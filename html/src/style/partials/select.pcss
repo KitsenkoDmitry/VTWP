@@ -27,7 +27,7 @@
         }
 
         .select2-selection__placeholder {
-            color: $cl-dk-grey;
+            color: $cl-hover-grey;
         }
 
         .select2-selection__arrow {
@@ -67,12 +67,12 @@
     &.select2-container--disabled {
         .select2-selection--single {
             background: transparent;
-            border-color: $cl-grey;
-            color: $cl-dk-grey;
+            border-color: $cl-hover-grey;
+            color: $cl-grey;
 
             .select2-selection__arrow {
                 b {
-                    border-top-color: $cl-dk-grey;
+                    border-top-color: $cl-hover-grey;
                 }
             }
         }
@@ -80,7 +80,7 @@
         &.select2-container--focus,
         &.select2-container--open {
             .select2-selection--single {
-                border-color: $cl-dk-grey;
+                border-color: $cl-hover-grey;
             }
         }
     }
@@ -105,16 +105,16 @@
             color: $cl-global;
 
             &:hover {
-                background: $cl-lg-green;
+                background: $cl-red;
             }
         }
 
         &[aria-selected="true"] {
             background: transparent;
-            color: $cl-dk-grey;
+            color: $cl-hover-grey;
 
             &:hover {
-                background: $cl-lg-green;
+                background: $cl-red;
             }
         }
     }

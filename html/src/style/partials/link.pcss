@@ -1,15 +1,15 @@
 .link {
     display: inline-block;
     position: relative;
-    color: $cl-green;
-    fill: $cl-green;
+    color: $cl-red;
+    fill: $cl-red;
     cursor: pointer;
     transition: all $time ease;
 
     &:hover {
-        border-color: $cl-dk-green;
-        color: $cl-dk-green;
-        fill: $cl-dk-green;
+        border-color: $cl-hover-red;
+        color: $cl-hover-red;
+        fill: $cl-hover-red;
     }
 
     &--black {
@@ -18,59 +18,37 @@
         fill: $cl-global;
 
         &:hover {
-            border-color: $cl-green;
-            color: $cl-green;
-            fill: $cl-green;
+            border-color: $cl-red;
+            color: $cl-red;
+            fill: $cl-red;
         }
     }
 
-    &--grey {
-        border-color: $cl-dk-grey;
-        color: $cl-dk-grey;
-        fill: $cl-dk-grey;
 
-        &:hover {
-            border-color: $cl-green;
-            color: $cl-green;
-            fill: $cl-green;
-        }
-    }
-
-    &--lg-grey {
-        border-color: $cl-grey;
-        color: $cl-grey;
-        fill: $cl-grey;
-
-        &:hover {
-            border-color: $cl-green;
-            color: $cl-green;
-            fill: $cl-green;
-        }
-    }
 
     &--dotted {
-        border-bottom: 1px dotted $cl-green;
+        border-bottom: 1px dotted $cl-red;
 
         &:hover {
-            border-color: $cl-dk-green;
+            border-color: $cl-hover-red;
             text-decoration: none;
 
             .link__dotted {
-                border-color: $cl-dk-green;
+                border-color: $cl-hover-red;
             }
         }
 
         &.link--grey {
-            border-color: $cl-dk-grey;
+            border-color: $cl-hover-grey;
 
             &:hover {
-                border-color: $cl-green;
+                border-color: $cl-red;
             }
         }
     }
 
         &__dotted {
-            border-bottom: 1px dotted $cl-green;
+            border-bottom: 1px dotted $cl-red;
             display: inline-block;
             position: relative;
             line-height: 1.2;

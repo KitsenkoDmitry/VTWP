@@ -3,17 +3,15 @@
 /* Изменение настроек сетки */
 $gutter-step: 8px;
 $gutter: calc($gutter-step * 4);
-$column: 90px;
-$grid-columns : 15;
 
-/* Не понимает переменные в качестве значения ширины :( задать равным $gutter */
-@lost gutter 40px;
-
+/* Основные размеры для элементов */
+$field-height: calc($gutter-step * 6);
+$field-height-sm: calc($gutter-step * 5);
+$field-height-lg: calc($gutter-step * 7);
 
 
 /* Точки адаптива
- Пример использования: @media (--mobile) {}
- !Плагин не понимает переменные в качестве значения ширины :(
+    Пример: @media (--mobile) {}
 */
 @custom-media --mobile-sm-min (min-width: 320px);
 @custom-media --mobile (max-width: 479px);

@@ -11,7 +11,7 @@
     }
 
     &::-webkit-scrollbar-thumb {
-        background-color: $cl-dk-grey;
+        background-color: $cl-disabled-grey;
         cursor: pointer;
     }
 }
@@ -66,14 +66,14 @@ img {
 }
 
 a {
-    color: $cl-green;
-    fill: $cl-green;
+    color: $cl-red;
+    fill: $cl-red;
     text-decoration: none;
     transition: all $time ease;
 
     &:hover {
-        color: $cl-dk-green;
-        fill: $cl-dk-green;
+        color: $cl-hover-red;
+        fill: $cl-hover-red;
         text-decoration: none;
     }
 }
@@ -242,14 +242,6 @@ fieldset {
         position: relative;
         margin-left: -$gutter-step;
         padding: 0 $gutter-step;
-    }
-}
-
-.text-grey {
-    color: $cl-dk-grey;
-
-    &--sm {
-        font-size: 13px;
     }
 }
 

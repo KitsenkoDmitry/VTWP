@@ -8,32 +8,27 @@
 
  /* Изменение настроек сетки */
 
- /* Не понимает переменные в качестве значения ширины :( задать равным $gutter */
-
- @lost gutter 40px;
+ /* Основные размеры для элементов */
 
  /* Точки адаптива
- Пример использования: @media (--mobile) {}
- !Плагин не понимает переменные в качестве значения ширины :(
+    Пример: @media (--mobile) {}
 */
 
  /* Переменные */
 
  /* Основные цвета проекта */
 
- /* /Основные цвета проекта */
+ /* цвета шрифта */
 
- /* Основные размеры для элементов */
+ /* цвет фона */
 
- /* /Основные размеры для элементов */
+ /* акцидентные цвета */
 
- /* Базовый путь к папке с картинками
- * Использование: background-image: url('$img_path/svg/load.svg')
+ /* Путь к папке с картинками
+ * Пример: background-image: url('$img_path/svg/load.svg')
  */
 
- /* Время для основных анимаций (изменение цфета, фона и пр.) */
-
- /* Отступы карточки товара (блочный вид) */
+ /* Время для основных анимаций */
 
  .ui-kit-main {
     counter-reset: uiSectionCounter;
@@ -77,15 +72,6 @@
         margin-bottom: 16px;
     }
 
- .ui-kit-section-carousel {
-        counter-reset: uiCarouselCounter;
-    }
-
- .ui-kit-section-carousel__counter:before {
-                counter-increment: uiCarouselCounter;
-                content:  counter(uiCarouselCounter) '. ';
-            }
-
  .ui-kit-colors {
     display: flex;
     flex-wrap: wrap;
@@ -105,12 +91,11 @@
             text-align: center;
             width: 120px;
             height: 120px;
-            border-radius: 50%;
             margin-bottom: 16px;
         }
 
  .ui-kit-colors__desc {
-            color: #cccccc;
+            color: #999;
             font-size: 0.875rem;
             text-align: center;
             margin-bottom: 0;

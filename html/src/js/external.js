@@ -6,7 +6,7 @@
 @@include('../../node_modules/jquery-ui/ui/core.js')
 @@include('../../node_modules/jquery-ui/ui/widget.js')
 @@include('../../node_modules/jquery-ui/ui/position.js')
-// @@include('../../node_modules/jquery-ui/ui/mouse.js')
+@@include('../../node_modules/jquery-ui/ui/mouse.js')
 @@include('../../node_modules/jquery-ui/ui/menu.js');
 @@include('../../node_modules/jquery-ui/ui/autocomplete.js')
 @@include('../../node_modules/jquery-ui/ui/slider.js')
@@ -17,7 +17,7 @@
 @@include('../../node_modules/jquery.inputmask/dist/jquery.inputmask.bundle.js')
 @@include('../../node_modules/select2/dist/js/select2.full.js')
 @@include('../../node_modules/swiper/dist/js/swiper.min.js')
-@@include('../../node_modules/lazysizes/lazysizes.min.js')
+@@include('../../node_modules/lazysizes/lazysizes.js')
 @@include('../../node_modules/parsleyjs/dist/parsley.js')
 @@include('../../node_modules/parsleyjs/dist/i18n/ru.js')
 @@include('../../node_modules/parsleyjs/dist/i18n/en.js')

@@ -44,17 +44,6 @@
         opacity: .6;
         margin-bottom: calc($gutter-step * 2);
     }
-
-    &-carousel {
-        counter-reset: uiCarouselCounter;
-
-        &__counter {
-            &:before {
-                counter-increment: uiCarouselCounter;
-                content:  counter(uiCarouselCounter) '. ';
-            }
-        }
-    }
 }
 
 .ui-kit-colors {
@@ -75,7 +64,6 @@
             text-align: center;
             width: 120px;
             height: 120px;
-            border-radius: 50%;
             margin-bottom: calc($gutter-step * 2);
         }
 

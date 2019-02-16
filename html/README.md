@@ -73,6 +73,7 @@ gulp --tasks
 **animate.css** - классы для разнообразных анимаций https://github.com/daneden/animate.css/
 **gulp-file-include** - используется для "шаблонизации", позволяет импортировать один файл в другой с передачей каких-либо параметров см. https://www.npmjs.com/package/gulp-file-include
 **browsersync** - вебсервер.
+**lazysizes** - lazy loading для картинок. Использовать вместо src у тега img – data-src!
 
 **gulp-svg-sprites** - генерит svg спрайт из файлов /src/img/svg/sprite/*.svg см. https://github.com/shakyshane/gulp-svg-sprites
 Использование:

@@ -16,11 +16,6 @@ $(document).ready(function() {
         mobileLgSize:   640,
         mobileSize:     480,
 
-        // Точка перехода попапов на фулскрин
-        popupsBreakpoint: 768,
-
-        // Время до сокрытия фиксированных попапов
-        popupsFixedTimeout: 5000,
 
         // Проверка touch устройств
         isTouch: $.browser.mobile,
@@ -69,12 +64,4 @@ $(document).ready(function() {
      * Подключение js partials
      */
     @@include('partials/partials.js');
-    /**
-     * Подключение js не привязанных к интерфейсу
-     */
-    @@include('core/core.js');
-    /**
-     * Подключение js для компонентов битрикса
-     */
-    @@include('components/components.js');
 });

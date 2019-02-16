@@ -5,7 +5,7 @@ label,
     display: block;
     position: relative;
     margin-bottom: calc($gutter-step * 2);
-    color: $cl-dk-grey;
+    color: $cl-grey;
 
     /* Скрытый лейбл для скринридеров */
     &.sr-only {
@@ -74,11 +74,11 @@ select {
         transparent,
         transparent,
         transparent,
-        $cl-lg-grey,
+        $cl-disabled-grey,
 
         $cl-grey,
         $cl-grey,
-        $cl-dk-grey,
+        $cl-grey,
         $cl-grey,
         $cl-grey,
 
@@ -103,12 +103,12 @@ select {
     }
 
     &.parsley-error {
-        border-color: $cl-pink;
+        border-color: $cl-red;
     }
 
     &.focus-visible {
         outline: none;
-        border-color: $cl-dk-grey;
+        border-color: $cl-grey;
     }
 }
 
@@ -118,7 +118,7 @@ textarea {
     resize: vertical;
 
     &.parsley-error {
-        border-color: $cl-pink;
+        border-color: $cl-red;
     }
 }
 
@@ -161,20 +161,20 @@ input[type="radio"]:not(.rating__input) {
         }
 
         &:hover {
-            color: $cl-green;
+            color: $cl-red;
         }
     }
 
     &:disabled {
         & + label {
-            color: $cl-dk-grey;
+            color: $cl-grey;
             cursor: default;
         }
     }
 
     &:checked {
         & + label:after {
-            background: $cl-green;
+            background: $cl-red;
         }
 
         &:disabled + label:after {
@@ -184,7 +184,7 @@ input[type="radio"]:not(.rating__input) {
 
     &.focus-visible {
         & + label {
-            outline: 5px auto $cl-focus-blue;
+            outline: 5px auto $cl-grey;
             outline-offset: -2px;
         }
     }
@@ -227,11 +227,11 @@ input[type="checkbox"]:not(.tags__input):checked + label::after {
 /* Parsley */
 
 .parsley-error {
-    border-color: $cl-pink;
+    border-color: $cl-red;
 }
 
 .parsley-error-message {
-    color: $cl-pink;
+    color: $cl-red;
     font-size: 13px;
     /* такие отступы, чтобы поместилась 1 строка ошибки без дёрганий */
     margin: -27px 0 7px 0;

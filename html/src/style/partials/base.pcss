@@ -1,0 +1,262 @@
+/* Базовые стили */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    &::-webkit-scrollbar {
+        width: 4px;
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $cl-dk-grey;
+        cursor: pointer;
+    }
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    min-height: 100vh;
+    background: $cl-global-invert;
+
+    font-size: 15px;
+    font-family: 'Gerbera', Arial, sans-serif;
+    line-height: 1.6;
+    color: $cl-global;
+
+    vertical-align: top;
+    backface-visibility: hidden;
+    overflow-x: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 5;
+        background-color: rgba(0, 0, 0, 0.5);
+        transition: opacity 0.5s ease 0.2s;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    &.has-overlay {
+        &::before {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: $cl-green;
+    fill: $cl-green;
+    text-decoration: none;
+    transition: all $time ease;
+
+    &:hover {
+        color: $cl-dk-green;
+        fill: $cl-dk-green;
+        text-decoration: none;
+    }
+}
+
+strong,
+b {
+    font-weight: bold;
+
+    i,
+    em {
+        font-size: 90%;
+        font-weight: bold;
+        font-style: normal;
+    }
+}
+
+em,
+i {
+    font-size: 90%;
+    font-style: normal;
+
+    strong,
+    b {
+        font-weight: bold;
+        font-style: normal;
+    }
+}
+
+p {
+    margin: 0 0 calc($gutter-step * 2);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: calc($gutter-step * 2) 0;
+
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 40px;
+    line-height: 1.4;
+    font-weight: 500;
+
+    @media (--desktop) {
+
+    }
+
+    @media (--tablet-lg) {
+
+    }
+
+    @media (--tablet) {
+        font-size: 32px;
+    }
+}
+
+h2 {
+    font-size: 32px;
+    line-height: 1.25;
+    font-weight: 500;
+
+    @media (--desktop) {
+
+    }
+
+    @media (--tablet-lg) {
+
+    }
+
+    @media (--tablet) {
+        font-size: 24px;
+    }
+}
+
+h3 {
+    font-size: 24px;
+    line-height: 1.33;
+    font-weight: 500;
+
+    @media (--desktop) {
+
+    }
+
+    @media (--tablet-lg) {
+
+    }
+
+    @media (--tablet) {
+        font-size: 20px;
+    }
+
+    @media (--mobile) {
+
+    }
+}
+
+h4 {
+    font-size: 20px;
+    line-height: 1.3;
+    font-weight: 500;
+
+    @media (--tablet) {
+        font-size: 18px;
+    }
+}
+
+h5 {
+    font-size: 18px;
+    line-height: 1.6;
+    font-weight: 500;
+
+    @media (--tablet) {
+        font-size: 15px;
+    }
+}
+
+h6 {
+    font-size: 15px;
+    line-height: 1.6;
+    font-weight: bold;
+
+    @media (--tablet) {
+        font-size: 14px;
+    }
+}
+
+
+hr {
+    background: none;
+    border: none;
+    border-bottom: 1px solid $cl-grey;
+    display: block;
+    position: relative;
+    height: 1px;
+    margin: calc($gutter / 2) 0;
+    line-height: 0;
+    font-size: 0;
+}
+
+ul, ol {
+    li {
+        list-style: none outside;
+    }
+}
+
+q,
+blockquote {
+    margin-bottom: calc($gutter / 2);
+    font-weight: bold;
+}
+
+fieldset {
+    border: 1px solid $cl-grey;
+    margin-bottom: calc($gutter / 2);
+    padding: $gutter;
+
+    legend {
+        position: relative;
+        margin-left: -$gutter-step;
+        padding: 0 $gutter-step;
+    }
+}
+
+.text-grey {
+    color: $cl-dk-grey;
+
+    &--sm {
+        font-size: 13px;
+    }
+}
+
+
+/*
+    This will hide the focus indicator if the element receives focus via the mouse,but it will still show up on keyboard focus.
+*/
+.js-focus-visible :focus:not(.focus-visible) {
+    outline: none;
+}

@@ -1,0 +1,34 @@
+/* Настройки шагов адаптива и сетки */
+
+/* Изменение настроек сетки */
+$gutter-step: 8px;
+$gutter: calc($gutter-step * 4);
+$column: 90px;
+$grid-columns : 15;
+
+/* Не понимает переменные в качестве значения ширины :( задать равным $gutter */
+@lost gutter 40px;
+
+
+
+/* Точки адаптива
+ Пример использования: @media (--mobile) {}
+ !Плагин не понимает переменные в качестве значения ширины :(
+*/
+@custom-media --mobile-sm-min (min-width: 320px);
+@custom-media --mobile (max-width: 479px);
+@custom-media --mobile-min (min-width: 480px);
+@custom-media --mobile-lg (max-width: 639px);
+@custom-media --mobile-lg-min (min-width: 640px);
+@custom-media --tablet (max-width: 767px);
+@custom-media --tablet-min (min-width: 768px);
+@custom-media --tablet-lg (max-width: 1023px);
+@custom-media --tablet-lg-min (min-width: 1024px);
+@custom-media --desktop-sm (max-width: 1279px);
+@custom-media --desktop-sm-min (min-width: 1280px);
+@custom-media --desktop (max-width: 1479px);
+@custom-media --desktop-min (min-width: 1480px);
+@custom-media --desktop-md (max-width: 1599px);
+@custom-media --desktop-md-min (min-width: 1600px);
+@custom-media --desktop-lg (max-width: 1909px);
+@custom-media --desktop-lg-min (min-width: 1910px);

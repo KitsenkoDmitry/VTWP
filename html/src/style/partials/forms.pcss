@@ -1,0 +1,250 @@
+/* Стилизация элементов форм */
+
+label,
+.label {
+    display: block;
+    position: relative;
+    margin-bottom: calc($gutter-step * 2);
+    color: $cl-dk-grey;
+
+    /* Скрытый лейбл для скринридеров */
+    &.sr-only {
+        border: 0;
+        position: absolute;
+        overflow: hidden;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        clip: rect(0, 0, 0, 0);
+    }
+}
+
+input[type="number"] {
+    /* Прячет стрелки управления поля number в Firefox */
+    appearance: textfield;
+
+    /* Прячет стрелки управления поля number в Chrome, Safari и Opera */
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        margin: 0;
+        appearance: none;
+    }
+}
+
+/* прячет стрелки у инпута */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+}
+
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+input:not([type]),
+textarea,
+select {
+    border: 1px solid transparent;
+    border-width: 1px;
+    display: block;
+    position: relative;
+    width: 100%;
+    margin: 0 0 calc($gutter-step * 4) 0;
+    padding: 0;
+    zoom: 1;
+    transition: all $time ease;
+    border-radius: 0;
+    box-shadow: none;
+
+    @include field-style(
+        transparent,
+        transparent,
+        transparent,
+        transparent,
+        $cl-lg-grey,
+
+        $cl-grey,
+        $cl-grey,
+        $cl-dk-grey,
+        $cl-grey,
+        $cl-grey,
+
+        $cl-global,
+        $cl-global,
+        $cl-global,
+        $cl-global,
+        $cl-grey
+    );
+    @include field-size(
+        $field-height-sm,
+        calc($gutter-step * 2),
+        calc($gutter-step * 1.5),
+        15px
+    );
+
+    &.is-disabled,
+    .is-disabled &,
+    &[disabled] {
+        cursor: default;
+        pointer-events: none;
+    }
+
+    &.parsley-error {
+        border-color: $cl-pink;
+    }
+
+    &.focus-visible {
+        outline: none;
+        border-color: $cl-dk-grey;
+    }
+}
+
+textarea {
+    min-height: $field-height;
+    height: auto;
+    resize: vertical;
+
+    &.parsley-error {
+        border-color: $cl-pink;
+    }
+}
+
+
+/* чекбоксы и радио-кнопки */
+input[type="checkbox"]:not(.tags__input),
+input[type="radio"]:not(.rating__input) {
+    position: absolute;
+    clip: rect(0,0,0,0);
+
+    & + label {
+        position: relative;
+        display: block;
+        margin-bottom: calc($gutter-step * 3);
+        padding-left: 27px;
+        font-size: 15px;
+        color: $cl-global;
+        cursor: pointer;
+
+        &:last-of-type {
+            margin-bottom: calc($gutter-step * 4);
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            position:absolute;
+            display: block;
+            box-sizing: border-box;
+            transition: opacity $time ease;
+        }
+
+        &::before {
+            content: '';
+            top: 5px;
+            left: 0;
+            width: 16px;
+            height: 16px;
+            border: 1px solid $cl-grey;
+        }
+
+        &:hover {
+            color: $cl-green;
+        }
+    }
+
+    &:disabled {
+        & + label {
+            color: $cl-dk-grey;
+            cursor: default;
+        }
+    }
+
+    &:checked {
+        & + label:after {
+            background: $cl-green;
+        }
+
+        &:disabled + label:after {
+            background: $cl-grey;
+        }
+    }
+
+    &.focus-visible {
+        & + label {
+            outline: 5px auto $cl-focus-blue;
+            outline-offset: -2px;
+        }
+    }
+}
+
+input[type="checkbox"]:not(.tags__input):checked:disabled + label::after {
+    /* background: svg-load('../svg/tick.svg', fill=#ccc) no-repeat center; */
+    background-size: contain;
+}
+
+/* input[type="checkbox"] + label::before,
+input[type="checkbox"] + label::after {
+    border-radius: 4px;
+} */
+
+input[type="radio"]:not(.rating__input) + label::before,
+input[type="radio"]:not(.rating__input) + label::after {
+    border-radius: 50%;
+}
+
+input[type="radio"]:not(.rating__input) + label::after {
+    top: 10px;
+    left: 5px;
+    width: 6px;
+    height: 6px;
+}
+
+input[type="checkbox"]:not(.tags__input) + label::after {
+    top: 10px;
+    left: 4px;
+    width: 8px;
+    height: 6px;
+}
+
+input[type="checkbox"]:not(.tags__input):checked + label::after {
+    /* background: svg-load('../svg/tick.svg', fill=#093) no-repeat center; */
+    background-size: contain;
+}
+
+/* Parsley */
+
+.parsley-error {
+    border-color: $cl-pink;
+}
+
+.parsley-error-message {
+    color: $cl-pink;
+    font-size: 13px;
+    /* такие отступы, чтобы поместилась 1 строка ошибки без дёрганий */
+    margin: -27px 0 7px 0;
+}
+
+/* /Parsley */
+
+.field {
+    position: relative;
+    margin: 0 0 calc($gutter-step * 5) 0;
+
+    input,
+    textarea {
+        margin-bottom: 0;
+    }
+}

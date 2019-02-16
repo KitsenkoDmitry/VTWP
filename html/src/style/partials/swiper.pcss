@@ -1,0 +1,28 @@
+.swiper {
+    &-container-horizontal {
+        > .swiper-pagination-bullets {
+            line-height: 1;
+            bottom: calc($gutter-step * 4);
+
+            @media (--tablet-lg) {
+                bottom: calc($gutter-step * 3);
+            }
+
+            .swiper-pagination-bullet {
+                height: calc($gutter-step * 2);
+                width: calc($gutter-step * 2);
+            }
+        }
+    }
+
+    &-pagination-bullet {
+        display: inline-flex;
+        flex-shrink: 0;
+        align-items: center;
+        justify-content: center;
+        opacity: 1;
+        border-radius: 0;
+        background-color: transparent;
+        vertical-align: middle;
+    }
+}

@@ -1,0 +1,168 @@
+/* Стилизация кнопок */
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.btn {
+    border: 1px solid transparent;
+    display: inline-block;
+    position: relative;
+    overflow: visible;
+    clear: both;
+    margin: 0 0 calc($gutter-step * 2) 0;
+    padding: 0;
+    font-family: inherit;
+    text-decoration: none;
+    text-align: center;
+    vertical-align: top;
+    transition: all $time ease;
+
+    @include button-style(
+        $cl-green,
+        $cl-dk-green,
+        $cl-dk-green,
+        $cl-dk-grey,
+
+        $cl-green,
+        $cl-dk-green,
+        $cl-dk-green,
+        $cl-dk-grey,
+
+        $cl-global-invert,
+        $cl-global-invert,
+        $cl-global-invert,
+        $cl-global-invert
+    );
+    @include button-size(
+        $field-height,
+        2px,
+        calc($gutter-step * 3),
+        15px
+    );
+
+    &:hover,
+    &.is-hover,
+    &:focus,
+    &.is-focus {
+        text-decoration: none;
+    }
+
+    &.is-disabled,
+    .is-disabled &,
+    &[disabled] {
+        cursor: default;
+        pointer-events: none;
+    }
+
+    &.pull-right,
+    &.pull-left {
+        margin-left: 0;
+    }
+
+    &.btn--block {
+        display: block;
+        width: 100%;
+
+        & + & {
+            margin-top: calc($gutter-step * 2);
+            margin-left: 0;
+        }
+    }
+
+    &.btn--sm {
+        @include button-size(
+            $field-height-sm,
+            2px,
+            calc($gutter-step * 2),
+            15px
+        );
+    }
+
+    &.btn--border {
+        @include button-style(
+            transparent,
+            transparent,
+            transparent,
+            transparent,
+
+            $cl-green,
+            $cl-dk-green,
+            $cl-dk-green,
+            $cl-dk-grey,
+
+            $cl-green,
+            $cl-dk-green,
+            $cl-dk-green,
+            $cl-dk-grey
+        );
+    }
+}
+
+.btn-mixed {
+    display: inline-flex;
+    height: calc($gutter-step * 6);
+    line-height: calc($gutter-step * 6 - 2px);
+    width: 100%;
+
+    &__link {
+        flex-grow: 1;
+        padding: 0 calc($gutter-step * 2.5);
+        color: $cl-global-invert;
+        text-align: center;
+        background-color: $cl-green;
+
+        &:hover {
+            background-color: color($cl-dk-green saturation(-20%));
+            color: $cl-global-invert;
+        }
+    }
+
+    &__add {
+        width: 0;
+        pointer-events: none;
+        background-color: $cl-dk-green;
+        color: $cl-global-invert;
+        transition: all calc($time * 2) ease;
+        overflow: hidden;
+
+
+        &:hover {
+            color: $cl-global-invert;
+        }
+
+        .btn-mixed.is-active & {
+            width: 48px;
+            pointer-events: all;
+
+            &:hover {
+                background-color: color($cl-dk-green saturation(-20%));
+            }
+        }
+    }
+}
+
+.btn-arrow {
+    display: inline-flex;
+    vertical-align: top;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    fill: $cl-global;
+
+    &:hover {
+        fill: $cl-green;
+    }
+
+    &.is-disabled {
+        fill: $cl-dk-grey;
+        cursor: default;
+        pointer-events: none;
+    }
+}

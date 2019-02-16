@@ -1,0 +1,152 @@
+/* Стилизация полей с датой (datepicker) */
+
+.ui-datepicker {
+    z-index: 10 !important;
+    background: $cl-global-invert;
+    border: none;
+    width: 300px;
+    padding: calc($gutter-step * 3) calc($gutter-step * 2);
+    box-shadow: 0px 12px 32px rgba(0, 0, 0, 0.08);
+
+
+    .ui-datepicker-header {
+        height: $gutter;
+        padding: 0;
+        line-height: $gutter;
+        margin-bottom: calc($gutter-step * 1.5);
+    }
+
+        .ui-datepicker-title {
+            color: $cl-global;
+            text-transform: uppercase;
+            font-size: 13px;
+            font-weight: bold;
+            line-height: $gutter;
+
+            display: flex;
+            justify-content: center;
+        }
+
+         .ui-datepicker-month,
+         .ui-datepicker-year {
+             display: inline-block;
+             vertical-align: top;
+             height: 30px;
+             padding: 0 $gutter-step 0;
+         }
+
+        .ui-datepicker-prev,
+        .ui-datepicker-next {
+            border: none;
+            display: block;
+            top: 0;
+            width: $gutter;
+            height: $gutter;
+            text-align: left;
+            cursor: pointer;
+
+            span {
+               display: none;
+            }
+
+            &.ui-state-disabled {
+                opacity: 0.5;
+            }
+        }
+
+        .ui-datepicker-prev {
+            left: 0;
+            background: url('$img_path/svg/arrow_left.svg') no-repeat center;
+        }
+
+        .ui-datepicker-next {
+            right: 0;
+            background: url('$img_path/svg/arrow_right.svg') no-repeat center;
+        }
+
+    .ui-datepicker-calendar {
+        width: 100%;
+        table-layout: fixed;
+        margin: 0;
+
+        th,
+        td {
+            padding: 2px 0;
+            text-align: center;
+        }
+
+        th {
+            padding-bottom: calc($gutter-step * 1.5);
+            font-size: 10px;
+            text-transform: uppercase;
+            color: $cl-grey;
+        }
+
+        td {
+            font-size: 13px;
+
+            .ui-state-default {
+                display: inline-block;
+                vertical-align: top;
+                width: $gutter;
+                height: calc($gutter-step * 3);
+                padding: 0;
+                line-height: calc($gutter-step * 3 - 2px);
+                text-align: center;
+                border: 1px solid transparent;
+                border-radius: 3px;
+
+                &.ui-state-highlight {
+                    color: $cl-pink;
+                }
+
+                &.ui-state-active {
+                    color: $cl-global-invert;
+                    background-color: $cl-green;
+                }
+
+                &.ui-statu-hover {
+                    color: $cl-green;
+                    background-color: $cl-lg-grey;
+                }
+            }
+
+            a {
+                color: $cl-global;
+
+                &:hover {
+                    color: $cl-green;
+                    background-color: $cl-lg-grey;
+                }
+            }
+
+            /* &.ui-datepicker-week-end {
+                a {
+                    color: $cl-pink;
+
+                    &:hover {
+                        color: #fff;
+                    }
+                }
+            } */
+
+            &.ui-datepicker-other-month {
+                color: $cl-dk-grey;
+            }
+
+            &.ui-datepicker-unselectable {
+                color: $cl-dk-grey;
+            }
+        }
+    }
+}
+
+.datepicker {
+    position: relative;
+
+    .icon {
+        position: absolute;
+        top: 11px;
+        right: 12px;
+    }
+}

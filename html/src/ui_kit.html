@@ -1,0 +1,474 @@
+@@include('template/head.html')
+<body>
+    @@include('template/old_ie_update.html')
+
+    @@include('img/svg/sprite.svg')
+
+    @@include('template/header.html')
+
+    <main class="wrap-main ui-kit-main">
+
+    <section id="icons" class="section ui-kit-section">
+            <div class="container">
+
+                <h2 class="ui-kit-section__hl">
+                    <span class="ui-kit-section__hl-num"></span>
+                    Иконки
+                </h2>
+
+                <p class="ui-kit-section__desc">Все отдельные иконки делаются в icons.pcss отдельным блоком icon с модификатором конкретной иконки <br>Иконки в кнопках или других местах, где им нужно менять цвет, лучше делать через xlink <br>Настройка: icons.pcss</p>
+
+                <p class="ui-kit-desc">Мелкие значки</p>
+                <p>
+                    <!-- <svg class="icon icon--view-row"><use xlink:href="#icon-view_row"></use></svg> -->
+                </p>
+
+            </div>
+        </section>
+
+        <section id="colors" class="section ui-kit-section">
+            <div class="container">
+
+                <h2 class="ui-kit-section__hl">
+                    <span class="ui-kit-section__hl-num"></span>
+                    Основные цвета
+                </h2>
+
+                <p class="ui-kit-section__desc">Настройка: variables.pcss</p>
+
+                <div class="ui-kit-colors">
+                    <div class="ui-kit-colors__col">
+                        <div class="ui-kit-colors__name" style="background-color: #009933; color: white;">
+                            #009933 <br> $cl-green
+                        </div>
+                        <p class="ui-kit-colors__desc"></p>
+                    </div>
+                    <div class="ui-kit-colors__col">
+                        <div class="ui-kit-colors__name" style="background-color: #007928; color: white;">
+                            #007928 <br> $cl-dk-green
+                        </div>
+                        <p class="ui-kit-colors__desc"></p>
+                    </div>
+                    <div class="ui-kit-colors__col">
+                        <div class="ui-kit-colors__name" style="background-color: #6AA76D; color: white;">
+                            #6aa76d <br> $cl-grass
+                        </div>
+                        <p class="ui-kit-colors__desc"></p>
+                    </div>
+                    <div class="ui-kit-colors__col">
+                        <div class="ui-kit-colors__name" style="background-color: #cc3366; color: white;">
+                            #cc3366 <br> $cl-pink
+                        </div>
+                        <p class="ui-kit-colors__desc"></p>
+                    </div>
+                    <div class="ui-kit-colors__col">
+                        <div class="ui-kit-colors__name" style="background-color:  #ff6633; color: white;">
+                            #ff6633 <br> $cl-orange
+                        </div>
+                        <p class="ui-kit-colors__desc"></p>
+                    </div>
+                    <div class="ui-kit-colors__col">
+                        <div class="ui-kit-colors__name" style="background-color:  #242424; color: white;">
+                            #242424 <br> $cl-global
+                        </div>
+                        <p class="ui-kit-colors__desc"></p>
+                    </div>
+                    <div class="ui-kit-colors__col">
+                        <div class="ui-kit-colors__name" style="background-color:  #ffffff; color: #000000; border: 1px solid #000000;">
+                            #ffffff <br> $cl-global-invert
+                        </div>
+                        <p class="ui-kit-colors__desc"></p>
+                    </div>
+                    <div class="ui-kit-colors__col">
+                        <div class="ui-kit-colors__name" style="background-color:  #000000; color: white;">
+                            #000000 <br> $cl-black
+                        </div>
+                        <p class="ui-kit-colors__desc"></p>
+                    </div>
+                    <div class="ui-kit-colors__col">
+                        <div class="ui-kit-colors__name" style="background-color:  #cccccc; color: white;">
+                            #cccccc <br> $cl-grey
+                        </div>
+                        <p class="ui-kit-colors__desc"></p>
+                    </div>
+                    <div class="ui-kit-colors__col">
+                        <div class="ui-kit-colors__name" style="background-color:  #a0a0a0; color: white;">
+                            #a0a0a0 <br> $cl-dk-grey
+                        </div>
+                        <p class="ui-kit-colors__desc"></p>
+                    </div>
+                    <div class="ui-kit-colors__col">
+                        <div class="ui-kit-colors__name" style="background-color:  #e6e6e6; color: #242424;">
+                            #e6e6e6 <br> $cl-lg-grey
+                        </div>
+                        <p class="ui-kit-colors__desc"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="fonts" class="section ui-kit-section">
+            <div class="container">
+
+                <h2 class="ui-kit-section__hl">
+                    <span class="ui-kit-section__hl-num"></span>
+                    Базовые стили, элементы и шрифты
+                </h2>
+
+                <div class="ui-kit-section__desc">
+                    Настройка base.html, fonts.html
+                </div>
+
+                <h1>H1 Gerbera Medium 40px / 1.4</h1>
+                <h2>H2 Gerbera Medium 32px / 1.25</h2>
+                <h3>H3 Gerbera Medium 24px / 1.33</h3>
+                <h4>H4 Gerbera Medium 20px / 1.3</h4>
+                <h5>H5 Gerbera Medium 15px / 1.6</h5>
+                <h6>H6 Gerbera Bold 15px / 1.6</h6>
+
+                <p>Основной текст. &lt;p&gt;
+                    Gerbera Regular 15px / 1.6
+                    <br>
+                    Задача организации, в особенности же <a href="javascript:;">обычная ссылка</a>   постоянное информационно-пропагандистское обеспечение нашей деятельности в значительной степени обуславливает создание позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянное информационно-пропагандистское обеспечение нашей деятельности влечет за собой процесс внедрения и модернизации соответствующий условий активизации.
+                </p>
+
+                <p class="text-grey">Уточняющий текст, 15px .text-grey<br>
+                    Равным образом постоянный количественный рост и сфера нашей активности в значительной степени обуславливает создание систем массового участия. Равным образом реализация намеченных плановых заданий представляет собой интересный эксперимент проверки модели развития.
+                </p>
+
+                <p class="text-grey text-grey--sm">Уточняющий текст маленький 13px .text-grey .text-grey--sm <br>
+                    Повседневная практика показывает, что реализация намеченных плановых заданий играет важную роль в формировании позиций, занимаемых участниками в отношении поставленных задач. Таким образом укрепление и развитие структуры позволяет выполнять важные задания по разработке дальнейших направлений развития. Разнообразный и богатый опыт постоянное информационно-пропагандистское обеспечение нашей деятельности требуют определения и уточнения модели развития.
+                </p>
+
+                <p class="ui-kit-desc mb-0">Fieldset</p>
+                <fieldset>
+                    <legend>Fieldset</legend>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste molestias quos eum labore, ipsum dolorum dolores culpa cupiditate nulla ex, eveniet sit reprehenderit, repellendus nemo suscipit, hic enim recusandae. Doloribus?
+                </fieldset>
+                <br>
+
+                <p class="ui-kit-desc mb-0">Цитата</p>
+                <q>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi repudiandae quo voluptate beatae dolore, sed. Harum blanditiis, sit illum ut nulla quis similique quo ab sunt distinctio minus, vero natus?</q>
+                <br><br>
+
+                <p class="ui-kit-desc mb-0">Линия</p>
+                <hr>
+
+                <p class="ui-kit-desc mb-0">Цена</p>
+                <p>
+                    <span class="price">5 123 ₽</span> <br>
+                    <span class="price price--new">5 123 ₽</span>
+                    <span class="price price--old">4 123 ₽</span>
+                    <span class="price-dif">1&nbsp;000&nbsp;₽ чистой экономии!</span> <br>
+                    <span class="price-cb">450&nbsp;₽&nbsp;кэшбек на&nbsp;карту «Твой Дом»!</span>
+                </p>
+            </div>
+        </section>
+
+        <section id="lists" class="section ui-kit-section">
+            <div class="container">
+
+                <h2 class="ui-kit-section__hl">
+                    <span class="ui-kit-section__hl-num"></span>
+                    Списки
+                </h2>
+
+                <p class="ui-kit-section__desc">Настройка: list.pcss</p>
+
+                <div class="ui-kit-cols">
+                    <div class="ui-kit-cols__col">
+                        <p class="ui-kit-desc">Маркированый список</p>
+                        <ul class="ul-list">
+                            <li>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+
+                            </li>
+                            <li>
+                                Corrupti blanditiis nesciunt nam ratione temporibus, architecto natus similique!
+                                <ul>
+                                    <li>Fugiat quo sequi nam, consequuntur soluta atque labore blanditiis odio beatae pariatur totam minus.</li>
+                                    <li>Voluptatum nam, alias nobis fuga tempore beatae nostrum.</li>
+                                </ul>
+                            </li>
+                            <li>
+                                Nisi vitae impedit incidunt id assumenda cum corporis qui possimus eius accusantium!
+                                <ol class="ol-list">
+                                    <li>Fugiat quo sequi nam, consequuntur soluta atque labore blanditiis odio beatae pariatur totam minus.</li>
+                                    <li>Voluptatum nam, alias nobis fuga tempore beatae nostrum.</li>
+                                </ol>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="ui-kit-cols__col">
+                        <p class="ui-kit-desc">Нумерованый список</p>
+                        <ol class="ol-list">
+                            <li>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            </li>
+                            <li>
+                                Corrupti blanditiis nesciunt nam ratione temporibus, architecto natus similique!
+                                <ol>
+                                    <li>Fugiat quo sequi nam, consequuntur soluta atque labore blanditiis odio beatae pariatur totam minus.</li>
+                                    <li>Voluptatum nam, alias nobis fuga tempore beatae nostrum.</li>
+                                </ol>
+                            </li>
+                            <li>
+                                Nisi vitae impedit incidunt id assumenda cum corporis qui possimus eius accusantium!
+                                <ul class="ul-list">
+                                    <li>Fugiat quo sequi nam, consequuntur soluta atque labore blanditiis odio beatae pariatur totam minus.</li>
+                                    <li>Voluptatum nam, alias nobis fuga tempore beatae nostrum.</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="links" class="section ui-kit-section">
+            <div class="container">
+
+                <h2 class="ui-kit-section__hl">
+                    <span class="ui-kit-section__hl-num"></span>
+                    Кнопки и ссылки
+                </h2>
+
+                <p class="ui-kit-section__desc">Можно использовать теги &lt;button&gt; и &lt;a&gt;, не использовать тег &lt;input&gt;<br>Настройка: link.pcss, buttons.pcss</p>
+
+
+                <p class="ui-kit-desc mb-xs">Buttons. Для растяжения кнопки на всю ширину контейнера использовать модификатор .btn--block</p>
+                <div class="ui-kit-cols">
+                    <div class="ui-kit-cols__col ui-kit-cols__col--1of4">
+                        <p class="ui-kit-desc">.btn</p>
+                        <button class="btn" type="button">Кнопка 1</button>
+                        <br>
+                        <button class="btn" type="button" disabled>Кнопка 1</button>
+                    </div>
+                    <div class="ui-kit-cols__col ui-kit-cols__col--1of4">
+                        <p class="ui-kit-desc">.btn .btn--border</p>
+                        <button class="btn btn--border" type="button">Кнопка 2</button>
+                        <br>
+                        <button class="btn btn--border" type="button" disabled>Кнопка 2</button>
+                    </div>
+                    <div class="ui-kit-cols__col ui-kit-cols__col--1of4">
+                        <p class="ui-kit-desc">.btn .btn--sm</p>
+                        <button class="btn btn--sm" type="button">Кнопка 3</button>
+                        <br>
+                        <button class="btn btn--sm" type="button" disabled>Кнопка 3</button>
+                    </div>
+                    <div class="ui-kit-cols__col ui-kit-cols__col--1of4">
+                        <p class="ui-kit-desc">.btn .btn--sm .btn--border</p>
+                        <button class="btn btn--sm btn--border" type="button">Кнопка 4</button>
+                        <br>
+                        <button class="btn btn--sm btn--border" type="button" disabled>Кнопка 4</button>
+                    </div>
+                </div>
+
+                <p class="ui-kit-desc mt-m mb-xs">Links</p>
+                <div class="ui-kit-cols mb-s">
+                    <div class="ui-kit-cols__col ui-kit-cols__col--1of4">
+                        <p class="ui-kit-desc mb-0">.link</p>
+                        <a href="javascript:;" class="link">Ссылка 1</a>
+                    </div>
+                    <div class="ui-kit-cols__col ui-kit-cols__col--1of4">
+                        <p class="ui-kit-desc mb-0">.link .link--black</p>
+                        <a href="javascript:;" class="link link--black">Ссылка 2</a>
+                    </div>
+                    <div class="ui-kit-cols__col ui-kit-cols__col--1of4">
+                        <p class="ui-kit-desc mb-0">.link .link--grey</p>
+                        <a href="javascript:;" class="link link--grey">Ссылка 3</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="form" class="section ui-kit-section">
+            <div class="container">
+
+                <h2 class="ui-kit-section__hl">
+                    <span class="ui-kit-section__hl-num"></span>
+                    Форма
+                </h2>
+
+                <p class="ui-kit-section__desc">
+                    Валидация включается атрибутом data-validate="true" для формы <br>
+                    По умолчанию включены русский и английский язык для ошибок в форме. Язык ошибок зависит от атрибута lang &lt;html&gt; (ru-RU и en-US). <br>
+                    Документация валидатора: <a href="http://parsleyjs.org/doc/" target="_blank">parsleyjs.org</a> (прежде чем воротить что-то, читаем документацию) <br>
+                    Настройка: forms.pcss
+                </p>
+                <br>
+
+                <form name="validation-form" id="validation-form" action="" data-validate="true">
+
+
+                    <div class="ui-kit-cols">
+                        <div class="ui-kit-cols__col ui-kit-cols__col--1of4">
+                            <label for="validation-form__name">Валидация имени (кириллица)</label>
+                            <input id="validation-form__name" type="text" name="validation-form__name" value="" data-parsley-name-ru>
+                        </div>
+                        <div class="ui-kit-cols__col ui-kit-cols__col--1of4">
+                            <label for="validation-form__tel">Телефон</label>
+                            <input id="validation-form__tel" class="js-phone-mask" type="tel" name="validation-form__tel" value="" data-parsley-phone>
+                        </div>
+                    </div>
+
+                    <div class="ui-kit-cols">
+                        <div class="ui-kit-cols__col ui-kit-cols__col--1of4">
+                            <label for="validation-form__password">Пароль</label>
+                            <input id="validation-form__password" type="password" name="validation-form__password" value="" data-parsley-type="alphanum" data-parsley-length="[5, 20]" required autocomplete="off">
+                        </div>
+                        <div class="ui-kit-cols__col ui-kit-cols__col--1of4">
+                            <label for="validation-form__password-repeat">Повторите пароль</label>
+                            <input id="validation-form__password-repeat" type="password" name="validation-form__password-repeat" value="" data-parsley-equalto="#validation-form__password" required autocomplete="off">
+                        </div>
+                    </div>
+
+                    <div class="ui-kit-cols">
+                        <div class="ui-kit-cols__col ui-kit-cols__col--1of4">
+                            <label for="validation-form__email">Email</label>
+                            <input id="validation-form__email" type="email" name="validation-form__email" value="" data-parsley-email>
+                        </div>
+                        <div class="ui-kit-cols__col ui-kit-cols__col--1of4">
+                            <label for="validation-form__disabled">Задизейблинный инпут</label>
+                            <input type="text" disabled id="validation-form__disabled" value="Какой-нибудь текст">
+                        </div>
+                    </div>
+
+
+                    <div class="ui-kit-cols">
+                        <div class="ui-kit-cols__col ui-kit-cols__col--1of4">
+                            <label for="validation-form__select2">Выберите любой вариант</label>
+                            <select name="validation-form__select2" id="validation-form__select2" data-search="false" data-placeholder="Выберите любой вариант">
+                                <option value="1">Рубашки</option>
+                                <option value="2">Обувь</option>
+                                <option value="3">Еда</option>
+                                <option value="4">Куртки</option>
+                                <option value="5">Джинсы</option>
+                                <option value="6">Бижутерия</option>
+                                <option value="7">Ювелирные украшения</option>
+                                <option value="8">Сумки</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="ui-kit-cols">
+                        <div class="ui-kit-cols__col ui-kit-cols__col--1of4">
+                            <label for="validation-form__textarea">Напишите о себе (не более 100 символов)</label>
+                            <textarea name="validation-form__textarea" id="validation-form__textarea" rows="3" data-parsley-maxlength="100"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="ui-kit-cols">
+                        <div class="ui-kit-cols__col ui-kit-cols__col--1of4">
+                            <label for="validation-form__date">Дата data-date-min(max)="дд.мм.гггг" или "current" для ограничения по текущей дате</label>
+                            <div class="datepicker">
+                                <input id="validation-form__date" class="js-datepicker" type="text" name="validation-form__date" value="" data-parsley-date data-date-min="01.04.2018" data-date-max="current" readonly>
+                                <svg class="icon icon--calendar"><use xlink:href="#icon-calendar"></use></svg>
+                            </div>
+                        </div>
+                        <div class="ui-kit-cols__col ui-kit-cols__col--1of4">
+                            <label for="validation-form__birth-day">Дата рождения <br> data-show-m-y="true"</label>
+                            <div class="datepicker">
+                                <input id="validation-form__birth-day" class="js-datepicker" type="text" name="validation-form__birth-day" value="" data-parsley-date readonly data-show-m-y="true">
+                                <svg class="icon icon--calendar"><use xlink:href="#icon-calendar"></use></svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ui-kit-cols">
+                        <div class="ui-kit-cols__col">
+                            <p class="label">Выберите от 1 до 3 вариантов:</p>
+                            <input type="checkbox" name="ui-kit-checkboxes" id="ui-kit-checkboxes-1" value="1" data-parsley-check="[1, 3]" required>
+                            <label for="ui-kit-checkboxes-1">Вариант 1</label>
+
+                            <input type="checkbox" name="ui-kit-checkboxes" id="ui-kit-checkboxes-2" value="2">
+                            <label for="ui-kit-checkboxes-2">Вариант 2</label>
+
+                            <input type="checkbox" name="ui-kit-checkboxes" id="ui-kit-checkboxes-3" value="3">
+                            <label for="ui-kit-checkboxes-3">Вариант 3</label>
+
+                            <input type="checkbox" name="ui-kit-checkboxes" id="ui-kit-checkboxes-4" value="4">
+                            <label for="ui-kit-checkboxes-4">Вариант 4</label>
+
+                            <input type="checkbox" name="ui-kit-checkboxes" id="ui-kit-checkboxes-5" value="5" disabled>
+                            <label for="ui-kit-checkboxes-5">Вариант 5</label>
+                        </div>
+                        <div class="ui-kit-cols__col">
+                            <p class="label">Выберите любой вариант:</p>
+                            <input type="radio" name="ui-kit-checkboxes-radio[]" id="ui-kit-checkboxes-radio-1" value="1" required>
+                            <label for="ui-kit-checkboxes-radio-1">Вариант 1</label>
+
+                            <input type="radio" name="ui-kit-checkboxes-radio[]" id="ui-kit-checkboxes-radio-2" value="2">
+                            <label for="ui-kit-checkboxes-radio-2">Вариант 2</label>
+
+                            <input type="radio" name="ui-kit-checkboxes-radio[]" id="ui-kit-checkboxes-radio-3" value="3">
+                            <label for="ui-kit-checkboxes-radio-3">Вариант 3</label>
+
+                            <input type="radio" name="ui-kit-checkboxes-radio[]" id="ui-kit-checkboxes-radio-4" value="4">
+                            <label for="ui-kit-checkboxes-radio-4">Вариант 4</label>
+
+                            <input type="radio" name="ui-kit-checkboxes-radio[]" id="ui-kit-checkboxes-radio-5" value="5" disabled>
+                            <label for="ui-kit-checkboxes-radio-5">Вариант 5</label>
+                        </div>
+                    </div>
+
+                    <input type="checkbox" name="validation-form__agree" id="validation-form__agree" value="1" required>
+                    <label for="validation-form__agree" class="cl-grey fz-13">Я согласен с <a href="javascript:;" target="_blank">условиями</a> передачи данных</label>
+
+                    <button class="btn" type="submit">Отправить</button>
+                </form>
+
+            </div>
+        </section>
+
+
+    </main>
+
+    @@include('template/footer.html')
+
+
+
+    <!-- Start ui kit sidebar -->
+    <!-- Этот сайдбар только для навигации в ките. Автособираемый -->
+    <button class="ui-kit-sidebar-open js-open-ui-sidebar" title="Навигация по UI Kit"><span>Навигация по UI Kit</span></button>
+    <div class="ui-kit-sidebar js-ui-sidebar">
+        <div class="ui-kit-sidebar__content">
+            <button class="ui-kit-sidebar__close js-close-ui-sidebar" title="Закрыть"><svg class="icon icon--cross"><use xlink:href="#icon-cross"></use></svg></button>
+            <p class="ui-kit-sidebar__hl">UI Kit навигация</p>
+            <div class="ui-kit-sidebar__scroll">
+                <ul class="ul-list js-ui-sidebar-list"></ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        const $sidebar = $('.js-ui-sidebar-list');
+        const $items = $('.ui-kit-section');
+        $items.each(function(index, item) {
+            const id = $(item).attr('id');
+            const text = $(item).find('.ui-kit-section__hl').text();
+            $sidebar.append('<li><a href="#' + id + '">' + text + '</a></li>')
+        });
+        $(document).on('click', '.js-open-ui-sidebar', function() {
+            $('.js-ui-sidebar').addClass('is-visible');
+        }).on('click', '.js-close-ui-sidebar', function() {
+            $('.js-ui-sidebar').removeClass('is-visible');
+        }).on('click', '.js-ui-sidebar a', function() {
+            $('.js-ui-sidebar').removeClass('is-visible');
+        }).on('keydown', function (e) {
+            if ( e.keyCode === 27 ) {
+                $('.js-ui-sidebar').removeClass('is-visible');
+            }
+        }).on('click', '.js-ui-sidebar', function(e) {
+            if($(e.target).closest('.ui-kit-sidebar__content').length) return;
+            $('.js-ui-sidebar').removeClass('is-visible');
+        });
+    </script>
+    <!-- /End ui kit sidebar -->
+
+    @@include('template/foot.html')
+</body>
+</html>

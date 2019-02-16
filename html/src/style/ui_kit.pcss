@@ -1,0 +1,261 @@
+/**
+ * Стили для красивой страницы ui kit
+ * Это стили только для оформления самой статичной страницы, это НЕ стили базовых элементов сайта
+ * В прод сборку не попадают
+ */
+
+ @import 'partials/grid_settings.pcss';
+ @import 'partials/variables.pcss';
+
+.ui-kit-main {
+    counter-reset: uiSectionCounter;
+
+    overflow: hidden;
+}
+
+.ui-kit-section {
+    padding: $gutter 0;
+    border-bottom: 1px dashed grey;
+
+    &__hl {
+        position: relative;
+        margin: 0 0 calc($gutter-step * 2) 0;
+        font-size: 32px;
+        font-weight: bold;
+        padding-right: 60px;
+
+        @media (--tablet) {
+            font-size: 24px;
+        }
+    }
+
+    &__hl-num {
+        position: absolute;
+        right: 0;
+
+        &:before {
+            counter-increment: uiSectionCounter;
+            content:  '\2014 ' counter(uiSectionCounter);
+            display: inline-block;
+        }
+    }
+
+    &__desc {
+        opacity: .6;
+        margin-bottom: calc($gutter-step * 2);
+    }
+
+    &-carousel {
+        counter-reset: uiCarouselCounter;
+
+        &__counter {
+            &:before {
+                counter-increment: uiCarouselCounter;
+                content:  counter(uiCarouselCounter) '. ';
+            }
+        }
+    }
+}
+
+.ui-kit-colors {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__col {
+        margin-right: calc($gutter-step * 2);
+        margin-bottom: calc($gutter-step * 2);
+        width: 120px;
+    }
+
+        &__name {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-transform: lowercase;
+            text-align: center;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: calc($gutter-step * 2);
+        }
+
+        &__desc {
+            color: $cl-grey;
+            font-size: 14px;
+            text-align: center;
+            margin-bottom: 0;
+        }
+}
+
+.ui-kit-cols {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+
+    &__col {
+        lost-column: 1/2 flex;
+
+        @media (--tablet-lg) {
+            lost-column: 1/1 flex;
+        }
+
+        &--1of4 {
+            lost-column: 1/4 flex;
+
+            @media (--tablet-lg) {
+                lost-column: 1/2 flex;
+            }
+
+            @media (--tablet) {
+                lost-column: 1/1 flex;
+            }
+        }
+    }
+}
+
+.ui-kit-desc {
+    font-size: 11px;
+    opacity: .6;
+}
+
+.ui-kit-table {
+    width: 75%;
+
+    @media (--desktop) {
+        width: 100%;
+    }
+}
+
+.ui-kit-sidebar {
+    background: rgba(#000, 0.5);
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10000;
+
+    &.is-visible {
+        display: block;
+    }
+
+    &-open {
+        background: #ccc;
+        box-shadow: 0 0 10px rgba(#000, 0.3);
+        position: fixed;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: calc($gutter-step * 4);
+        height: calc($gutter-step * 4);
+        font-size: 0;
+        line-height: 0;
+        cursor: pointer;
+        z-index: 9999;
+
+        span {
+            background: #000;
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: calc($gutter-step * 2);
+            height: calc($gutter-step / 2);
+            text-indent: -9999px;
+
+            &::before,
+            &::after {
+                content: '';
+                background: #000;
+                display: inline-block;
+                position: absolute;
+                left: 0;
+                width: calc($gutter-step * 2);
+                height: calc($gutter-step / 2);
+            }
+
+            &::before {
+                top: -$gutter-step;
+            }
+
+            &::after {
+                bottom: -$gutter-step;
+            }
+        }
+    }
+
+    &__content {
+        background: #fff;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 300px;
+        padding: calc($gutter-step * 2);
+    }
+
+        &__hl {
+            margin-bottom: calc($gutter-step * 3);
+            font-weight: bold;
+            line-height: 1;
+        }
+
+        &__scroll {
+            overflow-x: hidden;
+            overflow: auto;
+            position: absolute;
+            top: calc($gutter-step * 7);
+            right: calc($gutter-step * 2);
+            bottom: calc($gutter-step * 2);
+            left: calc($gutter-step * 2);
+        }
+
+        &__close {
+            position: absolute;
+            top: calc($gutter-step * 2);
+            right: calc($gutter-step * 2);
+            width: calc($gutter-step * 2);
+            height: calc($gutter-step * 2);
+            font-size: 0;
+            cursor: pointer;
+
+            .icon {
+                width: calc($gutter-step * 2);
+                height: calc($gutter-step * 2);
+            }
+        }
+}
+
+.ui-kit-products {
+    .products-list {
+        &__item {
+            @media(--desktop-md) {
+                &:nth-child(4n+1):nth-last-child(-n+4):not(:nth-last-child(4)),
+                &:nth-child(4n+1):nth-last-child(-n+4):not(:nth-last-child(4)) ~ .products-list__item {
+                    display: none;
+                }
+            }
+
+            @media(--desktop-sm) {
+                &:nth-child(3n+1):nth-last-child(-n+3):not(:nth-last-child(3)),
+                &:nth-child(3n+1):nth-last-child(-n+3):not(:nth-last-child(3)) ~ .products-list__item {
+                    display: none;
+                }
+            }
+
+            @media(--tablet-lg) {
+                &:not(:nth-child(-n + 2)) {
+                    display: none;
+                }
+            }
+
+            @media(--mobile-lg) {
+                &:not(:first-child) {
+                    display: none;
+                }
+            }
+        }
+    }
+}

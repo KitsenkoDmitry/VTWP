@@ -1,0 +1,322 @@
+/*
+Здесь определяются классы, которые не относятся к плагину,
+и настраивается внешний вид отдельных шаблонов.
+*/
+
+.carousel {
+    position: relative;
+
+    &__switch {
+        width: auto;
+        margin: 0;
+        padding: 0 calc($gutter-step * 1.5);
+        background: none;
+        z-index: 4;
+
+        & + & {
+            margin-left: calc($gutter-step * 0.5);
+        }
+
+        &--absolute {
+            margin-top: calc(-$gutter-step * 2.75);
+
+            & + & {
+                margin-left: 0;
+            }
+        }
+    }
+
+    &__preview {
+            position: absolute;
+            right: 0;
+            bottom: calc($gutter-step * 5);
+            height: calc($gutter-step * 20);
+            width: calc($gutter-step * 31);
+            background-size: cover;
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            z-index: 1;
+            transition: all $time ease;
+
+            @media (--tablet-lg) {
+                width: calc($gutter-step * 25);
+                height: calc($gutter-step * 16);
+                bottom: calc($gutter-step * 4);  
+            }
+
+            @media (--tablet) {
+                display: none;
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                z-index: 4;
+                background-color: rgba($cl-black, 0.45);
+                opacity: 0;
+                transition: opacity $time ease;
+            }
+
+            &:hover {
+                &:after {
+                    opacity: 1;
+                }
+            }
+        }
+
+    &__pagination-bullet {
+        width: $gutter-step;
+        height: $gutter-step;
+        border-radius: 50%;
+        background-color: rgba($cl-global-invert, 0.5);
+
+        .swiper-pagination-bullet-active & {
+            width: $gutter-step;
+            height: $gutter-step;
+            background: $cl-global-invert;
+            transform: scale(1.63);
+        }
+    }
+
+    &-title {
+        display: flex;
+
+        &__text {
+            padding-top: 0.2em;
+            margin-bottom: 0;
+            width: calc(100% - 100px);
+
+            &--mobile-hidden {
+                @media (--mobile-lg) {
+                    width: auto;
+                }
+            }
+        }
+
+        &__controls {
+            display: flex;
+            margin-left: auto;
+            margin-right: calc($gutter-step * (-1.5));
+
+            &--mobile-hidden {
+                @media (--mobile-lg) {
+                    display: none;
+                }
+            }
+        }
+
+        &__switch {
+            position: static;
+        }
+
+        &__link {
+            font-size: 15px;
+            font-weight: normal;
+            margin-left: calc($gutter-step * 5);
+
+            @media(--mobile-lg) {
+                display: inline-block;
+                margin-top: 10px;
+                margin-left: 0;
+            }
+        }
+
+        &__br {
+            @media(--mobile-lg-min) {
+                display: none;
+            }
+        }
+    }
+
+    &-pagination {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: calc($gutter-step * (-1.5));
+        margin-right: calc($gutter-step * (-1.5));
+
+        &--mobile-only {
+            @media(--mobile-lg-min) {
+                display: none;
+            }
+        }
+
+        &__switch {
+            position: static;
+            margin: 0;
+        }
+
+        &__container {
+            position: static;
+            width: auto;
+            margin: 0;
+            z-index: 4;
+        }
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        background: none;
+    }
+
+    &-anticontainer {
+        margin-left: calc($product-gutter * (-1));
+        margin-right: calc($product-gutter * (-1));
+
+        @media(--tablet-lg) {
+            margin-left: calc($gutter-step * (-3));
+            margin-right: calc($gutter-step * (-3));
+        }
+
+        @media(--tablet) {
+            margin-left: calc($gutter-step * (-2));
+            margin-right: calc($gutter-step * (-2));
+        }
+    }
+
+    &-anticontainer-tablet-lg {
+        @media(--tablet-lg) {
+            margin-left: calc($gutter-step * (-3));
+            margin-right: calc($gutter-step * (-3));
+        }
+
+        @media(--tablet) {
+            margin-left: calc($gutter-step * (-2));
+            margin-right: calc($gutter-step * (-2));
+        }
+    }
+
+    &-anticontainer-tablet {
+        @media(--tablet) {
+            margin-left: calc($gutter-step * (-2));
+            margin-right: calc($gutter-step * (-2));
+        }
+    }
+
+    &-anticontainer-mobile-lg {
+        @media(--mobile-lg) {
+            margin-left: calc($gutter-step * (-2));
+            margin-right: calc($gutter-step * (-2));
+        }
+    }
+
+    &-anticontainer-mobile {
+        @media(--mobile) {
+            margin-left: calc($gutter-step * (-2));
+            margin-right: calc($gutter-step * (-2));
+        }
+    }
+
+    /* Настройка шаблонов */
+
+    &--tabs-default {
+        &.is-active {
+            padding-left: calc($gutter-step * 4);
+        }
+
+        .swiper-slide {
+            width: auto;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: calc($gutter-step * 4);
+            height: auto;
+            margin-left: 0;
+            padding: 0 0 calc($gutter-step * 2);
+            text-align: left;
+            background-color: $cl-global-invert;
+            transition: opacity $time ease;
+        }
+
+        .swiper-button-next {
+            left: auto;
+            right: 0;
+            text-align: right;
+        }
+
+        .swiper-button-disabled {
+            opacity: 0;
+        }
+    }
+
+    /* /Настройка шаблонов */
+
+    /* Настройка конкретных каруселей */
+    &-products {
+
+        &__list-item {
+            height: auto;
+        }
+
+        /*
+         * Задаем отступы с целью корректно отобразить тени карточек
+         * Данные стили не работают на touch-устройствах и на разрешении менее 1024px
+         * По горизонтали к отступу еще прибавляем отступ .anticontainer
+         */
+        .no-touch & {
+            @media(--tablet-lg-min) {
+                $carousel-shadow-gutter: calc($gutter-step * 2);
+
+                &__container {
+                    margin-left: calc(($carousel-shadow-gutter + $product-gutter) * (-1));
+                    margin-right: calc(($carousel-shadow-gutter + $product-gutter) * (-1));
+                    padding-left: calc($carousel-shadow-gutter);
+                    padding-right: calc($carousel-shadow-gutter);
+                }
+
+                &__list-item {
+                    padding-top: $carousel-shadow-gutter;
+                    padding-bottom: $carousel-shadow-gutter;
+                }
+            }
+        }
+    }
+
+    &-watched {
+        $carousel-watched-mobile-gutter: calc($gutter-step * 1.5);
+
+        &__container {
+            margin-top: calc($gutter-step * 3);
+
+            @media(--mobile-lg) {
+                margin-left: calc($carousel-watched-mobile-gutter * (-1));
+                margin-right: calc($carousel-watched-mobile-gutter * (-1));
+            }
+        }
+
+        &__list-item {
+            @media(--mobile-lg) {
+                padding-left: $carousel-watched-mobile-gutter;
+                padding-right: $carousel-watched-mobile-gutter;
+                width: 88px;
+            }
+        }
+    }
+
+    &-homepage {
+        &__switch {
+            fill: $cl-global-invert;
+
+            @media (--tablet) {
+                display: none;
+            }
+        }
+
+        &__slide {
+            display: flex;
+            align-items: stretch;
+            height: auto;
+        }
+    }
+    /* /Настройка конкретных каруселей */
+}

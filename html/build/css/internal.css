@@ -65,9 +65,9 @@ body {
     min-height: 100vh;
     background: #fff;
 
-    font-size: 0.9375rem;
-    font-family: 'Gerbera', Arial, sans-serif;
-    line-height: 1.6;
+    font-size: 1rem;
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.5;
     color: #1D1D1D;
 
     vertical-align: top;
@@ -115,7 +115,7 @@ a:hover {
 
 strong,
 b {
-    font-weight: bold;
+    font-weight: 400;
 }
 
 strong i,
@@ -123,7 +123,7 @@ strong i,
     b i,
     b em {
         font-size: 90%;
-        font-weight: bold;
+        font-weight: 400;
         font-style: normal;
     }
 
@@ -137,7 +137,7 @@ em strong,
     em b,
     i strong,
     i b {
-        font-weight: bold;
+        font-weight: 400;
         font-style: normal;
     }
 
@@ -145,68 +145,53 @@ p {
     margin: 0 0 16px;
 }
 
+.intro-header,
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-    margin: 16px 0
+    margin: 16px 0;
+    font-family: Bernier, Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    text-transform: uppercase
 }
 
-h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
+.intro-header:first-child, h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
         margin-top: 0;
+    }
+
+.intro-header {
+    font-size: 4rem
+}
+
+@media (max-width: 1023px) {
+
+.intro-header {
+        font-size: 2rem
+}
     }
 
 h1 {
     margin-top: 0;
     font-size: 2.5rem;
-    line-height: 1.4;
-    font-weight: 500
+    line-height: 1.4
 }
-
-@media (max-width: 1479px) {
-
-h1 {
-}
-
-    }
 
 @media (max-width: 1023px) {
 
 h1 {
-}
-
-    }
-
-@media (max-width: 767px) {
-
-h1 {
-        font-size: 2rem
+        font-size: 1.75rem
 }
     }
 
 h2 {
     font-size: 2rem;
-    line-height: 1.25;
-    font-weight: 500
+    line-height: 1.25
 }
-
-@media (max-width: 1479px) {
-
-h2 {
-}
-
-    }
 
 @media (max-width: 1023px) {
-
-h2 {
-}
-
-    }
-
-@media (max-width: 767px) {
 
 h2 {
         font-size: 1.5rem
@@ -215,74 +200,39 @@ h2 {
 
 h3 {
     font-size: 1.5rem;
-    line-height: 1.33;
-    font-weight: 500
+    line-height: 1.33
 }
-
-@media (max-width: 1479px) {
-
-h3 {
-}
-
-    }
 
 @media (max-width: 1023px) {
 
 h3 {
+        font-size: 1.375rem
 }
-
-    }
-
-@media (max-width: 767px) {
-
-h3 {
-        font-size: 1.25rem
-}
-    }
-
-@media (max-width: 479px) {
-
-h3 {
-}
-
     }
 
 h4 {
-    font-size: 1.25rem;
-    line-height: 1.3;
-    font-weight: 500
+    font-size: 1.375rem;
+    line-height: 1.3
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
 
 h4 {
         font-size: 1.125rem
 }
     }
 
-h5 {
+h5,
+h6 {
     font-size: 1.125rem;
-    line-height: 1.6;
-    font-weight: 500
+    line-height: 1.6
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
 
-h5 {
-        font-size: 0.9375rem
-}
-    }
-
+h5,
 h6 {
-    font-size: 0.9375rem;
-    line-height: 1.6;
-    font-weight: bold
-}
-
-@media (max-width: 767px) {
-
-h6 {
-        font-size: 0.875rem
+        font-size: 1rem
 }
     }
 
@@ -305,7 +255,7 @@ ul li, ol li {
 q,
 blockquote {
     margin-bottom: 16px;
-    font-weight: bold;
+    font-weight: 400;
 }
 
 fieldset {
@@ -321,7 +271,8 @@ fieldset legend {
     }
 
 /*
-    This will hide the focus indicator if the element receives focus via the mouse,but it will still show up on keyboard focus.
+    This will hide the focus indicator if the element receives focus via the mouse,
+    but it will still show up on keyboard focus.
 */
 
 .js-focus-visible :focus:not(.focus-visible) {
@@ -1126,8 +1077,18 @@ input[type="submit"] {
 .fz-18 { font-size: 1.125rem; }
 
 @font-face {
-    font-family: 'Gerbera';
-    src: url('../fonts/Gerbera/gerbera.woff') format('woff');
+    font-family: 'Roboto';
+    src: url('../fonts/robotocondensed/Robotocondensed.woff2') format('woff2'),
+        url('../fonts/robotocondensed/Robotocondensed.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bernier';
+    src: url('../fonts/bernier/Bernierregular.woff2') format('woff2'),
+        url('../fonts/bernier/Bernierregular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
     font-display: swap;

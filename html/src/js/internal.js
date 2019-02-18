@@ -18,7 +18,7 @@ $(document).ready(function() {
 
 
         // Проверка touch устройств
-        isTouch: $.browser.mobile,
+        // isTouch: $.browser.mobile,
 
         lang: $('html').attr('lang')
     };
@@ -42,17 +42,17 @@ $(document).ready(function() {
 
 
     $(window).load(() => {
-        const { name } = $.browser;
+        // const { name } = $.browser;
 
-        if (name) {
-            $('html').addClass(`browser-${name}`);
-        }
+        // if (name) {
+        //     $('html').addClass(`browser-${name}`);
+        // }
 
-        if (globalOptions.isTouch) {
-            $('html').addClass('touch').removeClass('no-touch');
-        } else {
-            $('html').addClass('no-touch').removeClass('touch');
-        }
+        // if (globalOptions.isTouch) {
+        //     $('html').addClass('touch').removeClass('no-touch');
+        // } else {
+        //     $('html').addClass('no-touch').removeClass('touch');
+        // }
 
         if ($('textarea').length > 0) {
             autosize($('textarea'));

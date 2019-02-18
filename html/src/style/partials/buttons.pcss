@@ -10,7 +10,7 @@ input[type="submit"] {
 }
 
 .btn {
-    border: 1px solid transparent;
+    border: none;
     display: inline-block;
     position: relative;
     overflow: visible;
@@ -23,28 +23,34 @@ input[type="submit"] {
     vertical-align: top;
     transition: all $time ease;
 
-    /* @include button-style(
-        $cl-red,
-        $cl-hover-red,
-        $cl-hover-redn,
-        $cl-dk-grey,
+    background-color: $cl-red;
+    color: $cl-global-invert;
+    fill: $cl-global-invert;
 
-        $cl-green,
-        $cl-dk-green,
-        $cl-dk-green,
-        $cl-dk-grey,
+    &:hover,
+    &.is-hover,
+    &:focus,
+    &.is-focus,
+    &:active,
+    &.is-active {
+        background-color: $cl-hover-red;
+        color: $cl-global-invert;
+        fill: $cl-global-invert;
+    }
 
-        $cl-global-invert,
-        $cl-global-invert,
-        $cl-global-invert,
-        $cl-global-invert
-    ); */
-    @include button-size(
-        $field-height,
-        2px,
-        calc($gutter-step * 3),
-        15px
-    );
+    &.is-disabled,
+    .is-disabled &,
+    &[disabled] {
+        background-color: $cl-disabled-grey;
+        color: $cl-grey;
+        fill: $cl-grey;
+    }
+
+    height: 56px;
+    padding-right: calc($gutter-step * 3);
+    padding-left: calc($gutter-step * 3);
+    font-size: 18px;
+    line-height: 56px;
 
     &:hover,
     &.is-hover,
@@ -60,11 +66,6 @@ input[type="submit"] {
         pointer-events: none;
     }
 
-    &.pull-right,
-    &.pull-left {
-        margin-left: 0;
-    }
-
     &.btn--block {
         display: block;
         width: 100%;
@@ -75,31 +76,12 @@ input[type="submit"] {
         }
     }
 
-    &.btn--sm {
-        @include button-size(
-            $field-height-sm,
-            2px,
-            calc($gutter-step * 2),
-            15px
-        );
+    &.btn--white {
+        background-color: $cl-global-invert;
+        color: $cl-global;
+
+        &:hover {
+            background-color: $cl-hover-grey;
+        }
     }
-
-    /* &.btn--border {
-        @include button-style(
-            transparent,
-            transparent,
-            transparent,
-            transparent,
-
-            $cl-green,
-            $cl-dk-green,
-            $cl-dk-green,
-            $cl-dk-grey,
-
-            $cl-green,
-            $cl-dk-green,
-            $cl-dk-green,
-            $cl-dk-grey
-        );
-    } */
 }

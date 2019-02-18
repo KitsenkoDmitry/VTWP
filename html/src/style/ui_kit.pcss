@@ -79,23 +79,24 @@
     display: flex;
     position: relative;
     flex-wrap: wrap;
+    justify-content: space-between;
 
     &__col {
-        lost-column: 1/2 flex;
+        width: 45%;
 
         @media (--tablet-lg) {
-            lost-column: 1/1 flex;
+            width: 100$;
         }
 
         &--1of4 {
-            lost-column: 1/4 flex;
+            width: 22%;
 
             @media (--tablet-lg) {
-                lost-column: 1/2 flex;
+                width: 45%;
             }
 
             @media (--tablet) {
-                lost-column: 1/1 flex;
+                width: 100%;
             }
         }
     }

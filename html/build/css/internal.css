@@ -28,8 +28,6 @@
 
 /* Миксины */
 
-/* Стиль и размер кнопок */
-
 /* Стиль и размер элементов форм */
 
 /* Очистка потока для блоков с плавающими элементами */
@@ -49,7 +47,6 @@
 
 *::-webkit-scrollbar-thumb {
         background-color: #ccc;
-        cursor: pointer;
     }
 
 html,
@@ -89,11 +86,6 @@ body::before {
         opacity: 0;
         visibility: hidden;
     }
-
-body.has-overlay::before {
-            opacity: 1;
-            visibility: visible;
-        }
 
 img {
     max-width: 100%;
@@ -154,8 +146,8 @@ h5,
 h6 {
     margin: 16px 0;
     font-family: Bernier, Arial, Helvetica, sans-serif;
-    font-weight: 400;
-    text-transform: uppercase
+    text-transform: lowercase;
+    font-weight: 400
 }
 
 .intro-header:first-child, h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
@@ -764,7 +756,7 @@ input[type="submit"] {
 }
 
 .btn {
-    border: 1px solid transparent;
+    border: none;
     display: inline-block;
     position: relative;
     overflow: visible;
@@ -777,30 +769,38 @@ input[type="submit"] {
     vertical-align: top;
     transition: all 200ms ease;
 
-    /* @include button-style(
-        $cl-red,
-        $cl-hover-red,
-        $cl-hover-redn,
-        $cl-dk-grey,
+    background-color: #ff3300;
+    color: #fff;
+    fill: #fff
+}
 
-        $cl-green,
-        $cl-dk-green,
-        $cl-dk-green,
-        $cl-dk-grey,
+.btn:hover,
+    .btn.is-hover,
+    .btn:focus,
+    .btn.is-focus,
+    .btn:active,
+    .btn.is-active {
+        background-color: #ff2d00;
+        color: #fff;
+        fill: #fff;
+    }
 
-        $cl-global-invert,
-        $cl-global-invert,
-        $cl-global-invert,
-        $cl-global-invert
-    ); */
-    border-width: 2px;
-    height: 48px;
+.btn {
+
+    height: 56px;
     padding-right: 24px;
     padding-left: 24px;
-    font-size: 0.9375rem;
-    line-height: 2.75rem
-    /* line-height: $height; */
+    font-size: 1.125rem;
+    line-height: 3.5rem;
 }
+
+.btn.is-disabled,
+    .is-disabled .btn,
+    .btn[disabled] {
+        background-color: #ccc;
+        color: #999;
+        fill: #999;
+    }
 
 .btn:hover,
     .btn.is-hover,
@@ -816,11 +816,6 @@ input[type="submit"] {
         pointer-events: none;
     }
 
-.btn.pull-right,
-    .btn.pull-left {
-        margin-left: 0;
-    }
-
 .btn.btn--block {
         display: block;
         width: 100%;
@@ -831,37 +826,14 @@ input[type="submit"] {
             margin-left: 0;
         }
 
-.btn.btn--sm {
-    border-width: 2px;
-    height: 40px;
-    padding-right: 16px;
-    padding-left: 16px;
-    font-size: 0.9375rem;
-    line-height: 2.25rem;
-    /* line-height: $height; */
+.btn.btn--white {
+        background-color: #fff;
+        color: #1D1D1D
     }
 
-.btn {
-
-    /* &.btn--border {
-        @include button-style(
-            transparent,
-            transparent,
-            transparent,
-            transparent,
-
-            $cl-green,
-            $cl-dk-green,
-            $cl-dk-green,
-            $cl-dk-grey,
-
-            $cl-green,
-            $cl-dk-green,
-            $cl-dk-green,
-            $cl-dk-grey
-        );
-    } */
-}
+.btn.btn--white:hover {
+            background-color: #e0e0e0;
+        }
 
 .ul-list {
     margin-bottom: 16px;

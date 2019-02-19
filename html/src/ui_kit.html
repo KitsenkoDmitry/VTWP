@@ -1,10 +1,13 @@
 @@include('template/head.html')
-<body>
+<body style="background-color: white; color: #1D1D1D">
     @@include('template/old_ie_update.html')
 
     @@include('img/svg/sprite.svg')
 
-    @@include('template/header.html')
+    @@include('template/header.html', {
+        "isUiKit": true,
+        "isIndexPage": false
+    })
 
     <main class="wrap-main ui-kit-main">
 
@@ -30,10 +33,15 @@
                     <svg class="icon icon--menu"><use xlink:href="#icon-menu"></use></svg>
                     <svg class="icon icon--plus"><use xlink:href="#icon-plus"></use></svg>
                     <svg class="icon icon--minus"><use xlink:href="#icon-minus"></use></svg>
-                    <svg class="icon icon--question"><use xlink:href="#icon-question"></use></svg>
                     <span style="background: black; display: inline-block; padding: 3px;">
+                        <svg class="icon icon--question"><use xlink:href="#icon-question"></use></svg>
                         <svg class="icon icon--delete"><use xlink:href="#icon-delete"></use></svg>
                     </span>
+                </p>
+
+                <p class="ui-kit-desc">Лого</p>
+                <p style="background: black; display: inline-block; padding: 3px;">
+                    <svg class="icon icon--logo"><use xlink:href="#icon-logo"></use></svg>
                 </p>
 
                 <p class="ui-kit-desc">Социальные значки</p>
@@ -137,29 +145,6 @@
                     Roboto Condensed Regular 16px / 1.5
                     <br>
                     Задача организации, в особенности же <a href="javascript:;">обычная ссылка</a>   постоянное информационно-пропагандистское обеспечение нашей деятельности в значительной степени обуславливает создание позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянное информационно-пропагандистское обеспечение нашей деятельности влечет за собой процесс внедрения и модернизации соответствующий условий активизации.
-                </p>
-
-                <p class="ui-kit-desc mb-0">Fieldset</p>
-                <fieldset>
-                    <legend>Fieldset</legend>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste molestias quos eum labore, ipsum dolorum dolores culpa cupiditate nulla ex, eveniet sit reprehenderit, repellendus nemo suscipit, hic enim recusandae. Doloribus?
-                </fieldset>
-                <br>
-
-                <p class="ui-kit-desc mb-0">Цитата</p>
-                <q>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi repudiandae quo voluptate beatae dolore, sed. Harum blanditiis, sit illum ut nulla quis similique quo ab sunt distinctio minus, vero natus?</q>
-                <br><br>
-
-                <p class="ui-kit-desc mb-0">Линия</p>
-                <hr>
-
-                <p class="ui-kit-desc mb-0">Цена</p>
-                <p>
-                    <span class="price">5 123 ₽</span> <br>
-                    <span class="price price--new">5 123 ₽</span>
-                    <span class="price price--old">4 123 ₽</span>
-                    <span class="price-dif">1&nbsp;000&nbsp;₽ чистой экономии!</span> <br>
-                    <span class="price-cb">450&nbsp;₽&nbsp;кэшбек на&nbsp;карту «Твой Дом»!</span>
                 </p>
             </div>
         </section>

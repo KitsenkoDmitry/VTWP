@@ -1,3 +1,45 @@
 .header {
+    padding: calc($gutter-step * 4) 0 calc($gutter-step * 10);
 
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+        &__col {
+            width: calc((100% - ($gutter-step * 4)*2)/3);
+
+            @media (--desktop-sm) {
+                flex-grow: 1;
+            }
+
+            &--logo {
+                text-align: center;
+
+                @media (--desktop-sm) {
+                    flex-grow: 0;
+                    width: 250px;
+                }
+            }
+
+            &-top {
+                padding-top: $gutter-step;
+                margin-bottom: calc($gutter-step * 3);
+
+                &--right {
+                    text-align: right;
+                }
+            }
+
+            &-menu {
+                display: flex;
+                justify-content: space-between;
+                font-size: 18px;
+            }
+        }
+
+        &__logo {
+            display: inline-block;
+            vertical-align: top;
+        }
 }

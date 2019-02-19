@@ -1,0 +1,19 @@
+.qt {
+    margin-left: $gutter-step;
+    display: inline-block;
+    vertical-align: middle;
+    min-width: 25px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+    color: $cl-global;
+    text-align: center;
+    border-radius: 50%;
+    background-color: $cl-global-invert;
+    transition: all $time ease-in-out;
+
+    .link:hover & {
+        color: $cl-global-invert;
+        background-color: $cl-red;
+    }
+}

@@ -58,12 +58,12 @@ body {
     flex-direction: column;
     width: 100vw;
     min-height: 100vh;
-    background: #fff;
+    background: #111;
 
     font-size: 1rem;
     font-family: Roboto, Arial, Helvetica, sans-serif;
     line-height: 1.5;
-    color: #1D1D1D;
+    color: #fff;
 
     vertical-align: top;
     -webkit-backface-visibility: hidden;
@@ -889,7 +889,7 @@ input[type="submit"] {
     line-height: 0;
     text-align: center;
     vertical-align: middle;
-    transition: all 200ms ease-in-out;
+    transition: fill 200ms ease-in-out;
 }
 
 .icon--back {
@@ -974,6 +974,11 @@ input[type="submit"] {
         height: 24px;
     }
 
+.icon--logo {
+        width: 176px;
+        height: 123px;
+    }
+
 .link {
     position: relative;
     display: inline-block;
@@ -982,7 +987,7 @@ input[type="submit"] {
     fill: #ff3300;
     cursor: pointer;
     text-decoration: none;
-    transition: fill 200ms ease-in-out
+    transition: all 200ms ease-in-out
 }
 
 .link:hover {
@@ -1021,10 +1026,27 @@ input[type="submit"] {
             margin-right: 10px;
         }
 
-.clearfix::after {
-        content: '';
-        display: block;
-        clear: both;
+.browse-happy {
+    background: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.browse-happy strong {
+        color: red;
+    }
+
+.browse-happy__notice {
+        font-size: 1.25rem;
+    }
+
+.browse-happy__security,
+    .browse-happy__recommend  {
+        font-size: 0.75rem;
+    }
+
+.browse-happy__update {
+        font-size: 0.875rem;
     }
 
 /* Text-align */
@@ -1068,6 +1090,26 @@ input[type="submit"] {
     font-style: normal;
     font-display: swap;
 }
+
+.qt {
+    margin-left: 8px;
+    display: inline-block;
+    vertical-align: middle;
+    min-width: 25px;
+    height: 25px;
+    line-height: 1.5625rem;
+    font-size: 0.75rem;
+    color: #1D1D1D;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: all 200ms ease-in-out;
+}
+
+.link:hover .qt {
+        color: #fff;
+        background-color: #ff3300;
+    }
 
 /* Spacings
    Использование: добавляются классы .m-0 .m-xl .mt-xs .mv-l и т.д. (аналогично с padding)
@@ -1499,8 +1541,56 @@ input[type="submit"] {
     }
 
 .header {
-
+    padding: 32px 0 80px;
 }
+
+.header__container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+.header__col {
+            width: calc(33.33333% - 21.33333px)
+        }
+
+@media (max-width: 1279px) {
+
+        .header__col {
+                flex-grow: 1
+        }
+            }
+
+.header__col--logo {
+                text-align: center
+            }
+
+@media (max-width: 1279px) {
+
+            .header__col--logo {
+                    flex-grow: 0;
+                    width: 250px
+            }
+                }
+
+.header__col-top {
+                padding-top: 8px;
+                margin-bottom: 24px;
+            }
+
+.header__col-top--right {
+                    text-align: right;
+                }
+
+.header__col-menu {
+                display: flex;
+                justify-content: space-between;
+                font-size: 1.125rem;
+            }
+
+.header__logo {
+            display: inline-block;
+            vertical-align: top;
+        }
 
 .footer {
 
@@ -1666,20 +1756,20 @@ input[type="submit"] {
     min-width: 320px;
     max-width: 1600px;
     margin: 0 auto;
-    padding: 0 40px
+    padding: 0 calc(7.14286% - 7.42857px)
 }
+
+@media (max-width: 1279px) {
+
+.container {
+        padding: 0 32px
+}
+    }
 
 @media (max-width: 1023px) {
 
 .container {
         padding: 0 24px
-}
-    }
-
-@media (max-width: 767px) {
-
-.container {
-        padding: 0 16px
 }
     }
 
@@ -1691,32 +1781,6 @@ input[type="submit"] {
             margin: 0 0 32px 0;
             text-align: center;
         }
-
-.browse-happy {
-    background: #fff;
-    padding: 20px 0;
-    text-align: center;
-}
-
-.browse-happy strong {
-        color: red;
-    }
-
-.browse-happy__notice {
-        font-size: 1.25rem;
-    }
-
-.browse-happy__security {
-        font-size: 0.75rem;
-    }
-
-.browse-happy__update {
-        font-size: 0.875rem;
-    }
-
-.browse-happy__recommend {
-        font-size: 0.75rem;
-    }
 
 .hidden {
     display: none;

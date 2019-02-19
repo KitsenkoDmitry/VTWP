@@ -1,103 +1,46 @@
 .link {
-    display: inline-block;
     position: relative;
+    display: inline-block;
+    vertical-align: top;
     color: $cl-red;
     fill: $cl-red;
     cursor: pointer;
-    transition: all $time ease;
+    text-decoration: none;
+    transition: fill $time ease-in-out;
 
     &:hover {
-        border-color: $cl-hover-red;
         color: $cl-hover-red;
         fill: $cl-hover-red;
     }
 
+    &--bernier {
+        font-family: $bernier;
+        text-tranform: lowercase;
+    }
+
+    &--grey {
+        color: $cl-grey;
+    }
+
+    &--white {
+        color: $cl-global-invert;
+    }
+
     &--black {
-        border-color: $cl-global;
         color: $cl-global;
         fill: $cl-global;
 
         &:hover {
-            border-color: $cl-red;
             color: $cl-red;
             fill: $cl-red;
         }
     }
 
-
-
-    &--dotted {
-        border-bottom: 1px dotted $cl-red;
-
-        &:hover {
-            border-color: $cl-hover-red;
-            text-decoration: none;
-
-            .link__dotted {
-                border-color: $cl-hover-red;
-            }
-        }
-
-        &.link--grey {
-            border-color: $cl-hover-grey;
-
-            &:hover {
-                border-color: $cl-red;
-            }
-        }
-    }
-
-        &__dotted {
-            border-bottom: 1px dotted $cl-red;
-            display: inline-block;
-            position: relative;
-            line-height: 1.2;
-        }
-
-    &--icon {
-        border-color: transparent;
-
-        &:hover {
-            border-color: transparent;
-        }
-    }
-
-    &--show-more {
-        display: inline-flex;
-        align-items: center;
-        flex-direction: column;
+    &--icon-left {
+        transition: none;
 
         .icon {
-            margin-right: 0;
-            margin-bottom: calc($gutter-step * 2);
+            margin-right: 10px;
         }
-    }
-
-    &[disabled],
-    &.is-disabled,
-    .is-disabled &,
-    &[disabled]:hover,
-    &.is-disabled:hover,
-    .is-disabled &:hover {
-        border-color: rgba($cl-grey, 0.5);
-        color: rgba($cl-grey, 0.5);
-        fill: rgba($cl-grey, 0.5);
-        cursor: default;
-
-        &.link--icon {
-            border-color: transparent;
-        }
-
-        .link__dotted,
-        .link__line {
-            border-color: rgba($cl-grey, 0.5);
-        }
-    }
-
-    &__hidden-text {
-        text-align: left;
-        text-indent: -9999px;
-        font-size: 0;
-        line-height: 0;
     }
 }

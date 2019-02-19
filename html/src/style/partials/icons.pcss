@@ -5,16 +5,87 @@
     line-height: 0;
     text-align: center;
     vertical-align: middle;
-    transition: color $time ease,
-                background-color $time ease,
-                border-color $time ease,
-                opacity $time ease;
+    transition: all $time ease-in-out;
 
-    .btn & {
-        margin: -3px calc($gutter-step * 2) 0 calc(-$gutter-step * 2);
+    &--back {
+        width: 24px;
+        height: 16px;
+        transition: none;
     }
 
-    .link & {
-        margin: -3px calc($gutter-step / 2) 0 0;
+    &--done {
+        width: 13px;
+        height: 13px;
+    }
+
+    &--arrow-down {
+        width: 8px;
+        height: 5px;
+    }
+
+    &--arrow-next {
+        width: 5px;
+        height: 8px;
+    }
+
+    &--filter {
+        width: 18px;
+        height: 17px;
+    }
+
+    &--date {
+        width: 18px;
+        height: 16px;
+    }
+
+    &--close {
+        width: 24px;
+        height: 24px;
+    }
+
+    &--menu {
+        width: 24px;
+        height: 14px;
+    }
+
+    &--plus {
+        width: 16px;
+        height: 16px;
+    }
+
+    &--minus {
+        width: 16px;
+        height: 2px;
+    }
+
+    &--question,
+    &--delete {
+        width: 20px;
+        height: 20px;
+    }
+
+    &--insta {
+        width: 24px;
+        height: 24px;
+    }
+
+    &--tw {
+        width: 24px;
+        height: 20px;
+    }
+
+    &--vk {
+        width: 26px;
+        height: 15px;
+    }
+
+    &--ok {
+        width: 14px;
+        height: 24px;
+    }
+
+    &--fb {
+        width: 12px;
+        height: 24px;
     }
 }

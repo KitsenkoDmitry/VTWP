@@ -14,14 +14,20 @@ input[type="submit"] {
     display: inline-block;
     position: relative;
     overflow: visible;
-    clear: both;
     margin: 0 0 calc($gutter-step * 2) 0;
     padding: 0;
-    font-family: inherit;
+    font-family: $bernier;
     text-decoration: none;
     text-align: center;
+    text-transform: lowercase;
     vertical-align: top;
     transition: all $time ease;
+
+    height: 56px;
+    padding-right: calc($gutter-step * 3);
+    padding-left: calc($gutter-step * 3);
+    font-size: 18px;
+    line-height: 56px;
 
     background-color: $cl-red;
     color: $cl-global-invert;
@@ -41,27 +47,9 @@ input[type="submit"] {
     &.is-disabled,
     .is-disabled &,
     &[disabled] {
-        background-color: $cl-disabled-grey;
-        color: $cl-grey;
-        fill: $cl-grey;
-    }
-
-    height: 56px;
-    padding-right: calc($gutter-step * 3);
-    padding-left: calc($gutter-step * 3);
-    font-size: 18px;
-    line-height: 56px;
-
-    &:hover,
-    &.is-hover,
-    &:focus,
-    &.is-focus {
-        text-decoration: none;
-    }
-
-    &.is-disabled,
-    .is-disabled &,
-    &[disabled] {
+        background-color: $cl-hover-grey;
+        color: $cl-disabled-grey;
+        fill: $cl-disabled-grey;
         cursor: default;
         pointer-events: none;
     }
@@ -83,5 +71,19 @@ input[type="submit"] {
         &:hover {
             background-color: $cl-hover-grey;
         }
+
+        &.is-disabled,
+        .is-disabled &,
+        &[disabled] {
+            background-color: $cl-hover-grey;
+            color: $cl-disabled-grey;
+            fill: $cl-disabled-grey;
+        }
+    }
+
+    &.btn--lg {
+        height: 80px;
+        font-size: 22px;
+        padding: 0 calc($gutter-step * 5);
     }
 }

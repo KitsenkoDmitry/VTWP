@@ -30,8 +30,6 @@
 
 /* Стиль и размер элементов форм */
 
-/* Очистка потока для блоков с плавающими элементами */
-
 /* Базовые стили */
 
 * {
@@ -63,7 +61,7 @@ body {
     background: #fff;
 
     font-size: 1rem;
-    font-family: 'Roboto', Arial, sans-serif;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
     line-height: 1.5;
     color: #1D1D1D;
 
@@ -760,14 +758,20 @@ input[type="submit"] {
     display: inline-block;
     position: relative;
     overflow: visible;
-    clear: both;
     margin: 0 0 16px 0;
     padding: 0;
-    font-family: inherit;
+    font-family: Bernier, Arial, Helvetica, sans-serif;
     text-decoration: none;
     text-align: center;
+    text-transform: lowercase;
     vertical-align: top;
     transition: all 200ms ease;
+
+    height: 56px;
+    padding-right: 24px;
+    padding-left: 24px;
+    font-size: 1.125rem;
+    line-height: 3.5rem;
 
     background-color: #ff3300;
     color: #fff;
@@ -785,33 +789,12 @@ input[type="submit"] {
         fill: #fff;
     }
 
-.btn {
-
-    height: 56px;
-    padding-right: 24px;
-    padding-left: 24px;
-    font-size: 1.125rem;
-    line-height: 3.5rem;
-}
-
 .btn.is-disabled,
     .is-disabled .btn,
     .btn[disabled] {
-        background-color: #ccc;
-        color: #999;
-        fill: #999;
-    }
-
-.btn:hover,
-    .btn.is-hover,
-    .btn:focus,
-    .btn.is-focus {
-        text-decoration: none;
-    }
-
-.btn.is-disabled,
-    .is-disabled .btn,
-    .btn[disabled] {
+        background-color: #e0e0e0;
+        color: #ccc;
+        fill: #ccc;
         cursor: default;
         pointer-events: none;
     }
@@ -834,6 +817,20 @@ input[type="submit"] {
 .btn.btn--white:hover {
             background-color: #e0e0e0;
         }
+
+.btn.btn--white.is-disabled,
+        .is-disabled .btn.btn--white,
+        .btn.btn--white[disabled] {
+            background-color: #e0e0e0;
+            color: #ccc;
+            fill: #ccc;
+        }
+
+.btn.btn--lg {
+        height: 80px;
+        font-size: 1.375rem;
+        padding: 0 40px;
+    }
 
 .ul-list {
     margin-bottom: 16px;
@@ -892,131 +889,137 @@ input[type="submit"] {
     line-height: 0;
     text-align: center;
     vertical-align: middle;
-    transition: color 200ms ease,
-                background-color 200ms ease,
-                border-color 200ms ease,
-                opacity 200ms ease;
+    transition: all 200ms ease-in-out;
 }
 
-.btn .icon {
-        margin: -3px 16px 0 -16px;
+.icon--back {
+        width: 24px;
+        height: 16px;
+        transition: none;
     }
 
-.link .icon {
-        margin: -3px 4px 0 0;
+.icon--done {
+        width: 13px;
+        height: 13px;
+    }
+
+.icon--arrow-down {
+        width: 8px;
+        height: 5px;
+    }
+
+.icon--arrow-next {
+        width: 5px;
+        height: 8px;
+    }
+
+.icon--filter {
+        width: 18px;
+        height: 17px;
+    }
+
+.icon--date {
+        width: 18px;
+        height: 16px;
+    }
+
+.icon--close {
+        width: 24px;
+        height: 24px;
+    }
+
+.icon--menu {
+        width: 24px;
+        height: 14px;
+    }
+
+.icon--plus {
+        width: 16px;
+        height: 16px;
+    }
+
+.icon--minus {
+        width: 16px;
+        height: 2px;
+    }
+
+.icon--question,
+    .icon--delete {
+        width: 20px;
+        height: 20px;
+    }
+
+.icon--insta {
+        width: 24px;
+        height: 24px;
+    }
+
+.icon--tw {
+        width: 24px;
+        height: 20px;
+    }
+
+.icon--vk {
+        width: 26px;
+        height: 15px;
+    }
+
+.icon--ok {
+        width: 14px;
+        height: 24px;
+    }
+
+.icon--fb {
+        width: 12px;
+        height: 24px;
     }
 
 .link {
-    display: inline-block;
     position: relative;
+    display: inline-block;
+    vertical-align: top;
     color: #ff3300;
     fill: #ff3300;
     cursor: pointer;
-    transition: all 200ms ease
+    text-decoration: none;
+    transition: fill 200ms ease-in-out
 }
 
 .link:hover {
-        border-color: #ff2d00;
         color: #ff2d00;
         fill: #ff2d00;
     }
 
+.link--bernier {
+        font-family: Bernier, Arial, Helvetica, sans-serif;
+        text-tranform: lowercase;
+    }
+
+.link--grey {
+        color: #999;
+    }
+
+.link--white {
+        color: #fff;
+    }
+
 .link--black {
-        border-color: #1D1D1D;
         color: #1D1D1D;
         fill: #1D1D1D
     }
 
 .link--black:hover {
-            border-color: #ff3300;
             color: #ff3300;
             fill: #ff3300;
         }
 
-.link--dotted {
-        border-bottom: 1px dotted #ff3300
+.link--icon-left {
+        transition: none;
     }
 
-.link--dotted:hover {
-            border-color: #ff2d00;
-            text-decoration: none;
+.link--icon-left .icon {
+            margin-right: 10px;
         }
-
-.link--dotted:hover .link__dotted {
-                border-color: #ff2d00;
-            }
-
-.link--dotted.link--grey {
-            border-color: #e0e0e0
-        }
-
-.link--dotted.link--grey:hover {
-                border-color: #ff3300;
-            }
-
-.link__dotted {
-            border-bottom: 1px dotted #ff3300;
-            display: inline-block;
-            position: relative;
-            line-height: 1.2;
-        }
-
-.link--icon {
-        border-color: transparent
-    }
-
-.link--icon:hover {
-            border-color: transparent;
-        }
-
-.link--show-more {
-        display: inline-flex;
-        align-items: center;
-        flex-direction: column;
-    }
-
-.link--show-more .icon {
-            margin-right: 0;
-            margin-bottom: 16px;
-        }
-
-.link[disabled],
-    .link.is-disabled,
-    .is-disabled .link,
-    .link[disabled]:hover,
-    .link.is-disabled:hover,
-    .is-disabled .link:hover {
-        border-color: rgba(153, 153, 153, .5);
-        color: rgba(153, 153, 153, .5);
-        fill: rgba(153, 153, 153, .5);
-        cursor: default
-    }
-
-.link[disabled].link--icon, .link.is-disabled.link--icon, .is-disabled .link.link--icon, .link[disabled]:hover.link--icon, .link.is-disabled:hover.link--icon, .is-disabled .link:hover.link--icon {
-            border-color: transparent;
-        }
-
-.link[disabled] .link__dotted,
-        .link[disabled] .link__line,
-        .link.is-disabled .link__dotted,
-        .link.is-disabled .link__line,
-        .is-disabled .link .link__dotted,
-        .is-disabled .link .link__line,
-        .link[disabled]:hover .link__dotted,
-        .link[disabled]:hover .link__line,
-        .link.is-disabled:hover .link__dotted,
-        .link.is-disabled:hover .link__line,
-        .is-disabled .link:hover .link__dotted,
-        .is-disabled .link:hover .link__line {
-            border-color: rgba(153, 153, 153, .5);
-        }
-
-.link__hidden-text {
-        text-align: left;
-        text-indent: -9999px;
-        font-size: 0;
-        line-height: 0;
-    }
 
 .clearfix::after {
         content: '';

@@ -2,7 +2,10 @@
     <div class="header__container container">
         <div class="header__col">
             <p class="header__col-top">
-                <a href="tel:74994091101" class="link link--grey">+7 499 409-1101</a>
+                <a href="tel:74994091101" class="header__col-tel link link--grey">+7 499 409-1101</a>
+                <button type="button" class="header__col-menu-btn js-menu-btn">
+                    <svg class="icon icon--menu"><use xlink:href="#icon-menu"></use></svg>
+                </button>
             </p>
             <div class="header__col-menu">
                 <a href="javascript:;" class="link link--bernier link--white">Магазин</a>
@@ -11,14 +14,14 @@
             </div>
         </div>
         <div class="header__col header__col--logo">
-            <a @@if(!isIndexPage){href=""} class="header__logo">
+            <a @@if(!isIndexPage){href="index.html"} class="header__logo">
                 <svg class="icon icon--logo"><use xlink:href="#icon-logo"></use></svg>
             </a>
         </div>
         <div class="header__col">
             <p class="header__col-top header__col-top--right">
-                <a href="javascript:;" class="link link--white">
-                    Корзина
+                <a href="javascript:;" class="header__col-cart link link--white">
+                    <span class="header__col-cart-text">Корзина</span>
                     <span class="qt">3</span>
                 </a>
             </p>
@@ -29,4 +32,5 @@
             </div>
         </div>
     </div>
+    @@include('mobile_menu.html')
 </header>

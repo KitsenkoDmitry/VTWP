@@ -420,45 +420,6 @@
 
     @@include('template/footer.html')
 
-
-
-    <!-- Start ui kit sidebar -->
-    <!-- Этот сайдбар только для навигации в ките. Автособираемый -->
-    <button class="ui-kit-sidebar-open js-open-ui-sidebar" title="Навигация по UI Kit"><span>Навигация по UI Kit</span></button>
-    <div class="ui-kit-sidebar js-ui-sidebar">
-        <div class="ui-kit-sidebar__content">
-            <button class="ui-kit-sidebar__close js-close-ui-sidebar" title="Закрыть"><svg class="icon icon--cross"><use xlink:href="#icon-cross"></use></svg></button>
-            <p class="ui-kit-sidebar__hl">UI Kit навигация</p>
-            <div class="ui-kit-sidebar__scroll">
-                <ul class="ul-list js-ui-sidebar-list"></ul>
-            </div>
-        </div>
-    </div>
-    <script>
-        const $sidebar = $('.js-ui-sidebar-list');
-        const $items = $('.ui-kit-section');
-        $items.each(function(index, item) {
-            const id = $(item).attr('id');
-            const text = $(item).find('.ui-kit-section__hl').text();
-            $sidebar.append('<li><a href="#' + id + '">' + text + '</a></li>')
-        });
-        $(document).on('click', '.js-open-ui-sidebar', function() {
-            $('.js-ui-sidebar').addClass('is-visible');
-        }).on('click', '.js-close-ui-sidebar', function() {
-            $('.js-ui-sidebar').removeClass('is-visible');
-        }).on('click', '.js-ui-sidebar a', function() {
-            $('.js-ui-sidebar').removeClass('is-visible');
-        }).on('keydown', function (e) {
-            if ( e.keyCode === 27 ) {
-                $('.js-ui-sidebar').removeClass('is-visible');
-            }
-        }).on('click', '.js-ui-sidebar', function(e) {
-            if($(e.target).closest('.ui-kit-sidebar__content').length) return;
-            $('.js-ui-sidebar').removeClass('is-visible');
-        });
-    </script>
-    <!-- /End ui kit sidebar -->
-
     @@include('template/foot.html')
 </body>
 </html>

@@ -44,6 +44,7 @@
  .ui-kit-section__hl {
         position: relative;
         margin: 0 0 16px 0;
+        font-size: 32px;
         font-size: 2rem;
         font-weight: bold;
         padding-right: 60px
@@ -73,8 +74,10 @@
     }
 
  .ui-kit-colors {
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 
  .ui-kit-colors__col {
@@ -84,9 +87,12 @@
     }
 
  .ui-kit-colors__name {
+            display: -ms-flexbox;
             display: flex;
-            align-items: center;
-            justify-content: center;
+            -ms-flex-align: center;
+                align-items: center;
+            -ms-flex-pack: center;
+                justify-content: center;
             text-transform: lowercase;
             text-align: center;
             width: 120px;
@@ -96,16 +102,20 @@
 
  .ui-kit-colors__desc {
             color: #999;
+            font-size: 14px;
             font-size: 0.875rem;
             text-align: center;
             margin-bottom: 0;
         }
 
  .ui-kit-cols {
+    display: -ms-flexbox;
     display: flex;
     position: relative;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
 }
 
  .ui-kit-cols__col {
@@ -138,147 +148,9 @@
             }
 
  .ui-kit-desc {
+    font-size: 11px;
     font-size: 0.6875rem;
     opacity: .6;
 }
-
- .ui-kit-table {
-    width: 75%
-}
-
- @media (max-width: 1479px) {
-
- .ui-kit-table {
-        width: 100%
-}
-    }
-
- .ui-kit-sidebar {
-    background: rgba(0, 0, 0, .5);
-    display: none;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 10000
-}
-
- .ui-kit-sidebar.is-visible {
-        display: block;
-    }
-
- .ui-kit-sidebar-open {
-        background: #ccc;
-        box-shadow: 0 0 10px rgba(0, 0, 0, .3);
-        position: fixed;
-        top: 50%;
-        left: 0;
-        transform: translateY(-50%);
-        width: 32px;
-        height: 32px;
-        font-size: 0;
-        line-height: 0;
-        cursor: pointer;
-        z-index: 9999;
-    }
-
- .ui-kit-sidebar-open span {
-            background: #000;
-            display: inline-block;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 16px;
-            height: 4px;
-            text-indent: -9999px
-        }
-
- .ui-kit-sidebar-open span::before,
-            .ui-kit-sidebar-open span::after {
-                content: '';
-                background: #000;
-                display: inline-block;
-                position: absolute;
-                left: 0;
-                width: 16px;
-                height: 4px;
-            }
-
- .ui-kit-sidebar-open span::before {
-                top: -8px;
-            }
-
- .ui-kit-sidebar-open span::after {
-                bottom: -8px;
-            }
-
- .ui-kit-sidebar__content {
-        background: #fff;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        width: 300px;
-        padding: 16px;
-    }
-
- .ui-kit-sidebar__hl {
-            margin-bottom: 24px;
-            font-weight: bold;
-            line-height: 1;
-        }
-
- .ui-kit-sidebar__scroll {
-            overflow-x: hidden;
-            overflow: auto;
-            position: absolute;
-            top: 56px;
-            right: 16px;
-            bottom: 16px;
-            left: 16px;
-        }
-
- .ui-kit-sidebar__close {
-            position: absolute;
-            top: 16px;
-            right: 16px;
-            width: 16px;
-            height: 16px;
-            font-size: 0;
-            cursor: pointer;
-        }
-
- .ui-kit-sidebar__close .icon {
-                width: 16px;
-                height: 16px;
-            }
-
- @media(max-width: 1599px) {
-                .ui-kit-products .products-list__item:nth-child(4n+1):nth-last-child(-n+4):not(:nth-last-child(4)),
-                .ui-kit-products .products-list__item:nth-child(4n+1):nth-last-child(-n+4):not(:nth-last-child(4)) ~ .products-list__item {
-                    display: none;
-                }
-            }
-
- @media(max-width: 1279px) {
-                .ui-kit-products .products-list__item:nth-child(3n+1):nth-last-child(-n+3):not(:nth-last-child(3)),
-                .ui-kit-products .products-list__item:nth-child(3n+1):nth-last-child(-n+3):not(:nth-last-child(3)) ~ .products-list__item {
-                    display: none;
-                }
-            }
-
- @media(max-width: 1023px) {
-                .ui-kit-products .products-list__item:not(:nth-child(-n + 2)) {
-                    display: none;
-                }
-            }
-
- @media(max-width: 639px) {
-                .ui-kit-products .products-list__item:not(:first-child) {
-                    display: none;
-                }
-            }
 
 /*# sourceMappingURL=ui_kit.css.map */

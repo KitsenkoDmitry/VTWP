@@ -13,7 +13,6 @@
 @@include('../../node_modules/jquery-ui/ui/datepicker.js')
 @@include('../../node_modules/jquery-ui/ui/i18n/datepicker-ru.js')
 @@include('../../node_modules/tippy.js/dist/tippy.min.js')
-@@include('../../node_modules/focus-visible/dist/focus-visible.min.js')
 @@include('../../node_modules/jquery.inputmask/dist/jquery.inputmask.bundle.js')
 @@include('../../node_modules/select2/dist/js/select2.full.js')
 @@include('../../node_modules/swiper/dist/js/swiper.min.js')

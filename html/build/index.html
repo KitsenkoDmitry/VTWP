@@ -46,8 +46,8 @@
     			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.576 0l1.39 1.468-5.203 5.494H24v2.076H3.763l5.204 5.494L7.577 16 0 8l7.576-8z"></path>
     		</symbol>
 	
-    		<symbol id="icon-close" viewBox="0 0 40 40">
-    			<path d="M20 21.429l9.286 9.285 1.428-1.428L21.43 20l9.285-9.286-1.428-1.428L20 18.57l-9.286-9.285-1.428 1.428L18.57 20l-9.285 9.286 1.428 1.428L20 21.43z"></path>
+    		<symbol id="icon-close" viewBox="0 0 27 27">
+    			<path fill-rule="evenodd" d="M26.993 25.483l-1.416 1.415L13.546 14.87 1.515 26.898.1 25.483l12.031-12.028L.1 1.428 1.515.013l12.031 12.028L25.577.013l1.416 1.415-12.031 12.027 12.031 12.028z"></path>
     		</symbol>
 	
     		<symbol id="icon-date" viewBox="0 0 18 16">
@@ -113,7 +113,10 @@
         <div class="header__container container">
             <div class="header__col">
                 <p class="header__col-top">
-                    <a href="tel:74994091101" class="link link--grey">+7 499 409-1101</a>
+                    <a href="tel:74994091101" class="header__col-tel link link--grey">+7 499 409-1101</a>
+                    <button type="button" class="header__col-menu-btn js-menu-btn">
+                        <svg class="icon icon--menu"><use xlink:href="#icon-menu"></use></svg>
+                    </button>
                 </p>
                 <div class="header__col-menu">
                     <a href="javascript:;" class="link link--bernier link--white">Магазин</a>
@@ -128,8 +131,8 @@
             </div>
             <div class="header__col">
                 <p class="header__col-top header__col-top--right">
-                    <a href="javascript:;" class="link link--white">
-                        Корзина
+                    <a href="javascript:;" class="header__col-cart link link--white">
+                        <span class="header__col-cart-text">Корзина</span>
                         <span class="qt">3</span>
                     </a>
                 </p>
@@ -140,6 +143,48 @@
                 </div>
             </div>
         </div>
+        <div class="mobile-menu js-mobile-menu faster">
+            <div class="container">
+                <button class="mobile-menu__close js-menu-close">
+                    <svg class="icon icon--close"><use xlink:href="#icon-close"></use></svg>
+                </button>
+                <ul class="mobile-menu__menu">
+                    <li class="mobile-menu__menu-item">
+                        <a href="javascript:;" class="link link--bernier link--white">Магазин</a>
+                    </li>
+                    <li class="mobile-menu__menu-item">
+                        <a href="javascript:;" class="link link--bernier link--white">Заказ по каталогам</a>
+                    </li>
+                    <li class="mobile-menu__menu-item">
+                        <a href="javascript:;" class="link link--bernier link--white">мотоциклы</a>
+                    </li>
+                    <li class="mobile-menu__menu-item">
+                        <a href="javascript:;" class="link link--bernier link--white">наши проекты</a>
+                    </li>
+                    <li class="mobile-menu__menu-item">
+                        <a href="javascript:;" class="link link--bernier link--white">о нас</a>
+                    </li>
+                    <li class="mobile-menu__menu-item">
+                        <a href="javascript:;" class="link link--bernier link--white">контакты</a>
+                    </li>
+                </ul>
+
+                <hr class="mobile-menu__hr">
+
+                <ul class="mobile-menu__contacts">
+                    <li class="mobile-menu__contacts-item">
+                        <a href="tel:74994091101" class="link link--grey ">+7 499 409-1101</a>
+                    </li>
+                    <li class="mobile-menu__contacts-item">
+                        <a href="tel:+7 964 643-0101" class="link link--grey">+7 964 643-0101</a>
+                    </li>
+                    <li class="mobile-menu__contacts-item">
+                        <a href="mailto:info@harley-parts.ru" class="link link--grey ">info@harley-parts.ru</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
     </header>
 
 

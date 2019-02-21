@@ -4,6 +4,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    outline: none;
 
     &::-webkit-scrollbar {
         width: 4px;
@@ -37,18 +38,9 @@ body {
     backface-visibility: hidden;
     overflow-x: hidden;
 
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: 5;
-        background-color: rgba(0, 0, 0, 0.5);
-        transition: opacity 0.5s ease 0.2s;
-        opacity: 0;
-        visibility: hidden;
+    &.is-locked {
+        position: fixed;
+        overflow: hidden;
     }
 }
 
@@ -174,11 +166,12 @@ h6 {
 hr {
     background: none;
     border: none;
-    border-bottom: 1px solid $cl-grey;
+    border-bottom: 1px solid $cl-global-invert;
     display: block;
     position: relative;
     height: 1px;
-    margin: calc($gutter / 2) 0;
+    margin: calc($gutter-step * 2) 0;
+    opacity: 0.2;
     line-height: 0;
     font-size: 0;
 }
@@ -205,13 +198,4 @@ fieldset {
         margin-left: -$gutter-step;
         padding: 0 $gutter-step;
     }
-}
-
-
-/*
-    This will hide the focus indicator if the element receives focus via the mouse,
-    but it will still show up on keyboard focus.
-*/
-.js-focus-visible :focus:not(.focus-visible) {
-    outline: none;
 }

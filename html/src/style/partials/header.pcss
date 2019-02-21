@@ -1,6 +1,10 @@
 .header {
     padding: calc($gutter-step * 4) 0 calc($gutter-step * 10);
 
+    @media (--tablet-lg) {
+        padding: calc($gutter-step * 2) 0 calc($gutter-step * 10);
+    }
+
     &__container {
         display: flex;
         justify-content: space-between;
@@ -13,6 +17,11 @@
                 flex-grow: 1;
             }
 
+            @media (--tablet-lg) {
+                width: auto;
+                flex-grow: 0;
+            }
+
             &--logo {
                 text-align: center;
 
@@ -20,21 +29,71 @@
                     flex-grow: 0;
                     width: 250px;
                 }
+
+                @media (--tablet-lg) {
+                    width: auto;
+                }
             }
 
             &-top {
                 padding-top: $gutter-step;
                 margin-bottom: calc($gutter-step * 3);
 
+                @media (--tablet-lg) {
+                    margin-bottom: 0;
+                }
+
                 &--right {
                     text-align: right;
                 }
             }
 
+                &-tel {
+                    @media (--tablet-lg) {
+                        display: none;
+                    }
+                }
+
+                &-menu-btn {
+                    display: inline-flex;
+                    vertical-align: top;
+                    flex-direction: column;
+                    width: 44px;
+                    height: 44px;
+                    fill: $cl-global-invert;
+
+                    @media (--tablet-lg-min) {
+                        display: none;
+                    }
+                }
+
+                &-cart {
+                    @media (--tablet-lg) {
+                        display: inline-flex;
+                        vertical-align: top;
+                        align-items: flex-start;
+                        justify-content: flex-end;
+                        width: 44px;
+                        height: 44px;
+                    }
+
+                    &-text {
+                        margin-right: $gutter-step;
+
+                        @media (--tablet-lg) {
+                            display: none;
+                        }
+                    }
+                }
+
             &-menu {
                 display: flex;
                 justify-content: space-between;
                 font-size: 18px;
+
+                @media (--tablet-lg) {
+                    display: none;
+                }
             }
         }
 

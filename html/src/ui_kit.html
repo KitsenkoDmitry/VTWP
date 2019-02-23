@@ -276,7 +276,7 @@
             </div>
         </section>
 
-        <section id="form" class="section ui-kit-section">
+        <section id="form" class="section ui-kit-section" style="background-color: #E4E4E4;">
             <div class="container">
 
                 <h2 class="ui-kit-section__hl">
@@ -292,81 +292,61 @@
                 </p>
                 <br>
 
-                <form name="validation-form" id="validation-form" action="" data-validate="true">
+                <form name="ui-form" id="ui-form" action="" data-validate="true">
 
 
                     <div class="ui-kit-cols">
                         <div class="ui-kit-cols__col ui-kit-cols__col--1of4">
-                            <label for="validation-form__name">Валидация имени (кириллица)</label>
-                            <input id="validation-form__name" type="text" name="validation-form__name" value="" data-parsley-name-ru>
+                            <div class="field">
+                                <label for="ui-form__name" class="field__label">Валидация имени (кириллица)</label>
+                                <input id="ui-form__name" type="text" name="ui-form__name" value="" placeholder="placeholder" data-parsley-name-ru>
+                            </div>
                         </div>
                         <div class="ui-kit-cols__col ui-kit-cols__col--1of4">
-                            <label for="validation-form__tel">Телефон</label>
-                            <input id="validation-form__tel" class="js-phone-mask" type="tel" name="validation-form__tel" value="" data-parsley-phone>
+                            <div class="field">
+                                <label for="ui-form__tel" class="field__label">Телефон</label>
+                                <input id="ui-form__tel" class="js-phone-mask" type="tel" name="ui-form__tel" value="" data-parsley-phone>
+                            </div>
+                        </div>
+                        <div class="ui-kit-cols__col ui-kit-cols__col--1of4">
+                            <div class="field">
+                                <label for="ui-form__tel" class="field__label">Эл. почта</label>
+                                <input id="ui-form__tel" type="email" name="ui-form__tel" value="" data-parsley-email>
+                            </div>
+                        </div>
+                        <div class="ui-kit-cols__col ui-kit-cols__col--1of4">
+                            <div class="field">
+                                <label for="ui-form__name" class="field__label">Задизейблиное поле</label>
+                                <input id="ui-form__disabled" type="text" name="ui-form__disabled" value="" placeholder="placeholder" disabled>
+                            </div>
                         </div>
                     </div>
 
                     <div class="ui-kit-cols">
                         <div class="ui-kit-cols__col ui-kit-cols__col--1of4">
-                            <label for="validation-form__password">Пароль</label>
-                            <input id="validation-form__password" type="password" name="validation-form__password" value="" data-parsley-type="alphanum" data-parsley-length="[5, 20]" required autocomplete="off">
+                            <div class="field">
+                                <label for="ui-form__date" class="field__label">Дата</label>
+                                <input id="ui-form__date" class="js-datepicker" type="text" name="ui-form__date" value="" data-parsley-date data-date-min="current" readonly>
+                                <svg class="field__calendar icon icon--date"><use xlink:href="#icon-date"></use></svg>
+                            </div>
+                            <p class="ui-kit-desc">Дата data-date-min(max)="дд.мм.гггг" или "current" для ограничения по текущей дате</p>
                         </div>
                         <div class="ui-kit-cols__col ui-kit-cols__col--1of4">
-                            <label for="validation-form__password-repeat">Повторите пароль</label>
-                            <input id="validation-form__password-repeat" type="password" name="validation-form__password-repeat" value="" data-parsley-equalto="#validation-form__password" required autocomplete="off">
-                        </div>
-                    </div>
-
-                    <div class="ui-kit-cols">
-                        <div class="ui-kit-cols__col ui-kit-cols__col--1of4">
-                            <label for="validation-form__email">Email</label>
-                            <input id="validation-form__email" type="email" name="validation-form__email" value="" data-parsley-email>
+                            <div class="field">
+                                <label for="ui-form__textarea" class="field__label">Сообщение</label>
+                                <textarea name="ui-form__textarea" id="ui-form__textarea" rows="3" placeholder="Напишите что-нибудь"></textarea>
+                            </div>
                         </div>
                         <div class="ui-kit-cols__col ui-kit-cols__col--1of4">
-                            <label for="validation-form__disabled">Задизейблинный инпут</label>
-                            <input type="text" disabled id="validation-form__disabled" value="Какой-нибудь текст">
-                        </div>
-                    </div>
-
-
-                    <div class="ui-kit-cols">
-                        <div class="ui-kit-cols__col ui-kit-cols__col--1of4">
-                            <label for="validation-form__select2">Выберите любой вариант</label>
-                            <select name="validation-form__select2" id="validation-form__select2" data-search="false" data-placeholder="Выберите любой вариант">
-                                <option value="1">Рубашки</option>
-                                <option value="2">Обувь</option>
-                                <option value="3">Еда</option>
-                                <option value="4">Куртки</option>
-                                <option value="5">Джинсы</option>
-                                <option value="6">Бижутерия</option>
-                                <option value="7">Ювелирные украшения</option>
-                                <option value="8">Сумки</option>
+                            <select name="ui-form__select2" id="ui-form__select2" data-search="false" data-placeholder="Выберите любой вариант" >
+                                <option value="1">Пункт 1</option>
+                                <option value="2">Пункт 2</option>
+                                <option value="3">Пункт 3</option>
+                                <option value="4">Пункт 4</option>
+                                <option value="5">Пункт 5</option>
                             </select>
                         </div>
-                    </div>
 
-                    <div class="ui-kit-cols">
-                        <div class="ui-kit-cols__col ui-kit-cols__col--1of4">
-                            <label for="validation-form__textarea">Напишите о себе (не более 100 символов)</label>
-                            <textarea name="validation-form__textarea" id="validation-form__textarea" rows="3" data-parsley-maxlength="100"></textarea>
-                        </div>
-                    </div>
-
-                    <div class="ui-kit-cols">
-                        <div class="ui-kit-cols__col ui-kit-cols__col--1of4">
-                            <label for="validation-form__date">Дата data-date-min(max)="дд.мм.гггг" или "current" для ограничения по текущей дате</label>
-                            <div class="datepicker">
-                                <input id="validation-form__date" class="js-datepicker" type="text" name="validation-form__date" value="" data-parsley-date data-date-min="01.04.2018" data-date-max="current" readonly>
-                                <svg class="icon icon--calendar"><use xlink:href="#icon-calendar"></use></svg>
-                            </div>
-                        </div>
-                        <div class="ui-kit-cols__col ui-kit-cols__col--1of4">
-                            <label for="validation-form__birth-day">Дата рождения <br> data-show-m-y="true"</label>
-                            <div class="datepicker">
-                                <input id="validation-form__birth-day" class="js-datepicker" type="text" name="validation-form__birth-day" value="" data-parsley-date readonly data-show-m-y="true">
-                                <svg class="icon icon--calendar"><use xlink:href="#icon-calendar"></use></svg>
-                            </div>
-                        </div>
                     </div>
 
                     <div class="ui-kit-cols">
@@ -406,8 +386,8 @@
                         </div>
                     </div>
 
-                    <input type="checkbox" name="validation-form__agree" id="validation-form__agree" value="1" required>
-                    <label for="validation-form__agree" class="cl-grey fz-13">Я согласен с <a href="javascript:;" target="_blank">условиями</a> передачи данных</label>
+                    <input type="checkbox" name="ui-form__agree" id="ui-form__agree" value="1" required>
+                    <label for="ui-form__agree" class="cl-grey fz-13">Я согласен с <a href="javascript:;" target="_blank">условиями</a> передачи данных</label>
 
                     <button class="btn" type="submit">Отправить</button>
                 </form>

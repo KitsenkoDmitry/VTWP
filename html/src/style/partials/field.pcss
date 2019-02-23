@@ -1,0 +1,18 @@
+.field {
+    position: relative;
+
+    &__label {
+        position: absolute;
+        top: 18px;
+        left: calc($gutter-step * 3);
+        font-size: 12px;
+        color: $cl-grey;
+        pointer-events: none;
+    }
+
+    &__calendar {
+        position: absolute;
+        top: 44px;
+        right: calc($gutter-step * 3);
+    }
+}

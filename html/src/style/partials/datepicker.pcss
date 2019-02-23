@@ -6,7 +6,7 @@
     border: none;
     width: 300px;
     padding: calc($gutter-step * 3) calc($gutter-step * 2);
-    box-shadow: 0px 12px 32px rgba(0, 0, 0, 0.08);
+    box-shadow: 0px 0 32px rgba(0, 0, 0, 0.2);
 
 
     .ui-datepicker-header {
@@ -44,6 +44,7 @@
             height: $gutter;
             text-align: left;
             cursor: pointer;
+            background: url('$img_path/svg/arrow_next.svg') no-repeat center;
 
             span {
                display: none;
@@ -56,12 +57,11 @@
 
         .ui-datepicker-prev {
             left: 0;
-            background: url('$img_path/svg/arrow_left.svg') no-repeat center;
+            transform: rotate(180deg);
         }
 
         .ui-datepicker-next {
             right: 0;
-            background: url('$img_path/svg/arrow_right.svg') no-repeat center;
         }
 
     .ui-datepicker-calendar {

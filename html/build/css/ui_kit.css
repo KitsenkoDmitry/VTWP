@@ -114,13 +114,16 @@
     position: relative;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -ms-flex-pack: justify;
-        justify-content: space-between;
 }
 
  .ui-kit-cols__col {
-        width: 45%
+        width: 45%;
+        margin-right: 5%
     }
+
+ .ui-kit-cols__col:last-child {
+            margin-right: 0;
+        }
 
  @media (max-width: 1023px) {
 
@@ -130,13 +133,19 @@
         }
 
  .ui-kit-cols__col--1of4 {
-            width: 22%
+            width: 22%;
+            margin-right: 4%
         }
+
+ .ui-kit-cols__col--1of4:last-child {
+                margin-right: 0;
+            }
 
  @media (max-width: 1023px) {
 
         .ui-kit-cols__col--1of4 {
-                width: 45%
+                width: 45%;
+                margin-right: 5%
         }
             }
 

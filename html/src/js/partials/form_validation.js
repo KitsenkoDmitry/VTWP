@@ -25,7 +25,7 @@ $.extend(Parsley.options, {
         const $element = instance.$element;
         let type = $element.attr('type'),
             $container;
-            
+
         if (type == 'checkbox' || type == 'radio') {
             $container = $(`[name="${$element.attr('name')}"]:last + label`).next('.errors-placement');
         }
@@ -35,12 +35,13 @@ $.extend(Parsley.options, {
         else if (type == 'file') {
             $container = $element.closest('.custom-file').next('.errors-placement');
         }
-        else if ($element.closest('.js-datepicker-range').length) {
-            $container = $element.closest('.js-datepicker-range').next('.errors-placement');
-        }
         else if ($element.attr('name') == 'is_recaptcha_success') {
             $container = $element.parent().next('.g-recaptcha').next('.errors-placement');
         }
+        // else {
+        //     $container = $element.closest('.field');
+        //     console.log($container)
+        // }
 
         return $container;
     }

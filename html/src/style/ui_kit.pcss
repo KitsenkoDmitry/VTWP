@@ -79,10 +79,14 @@
     display: flex;
     position: relative;
     flex-wrap: wrap;
-    justify-content: space-between;
 
     &__col {
         width: 45%;
+        margin-right: 5%;
+
+        &:last-child {
+            margin-right: 0;
+        }
 
         @media (--tablet-lg) {
             width: 100$;
@@ -90,9 +94,15 @@
 
         &--1of4 {
             width: 22%;
+            margin-right: calc((100% - 22% * 4)/3);
+
+            &:last-child {
+                margin-right: 0;
+            }
 
             @media (--tablet-lg) {
                 width: 45%;
+                margin-right: 5%;
             }
 
             @media (--tablet) {

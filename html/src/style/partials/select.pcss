@@ -2,28 +2,25 @@
 .select2-container {
     display: block;
     margin: 0 0 calc($gutter-step * 3) 0;
-    font-size: 15px;
+    font-size: 16px;
     text-align: left;
-    text-transform: none;
+    text-transform: uppercase;
 
     &.select2 {
         width: 100% !important;
     }
 
     .select2-selection--single {
-        border-color: $cl-grey;
+        border-color: $cl-global-invert;
         border-radius: 0;
         box-shadow: none;
-        height: $field-height-sm;
-        line-height: calc($field-height-sm - 2px);
+        height: 80px;
         transition: color $time ease,
                     background-color $time ease,
                     border-color $time ease;
 
         .select2-selection__rendered {
-            padding-right: calc($gutter-step * 5);
-            padding-left: calc($gutter-step * 2);
-            line-height: calc($field-height-sm - 2px);
+            padding: calc($gutter-step * 5) calc($gutter-step * 3) calc($gutter-step * 2);
         }
 
         .select2-selection__placeholder {
@@ -31,6 +28,8 @@
         }
 
         .select2-selection__arrow {
+            top: initial;
+            bottom: 8px;
             width: calc($field-height-sm - 2px);
             height: calc($field-height-sm - 2px);
 

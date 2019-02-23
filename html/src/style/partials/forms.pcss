@@ -1,25 +1,5 @@
 /* Стилизация элементов форм */
 
-label,
-.label {
-    display: block;
-    position: relative;
-    margin-bottom: calc($gutter-step * 2);
-    color: $cl-grey;
-
-    /* Скрытый лейбл для скринридеров */
-    &.sr-only {
-        border: 0;
-        position: absolute;
-        overflow: hidden;
-        width: 1px;
-        height: 1px;
-        margin: -1px;
-        padding: 0;
-        clip: rect(0, 0, 0, 0);
-    }
-}
-
 input[type="number"] {
     /* Прячет стрелки управления поля number в Firefox */
     appearance: textfield;
@@ -57,58 +37,42 @@ input[type="week"],
 input:not([type]),
 textarea,
 select {
-    border: 1px solid transparent;
-    border-width: 1px;
     display: block;
-    position: relative;
+    height: 80px;
+    padding: calc($gutter-step * 5) calc($gutter-step * 3) calc($gutter-step * 2);
     width: 100%;
-    margin: 0 0 calc($gutter-step * 4) 0;
-    padding: 0;
+    margin-bottom: calc($gutter-step * 4);
+
+    font-size: 16px;
+
     zoom: 1;
     transition: all $time ease;
     border-radius: 0;
     box-shadow: none;
-
-    @include field-style(
-        transparent,
-        transparent,
-        transparent,
-        transparent,
-        $cl-disabled-grey,
-
-        $cl-grey,
-        $cl-grey,
-        $cl-grey,
-        $cl-grey,
-        $cl-grey,
-
-        $cl-global,
-        $cl-global,
-        $cl-global,
-        $cl-global,
-        $cl-grey
-    );
-    @include field-size(
-        $field-height-sm,
-        calc($gutter-step * 2),
-        calc($gutter-step * 1.5),
-        15px
-    );
+    border: 1px solid $cl-global-invert;
+    background-color: $cl-global-invert;
 
     &.is-disabled,
     .is-disabled &,
     &[disabled] {
         cursor: default;
         pointer-events: none;
+        border-color: $cl-hover-grey;
+        background-color: $cl-hover-grey;
+        color: $cl-disabled-grey;
+
+        &::placeholder {
+            color: $cl-disabled-grey;
+        }
     }
 
     &.parsley-error {
         border-color: $cl-red;
     }
 
-    &.focus-visible {
-        outline: none;
-        border-color: $cl-grey;
+    &::placeholder {
+        color: $cl-disabled-grey;
+        text-transform: uppercase;
     }
 }
 
@@ -181,16 +145,9 @@ input[type="radio"]:not(.rating__input) {
             background: $cl-grey;
         }
     }
-
-    &.focus-visible {
-        & + label {
-            outline: 5px auto $cl-grey;
-            outline-offset: -2px;
-        }
-    }
 }
 
-input[type="checkbox"]:not(.tags__input):checked:disabled + label::after {
+input[type="checkbox"]:checked:disabled + label::after {
     /* background: svg-load('../svg/tick.svg', fill=#ccc) no-repeat center; */
     background-size: contain;
 }
@@ -219,7 +176,7 @@ input[type="checkbox"]:not(.tags__input) + label::after {
     height: 6px;
 }
 
-input[type="checkbox"]:not(.tags__input):checked + label::after {
+input[type="checkbox"]:checked + label::after {
     /* background: svg-load('../svg/tick.svg', fill=#093) no-repeat center; */
     background-size: contain;
 }
@@ -232,19 +189,9 @@ input[type="checkbox"]:not(.tags__input):checked + label::after {
 
 .parsley-error-message {
     color: $cl-red;
-    font-size: 13px;
+    font-size: 12px;
     /* такие отступы, чтобы поместилась 1 строка ошибки без дёрганий */
     margin: -27px 0 7px 0;
 }
 
 /* /Parsley */
-
-.field {
-    position: relative;
-    margin: 0 0 calc($gutter-step * 5) 0;
-
-    input,
-    textarea {
-        margin-bottom: 0;
-    }
-}

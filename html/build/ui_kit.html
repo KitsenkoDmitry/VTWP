@@ -476,25 +476,25 @@
 
                     <div class="ui-kit-cols">
                         <div class="ui-kit-cols__col ui-kit-cols__col--1of4">
-                            <div class="field">
+                            <div class="field js-label-animation">
                                 <label for="ui-form__name" class="field__label">Валидация имени (кириллица)</label>
                                 <input id="ui-form__name" type="text" name="ui-form__name" value="" placeholder="placeholder" data-parsley-name-ru>
                             </div>
                         </div>
                         <div class="ui-kit-cols__col ui-kit-cols__col--1of4">
-                            <div class="field">
+                            <div class="field js-label-animation">
                                 <label for="ui-form__tel" class="field__label">Телефон</label>
                                 <input id="ui-form__tel" class="js-phone-mask" type="tel" name="ui-form__tel" value="" data-parsley-phone>
                             </div>
                         </div>
                         <div class="ui-kit-cols__col ui-kit-cols__col--1of4">
-                            <div class="field">
+                            <div class="field js-label-animation">
                                 <label for="ui-form__tel" class="field__label">Эл. почта</label>
                                 <input id="ui-form__tel" type="email" name="ui-form__tel" value="" data-parsley-email>
                             </div>
                         </div>
                         <div class="ui-kit-cols__col ui-kit-cols__col--1of4">
-                            <div class="field">
+                            <div class="field js-label-animation">
                                 <label for="ui-form__name" class="field__label">Задизейблиное поле</label>
                                 <input id="ui-form__disabled" type="text" name="ui-form__disabled" value="" placeholder="placeholder" disabled>
                             </div>
@@ -503,7 +503,7 @@
 
                     <div class="ui-kit-cols">
                         <div class="ui-kit-cols__col ui-kit-cols__col--1of4">
-                            <div class="field">
+                            <div class="field js-label-animation">
                                 <label for="ui-form__date" class="field__label">Дата</label>
                                 <input id="ui-form__date" class="js-datepicker" type="text" name="ui-form__date" value="" data-parsley-date data-date-min="current" readonly>
                                 <svg class="field__calendar icon icon--date"><use xlink:href="#icon-date"></use></svg>
@@ -511,19 +511,23 @@
                             <p class="ui-kit-desc">Дата data-date-min(max)="дд.мм.гггг" или "current" для ограничения по текущей дате</p>
                         </div>
                         <div class="ui-kit-cols__col ui-kit-cols__col--1of4">
-                            <div class="field">
+                            <div class="field js-label-animation">
                                 <label for="ui-form__textarea" class="field__label">Сообщение</label>
                                 <textarea name="ui-form__textarea" id="ui-form__textarea" rows="3" placeholder="Напишите что-нибудь"></textarea>
                             </div>
                         </div>
                         <div class="ui-kit-cols__col ui-kit-cols__col--1of4">
-                            <select name="ui-form__select2" id="ui-form__select2" data-search="false" data-placeholder="Выберите любой вариант" >
-                                <option value="1">Пункт 1</option>
-                                <option value="2">Пункт 2</option>
-                                <option value="3">Пункт 3</option>
-                                <option value="4">Пункт 4</option>
-                                <option value="5">Пункт 5</option>
-                            </select>
+                            <!-- из-за того, что используем плагин, у селекта не будет анимированного лейбла -->
+                            <div class="field is-filled">
+                                <select name="ui-form__select2" id="ui-form__select2" data-search="false">
+                                    <option value="1">Пункт 1</option>
+                                    <option value="2">Пункт 2</option>
+                                    <option value="3">Пункт 3</option>
+                                    <option value="4">Пункт 4</option>
+                                    <option value="5">Пункт 5</option>
+                                </select>
+                                <label for="ui-form__select2" class="field__label">Выберите вариант</label>
+                            </div>
                         </div>
 
                     </div>

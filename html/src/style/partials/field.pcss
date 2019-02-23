@@ -5,9 +5,19 @@
         position: absolute;
         top: 18px;
         left: calc($gutter-step * 3);
-        font-size: 12px;
+
+        font-size: 16px;
         color: $cl-grey;
+
         pointer-events: none;
+
+        transform: translateY(22px);
+        transition: all $time ease;
+
+        .is-filled & {
+            font-size: 12px;
+            transform: translateY(0);
+        }
     }
 
     &__calendar {

@@ -11,7 +11,7 @@
     }
 
     .select2-selection--single {
-        border-color: $cl-global-invert;
+        border: none;
         border-radius: 0;
         box-shadow: none;
         height: 80px;
@@ -24,7 +24,8 @@
         }
 
         .select2-selection__placeholder {
-            color: $cl-hover-grey;
+            color: $cl-grey;
+            text-transform: uppercase;
         }
 
         .select2-selection__arrow {
@@ -66,7 +67,7 @@
     &.select2-container--disabled {
         .select2-selection--single {
             background: transparent;
-            border-color: $cl-hover-grey;
+
             color: $cl-grey;
 
             .select2-selection__arrow {
@@ -90,39 +91,39 @@
             height: 30px;
             margin: $gutter-step calc($gutter-step * 2) calc($gutter-step * 0.5);
             padding: 4px 10px;
-            border-color: $cl-grey;
+            border: none;
         }
     }
 
     .select2-results__option {
         list-style: none outside;
         margin: 0;
-        padding: $gutter-step calc($gutter-step * 2);
+        padding: $gutter-step calc($gutter-step * 3);
 
         &--highlighted[aria-selected] {
             background: transparent;
             color: $cl-global;
 
             &:hover {
-                background: $cl-red;
+                background: $cl-hover-grey;
             }
         }
 
         &[aria-selected="true"] {
             background: transparent;
-            color: $cl-hover-grey;
+            color: $cl-grey;
 
             &:hover {
-                background: $cl-red;
+                background: $cl-hover-grey;
             }
         }
     }
 }
 
 .select2-dropdown {
-    border-color: $cl-grey;
+    border: none;
     border-radius: 0;
-    font-size: 15px;
+    font-size: 16px;
 }
 
 /* стили селекта в дейтпикере */

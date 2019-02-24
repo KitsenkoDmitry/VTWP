@@ -88,8 +88,8 @@ textarea {
 
 
 /* чекбоксы и радио-кнопки */
-input[type="checkbox"]:not(.tags__input),
-input[type="radio"]:not(.rating__input) {
+input[type="checkbox"],
+input[type="radio"] {
     position: absolute;
     clip: rect(0,0,0,0);
 
@@ -97,8 +97,9 @@ input[type="radio"]:not(.rating__input) {
         position: relative;
         display: block;
         margin-bottom: calc($gutter-step * 3);
-        padding-left: 27px;
-        font-size: 15px;
+        padding-left: 36px;
+        font-size: 16px;
+        line-height: 1.5;
         color: $cl-global;
         cursor: pointer;
 
@@ -109,7 +110,7 @@ input[type="radio"]:not(.rating__input) {
         &::before,
         &::after {
             content: '';
-            position:absolute;
+            position: absolute;
             display: block;
             box-sizing: border-box;
             transition: opacity $time ease;
@@ -117,11 +118,12 @@ input[type="radio"]:not(.rating__input) {
 
         &::before {
             content: '';
-            top: 5px;
+            top: -2px;
             left: 0;
-            width: 16px;
-            height: 16px;
-            border: 1px solid $cl-grey;
+            width: 24px;
+            height: 24px;
+            border: none;
+            background-color: $cl-global-invert;
         }
 
         &:hover {
@@ -133,65 +135,49 @@ input[type="radio"]:not(.rating__input) {
         & + label {
             color: $cl-grey;
             cursor: default;
+
+            &::before {
+                background-color: $cl-disabled-grey;
+            }
         }
+
     }
 
     &:checked {
         & + label:after {
-            background: $cl-red;
+
         }
 
         &:disabled + label:after {
-            background: $cl-grey;
+
         }
     }
 }
 
-input[type="checkbox"]:checked:disabled + label::after {
-    /* background: svg-load('../svg/tick.svg', fill=#ccc) no-repeat center; */
-    background-size: contain;
-}
-
-/* input[type="checkbox"] + label::before,
-input[type="checkbox"] + label::after {
-    border-radius: 4px;
-} */
-
-input[type="radio"]:not(.rating__input) + label::before,
-input[type="radio"]:not(.rating__input) + label::after {
+input[type="radio"] + label::before,
+input[type="radio"] + label::after {
     border-radius: 50%;
 }
 
-input[type="radio"]:not(.rating__input) + label::after {
-    top: 10px;
-    left: 5px;
+input[type="radio"] + label::after {
+    top: 7px;
+    left: 9px;
     width: 6px;
     height: 6px;
 }
 
-input[type="checkbox"]:not(.tags__input) + label::after {
-    top: 10px;
-    left: 4px;
-    width: 8px;
-    height: 6px;
+input[type="radio"]:checked + label::after {
+    background-color: $cl-global;
+}
+
+input[type="checkbox"] + label::after {
+    top: 3px;
+    left: 6px;
+    width: 13px;
+    height: 13px;
 }
 
 input[type="checkbox"]:checked + label::after {
-    /* background: svg-load('../svg/tick.svg', fill=#093) no-repeat center; */
+    background: svg-load('../svg/done.svg', fill=#1D1D1D) no-repeat center;
     background-size: contain;
 }
-
-/* Parsley */
-
-.parsley-error {
-    border-color: $cl-red;
-}
-
-.parsley-error-message {
-    color: $cl-red;
-    font-size: 12px;
-    /* такие отступы, чтобы поместилась 1 строка ошибки без дёрганий */
-    margin: -27px 0 7px 0;
-}
-
-/* /Parsley */

@@ -466,113 +466,97 @@ textarea.parsley-error {
 
 /* чекбоксы и радио-кнопки */
 
-input[type="checkbox"]:not(.tags__input),
-input[type="radio"]:not(.rating__input) {
+input[type="checkbox"],
+input[type="radio"] {
     position: absolute;
     clip: rect(0,0,0,0)
 }
 
-input[type="checkbox"]:not(.tags__input) + label, input[type="radio"]:not(.rating__input) + label {
+input[type="checkbox"] + label, input[type="radio"] + label {
         position: relative;
         display: block;
         margin-bottom: 24px;
-        padding-left: 27px;
-        font-size: 15px;
-        font-size: 0.9375rem;
+        padding-left: 36px;
+        font-size: 16px;
+        font-size: 1rem;
+        line-height: 1.5;
         color: #1D1D1D;
         cursor: pointer
     }
 
-input[type="checkbox"]:not(.tags__input) + label:last-of-type, input[type="radio"]:not(.rating__input) + label:last-of-type {
+input[type="checkbox"] + label:last-of-type, input[type="radio"] + label:last-of-type {
             margin-bottom: 32px;
         }
 
-input[type="checkbox"]:not(.tags__input) + label::before,
-        input[type="checkbox"]:not(.tags__input) + label::after,
-        input[type="radio"]:not(.rating__input) + label::before,
-        input[type="radio"]:not(.rating__input) + label::after {
+input[type="checkbox"] + label::before,
+        input[type="checkbox"] + label::after,
+        input[type="radio"] + label::before,
+        input[type="radio"] + label::after {
             content: '';
-            position:absolute;
+            position: absolute;
             display: block;
             box-sizing: border-box;
             transition: opacity 200ms ease;
         }
 
-input[type="checkbox"]:not(.tags__input) + label::before, input[type="radio"]:not(.rating__input) + label::before {
+input[type="checkbox"] + label::before, input[type="radio"] + label::before {
             content: '';
-            top: 5px;
+            top: -2px;
             left: 0;
-            width: 16px;
-            height: 16px;
-            border: 1px solid #999;
+            width: 24px;
+            height: 24px;
+            border: none;
+            background-color: #fff;
         }
 
-input[type="checkbox"]:not(.tags__input) + label:hover, input[type="radio"]:not(.rating__input) + label:hover {
+input[type="checkbox"] + label:hover, input[type="radio"] + label:hover {
             color: #ff3300;
         }
 
-input[type="checkbox"]:not(.tags__input):disabled + label, input[type="radio"]:not(.rating__input):disabled + label {
+input[type="checkbox"]:disabled + label, input[type="radio"]:disabled + label {
             color: #999;
-            cursor: default;
+            cursor: default
         }
 
-input[type="checkbox"]:not(.tags__input):checked + label:after, input[type="radio"]:not(.rating__input):checked + label:after {
-            background: #ff3300;
+input[type="checkbox"]:disabled + label::before, input[type="radio"]:disabled + label::before {
+                background-color: #ccc;
+            }
+
+input[type="checkbox"]:checked + label:after, input[type="radio"]:checked + label:after {
+
         }
 
-input[type="checkbox"]:not(.tags__input):checked:disabled + label:after, input[type="radio"]:not(.rating__input):checked:disabled + label:after {
-            background: #999;
+input[type="checkbox"]:checked:disabled + label:after, input[type="radio"]:checked:disabled + label:after {
+
         }
 
-input[type="checkbox"]:checked:disabled + label::after {
-    /* background: svg-load('../svg/tick.svg', fill=#ccc) no-repeat center; */
-    background-size: contain;
-}
-
-/* input[type="checkbox"] + label::before,
-input[type="checkbox"] + label::after {
-    border-radius: 4px;
-} */
-
-input[type="radio"]:not(.rating__input) + label::before,
-input[type="radio"]:not(.rating__input) + label::after {
+input[type="radio"] + label::before,
+input[type="radio"] + label::after {
     border-radius: 50%;
 }
 
-input[type="radio"]:not(.rating__input) + label::after {
-    top: 10px;
-    left: 5px;
+input[type="radio"] + label::after {
+    top: 7px;
+    left: 9px;
     width: 6px;
     height: 6px;
 }
 
-input[type="checkbox"]:not(.tags__input) + label::after {
-    top: 10px;
-    left: 4px;
-    width: 8px;
-    height: 6px;
+input[type="radio"]:checked + label::after {
+    background-color: #1D1D1D;
+}
+
+input[type="checkbox"] + label::after {
+    top: 3px;
+    left: 6px;
+    width: 13px;
+    height: 13px;
 }
 
 input[type="checkbox"]:checked + label::after {
-    /* background: svg-load('../svg/tick.svg', fill=#093) no-repeat center; */
+    background: url("data:image/svg+xml;charset=utf-8,%3Csvg width='13' height='13' viewBox='0 0 13 13' xmlns='http://www.w3.org/2000/svg' fill='%231D1D1D'%3E %3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M13 4.33333L4.33329 13L-4.04497e-05 8.66667L1.4444 7.22222L4.33329 10.1111L11.5555 2.88889L13 4.33333Z'/%3E %3C/svg%3E") no-repeat center;
     background-size: contain;
 }
-
-/* Parsley */
-
-.parsley-error {
-    border-color: #ff3300;
-}
-
-.parsley-error-message {
-    color: #ff3300;
-    font-size: 12px;
-    font-size: 0.75rem;
-    /* такие отступы, чтобы поместилась 1 строка ошибки без дёрганий */
-    margin: -27px 0 7px 0;
-}
-
-/* /Parsley */
 
 /* Стилизация кнопок */
 
@@ -962,6 +946,18 @@ input[type="submit"] {
         color: #fff;
         background-color: #ff3300;
     }
+
+.parsley-error {
+    border-color: #ff3300;
+}
+
+.parsley-error-message {
+    color: #ff3300;
+    font-size: 12px;
+    font-size: 0.75rem;
+    /* такие отступы, чтобы поместилась 1 строка ошибки без дёрганий */
+    margin: -27px 0 7px 0;
+}
 
 .field {
     position: relative;
@@ -1656,7 +1652,8 @@ input[type="submit"] {
 .footer {
     padding-top: 40px;
     padding-bottom: 32px;
-    margin-top: auto
+    margin-top: auto;
+    background-color: #111
 }
 
 @media (max-width: 1023px) {

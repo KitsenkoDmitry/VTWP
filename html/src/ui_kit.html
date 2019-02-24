@@ -288,7 +288,7 @@
                     Валидация включается атрибутом data-validate="true" для формы <br>
                     По умолчанию включены русский и английский язык для ошибок в форме. Язык ошибок зависит от атрибута lang &lt;html&gt; (ru-RU и en-US). <br>
                     Документация валидатора: <a href="http://parsleyjs.org/doc/" target="_blank">parsleyjs.org</a> (прежде чем воротить что-то, читаем документацию) <br>
-                    Настройка: forms.pcss
+                    Настройка: forms.pcss, parsley.pcss, select.pcss, field.pcss
                 </p>
                 <br>
 
@@ -355,14 +355,14 @@
 
                     <div class="ui-kit-cols">
                         <div class="ui-kit-cols__col">
-                            <p class="label">Выберите от 1 до 3 вариантов:</p>
-                            <input type="checkbox" name="ui-kit-checkboxes" id="ui-kit-checkboxes-1" value="1" data-parsley-check="[1, 3]" required>
+                            <p class="label">Выберите один или несколько вариантов</p>
+                            <input type="checkbox" name="ui-kit-checkboxes" id="ui-kit-checkboxes-1" value="1" required>
                             <label for="ui-kit-checkboxes-1">Вариант 1</label>
 
                             <input type="checkbox" name="ui-kit-checkboxes" id="ui-kit-checkboxes-2" value="2">
                             <label for="ui-kit-checkboxes-2">Вариант 2</label>
 
-                            <input type="checkbox" name="ui-kit-checkboxes" id="ui-kit-checkboxes-3" value="3">
+                            <input type="checkbox" name="ui-kit-checkboxes" id="ui-kit-checkboxes-3" value="3" checked>
                             <label for="ui-kit-checkboxes-3">Вариант 3</label>
 
                             <input type="checkbox" name="ui-kit-checkboxes" id="ui-kit-checkboxes-4" value="4">
@@ -373,20 +373,20 @@
                         </div>
                         <div class="ui-kit-cols__col">
                             <p class="label">Выберите любой вариант:</p>
-                            <input type="radio" name="ui-kit-checkboxes-radio[]" id="ui-kit-checkboxes-radio-1" value="1" required>
-                            <label for="ui-kit-checkboxes-radio-1">Вариант 1</label>
+                            <input type="radio" name="ui-kit-radio" id="ui-kit-radio-1" value="1" required checked>
+                            <label for="ui-kit-radio-1">Вариант 1</label>
 
-                            <input type="radio" name="ui-kit-checkboxes-radio[]" id="ui-kit-checkboxes-radio-2" value="2">
-                            <label for="ui-kit-checkboxes-radio-2">Вариант 2</label>
+                            <input type="radio" name="ui-kit-radio" id="ui-kit-radio-2" value="2">
+                            <label for="ui-kit-radio-2">Вариант 2</label>
 
-                            <input type="radio" name="ui-kit-checkboxes-radio[]" id="ui-kit-checkboxes-radio-3" value="3">
-                            <label for="ui-kit-checkboxes-radio-3">Вариант 3</label>
+                            <input type="radio" name="ui-kit-radio" id="ui-kit-radio-3" value="3">
+                            <label for="ui-kit-radio-3">Вариант 3</label>
 
-                            <input type="radio" name="ui-kit-checkboxes-radio[]" id="ui-kit-checkboxes-radio-4" value="4">
-                            <label for="ui-kit-checkboxes-radio-4">Вариант 4</label>
+                            <input type="radio" name="ui-kit-radio" id="ui-kit-radio-4" value="4">
+                            <label for="ui-kit-radio-4">Вариант 4</label>
 
-                            <input type="radio" name="ui-kit-checkboxes-radio[]" id="ui-kit-checkboxes-radio-5" value="5" disabled>
-                            <label for="ui-kit-checkboxes-radio-5">Вариант 5</label>
+                            <input type="radio" name="ui-kit-radio" id="ui-kit-radio-5" value="5" disabled>
+                            <label for="ui-kit-radio-5">Вариант 5</label>
                         </div>
                     </div>
 

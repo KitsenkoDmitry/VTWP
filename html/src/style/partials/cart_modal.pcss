@@ -1,0 +1,109 @@
+.cart-modal {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    flex-direction: column;
+    width: 584px;
+    height: 100vh;
+    color: $cl-global-invert;
+    background-color: $cl-bg;
+
+    @media (--tablet) {
+        width: 100%;
+    }
+
+    &.is-active {
+        display: flex;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        padding: calc($gutter-step * 6) calc($gutter-step * 5) 0 calc($gutter-step * 6);
+
+        @media (--tablet-lg) {
+            padding: calc($gutter-step * 4) calc($gutter-step * 3) 0 calc($gutter-step * 4);
+        }
+
+        @media (--tablet) {
+            padding-left: calc($gutter-step * 3);
+            padding-right: calc($gutter-step * 3);
+        }
+    }
+
+        &__title {
+            margin-top: 0;
+            margin-bottom: $gutter-step;
+            flex-shrink: 0;
+        }
+
+        &__cart-items-wrapper {
+            padding-right: $gutter-step;
+            overflow: auto;
+
+            @media (--tablet) {
+                padding-right: 0;
+            }
+        }
+
+        &__close {
+            position: absolute;
+            top: calc($gutter-step * 3);
+            right: calc($gutter-step * 3);
+
+            @media (--tablet) {
+                top: calc($gutter-step * 2);
+                right: calc($gutter-step * 2);
+            }
+        }
+
+    &__footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-shrink: 0;
+        padding: calc($gutter-step * 3) calc($gutter-step * 6);
+        background-color: $cl-hover-red;
+        color: $cl-global-invert;
+
+        @media (--tablet-lg) {
+            padding: calc($gutter-step * 2) calc($gutter-step * 4);
+        }
+
+        @media (--tablet) {
+            padding: calc($gutter-step * 2) calc($gutter-step * 3);
+        }
+
+        &-price {
+
+        }
+
+            &-name {
+                margin-bottom: 0;
+            }
+
+            &-amount {
+                margin-bottom: 0;
+                font-weight: bold;
+                font-family: $bernier;
+                font-size: 22px;
+            }
+
+        &-link {
+            font-size: 22px;
+
+            @media (--tablet) {
+                font-size: 18px;
+            }
+
+            &:hover {
+                color: $cl-global-invert;
+            }
+        }
+    }
+}

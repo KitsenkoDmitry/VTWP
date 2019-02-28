@@ -6,13 +6,15 @@
     padding: 0;
     outline: none;
 
-    &::-webkit-scrollbar {
-        width: 4px;
-        background: transparent;
-    }
+    @media (--tablet-lg-min) {
+        &::-webkit-scrollbar {
+            width: 4px;
+            background: transparent;
+        }
 
-    &::-webkit-scrollbar-thumb {
-        background-color: $cl-disabled-grey;
+        &::-webkit-scrollbar-thumb {
+            background-color: $cl-disabled-grey;
+        }
     }
 }
 

@@ -126,36 +126,10 @@
     font-size: 16px;
 }
 
-/* стили селекта в дейтпикере */
-
-.ui-datepicker {
-
-    .select2-container {
-        font-size: 13px;
-        margin: 0;
-        text-transform: uppercase;
-
-        .select2-selection--single {
-            height: 32px;
-            line-height: 30px;
-
-            .select2-selection__rendered {
-                line-height: 30px;
-            }
-
-            .select2-selection__arrow {
-                height: 32px;
-
-                b {
-                    top: 17px;
-                }
-            }
-        }
-
-        .select2-results__option {
-            padding-top: 4px;
-            padding-bottom: 4px;
-            font-size: 13px;
-        }
+.select2-transparent {
+    .select2-container--default .select2-selection--single {
+        background-color: transparent;
+        text-align: center;
+        text-transform: none;
     }
 }

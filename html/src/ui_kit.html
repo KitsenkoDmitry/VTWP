@@ -6,7 +6,8 @@
 
     @@include('template/header.html', {
         "isUiKit": true,
-        "isIndexPage": false
+        "isIndexPage": false,
+        "isCartActive": true
     })
 
     <main class="wrap-main ui-kit-main">
@@ -23,6 +24,7 @@
 
                 <p class="ui-kit-desc">Мелкие значки</p>
                 <p>
+                    <svg class="icon icon--up"><use xlink:href="#icon-arrow_up"></use></svg>
                     <svg class="icon icon--back"><use xlink:href="#icon-back"></use></svg>
                     <svg class="icon icon--done"><use xlink:href="#icon-done"></use></svg>
                     <svg class="icon icon--arrow-next"><use xlink:href="#icon-arrow_next"></use></svg>
@@ -245,7 +247,10 @@
                         <button class="btn btn--lg" type="button" disabled>Кнопка 3</button>
                     </div>
                     <div class="ui-kit-cols__col ui-kit-cols__col--1of4">
-
+                        <p class="ui-kit-desc">.btn-up</p>
+                        <button type="button" class="btn-up js-btn-up">
+                            <svg class="icon icon--up"><use xlink:href="#icon-arrow_up"></use></svg>
+                        </button>
                     </div>
                 </div>
 
@@ -276,6 +281,23 @@
             </div>
         </section>
 
+        <section id="tooltip" class="section ui-kit-section" style="background: #E4E4E4; color: 1D1D1D">
+            <div class="container">
+
+                <h2 class="ui-kit-section__hl">
+                    <span class="ui-kit-section__hl-num"></span>
+                    Тултип
+                </h2>
+
+                <p class="ui-kit-section__desc">Настройка tippy.js, tippy.pcss</p>
+
+                <p>
+                    <span data-tooltip="Парадигма трансформации общества важно символизирует постиндустриализм, последнее особенно ярко выражено в ранних работах.">
+                        <svg class="icon icon--question"><use xlink:href="#icon-question"></use></svg>
+                    </span>
+                </p>
+            </div>
+        </section>
         <section id="form" class="section ui-kit-section" style="background-color: #E4E4E4;">
             <div class="container">
 
@@ -348,6 +370,17 @@
                                     <option value="5">Пункт 5</option>
                                 </select>
                                 <label for="ui-form__select2" class="field__label">Выберите вариант</label>
+                            </div>
+                        </div>
+                        <div class="ui-kit-cols__col ui-kit-cols__col--1of4">
+                            <div class="field select2-transparent">
+                                <select name="ui-form__select2_2" id="ui-form__select2_2" data-search="false">
+                                    <option value="1">Сначала новинки</option>
+                                    <option value="2">Сначала подороже</option>
+                                    <option value="3">Сначала подешевле</option>
+                                    <option value="4">Сначала популярное</option>
+                                    <option value="4">Сначала со скидками</option>
+                                </select>
                             </div>
                         </div>
 

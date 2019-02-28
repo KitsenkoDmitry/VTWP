@@ -87,3 +87,30 @@ input[type="submit"] {
         padding: 0 calc($gutter-step * 5);
     }
 }
+
+.btn-up {
+    display: inline-flex;
+    vertical-align: top;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    fill: $cl-global-invert;
+    background-color: $cl-disabled-grey;
+
+    &:hover {
+        background-color: $cl-hover-grey;
+    }
+}
+
+
+.btn-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    fill: $cl-global-invert;
+    background-color: $cl-bg;
+}

@@ -1,0 +1,52 @@
+<div class="cart-modal js-cart-modal faster">
+    <button class="cart-modal__close btn-close js-cart-close">
+        <svg class="icon icon--close"><use xlink:href="#icon-close"></use></svg>
+    </button>
+    <div class="cart-modal__content">
+        <h3 class="cart-modal__title">В корзине</h3>
+
+        <div class="cart-modal__cart-items-wrapper">
+            <ul class="cart-modal__cart-items cart-items">
+                @@include('cart_items_item.html', {
+                    "className": false,
+                    "imgLink": "img/inhtml/img1.png",
+                    "brand": "Screamin Eagle",
+                    "title": "Масло Синтетика SYN3 20w-50 1Qt",
+                    "price": "1 800",
+                    "number": "46654"
+                })
+                @@include('cart_items_item.html', {
+                    "className": false,
+                    "imgLink": "img/inhtml/img2.png",
+                    "brand": "Biltwell",
+                    "title": "Шлем Gringo S Gloss Black",
+                    "price": "24 990",
+                    "number": "45345"
+                })
+                @@include('cart_items_item.html', {
+                    "className": false,
+                    "imgLink": "img/inhtml/img3.png",
+                    "brand": "Vance & Hines",
+                    "title": "Фильтр VO2 Cage Fighter Air Intake",
+                    "price": "16 490",
+                    "number": "46789"
+                })
+                @@include('cart_items_item.html', {
+                    "className": false,
+                    "imgLink": "img/inhtml/img4.png",
+                    "brand": "Vance & Hines",
+                    "title": "Флейты Quiet Baffles",
+                    "price": "7 990",
+                    "number": "75436"
+                })
+            </ul>
+        </div>
+    </div>
+    <div class="cart-modal__footer">
+        <div class="cart-modal__footer-price">
+            <p class="cart-modal__footer-name">Сумма</p>
+            <p class="cart-modal__footer-amount">51 300 ₽</p>
+        </div>
+        <a href="javascript:;" class="cart-modal__footer-link link link--bernier link--white">Перейти в корзину</a>
+    </div>
+</div>

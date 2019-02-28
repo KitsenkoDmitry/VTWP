@@ -8,6 +8,10 @@
 			<path fill-rule="evenodd" clip-rule="evenodd" d="M5 3.999L0 0v7.998l5-3.999z"></path>
 		</symbol>
 	
+		<symbol id="icon-arrow_up" viewBox="0 0 8 16">
+			<path d="M8 6L4 0 0 6h3.076v10h1.848V6H8z"></path>
+		</symbol>
+	
 		<symbol id="icon-back" viewBox="0 0 24 16">
 			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.576 0l1.39 1.468-5.203 5.494H24v2.076H3.763l5.204 5.494L7.577 16 0 8l7.576-8z"></path>
 		</symbol>

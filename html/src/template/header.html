@@ -20,10 +20,15 @@
         </div>
         <div class="header__col">
             <p class="header__col-top header__col-top--right">
-                <a href="javascript:;" class="header__col-cart link link--white">
-                    <span class="header__col-cart-text">Корзина</span>
-                    <span class="qt">3</span>
-                </a>
+                @@if(isCartActive) {
+                    <a href="javascript:;" class="header__col-cart link link--white js-cart-btn">
+                        <span class="header__col-cart-text">Корзина</span>
+                        <span class="qt">3</span>
+                    </a>
+                }
+                @@if(!isCartActive) {
+                    <a class="header__col-cart header__col-cart--empty">Корзина пуста</a>
+                }
             </p>
             <div class="header__col-menu">
                 <a href="javascript:;" class="link link--bernier link--white">Наши проекты</a>
@@ -33,4 +38,5 @@
         </div>
     </div>
     @@include('mobile_menu.html')
+    @@include('cart_modal.html')
 </header>

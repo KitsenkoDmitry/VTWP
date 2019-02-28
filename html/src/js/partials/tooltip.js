@@ -1,8 +1,11 @@
 /* @see https://atomiks.github.io/tippyjs/ */
 
 const tooltipSettings = {
-    arrow: true,
-    allowHTML: true,
+    arrow: false,
+    allowHTML: false,
+    animateFill: false,
+    placement: 'right-center',
+    distance: 20,
     theme: 'tooltip'
 }
 

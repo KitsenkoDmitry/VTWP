@@ -42,6 +42,10 @@
     			<path fill-rule="evenodd" clip-rule="evenodd" d="M5 3.999L0 0v7.998l5-3.999z"></path>
     		</symbol>
 	
+    		<symbol id="icon-arrow_up" viewBox="0 0 8 16">
+    			<path d="M8 6L4 0 0 6h3.076v10h1.848V6H8z"></path>
+    		</symbol>
+	
     		<symbol id="icon-back" viewBox="0 0 24 16">
     			<path fill-rule="evenodd" clip-rule="evenodd" d="M7.576 0l1.39 1.468-5.203 5.494H24v2.076H3.763l5.204 5.494L7.577 16 0 8l7.576-8z"></path>
     		</symbol>
@@ -131,10 +135,13 @@
             </div>
             <div class="header__col">
                 <p class="header__col-top header__col-top--right">
-                    <a href="javascript:;" class="header__col-cart link link--white">
-                        <span class="header__col-cart-text">Корзина</span>
-                        <span class="qt">3</span>
-                    </a>
+                    
+                        <a href="javascript:;" class="header__col-cart link link--white js-cart-btn">
+                            <span class="header__col-cart-text">Корзина</span>
+                            <span class="qt">3</span>
+                        </a>
+                    
+                    
                 </p>
                 <div class="header__col-menu">
                     <a href="javascript:;" class="link link--bernier link--white">Наши проекты</a>
@@ -145,7 +152,7 @@
         </div>
         <div class="mobile-menu js-mobile-menu faster">
             <div class="container">
-                <button class="mobile-menu__close js-menu-close">
+                <button class="btn-close js-menu-close">
                     <svg class="icon icon--close"><use xlink:href="#icon-close"></use></svg>
                 </button>
                 <ul class="mobile-menu__menu">
@@ -185,6 +192,99 @@
             </div>
         </div>
 
+        <div class="cart-modal js-cart-modal faster">
+            <button class="cart-modal__close btn-close js-cart-close">
+                <svg class="icon icon--close"><use xlink:href="#icon-close"></use></svg>
+            </button>
+            <div class="cart-modal__content">
+                <h3 class="cart-modal__title">В корзине</h3>
+
+                <div class="cart-modal__cart-items-wrapper">
+                    <ul class="cart-modal__cart-items cart-items">
+                        <li class="cart-items__item">
+                            <div class="cart-items__item-img">
+                                <img src="img/inhtml/img1.png">
+                            </div>
+                            <div class="cart-items__item-content">
+                                <p class="cart-items__item-brand">Screamin Eagle</p>
+                                <a href="javascript:;" class="cart-items__item-name link link--white">Масло Синтетика SYN3 20w-50 1Qt</a>
+                                <p class="cart-items__item-number">Артикул: 42328</p>
+                            </div>
+
+                            <div class="cart-items__item-aside">
+                                1 800 ₽
+                                <button class="cart-items__item-remove" type="button">
+                                    <svg class="icon icon--delete"><use xlink:href="#icon-delete"></use></svg>
+                                </button>
+                            </div>
+                        </li>
+
+                        <li class="cart-items__item">
+                            <div class="cart-items__item-img">
+                                <img src="img/inhtml/img2.png">
+                            </div>
+                            <div class="cart-items__item-content">
+                                <p class="cart-items__item-brand">Biltwell</p>
+                                <a href="javascript:;" class="cart-items__item-name link link--white">Шлем Gringo S Gloss Black</a>
+                                <p class="cart-items__item-number">Артикул: 42328</p>
+                            </div>
+
+                            <div class="cart-items__item-aside">
+                                24 990 ₽
+                                <button class="cart-items__item-remove" type="button">
+                                    <svg class="icon icon--delete"><use xlink:href="#icon-delete"></use></svg>
+                                </button>
+                            </div>
+                        </li>
+
+                        <li class="cart-items__item">
+                            <div class="cart-items__item-img">
+                                <img src="img/inhtml/img3.png">
+                            </div>
+                            <div class="cart-items__item-content">
+                                <p class="cart-items__item-brand">Vance & Hines</p>
+                                <a href="javascript:;" class="cart-items__item-name link link--white">Фильтр VO2 Cage Fighter Air Intake</a>
+                                <p class="cart-items__item-number">Артикул: 42328</p>
+                            </div>
+
+                            <div class="cart-items__item-aside">
+                                16 490 ₽
+                                <button class="cart-items__item-remove" type="button">
+                                    <svg class="icon icon--delete"><use xlink:href="#icon-delete"></use></svg>
+                                </button>
+                            </div>
+                        </li>
+
+                        <li class="cart-items__item">
+                            <div class="cart-items__item-img">
+                                <img src="img/inhtml/img4.png">
+                            </div>
+                            <div class="cart-items__item-content">
+                                <p class="cart-items__item-brand">Vance & Hines</p>
+                                <a href="javascript:;" class="cart-items__item-name link link--white">Флейты Quiet Baffles</a>
+                                <p class="cart-items__item-number">Артикул: 42328</p>
+                            </div>
+
+                            <div class="cart-items__item-aside">
+                                7 990 ₽
+                                <button class="cart-items__item-remove" type="button">
+                                    <svg class="icon icon--delete"><use xlink:href="#icon-delete"></use></svg>
+                                </button>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="cart-modal__footer">
+                <div class="cart-modal__footer-price">
+                    <p class="cart-modal__footer-name">Сумма</p>
+                    <p class="cart-modal__footer-amount">51 300 ₽</p>
+                </div>
+                <a href="javascript:;" class="cart-modal__footer-link link link--bernier link--white">Перейти в корзину</a>
+            </div>
+        </div>
+
     </header>
 
 
@@ -202,6 +302,7 @@
 
                 <p class="ui-kit-desc">Мелкие значки</p>
                 <p>
+                    <svg class="icon icon--up"><use xlink:href="#icon-arrow_up"></use></svg>
                     <svg class="icon icon--back"><use xlink:href="#icon-back"></use></svg>
                     <svg class="icon icon--done"><use xlink:href="#icon-done"></use></svg>
                     <svg class="icon icon--arrow-next"><use xlink:href="#icon-arrow_next"></use></svg>
@@ -424,7 +525,10 @@
                         <button class="btn btn--lg" type="button" disabled>Кнопка 3</button>
                     </div>
                     <div class="ui-kit-cols__col ui-kit-cols__col--1of4">
-
+                        <p class="ui-kit-desc">.btn-up</p>
+                        <button type="button" class="btn-up js-btn-up">
+                            <svg class="icon icon--up"><use xlink:href="#icon-arrow_up"></use></svg>
+                        </button>
                     </div>
                 </div>
 
@@ -455,6 +559,23 @@
             </div>
         </section>
 
+        <section id="tooltip" class="section ui-kit-section" style="background: #E4E4E4; color: 1D1D1D">
+            <div class="container">
+
+                <h2 class="ui-kit-section__hl">
+                    <span class="ui-kit-section__hl-num"></span>
+                    Тултип
+                </h2>
+
+                <p class="ui-kit-section__desc">Настройка tippy.js, tippy.pcss</p>
+
+                <p>
+                    <span data-tooltip="Парадигма трансформации общества важно символизирует постиндустриализм, последнее особенно ярко выражено в ранних работах.">
+                        <svg class="icon icon--question"><use xlink:href="#icon-question"></use></svg>
+                    </span>
+                </p>
+            </div>
+        </section>
         <section id="form" class="section ui-kit-section" style="background-color: #E4E4E4;">
             <div class="container">
 
@@ -527,6 +648,17 @@
                                     <option value="5">Пункт 5</option>
                                 </select>
                                 <label for="ui-form__select2" class="field__label">Выберите вариант</label>
+                            </div>
+                        </div>
+                        <div class="ui-kit-cols__col ui-kit-cols__col--1of4">
+                            <div class="field select2-transparent">
+                                <select name="ui-form__select2_2" id="ui-form__select2_2" data-search="false">
+                                    <option value="1">Сначала новинки</option>
+                                    <option value="2">Сначала подороже</option>
+                                    <option value="3">Сначала подешевле</option>
+                                    <option value="4">Сначала популярное</option>
+                                    <option value="4">Сначала со скидками</option>
+                                </select>
                             </div>
                         </div>
 

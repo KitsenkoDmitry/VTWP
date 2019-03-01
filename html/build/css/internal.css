@@ -48,8 +48,12 @@
 
 html,
 body {
-    min-height: 100%;
+    height: 100%;
 }
+
+html.is-locked {
+        overflow: hidden;
+    }
 
 body {
     position: relative;
@@ -70,12 +74,12 @@ body {
     vertical-align: top;
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
-    overflow-x: hidden
+    overflow-x: hidden;
 }
 
-body.is-locked {
+.is-locked body {
         position: fixed;
-        overflow: hidden;
+        /* overflow: hidden; */
     }
 
 img {
@@ -1156,17 +1160,17 @@ input[type="submit"] {
 
 .cart-modal {
     display: none;
-    position: absolute;
+    position: fixed;
     z-index: 10;
-    right: 0;
+    left: 0;
     top: 0;
+    right: 0;
     bottom: 0;
 
     -ms-flex-direction: column;
 
         flex-direction: column;
     width: 584px;
-    height: 100vh;
     color: #fff;
     background-color: #111
 }
@@ -1204,7 +1208,7 @@ input[type="submit"] {
 
     .cart-modal__content {
             padding-left: 24px;
-            padding-right: 24px
+            padding-right: 16px
     }
         }
 
@@ -1217,15 +1221,9 @@ input[type="submit"] {
 
 .cart-modal__cart-items-wrapper {
             padding-right: 8px;
-            overflow: auto
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
         }
-
-@media (max-width: 767px) {
-
-        .cart-modal__cart-items-wrapper {
-                padding-right: 0
-        }
-            }
 
 .cart-modal__close {
             position: absolute;
@@ -1553,17 +1551,19 @@ input[type="submit"] {
 
 .mobile-menu {
     display: none;
-    position: absolute;
+    /* position: absolute; */
+    position: fixed;
     z-index: 10;
     top: 0;
+    right: 0;
+    bottom: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    max-height: 100vh;
     padding-top: 16px;
     padding-bottom: 16px;
     background-color: #111;
-    overflow-y: scroll
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch
 }
 
 .mobile-menu.is-active {
@@ -1576,6 +1576,11 @@ input[type="submit"] {
             display: none
     }
         }
+
+.mobile-menu__close {
+        position: relative;
+        left: -12px
+    }
 
 .mobile-menu__menu {
         padding-top: 24px;

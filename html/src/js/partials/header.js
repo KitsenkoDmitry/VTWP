@@ -15,7 +15,7 @@ $(document).on('click', '.js-cart-btn', (e) => {
 });
 
 $(document).on('click', '.js-cart-close', () => {
-    hideModal($cartModal)
+    hideModal($cartModal);
 });
 
 /**
@@ -24,7 +24,7 @@ $(document).on('click', '.js-cart-close', () => {
  */
 function openModal($modalBlock) {
     $modalBlock.addClass('is-active').animateCss('slideInRight');
-    lockBody($modalBlock)
+    lockDocument();
 }
 
 /**
@@ -34,21 +34,22 @@ function openModal($modalBlock) {
 function hideModal($modalBlock) {
     $modalBlock.animateCss('slideOutRight', () => {
         $modalBlock.removeClass('is-active');
-        unlockBody();
+        unlockDocument();
     });
 }
 
 /**
- * Unlock body for scroll
+ * Unlock document for scroll
  */
-function unlockBody() {
-    $('body').removeClass('is-locked').css('height', 'auto');
+function unlockDocument() {
+    $('html').removeClass('is-locked');
+    // .css('height', 'auto');
 }
 
 /**
- * Lock body for scroll
- * @param {jQuery} $lockBlock Block which define body height
+ * Lock document for scroll
+ * @param {jQuery} $lockBlock Block which define document height
  */
-function lockBody($lockBlock) {
-    $('body').addClass('is-locked').css('height', $lockBlock.outerHeight() + 'px');
+function lockDocument() {
+    $('html').addClass('is-locked');
 }

@@ -1,14 +1,14 @@
 .cart-modal {
     display: none;
-    position: absolute;
+    position: fixed;
     z-index: 10;
-    right: 0;
+    left: 0;
     top: 0;
+    right: 0;
     bottom: 0;
 
     flex-direction: column;
     width: 584px;
-    height: 100vh;
     color: $cl-global-invert;
     background-color: $cl-bg;
 
@@ -32,7 +32,7 @@
 
         @media (--tablet) {
             padding-left: calc($gutter-step * 3);
-            padding-right: calc($gutter-step * 3);
+            padding-right: calc($gutter-step * 2);
         }
     }
 
@@ -44,11 +44,8 @@
 
         &__cart-items-wrapper {
             padding-right: $gutter-step;
-            overflow: auto;
-
-            @media (--tablet) {
-                padding-right: 0;
-            }
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
         }
 
         &__close {

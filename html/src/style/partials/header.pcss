@@ -1,13 +1,48 @@
 .header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
     padding: calc($gutter-step * 4) 0 calc($gutter-step * 10);
+    color: $cl-global-invert;
 
     @media (--tablet-lg) {
         padding: calc($gutter-step * 2) 0 calc($gutter-step * 10);
     }
 
+    &--transparent {
+        position: relative;
+        z-index: 1;
+        margin-bottom: -235px;
+        background-color: transparent;
+    }
+
+    &.is-active {
+        @media (--tablet-lg-min) {
+            padding-bottom: calc($gutter-step * 8);
+        }
+    }
+
     &__container {
+        position: relative;
+        z-index: 2;
         display: flex;
+
         justify-content: space-between;
+
+
+        &--dropdown {
+            z-index: 1;
+            display: none;
+            padding-top: calc($gutter-step * 7);
+
+            &.is-active {
+                @media (--tablet-lg-min) {
+                    display: flex;
+                }
+            }
+        }
     }
 
         &__col {
@@ -33,6 +68,10 @@
                 @media (--tablet-lg) {
                     width: 80px
                 }
+            }
+
+            &--flex-grow {
+                flex-grow: 1;
             }
 
             &-top {
@@ -114,4 +153,57 @@
             display: inline-block;
             vertical-align: top;
         }
+
+    &__dropdown {
+        &-col {
+            /* 3 колонки */
+            width: calc(75% - $gutter-step * 3);
+
+            &--1of4 {
+                /* 1 колонка */
+                width: calc(25% - $gutter-step);
+            }
+        }
+
+        &-list {
+            padding-top: calc($gutter-step * 3);
+            column-count: 3;
+            column-gap: calc($gutter-step * 4);
+            font-size: 18px;
+
+            &--no-columns {
+                column-count: 1;
+            }
+
+            &-item {
+                margin-bottom: calc($gutter-step * 2);
+            }
+        }
+
+        &-card-link {
+            display: block;
+            padding: calc($gutter-step * 5) calc($gutter-step * 6);
+            height: 208px;
+            font-family: $bernier;
+            font-size: 24px;
+            color: $cl-global-invert;
+            background-size: cover;
+        }
+    }
+
+    &__how-to-title {
+        font-size: 22px;
+        font-family: $bernier;
+        text-transform: lowercase;
+        margin-bottom: calc($gutter-step * 3);
+    }
+
+    &__how-to-mb {
+        margin-bottom: calc($gutter-step * 3);
+    }
+
+    &__how-to-mb0 {
+        margin-bottom: 0;
+    }
+
 }

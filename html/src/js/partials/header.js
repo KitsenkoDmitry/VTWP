@@ -53,3 +53,37 @@ function unlockDocument() {
 function lockDocument() {
     $('html').addClass('is-locked');
 }
+
+
+// ------ логика открытия выпадашек хедера ------
+const $header = $('.js-header');
+
+$(document).on('click', '.js-header-dropdown-btn', e => {
+    e.preventDefault();
+    const $self = $(e.currentTarget);
+    const category = $self.attr('data-category');
+    const $categoryDropdown = $(`[data-dropdown-category='${category}']`);
+
+    if ($self.hasClass('is-active')) {
+        $self.removeClass('is-active');
+        $categoryDropdown.removeClass('is-active');
+        $header.removeClass('is-active');
+    } else {
+        $('.js-header-dropdown-btn').removeClass('is-active');
+        $('.js-header-dropdown').removeClass('is-active');
+        $header.addClass('is-active');
+        $self.addClass('is-active');
+        $categoryDropdown.addClass('is-active');
+        $(document).on('click', closeDropdownHandler);
+    }
+});
+
+
+function closeDropdownHandler(e) {
+    if ($(e.target).closest('.js-header').length === 0) {
+        $('.js-header-dropdown-btn').removeClass('is-active');
+        $('.js-header-dropdown').removeClass('is-active');
+        $header.removeClass('is-active');
+        $(document).off('click', closeDropdownHandler);
+    }
+}

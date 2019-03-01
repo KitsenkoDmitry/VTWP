@@ -36,6 +36,32 @@
         }
     }
 
+    &--underline {
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -$gutter-step;
+            height: 2px;
+            width: 100%;
+            background-color: $cl-global-invert;
+            transition: transform $time ease-in-out;
+            transform-origin: left;
+            transform: scaleX(0);
+        }
+
+        &:hover,
+        &.is-active {
+            color: $cl-global-invert;
+
+            &::after {
+                transform: scaleX(1);
+            }
+        }
+    }
+
     &--block {
         display: block;
         width: 100%;

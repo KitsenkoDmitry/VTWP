@@ -113,7 +113,7 @@
     </svg>
 
 
-    <header class="header" >
+    <header class="header header--transparent js-header" >
         <div class="header__container container">
             <div class="header__col">
                 <p class="header__col-top">
@@ -123,9 +123,9 @@
                     </button>
                 </p>
                 <div class="header__col-menu">
-                    <a href="javascript:;" class="link link--bernier link--white">Магазин</a>
-                    <a href="javascript:;" class="link link--bernier link--white">Заказ по каталогам</a>
-                    <a href="javascript:;" class="link link--bernier link--white">Мотоциклы</a>
+                    <a href="javascript:;" class="link link--bernier link--white link--underline js-header-dropdown-btn" data-category="shop">Магазин</a>
+                    <a href="javascript:;" class="link link--bernier link--white link--underline js-header-dropdown-btn" data-category="catalog">Заказ по каталогам</a>
+                    <a href="javascript:;" class="link link--bernier link--white link--underline">Мотоциклы</a>
                 </div>
             </div>
             <div class="header__col header__col--logo">
@@ -141,10 +141,91 @@
                     
                 </p>
                 <div class="header__col-menu">
-                    <a href="javascript:;" class="link link--bernier link--white">Наши проекты</a>
-                    <a href="javascript:;" class="link link--bernier link--white">О нас</a>
-                    <a href="javascript:;" class="link link--bernier link--white">Контакты</a>
+                    <a href="javascript:;" class="link link--bernier link--white link--underline">Наши проекты</a>
+                    <a href="javascript:;" class="link link--bernier link--white link--underline">О нас</a>
+                    <a href="javascript:;" class="link link--bernier link--white link--underline">Контакты</a>
                 </div>
+            </div>
+        </div>
+        <div class="header__container header__container--dropdown container js-header-dropdown" data-dropdown-category="shop">
+            <div class="header__dropdown-col">
+                <ul class="header__dropdown-list">
+                    <li class="header__dropdown-list-item">
+                        <a href="javascript:;" class="link link--white link--bernier">Выхлопы vance & hines</a>
+                    </li>
+                    <li class="header__dropdown-list-item">
+                        <a href="javascript:;" class="link link--white link--bernier">Выхлопы TBR</a>
+                    </li>
+                    <li class="header__dropdown-list-item">
+                        <a href="javascript:;" class="link link--white link--bernier">Тюнеры</a>
+                    </li>
+                    <li class="header__dropdown-list-item">
+                        <a href="javascript:;" class="link link--white link--bernier">Фильтры</a>
+                    </li>
+                    <li class="header__dropdown-list-item">
+                        <a href="javascript:;" class="link link--white link--bernier">Подсветка</a>
+                    </li>
+                    <li class="header__dropdown-list-item">
+                        <a href="javascript:;" class="link link--white link--bernier">Свет</a>
+                    </li>
+                    <li class="header__dropdown-list-item">
+                        <a href="javascript:;" class="link link--white link--bernier">Крылья</a>
+                    </li>
+                    <li class="header__dropdown-list-item">
+                        <a href="javascript:;" class="link link--white link--bernier">Ручки (грипсы)</a>
+                    </li>
+                    <li class="header__dropdown-list-item">
+                        <a href="javascript:;" class="link link--white link--bernier">Экипировка</a>
+                    </li>
+                    <li class="header__dropdown-list-item">
+                        <a href="javascript:;" class="link link--white link--bernier">Кронштейны</a>
+                    </li>
+                    <li class="header__dropdown-list-item">
+                        <a href="javascript:;" class="link link--white link--bernier">Аксессуары</a>
+                    </li>
+                    <li class="header__dropdown-list-item">
+                        <a href="javascript:;" class="link link--white link--bernier">Запчасти для ТО</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="header__dropdown-col header__dropdown-col--1of4">
+                <a href="javascript:;" class="header__dropdown-card-link" style="background-image: url('img/exhaust.png')">
+                    выхлопные системы vines and hines
+                </a>
+            </div>
+        </div>
+        <div class="header__container header__container--dropdown container js-header-dropdown" data-dropdown-category="catalog">
+            <div class="header__col header__col--flex-grow">
+                <ul class="header__dropdown-list header__dropdown-list--no-columns">
+                    <li class="header__dropdown-list-item">
+                        <a href="javascript:;" class="link link--white link--bernier" target="_blank">Каталог оригинальных запчастей Harley-Davidson
+                        </a>
+                    </li>
+                    <li class="header__dropdown-list-item">
+                        <a href="javascript:;" class="link link--white link--bernier" target="_blank">Каталог оригинальных аксессуаров Harley-Davidson
+                        </a>
+                    </li>
+                    <li class="header__dropdown-list-item">
+                        <a href="javascript:;" class="link link--white link--bernier" target="_blank">Каталог оригинальных выхлопных систем Harley-Davidson</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="header__col">
+                <p class="header__how-to-title">
+                    Как заказать?
+                </p>
+                <p class="header__how-to-mb cl-grey">Просто сообщите нам артикул товара из каталога и мы уточним все детали заказа</p>
+
+                <p class="header__how-to-mb0">
+                    <a href="tel:74994091101" class="link link--white">+7 499 409 1101</a>
+                </p>
+                <p class="header__how-to-mb">
+                    <a href="tel:79646430101" class="link link--white">+7 964 643 0101</a>
+                </p>
+
+                <p class="header__how-to-mb0">
+                    <a href="mailto:info@harley-parts.ru" class="link link--white">info@harley-parts.ru</a>
+                </p>
             </div>
         </div>
         <div class="mobile-menu js-mobile-menu faster">
@@ -273,13 +354,13 @@
                     </ul>
                 </div>
             </div>
-            <div class="cart-modal__footer">
+            <a href="javascript:;" class="cart-modal__footer">
                 <div class="cart-modal__footer-price">
                     <p class="cart-modal__footer-name">Сумма</p>
                     <p class="cart-modal__footer-amount">51 300 ₽</p>
                 </div>
-                <a href="javascript:;" class="cart-modal__footer-link link link--bernier link--white">Перейти в корзину</a>
-            </div>
+                <span class="cart-modal__footer-text">Перейти в корзину</a>
+            </a>
         </div>
 
     </header>
@@ -287,7 +368,7 @@
 
     <main class="wrap-main">
         <div class="container">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, minima provident? Repudiandae eaque delectus aliquid, quisquam maxime sed error inventore animi, at, iusto a tempora quae saepe incidunt voluptate reiciendis.
+            <p style="padding-top: 235px">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, minima provident? Repudiandae eaque delectus aliquid, quisquam maxime sed error inventore animi, at, iusto a tempora quae saepe incidunt voluptate reiciendis.
             Perferendis culpa rerum dignissimos ullam quas nostrum? Sequi error voluptatem eos, dolore iure omnis magnam ipsam animi aspernatur dolores, corrupti dignissimos, eaque repellat accusantium quo suscipit! Quia cumque ullam ex.
             Id facilis natus modi adipisci quia minima rem velit officia nostrum. Ipsa labore quidem nemo modi, praesentium, et mollitia aperiam enim soluta quasi vero beatae, laudantium obcaecati autem. Impedit, laudantium!
             Nemo laborum velit praesentium neque veritatis, natus a ut omnis. Magni rerum dicta debitis et quia maxime facilis consequatur rem harum quaerat distinctio, obcaecati quidem? Recusandae minima dolorum omnis quos!

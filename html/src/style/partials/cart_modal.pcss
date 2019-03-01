@@ -2,7 +2,6 @@
     display: none;
     position: fixed;
     z-index: 10;
-    left: 0;
     top: 0;
     right: 0;
     bottom: 0;
@@ -76,6 +75,10 @@
             padding: calc($gutter-step * 2) calc($gutter-step * 3);
         }
 
+        &:hover {
+            color: $cl-global-invert;
+        }
+
         &-price {
 
         }
@@ -91,15 +94,14 @@
                 font-size: 22px;
             }
 
-        &-link {
+        &-text {
             font-size: 22px;
+            font-family: $bernier;
+            text-transform: lowercase;
+            color: $cl-global-invert;
 
             @media (--tablet) {
                 font-size: 18px;
-            }
-
-            &:hover {
-                color: $cl-global-invert;
             }
         }
     }

@@ -6,5 +6,6 @@
 @@include('datepicker.js')
 @@include('header.js')
 @@include('btn_up.js')
+@@include('filter_modal.js')
 @@include('label_animation.js')
 @@include('tooltip.js')

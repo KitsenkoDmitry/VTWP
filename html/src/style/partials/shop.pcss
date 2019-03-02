@@ -39,6 +39,7 @@
 
         @media (--tablet-lg) {
             width: 100%;
+            padding-bottom: calc($gutter-step * 2);
         }
 
         &-title {
@@ -119,8 +120,16 @@
     }
 
     &__btn-up {
+        display: none;
         position: fixed;
-        left: 0;
-        bottom: 0;
+        left: calc($gutter-step * 3);
+        bottom: calc($gutter-step * 2);
+
+        @media (--tablet-lg) {
+            display: block;
+            position: static;
+            margin-left: auto;
+            margin-top: calc($gutter-step * 3);
+        }
     }
 }

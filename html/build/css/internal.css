@@ -993,6 +993,75 @@ input[type="submit"] {
     color: #999;
 }
 
+.filter-modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    -ms-flex-direction: column;
+
+        flex-direction: column;
+    width: 500px;
+    color: #fff;
+    background-color: #111
+}
+
+@media (max-width: 767px) {
+
+.filter-modal {
+        width: 100%
+}
+    }
+
+.filter-modal.is-active {
+        display: -ms-flexbox;
+        display: flex
+    }
+
+@media (min-width: 1024px) {
+
+.filter-modal.is-active {
+            display: none
+    }
+        }
+
+.filter-modal__title {
+        margin-bottom: 24px;
+    }
+
+.filter-modal__close {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+    }
+
+.filter-modal__content {
+        padding: 40px 24px 24px;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+.filter-modal__footer {
+        width: 100%;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+            align-items: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+        background-color: #ff3300;
+        color: #fff;
+        font-family: Bernier, Arial, Helvetica, sans-serif;
+        font-size: 22px;
+        font-size: 1.375rem;
+        height: 80px;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
+    }
+
 .shop {
     position: relative;
     display: -ms-flexbox;
@@ -1049,7 +1118,8 @@ input[type="submit"] {
 @media (max-width: 1023px) {
 
     .shop__main {
-            width: 100%
+            width: 100%;
+            padding-bottom: 16px
     }
         }
 
@@ -1153,10 +1223,21 @@ input[type="submit"] {
             }
 
 .shop__btn-up {
+        display: none;
         position: fixed;
-        left: 0;
-        bottom: 0;
+        left: 24px;
+        bottom: 16px
     }
+
+@media (max-width: 1023px) {
+
+    .shop__btn-up {
+            display: block;
+            position: static;
+            margin-left: auto;
+            margin-top: 24px
+    }
+        }
 
 .product {
     position: relative;
@@ -1186,14 +1267,17 @@ input[type="submit"] {
 .product__icon {
         position: absolute;
         top: 18px;
-        right: 18px
+        right: 18px;
     }
 
-.product__icon.icon--flash {
-            width: 17px;
-            height: 24px;
+.product__icon--flash {
             top: 24px;
             right: 24px;
+        }
+
+.product__icon .icon--flash {
+            width: 17px;
+            height: 24px;
         }
 
 .product__content {

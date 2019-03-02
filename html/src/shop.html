@@ -85,7 +85,7 @@
                     <h1 class="shop__main-title">Выхлопы vance & hines</h1>
                     <div class="shop__main-top">
                         <p class="shop__main-top-qt">Найдено: 16 товаров</p>
-                        <button class="shop__main-top-filters-btn">
+                        <button class="shop__main-top-filters-btn js-filter-btn">
                             <svg class="icon icon--filter"><use xlink:href="#icon-filter"></use></svg>
                         </button>
                         <div class="field select2-transparent">
@@ -194,10 +194,11 @@
                     <p class="shop__main-disclaimer">
                         V-TWINPARTS.RU является официальным дистрибьютором американской компании VANCE & HINES. Это позволяет реализовывать их продукцию по ценам близко к розничным в США. Приглашаем региональные компании к сотрудничеству. Также мы занимаемся установкой и изготовлением глушителей.
                     </p>
+                    <button type="button" class="shop__btn-up btn-up js-btn-up">
+                        <svg class="icon icon--up"><use xlink:href="#icon-arrow_up"></use></svg>
+                    </button>
+                    @@include('template/filter_modal.html')
                 </section>
-                <button type="button" class="shop__btn-up btn-up js-btn-up">
-                    <svg class="icon icon--up"><use xlink:href="#icon-arrow_up"></use></svg>
-                </button>
             </div>
         </div>
     </main>

@@ -3,10 +3,14 @@
         <img src="@@imgSrc">
     </div>
     @@if(isNew) {
-        <svg class="product__icon icon icon--new"><use xlink:href="#icon-new"></use></svg>
+        <span class="product__icon" data-tooltip="Парадигма трансформации общества важно символизирует постиндустриализм, последнее особенно ярко выражено в ранних работах.">
+            <svg class="icon icon--new"><use xlink:href="#icon-new"></use></svg>
+        </span>
     }
     @@if(oldPrice) {
-        <svg class="product__icon icon icon--flash"><use xlink:href="#icon-flash"></use></svg>
+        <span class="product__icon product__icon--flash" data-tooltip="Парадигма трансформации общества важно символизирует постиндустриализм, последнее особенно ярко выражено в ранних работах.">
+            <svg class="icon icon--flash"><use xlink:href="#icon-flash"></use></svg>
+        </span>
     }
     <div class="product__content">
         <div class="product__content-col">

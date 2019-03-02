@@ -451,7 +451,7 @@
                     <h1 class="shop__main-title">Выхлопы vance & hines</h1>
                     <div class="shop__main-top">
                         <p class="shop__main-top-qt">Найдено: 16 товаров</p>
-                        <button class="shop__main-top-filters-btn">
+                        <button class="shop__main-top-filters-btn js-filter-btn">
                             <svg class="icon icon--filter"><use xlink:href="#icon-filter"></use></svg>
                         </button>
                         <div class="field select2-transparent">
@@ -472,7 +472,9 @@
                                 </div>
                                 
                                 
-                                    <svg class="product__icon icon icon--flash"><use xlink:href="#icon-flash"></use></svg>
+                                    <span class="product__icon product__icon--flash" data-tooltip="Парадигма трансформации общества важно символизирует постиндустриализм, последнее особенно ярко выражено в ранних работах.">
+                                        <svg class="icon icon--flash"><use xlink:href="#icon-flash"></use></svg>
+                                    </span>
                                 
                                 <div class="product__content">
                                     <div class="product__content-col">
@@ -495,7 +497,9 @@
                                     <img src="img/inhtml/bike2.jpg">
                                 </div>
                                 
-                                    <svg class="product__icon icon icon--new"><use xlink:href="#icon-new"></use></svg>
+                                    <span class="product__icon" data-tooltip="Парадигма трансформации общества важно символизирует постиндустриализм, последнее особенно ярко выражено в ранних работах.">
+                                        <svg class="icon icon--new"><use xlink:href="#icon-new"></use></svg>
+                                    </span>
                                 
                                 
                                 <div class="product__content">
@@ -558,7 +562,9 @@
                                 </div>
                                 
                                 
-                                    <svg class="product__icon icon icon--flash"><use xlink:href="#icon-flash"></use></svg>
+                                    <span class="product__icon product__icon--flash" data-tooltip="Парадигма трансформации общества важно символизирует постиндустриализм, последнее особенно ярко выражено в ранних работах.">
+                                        <svg class="icon icon--flash"><use xlink:href="#icon-flash"></use></svg>
+                                    </span>
                                 
                                 <div class="product__content">
                                     <div class="product__content-col">
@@ -581,7 +587,9 @@
                                     <img src="img/inhtml/bike2.jpg">
                                 </div>
                                 
-                                    <svg class="product__icon icon icon--new"><use xlink:href="#icon-new"></use></svg>
+                                    <span class="product__icon" data-tooltip="Парадигма трансформации общества важно символизирует постиндустриализм, последнее особенно ярко выражено в ранних работах.">
+                                        <svg class="icon icon--new"><use xlink:href="#icon-new"></use></svg>
+                                    </span>
                                 
                                 
                                 <div class="product__content">
@@ -644,10 +652,80 @@
                     <p class="shop__main-disclaimer">
                         V-TWINPARTS.RU является официальным дистрибьютором американской компании VANCE & HINES. Это позволяет реализовывать их продукцию по ценам близко к розничным в США. Приглашаем региональные компании к сотрудничеству. Также мы занимаемся установкой и изготовлением глушителей.
                     </p>
+                    <button type="button" class="shop__btn-up btn-up js-btn-up">
+                        <svg class="icon icon--up"><use xlink:href="#icon-arrow_up"></use></svg>
+                    </button>
+                    <div class="filter-modal js-filter-modal faster">
+                        <button class="filter-modal__close btn-close js-filter-close">
+                            <svg class="icon icon--close"><use xlink:href="#icon-close"></use></svg>
+                        </button>
+                        <div class="filter-modal__content">
+                            <h3 class="filter-modal__title">Фильтры</h3>
+
+                            <form action="">
+                                <div class="field is-filled">
+                                    <select name="filter-family-modal" id="filter-family-modal" data-search="false">
+                                        <option value="1">Touring</option>
+                                        <option value="2">Пункт 2</option>
+                                        <option value="3">Пункт 3</option>
+                                        <option value="4">Пункт 4</option>
+                                        <option value="5">Пункт 5</option>
+                                    </select>
+                                    <label for="filter-family-modal" class="field__label">Семейство</label>
+                                </div>
+                                <div class="field is-filled">
+                                    <select name="filter-year-modal" id="filter-year-modal" data-search="false">
+                                        <option value="1">2019</option>
+                                        <option value="2">2018</option>
+                                        <option value="3">2017</option>
+                                        <option value="4">2016</option>
+                                        <option value="5">2015</option>
+                                    </select>
+                                    <label for="filter-family-modal" class="field__label">Год выпуска</label>
+                                </div>
+                                <ul class="shop__filters-list">
+                                    <li class="shop__filters-list-item">
+                                        <a href="javascript:;" class="link link--bernier link--white">Выхлопы vans & hines</a>
+                                    </li>
+                                    <li class="shop__filters-list-item">
+                                        <a href="javascript:;" class="link link--bernier link--grey">Выхлопы TBR</a>
+                                    </li>
+                                    <li class="shop__filters-list-item">
+                                        <a href="javascript:;" class="link link--bernier link--grey">Фильтры</a>
+                                    </li>
+                                    <li class="shop__filters-list-item">
+                                        <a href="javascript:;" class="link link--bernier link--grey">Подвеска</a>
+                                    </li>
+                                    <li class="shop__filters-list-item">
+                                        <a href="javascript:;" class="link link--bernier link--grey">Свет</a>
+                                    </li>
+                                    <li class="shop__filters-list-item">
+                                        <a href="javascript:;" class="link link--bernier link--grey">Крылья</a>
+                                    </li>
+                                    <li class="shop__filters-list-item">
+                                        <a href="javascript:;" class="link link--bernier link--grey">Ручки (грипсы)</a>
+                                    </li>
+                                    <li class="shop__filters-list-item">
+                                        <a href="javascript:;" class="link link--bernier link--grey">Экипировка</a>
+                                    </li>
+                                    <li class="shop__filters-list-item">
+                                        <a href="javascript:;" class="link link--bernier link--grey">Кронштейны</a>
+                                    </li>
+                                    <li class="shop__filters-list-item">
+                                        <a href="javascript:;" class="link link--bernier link--grey">Аксессуары</a>
+                                    </li>
+                                    <li class="shop__filters-list-item">
+                                        <a href="javascript:;" class="link link--bernier link--grey">Запчасти для ТО</a>
+                                    </li>
+                                </ul>
+                            </form>
+                        </div>
+                        <a href="javascript:;" class="filter-modal__footer">
+                            Показать
+                        </a>
+                    </div>
+
                 </section>
-                <button type="button" class="shop__btn-up btn-up js-btn-up">
-                    <svg class="icon icon--up"><use xlink:href="#icon-arrow_up"></use></svg>
-                </button>
             </div>
         </div>
     </main>

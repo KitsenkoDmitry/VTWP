@@ -1062,6 +1062,16 @@ input[type="submit"] {
             flex-shrink: 0;
     }
 
+.filters-list {
+    padding-top: 32px;
+    font-size: 18px;
+    font-size: 1.125rem;
+}
+
+.filters-list__item {
+        margin-bottom: 16px;
+    }
+
 .shop {
     position: relative;
     display: -ms-flexbox;
@@ -1092,16 +1102,6 @@ input[type="submit"] {
 .shop__filters-title {
             margin-bottom: 48px;
         }
-
-.shop__filters-list {
-            padding-top: 32px;
-            font-size: 18px;
-            font-size: 1.125rem;
-        }
-
-.shop__filters-list-item {
-                margin-bottom: 16px;
-            }
 
 .shop__main {
         width: 66.66667%;

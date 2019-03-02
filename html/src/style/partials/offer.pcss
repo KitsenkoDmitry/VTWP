@@ -1,0 +1,69 @@
+.offer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: calc($gutter-step * 2.5) calc($gutter-step * 5);
+    font-family: $bernier;
+    text-transform: lowercase;
+    font-size: 18px;
+    background-image: url('$img_path/offer.jpeg');
+    background-size: cover;
+    background-position: center center;
+
+    @media (--mobile-lg) {
+        flex-wrap: wrap;
+        padding: calc($gutter-step * 2) calc($gutter-step * 3);
+        font-size: 16px;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 0;
+        background-color: $cl-bg;
+        opacity: 0.7;
+    }
+
+    &--mb {
+        margin-bottom: calc($gutter-step * 8);
+
+        @media (--mobile-lg) {
+            margin-bottom: calc($gutter-step * 3);
+        }
+    }
+
+    &__icon {
+        margin-right: calc($gutter-step * 2);
+        z-index: 1;
+
+        @media (--mobile-lg) {
+            width: 17px;
+            height: 27px;
+        }
+    }
+
+    &__discount {
+        position: relative;
+        z-index: 1;
+        color: $cl-red;
+        font-size: 64px;
+        margin-right: calc($gutter-step * 4);
+
+        @media (--mobile-lg) {
+            font-size: 32px;
+        }
+    }
+
+    &__desc {
+        position: relative;
+        z-index: 1;
+
+        @media (--mobile-lg) {
+            width: 100%;
+        }
+    }
+}

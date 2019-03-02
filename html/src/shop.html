@@ -1,0 +1,210 @@
+@@include('template/head.html')
+<body>
+    @@include('template/old_ie_update.html')
+
+    @@include('img/svg/sprite.svg')
+
+    @@include('template/header.html', {
+        "isUiKit": false,
+        "isTransparent": true,
+        "isIndexPage": true,
+        "isCartActive": true
+    })
+
+    <main class="wrap-main wrap-main--margin">
+        <div class="container">
+            <div class="offer offer--mb">
+                <svg class="offer__icon icon icon--flash"><use xlink:href="#icon-flash"></use></svg>
+                <span class="offer__discount">10%</span>
+                <span class="offer__desc">Закажите любой фильтр + выхлоп + аксессуар и получите скидку на весь заказ </span>
+            </div>
+
+            <div class="shop">
+                <aside class="shop__filters">
+                    <h3 class="shop__filters-title">Подбор аксессуаров для вашего
+                        harley-davidson</h3>
+                    <form action="">
+                        <div class="field is-filled">
+                            <select name="filter-family" id="filter-family" data-search="false">
+                                <option value="1">Touring</option>
+                                <option value="2">Пункт 2</option>
+                                <option value="3">Пункт 3</option>
+                                <option value="4">Пункт 4</option>
+                                <option value="5">Пункт 5</option>
+                            </select>
+                            <label for="filter-family" class="field__label">Семейство</label>
+                        </div>
+                        <div class="field is-filled">
+                            <select name="filter-year" id="filter-year" data-search="false">
+                                <option value="1">2019</option>
+                                <option value="2">2018</option>
+                                <option value="3">2017</option>
+                                <option value="4">2016</option>
+                                <option value="5">2015</option>
+                            </select>
+                            <label for="filter-family" class="field__label">Год выпуска</label>
+                        </div>
+                        <ul class="shop__filters-list">
+                            <li class="shop__filters-list-item">
+                                <a href="javascript:;" class="link link--bernier link--white">Выхлопы vans & hines</a>
+                            </li>
+                            <li class="shop__filters-list-item">
+                                <a href="javascript:;" class="link link--bernier link--grey">Выхлопы TBR</a>
+                            </li>
+                            <li class="shop__filters-list-item">
+                                <a href="javascript:;" class="link link--bernier link--grey">Фильтры</a>
+                            </li>
+                            <li class="shop__filters-list-item">
+                                <a href="javascript:;" class="link link--bernier link--grey">Подвеска</a>
+                            </li>
+                            <li class="shop__filters-list-item">
+                                <a href="javascript:;" class="link link--bernier link--grey">Свет</a>
+                            </li>
+                            <li class="shop__filters-list-item">
+                                <a href="javascript:;" class="link link--bernier link--grey">Крылья</a>
+                            </li>
+                            <li class="shop__filters-list-item">
+                                <a href="javascript:;" class="link link--bernier link--grey">Ручки (грипсы)</a>
+                            </li>
+                            <li class="shop__filters-list-item">
+                                <a href="javascript:;" class="link link--bernier link--grey">Экипировка</a>
+                            </li>
+                            <li class="shop__filters-list-item">
+                                <a href="javascript:;" class="link link--bernier link--grey">Кронштейны</a>
+                            </li>
+                            <li class="shop__filters-list-item">
+                                <a href="javascript:;" class="link link--bernier link--grey">Аксессуары</a>
+                            </li>
+                            <li class="shop__filters-list-item">
+                                <a href="javascript:;" class="link link--bernier link--grey">Запчасти для ТО</a>
+                            </li>
+                        </ul>
+                    </form>
+                </aside>
+                <section class="shop__main">
+                    <h1 class="shop__main-title">Выхлопы vance & hines</h1>
+                    <div class="shop__main-top">
+                        <p class="shop__main-top-qt">Найдено: 16 товаров</p>
+                        <button class="shop__main-top-filters-btn">
+                            <svg class="icon icon--filter"><use xlink:href="#icon-filter"></use></svg>
+                        </button>
+                        <div class="field select2-transparent">
+                            <select name="ui-form__select2_2" id="ui-form__select2_2" data-search="false">
+                                <option value="1">Сначала новинки</option>
+                                <option value="2">Сначала подороже</option>
+                                <option value="3">Сначала подешевле</option>
+                                <option value="4">Сначала популярное</option>
+                                <option value="4">Сначала со скидками</option>
+                            </select>
+                        </div>
+                    </div>
+                    <ul class="shop__main-products">
+                        <li class="shop__main-product">
+                            @@include('template/product.html', {
+                                "className": false,
+                                "imgSrc": "img/inhtml/bike.jpg",
+                                "isNew": false,
+                                "oldPrice": "55 890",
+                                "price": "49 990",
+                                "companyName": "Vines & Hines",
+                                "productName": "Oversized 450 Destroyer Slip-Ons"
+                            })
+                        </li>
+                        <li class="shop__main-product">
+                            @@include('template/product.html', {
+                                "className": false,
+                                "imgSrc": "img/inhtml/bike2.jpg",
+                                "isNew": true,
+                                "oldPrice": false,
+                                "price": "75 500",
+                                "companyName": "Vines & Hines",
+                                "productName": "Twin Slash Round Slip-Ons"
+                            })
+                        </li>
+                        <li class="shop__main-product">
+                            @@include('template/product.html', {
+                                "className": false,
+                                "imgSrc": "img/inhtml/bike2.jpg",
+                                "isNew": false,
+                                "oldPrice": false,
+                                "price": "25 500",
+                                "companyName": "Vines & Hines",
+                                "productName": "Oversized 450 Titan Slip-Ons"
+                            })
+                        </li>
+                        <li class="shop__main-product">
+                            @@include('template/product.html', {
+                                "className": false,
+                                "imgSrc": "img/inhtml/bike.jpg",
+                                "isNew": false,
+                                "oldPrice": false,
+                                "price": "10 970",
+                                "companyName": "Vines & Hines",
+                                "productName": "Oversized 450 Titan Slip-Ons Black Tips"
+                            })
+                        </li>
+                        <li class="shop__main-product">
+                            @@include('template/product.html', {
+                                "className": false,
+                                "imgSrc": "img/inhtml/bike.jpg",
+                                "isNew": false,
+                                "oldPrice": "55 890",
+                                "price": "49 990",
+                                "companyName": "Vines & Hines",
+                                "productName": "Oversized 450 Destroyer Slip-Ons"
+                            })
+                        </li>
+                        <li class="shop__main-product">
+                            @@include('template/product.html', {
+                                "className": false,
+                                "imgSrc": "img/inhtml/bike2.jpg",
+                                "isNew": true,
+                                "oldPrice": false,
+                                "price": "75 500",
+                                "companyName": "Vines & Hines",
+                                "productName": "Twin Slash Round Slip-Ons"
+                            })
+                        </li>
+                        <li class="shop__main-product">
+                            @@include('template/product.html', {
+                                "className": false,
+                                "imgSrc": "img/inhtml/bike2.jpg",
+                                "isNew": false,
+                                "oldPrice": false,
+                                "price": "25 500",
+                                "companyName": "Vines & Hines",
+                                "productName": "Oversized 450 Titan Slip-Ons"
+                            })
+                        </li>
+                        <li class="shop__main-product">
+                            @@include('template/product.html', {
+                                "className": false,
+                                "imgSrc": "img/inhtml/bike.jpg",
+                                "isNew": false,
+                                "oldPrice": false,
+                                "price": "10 970",
+                                "companyName": "Vines & Hines",
+                                "productName": "Oversized 450 Titan Slip-Ons Black Tips"
+                            })
+                        </li>
+                    </ul>
+                    <div class="shop__main-more">
+                        <button type="button" class="shop__main-more-btn btn btn--white">Показать еще</button>
+                    </div>
+                    <p class="shop__main-disclaimer">
+                        V-TWINPARTS.RU является официальным дистрибьютором американской компании VANCE & HINES. Это позволяет реализовывать их продукцию по ценам близко к розничным в США. Приглашаем региональные компании к сотрудничеству. Также мы занимаемся установкой и изготовлением глушителей.
+                    </p>
+                </section>
+                <button type="button" class="shop__btn-up btn-up js-btn-up">
+                    <svg class="icon icon--up"><use xlink:href="#icon-arrow_up"></use></svg>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    @@include('template/footer.html')
+
+    @@include('template/foot.html')
+
+</body>
+</html>

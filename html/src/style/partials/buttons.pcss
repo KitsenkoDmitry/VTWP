@@ -15,6 +15,7 @@ input[type="submit"] {
     position: relative;
     overflow: visible;
     margin: 0 0 calc($gutter-step * 2) 0;
+    width: 200px;
     padding: 0;
     font-family: $bernier;
     text-decoration: none;
@@ -97,10 +98,11 @@ input[type="submit"] {
     height: 64px;
     border-radius: 50%;
     fill: $cl-global-invert;
-    background-color: $cl-disabled-grey;
+    background-color: #414141;
+    transition: opacity $time ease;
 
     &:hover {
-        background-color: $cl-hover-grey;
+        opacity: 0.8;
     }
 }
 

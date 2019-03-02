@@ -1,0 +1,23 @@
+<a href="javascript:;" class="product@@if(className){ @@className}">
+    <div class="product__img">
+        <img src="@@imgSrc">
+    </div>
+    @@if(isNew) {
+        <svg class="product__icon icon icon--new"><use xlink:href="#icon-new"></use></svg>
+    }
+    @@if(oldPrice) {
+        <svg class="product__icon icon icon--flash"><use xlink:href="#icon-flash"></use></svg>
+    }
+    <div class="product__content">
+        <div class="product__content-col">
+            <p class="product__company">@@companyName</p>
+            <p class="product__name">@@productName</p>
+        </div>
+        <div class="product__content-col">
+            @@if(oldPrice) {
+                <p class="product__price product__price--old">@@oldPrice ₽</p>
+            }
+            <p class="product__price@@if(oldPrice){ product__price--red}">@@price ₽</p>
+        </div>
+    </div>
+</a>

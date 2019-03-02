@@ -1,0 +1,97 @@
+.product {
+    position: relative;
+    display: block;
+    color: $cl-global-invert;
+
+    &__img {
+        display: block;
+        height: 304px;
+        overflow: hidden;
+        margin-bottom: calc($gutter-step * 2);
+        background-color: #232323;
+
+        @media (--mobile) {
+            height: auto;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        top: 18px;
+        right: 18px;
+
+        &.icon--flash {
+            width: 17px;
+            height: 24px;
+            top: 24px;
+            right: 24px;
+        }
+    }
+
+    &__content {
+        display: flex;
+
+        &-col {
+            flex-shrink: 1;
+            flex-grow: 1;
+
+            &:last-child {
+                min-width: 100px;
+                flex-shrink: 0;
+                margin-left: calc($gutter-step * 2);
+                text-align: right;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: flex-end;
+                flex-wrap: wrap;
+            }
+        }
+    }
+
+    &__company {
+        margin-bottom: 0;
+        color: $cl-grey;
+    }
+
+    &__name {
+        margin-bottom: calc($gutter-step * 0.5);
+        color: $cl-global-invert;
+    }
+
+    &__price {
+        width: 100%;
+        color: $cl-global-invert;
+        font-size: 22px;
+        font-family: $bernier;
+        margin-bottom: 0;
+
+        &--red {
+            color: $cl-red;
+        }
+
+        &--old {
+            position: relative;
+            width: auto;
+            padding-left: 7px;
+            padding-right: 4px;
+            font-size: 16px;
+            color: $cl-grey;
+            line-height: 1;
+
+            &::after {
+                content: '';
+                position: absolute;
+                height: 1px;
+                left: 0;
+                right: 0;
+                top: 50%;
+                background-color: $cl-grey;
+            }
+        }
+    }
+}

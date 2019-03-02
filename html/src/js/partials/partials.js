@@ -5,5 +5,6 @@
 @@include('select.js')
 @@include('datepicker.js')
 @@include('header.js')
+@@include('btn_up.js')
 @@include('label_animation.js')
 @@include('tooltip.js')

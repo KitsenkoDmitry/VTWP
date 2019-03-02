@@ -96,6 +96,7 @@
     }
 
     .select2-results__option {
+        color: $cl-global;
         list-style: none outside;
         margin: 0;
         padding: $gutter-step calc($gutter-step * 3);
@@ -127,9 +128,30 @@
 }
 
 .select2-transparent {
-    .select2-container--default .select2-selection--single {
-        background-color: transparent;
-        text-align: center;
-        text-transform: none;
+    .select2-container--default {
+
+        .select2-selection--single {
+            background-color: transparent;
+            color: $cl-global-invert;
+            text-align: center;
+            text-transform: none;
+            height: auto;
+
+            .select2-selection__rendered {
+                padding-top: 0;
+                padding-right: 24px;
+                color: $cl-global-invert;
+            }
+
+
+            .select2-selection__arrow {
+                right: -10px;
+                bottom: 11px;
+
+                b {
+                    background: url('$img_path/svg/arrow_down_white.svg') no-repeat center;
+                }
+            }
+        }
     }
 }

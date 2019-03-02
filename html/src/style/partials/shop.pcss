@@ -1,0 +1,126 @@
+.shop {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+    &__filters {
+        width: 312px;
+        padding-top: $gutter-step;
+
+        @media (--desktop) {
+            width: calc(100% / 4 - $gutter-step * 2)
+        }
+
+        @media (--tablet-lg) {
+            display: none;
+        }
+
+        &-title {
+            margin-bottom: calc($gutter-step * 6);
+        }
+
+        &-list {
+            padding-top: calc($gutter-step * 4);
+            font-size: 18px;
+
+            &-item {
+                margin-bottom: calc($gutter-step * 2);
+            }
+        }
+    }
+
+    &__main {
+        width: calc(100% / 3 * 2);
+        padding-bottom: calc($gutter-step * 7);
+
+        @media (--desktop) {
+            width: calc(100% / 4 * 3 - $gutter-step * 2);
+        }
+
+        @media (--tablet-lg) {
+            width: 100%;
+        }
+
+        &-title {
+            margin-bottom: calc($gutter-step * 5);
+        }
+
+        &-top {
+            display: flex;
+            justify-content: space-between;
+
+            &-qt {
+                color: $cl-grey;
+
+                @media (--tablet-lg) {
+                    display: none;
+                }
+            }
+
+            &-filters-btn {
+                display: none;
+                width: 40px;
+                height: 40px;
+                background-color: $cl-global-invert;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                margin-top: -6px;
+
+                @media (--tablet-lg) {
+                    display: flex;
+                }
+            }
+        }
+
+        &-products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+            &-product {
+                width: calc((100% - $gutter-step * 4)/2);
+                margin-bottom: calc($gutter-step * 9);
+
+                @media (--mobile-lg) {
+                    width: 100%;
+                    margin-bottom: calc($gutter-step * 6);
+                }
+            }
+
+        &-more {
+            position: relative;
+            display: flex;
+            justify-content: center;
+
+            &-btn {
+                @media (--mobile) {
+                    width: 100%;
+                }
+            }
+
+            &-btn-up {
+                position: absolute;
+                left: 0;
+                top: -7px;
+            }
+        }
+
+        &-disclaimer {
+            margin-top: calc($gutter-step * 14);
+            margin-bottom: 0;
+            color: $cl-global-invert;
+
+            @media (--tablet-lg) {
+                margin-top: calc($gutter-step * 5);
+            }
+        }
+    }
+
+    &__btn-up {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+    }
+}

@@ -15,7 +15,7 @@
 @@include('../../node_modules/tippy.js/dist/tippy.min.js')
 @@include('../../node_modules/jquery.inputmask/dist/jquery.inputmask.bundle.js')
 @@include('../../node_modules/select2/dist/js/select2.full.js')
-@@include('../../node_modules/swiper/dist/js/swiper.min.js')
+@@include('../../node_modules/slick-carousel/slick/slick.min.js')
 @@include('../../node_modules/lazysizes/lazysizes.js')
 @@include('../../node_modules/parsleyjs/dist/parsley.js')
 @@include('../../node_modules/parsleyjs/dist/i18n/ru.js')

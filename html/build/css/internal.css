@@ -151,7 +151,8 @@ h6 {
 
 .intro-header {
     font-size: 64px;
-    font-size: 4rem
+    font-size: 4rem;
+    line-height: 1.125
 }
 
 @media (max-width: 1023px) {
@@ -1241,6 +1242,65 @@ input[type="submit"] {
     }
         }
 
+.index-main {
+    position: relative;
+    /* высота меню + отступы */
+    padding-top: 291px;
+    overflow: hidden
+}
+
+@media (max-width: 1023px) {
+
+.index-main {
+        padding-top: 130px;
+        padding-bottom: 80px
+}
+    }
+
+.index-main__bg {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        pointer-events: none;
+    }
+
+.index-main__bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+.index-main__bg::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, .4);
+        }
+
+.index-main__container {
+        position: relative;
+        z-index: 2;
+    }
+
+.index-main__hl {
+        max-width: 800px;
+        margin-bottom: 80px
+    }
+
+@media (max-width: 767px) {
+
+    .index-main__hl {
+            margin-bottom: 136px
+    }
+        }
+
 .product {
     position: relative;
     display: block;
@@ -1373,6 +1433,114 @@ input[type="submit"] {
     font-style: normal;
     font-display: swap;
 }
+
+.news-carousel {
+    display: -ms-flexbox;
+    display: flex
+}
+
+@media (max-width: 1023px) {
+
+.news-carousel {
+        margin: 0 -24px
+}
+    }
+
+.news-carousel__item {
+        position: relative;
+        display: block;
+        width: 33.333%;
+        padding: 48px;
+        height: 224px;
+
+        font-size: 22px;
+        font-size: 1.375rem;
+        font-family: Bernier, Arial, Helvetica, sans-serif;
+        text-transform: lowercase;
+        color: #fff;
+
+        border-left: 1px solid rgba(255, 255, 255, .2);
+        overflow: hidden
+    }
+
+@media (max-width: 1479px) {
+
+    .news-carousel__item {
+            padding: 48px 40px
+    }
+        }
+
+@media (max-width: 1023px) {
+
+    .news-carousel__item {
+            padding: 0 0 0 24px;
+            border: none;
+            width: 200px;
+            height: 100px;
+            margin-right: 32px
+    }
+        }
+
+.news-carousel__item:hover {
+            color: #fff;
+        }
+
+.news-carousel__item:last-child {
+            border-right: 1px solid rgba(255, 255, 255, .2)
+        }
+
+@media (max-width: 1023px) {
+
+        .news-carousel__item:last-child {
+                border-right: none;
+                margin-right: 0
+        }
+            }
+
+.news-carousel__item-img {
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0;
+            transition: opacity 200ms ease-in-out;
+            object-fit: cover;
+            pointer-events: none
+        }
+
+@media (max-width: 1023px) {
+
+        .news-carousel__item-img {
+                display: none
+        }
+            }
+
+.news-carousel__item:hover .news-carousel__item-img {
+                opacity: 1;
+            }
+
+.news-carousel__item-img img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+.news-carousel__item-img::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-image: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .338081) 24.97%, rgba(0, 0, 0, .529309) 51.95%, rgba(0, 0, 0, .7) 76.36%);
+            }
+
+.news-carousel__item-text {
+            position: relative;
+            z-index: 2;
+        }
 
 .qt {
     display: inline-block;
@@ -2297,7 +2465,8 @@ input[type="submit"] {
     width: 100%;
     padding: 32px 0 80px;
     color: #fff;
-    background-color:#111
+    background-color:#111;
+    transition: background 200ms ease-in-out
 }
 
 @media (max-width: 1023px) {
@@ -2317,6 +2486,10 @@ input[type="submit"] {
             padding-bottom: 64px
     }
         }
+
+.header.is-active {
+        background-color: #111
+    }
 
 @media (min-width: 1024px) {
 
@@ -2341,6 +2514,12 @@ input[type="submit"] {
             display: none;
             padding-top: 56px
         }
+
+@media (max-width: 1479px) {
+                .header__container--dropdown.container {
+                    padding-top: 40px;
+                }
+            }
 
 @media (min-width: 1024px) {
 

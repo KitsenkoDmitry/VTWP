@@ -7,6 +7,7 @@
     padding: calc($gutter-step * 4) 0 calc($gutter-step * 10);
     color: $cl-global-invert;
     background-color:$cl-bg;
+    transition: background $time ease-in-out;
 
     @media (--tablet-lg) {
         padding: calc($gutter-step * 2) 0 calc($gutter-step * 4);
@@ -20,6 +21,8 @@
     }
 
     &.is-active {
+        background-color: $cl-bg;
+
         @media (--tablet-lg-min) {
             padding-bottom: calc($gutter-step * 8);
         }
@@ -37,6 +40,12 @@
             z-index: 1;
             display: none;
             padding-top: calc($gutter-step * 7);
+
+            @media (--desktop) {
+                &.container {
+                    padding-top: calc($gutter-step * 5);
+                }
+            }
 
             &.is-active {
                 @media (--tablet-lg-min) {

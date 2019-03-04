@@ -1208,6 +1208,7 @@ input[type="submit"] {
                 position: absolute;
                 left: 0;
                 top: -7px;
+                z-index: 15;
             }
 
 .shop__main-disclaimer {
@@ -2297,16 +2298,25 @@ input[type="submit"] {
     padding: 32px 0 80px;
     color: #fff;
     background-color:#111
-
 }
 
 @media (max-width: 1023px) {
 
 .header {
-        padding: 16px 0 80px
-
+        padding: 16px 0 32px
 }
     }
+
+.header--index {
+        background-color: transparent
+    }
+
+@media (max-width: 1023px) {
+
+    .header--index {
+            padding-bottom: 64px
+    }
+        }
 
 @media (min-width: 1024px) {
 
@@ -2552,6 +2562,24 @@ input[type="submit"] {
 .header__how-to-mb0 {
         margin-bottom: 0;
     }
+
+.header-placeholder {
+        height: 235px;
+        -ms-flex-negative: 0;
+            flex-shrink: 0
+    }
+
+@media (max-width: 1023px) {
+
+    .header-placeholder {
+            height: 103px
+    }
+        }
+
+.header-placeholder--index {
+            height: 0;
+            display: none;
+        }
 
 .socials {
     display: -ms-inline-flexbox;
@@ -2858,10 +2886,6 @@ input[type="submit"] {
     -ms-flex-negative: 0;
         flex-shrink: 0;
 }
-
-.wrap-main--margin {
-        margin-top: 235px;
-    }
 
 .container {
     position: relative;

@@ -9,7 +9,14 @@
     background-color:$cl-bg;
 
     @media (--tablet-lg) {
-        padding: calc($gutter-step * 2) 0 calc($gutter-step * 10);
+        padding: calc($gutter-step * 2) 0 calc($gutter-step * 4);
+    }
+
+    &--index {
+        background-color: transparent;
+        @media (--tablet-lg) {
+            padding-bottom: calc($gutter-step * 8);
+        }
     }
 
     &.is-active {
@@ -200,4 +207,17 @@
         margin-bottom: 0;
     }
 
+    &-placeholder {
+        height: 235px;
+        flex-shrink: 0;
+
+        @media (--tablet-lg) {
+            height: 103px;
+        }
+
+        &--index {
+            height: 0;
+            display: none;
+        }
+    }
 }

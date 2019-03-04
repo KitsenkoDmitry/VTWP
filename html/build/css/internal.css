@@ -918,11 +918,12 @@ input[type="submit"] {
         }
 
 .link--underline:hover,
-        .link--underline.is-active {
+        .link--underline.is-active,
+        .link--underline.is-chosen {
             color: #fff
         }
 
-.link--underline:hover::after, .link--underline.is-active::after {
+.link--underline:hover::after, .link--underline.is-active::after, .link--underline.is-chosen::after {
                 transform: scaleX(1);
             }
 
@@ -2294,7 +2295,8 @@ input[type="submit"] {
     z-index: 10;
     width: 100%;
     padding: 32px 0 80px;
-    color: #fff
+    color: #fff;
+    background-color:#111
 
 }
 
@@ -2304,12 +2306,6 @@ input[type="submit"] {
         padding: 16px 0 80px
 
 }
-    }
-
-.header--transparent {
-        position: relative;
-        margin-bottom: -235px;
-        background-color: transparent;
     }
 
 @media (min-width: 1024px) {

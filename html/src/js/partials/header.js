@@ -64,15 +64,15 @@ $(document).on('click', '.js-header-dropdown-btn', e => {
     const category = $self.attr('data-category');
     const $categoryDropdown = $(`[data-dropdown-category='${category}']`);
 
-    if ($self.hasClass('is-active')) {
-        $self.removeClass('is-active');
+    if ($self.hasClass('is-chosen')) {
+        $self.removeClass('is-chosen');
         $categoryDropdown.removeClass('is-active');
         $header.removeClass('is-active');
     } else {
-        $('.js-header-dropdown-btn').removeClass('is-active');
+        $('.js-header-dropdown-btn').removeClass('is-chosen');
         $('.js-header-dropdown').removeClass('is-active');
         $header.addClass('is-active');
-        $self.addClass('is-active');
+        $self.addClass('is-chosen');
         $categoryDropdown.addClass('is-active');
         $(document).on('click', closeDropdownHandler);
     }

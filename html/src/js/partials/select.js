@@ -32,7 +32,7 @@ let CustomSelect = function($elem) {
 
                 $(this).on('change', function(e) {
                     // нужно для вылидации на лету
-                    $(this).find(`option[value="${$(this).context.value}"]`).click();
+                    $(this).find(`option[value="${$(this).value}"]`).click();
                 });
             }
         });

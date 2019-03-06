@@ -1057,7 +1057,7 @@ template {
 .select2-container--classic.select2-container--open .select2-dropdown{border-color:#5897fb}
 
 /*!
- * jQuery UI CSS Framework 1.11.4
+ * jQuery UI CSS Framework 1.12.1
  * http://jqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
@@ -1068,7 +1068,7 @@ template {
  */
 
 /*!
- * jQuery UI CSS Framework 1.11.4
+ * jQuery UI CSS Framework 1.12.1
  * http://jqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
@@ -1118,10 +1118,6 @@ template {
 	clear: both;
 }
 
-.ui-helper-clearfix {
-	min-height: 0; /* support: IE7 */
-}
-
 .ui-helper-zfix {
 	width: 100%;
 	height: 100%;
@@ -1141,18 +1137,26 @@ template {
 
 .ui-state-disabled {
 	cursor: default !important;
+	pointer-events: none;
 }
 
 /* Icons
 ----------------------------------*/
 
-/* states and images */
-
 .ui-icon {
-	display: block;
+	display: inline-block;
+	vertical-align: middle;
+	margin-top: -.25em;
+	position: relative;
 	text-indent: -99999px;
 	overflow: hidden;
 	background-repeat: no-repeat;
+}
+
+.ui-widget-icon-block {
+	left: 50%;
+	margin-left: -8px;
+	display: block;
 }
 
 /* Misc visuals
@@ -1169,7 +1173,7 @@ template {
 }
 
 /*!
- * jQuery UI Accordion 1.11.4
+ * jQuery UI Accordion 1.12.1
  * http://jqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
@@ -1185,23 +1189,7 @@ template {
 	position: relative;
 	margin: 2px 0 0 0;
 	padding: .5em .5em .5em .7em;
-	min-height: 0; /* support: IE7 */
 	font-size: 100%;
-}
-
-.ui-accordion .ui-accordion-icons {
-	padding-left: 2.2em;
-}
-
-.ui-accordion .ui-accordion-icons .ui-accordion-icons {
-	padding-left: 2.2em;
-}
-
-.ui-accordion .ui-accordion-header .ui-accordion-header-icon {
-	position: absolute;
-	left: .5em;
-	top: 50%;
-	margin-top: -8px;
 }
 
 .ui-accordion .ui-accordion-content {
@@ -1211,7 +1199,7 @@ template {
 }
 
 /*!
- * jQuery UI Autocomplete 1.11.4
+ * jQuery UI Autocomplete 1.12.1
  * http://jqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
@@ -1229,7 +1217,7 @@ template {
 }
 
 /*!
- * jQuery UI Button 1.11.4
+ * jQuery UI Button 1.12.1
  * http://jqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
@@ -1240,15 +1228,21 @@ template {
  */
 
 .ui-button {
+	padding: .4em 1em;
 	display: inline-block;
 	position: relative;
-	padding: 0;
 	line-height: normal;
 	margin-right: .1em;
 	cursor: pointer;
 	vertical-align: middle;
 	text-align: center;
-	overflow: visible; /* removes extra width in IE */
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+	/* Support: IE <= 11 */
+	overflow: visible;
 }
 
 .ui-button,
@@ -1262,104 +1256,48 @@ template {
 /* to make room for the icon, a width needs to be set here */
 
 .ui-button-icon-only {
-	width: 2.2em;
+	width: 2em;
+	box-sizing: border-box;
+	text-indent: -9999px;
+	white-space: nowrap;
 }
 
-/* button elements seem to need a little more width */
+/* no icon support for input elements */
 
-button.ui-button-icon-only {
-	width: 2.4em;
-}
-
-.ui-button-icons-only {
-	width: 3.4em;
-}
-
-button.ui-button-icons-only {
-	width: 3.7em;
-}
-
-/* button text element */
-
-.ui-button .ui-button-text {
-	display: block;
-	line-height: normal;
-}
-
-.ui-button-text-only .ui-button-text {
-	padding: .4em 1em;
-}
-
-.ui-button-icon-only .ui-button-text,
-.ui-button-icons-only .ui-button-text {
-	padding: .4em;
-	text-indent: -9999999px;
-}
-
-.ui-button-text-icon-primary .ui-button-text,
-.ui-button-text-icons .ui-button-text {
-	padding: .4em 1em .4em 2.1em;
-}
-
-.ui-button-text-icon-secondary .ui-button-text,
-.ui-button-text-icons .ui-button-text {
-	padding: .4em 2.1em .4em 1em;
-}
-
-.ui-button-text-icons .ui-button-text {
-	padding-left: 2.1em;
-	padding-right: 2.1em;
-}
-
-/* no icon support for input elements, provide padding by default */
-
-input.ui-button {
-	padding: .4em 1em;
+input.ui-button.ui-button-icon-only {
+	text-indent: 0;
 }
 
 /* button icon element(s) */
 
-.ui-button-icon-only .ui-icon,
-.ui-button-text-icon-primary .ui-icon,
-.ui-button-text-icon-secondary .ui-icon,
-.ui-button-text-icons .ui-icon,
-.ui-button-icons-only .ui-icon {
+.ui-button-icon-only .ui-icon {
 	position: absolute;
 	top: 50%;
-	margin-top: -8px;
-}
-
-.ui-button-icon-only .ui-icon {
 	left: 50%;
+	margin-top: -8px;
 	margin-left: -8px;
 }
 
-.ui-button-text-icon-primary .ui-button-icon-primary,
-.ui-button-text-icons .ui-button-icon-primary,
-.ui-button-icons-only .ui-button-icon-primary {
-	left: .5em;
+.ui-button.ui-icon-notext .ui-icon {
+	padding: 0;
+	width: 2.1em;
+	height: 2.1em;
+	text-indent: -9999px;
+	white-space: nowrap;
+
 }
 
-.ui-button-text-icon-secondary .ui-button-icon-secondary,
-.ui-button-text-icons .ui-button-icon-secondary,
-.ui-button-icons-only .ui-button-icon-secondary {
-	right: .5em;
-}
-
-/* button sets */
-
-.ui-buttonset {
-	margin-right: 7px;
-}
-
-.ui-buttonset .ui-button {
-	margin-left: 0;
-	margin-right: -.3em;
+input.ui-button.ui-icon-notext .ui-icon {
+	width: auto;
+	height: auto;
+	text-indent: 0;
+	white-space: normal;
+	padding: .4em 1em;
 }
 
 /* workarounds */
 
-/* reset extra padding in Firefox, see h5bp.com/l */
+/* Support: Firefox 5 - 40 */
 
 input.ui-button::-moz-focus-inner,
 button.ui-button::-moz-focus-inner {
@@ -1368,7 +1306,122 @@ button.ui-button::-moz-focus-inner {
 }
 
 /*!
- * jQuery UI Datepicker 1.11.4
+ * jQuery UI Checkboxradio 1.12.1
+ * http://jqueryui.com
+ *
+ * Copyright jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ *
+ * http://api.jqueryui.com/checkboxradio/#theming
+ */
+
+.ui-checkboxradio-label .ui-icon-background {
+	box-shadow: inset 1px 1px 1px #ccc;
+	border-radius: .12em;
+	border: none;
+}
+
+.ui-checkboxradio-radio-label .ui-icon-background {
+	width: 16px;
+	height: 16px;
+	border-radius: 1em;
+	overflow: visible;
+	border: none;
+}
+
+.ui-checkboxradio-radio-label.ui-checkboxradio-checked .ui-icon,
+.ui-checkboxradio-radio-label.ui-checkboxradio-checked:hover .ui-icon {
+	background-image: none;
+	width: 8px;
+	height: 8px;
+	border-width: 4px;
+	border-style: solid;
+}
+
+.ui-checkboxradio-disabled {
+	pointer-events: none;
+}
+
+/*!
+ * jQuery UI Controlgroup 1.12.1
+ * http://jqueryui.com
+ *
+ * Copyright jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ *
+ * http://api.jqueryui.com/controlgroup/#theming
+ */
+
+.ui-controlgroup {
+	vertical-align: middle;
+	display: inline-block;
+}
+
+.ui-controlgroup > .ui-controlgroup-item {
+	float: left;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.ui-controlgroup > .ui-controlgroup-item:focus,
+.ui-controlgroup > .ui-controlgroup-item.ui-visual-focus {
+	z-index: 9999;
+}
+
+.ui-controlgroup-vertical > .ui-controlgroup-item {
+	display: block;
+	float: none;
+	width: 100%;
+	margin-top: 0;
+	margin-bottom: 0;
+	text-align: left;
+}
+
+.ui-controlgroup-vertical .ui-controlgroup-item {
+	box-sizing: border-box;
+}
+
+.ui-controlgroup .ui-controlgroup-label {
+	padding: .4em 1em;
+}
+
+.ui-controlgroup .ui-controlgroup-label span {
+	font-size: 80%;
+}
+
+.ui-controlgroup-horizontal .ui-controlgroup-label + .ui-controlgroup-item {
+	border-left: none;
+}
+
+.ui-controlgroup-vertical .ui-controlgroup-label + .ui-controlgroup-item {
+	border-top: none;
+}
+
+.ui-controlgroup-horizontal .ui-controlgroup-label.ui-widget-content {
+	border-right: none;
+}
+
+.ui-controlgroup-vertical .ui-controlgroup-label.ui-widget-content {
+	border-bottom: none;
+}
+
+/* Spinner specific style fixes */
+
+.ui-controlgroup-vertical .ui-spinner-input {
+
+	/* Support: IE8 only, Android < 4.4 only */
+	width: 75%;
+	width: calc( 100% - 2.4em );
+}
+
+.ui-controlgroup-vertical .ui-spinner .ui-spinner-up {
+	border-top-style: solid;
+}
+
+/*!
+ * jQuery UI Datepicker 1.12.1
  * http://jqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
@@ -1580,8 +1633,19 @@ button.ui-button::-moz-focus-inner {
 	border-left-width: 1px;
 }
 
+/* Icons */
+
+.ui-datepicker .ui-icon {
+	display: block;
+	text-indent: -99999px;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	left: .5em;
+	top: .3em;
+}
+
 /*!
- * jQuery UI Dialog 1.11.4
+ * jQuery UI Dialog 1.12.1
  * http://jqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
@@ -1592,7 +1656,6 @@ button.ui-button::-moz-focus-inner {
  */
 
 .ui-dialog {
-	overflow: hidden;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -1649,12 +1712,52 @@ button.ui-button::-moz-focus-inner {
 	cursor: pointer;
 }
 
+.ui-dialog .ui-resizable-n {
+	height: 2px;
+	top: 0;
+}
+
+.ui-dialog .ui-resizable-e {
+	width: 2px;
+	right: 0;
+}
+
+.ui-dialog .ui-resizable-s {
+	height: 2px;
+	bottom: 0;
+}
+
+.ui-dialog .ui-resizable-w {
+	width: 2px;
+	left: 0;
+}
+
+.ui-dialog .ui-resizable-se,
+.ui-dialog .ui-resizable-sw,
+.ui-dialog .ui-resizable-ne,
+.ui-dialog .ui-resizable-nw {
+	width: 7px;
+	height: 7px;
+}
+
 .ui-dialog .ui-resizable-se {
-	width: 12px;
-	height: 12px;
-	right: -5px;
-	bottom: -5px;
-	background-position: 16px 16px;
+	right: 0;
+	bottom: 0;
+}
+
+.ui-dialog .ui-resizable-sw {
+	left: 0;
+	bottom: 0;
+}
+
+.ui-dialog .ui-resizable-ne {
+	right: 0;
+	top: 0;
+}
+
+.ui-dialog .ui-resizable-nw {
+	left: 0;
+	top: 0;
 }
 
 .ui-draggable .ui-dialog-titlebar {
@@ -1662,7 +1765,7 @@ button.ui-button::-moz-focus-inner {
 }
 
 /*!
- * jQuery UI Draggable 1.11.4
+ * jQuery UI Draggable 1.12.1
  * http://jqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
@@ -1676,7 +1779,7 @@ button.ui-button::-moz-focus-inner {
 }
 
 /*!
- * jQuery UI Menu 1.11.4
+ * jQuery UI Menu 1.12.1
  * http://jqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
@@ -1691,7 +1794,7 @@ button.ui-button::-moz-focus-inner {
 	padding: 0;
 	margin: 0;
 	display: block;
-	outline: none;
+	outline: 0;
 }
 
 .ui-menu .ui-menu {
@@ -1699,13 +1802,15 @@ button.ui-button::-moz-focus-inner {
 }
 
 .ui-menu .ui-menu-item {
-	position: relative;
 	margin: 0;
-	padding: 3px 1em 3px .4em;
 	cursor: pointer;
-	min-height: 0; /* support: IE7 */
 	/* support: IE10, see #8844 */
 	list-style-image: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
+}
+
+.ui-menu .ui-menu-item-wrapper {
+	position: relative;
+	padding: 3px 1em 3px .4em;
 }
 
 .ui-menu .ui-menu-divider {
@@ -1727,7 +1832,7 @@ button.ui-button::-moz-focus-inner {
 	position: relative;
 }
 
-.ui-menu-icons .ui-menu-item {
+.ui-menu-icons .ui-menu-item-wrapper {
 	padding-left: 2em;
 }
 
@@ -1749,7 +1854,7 @@ button.ui-button::-moz-focus-inner {
 }
 
 /*!
- * jQuery UI Progressbar 1.11.4
+ * jQuery UI Progressbar 1.12.1
  * http://jqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
@@ -1782,7 +1887,7 @@ button.ui-button::-moz-focus-inner {
 }
 
 /*!
- * jQuery UI Resizable 1.11.4
+ * jQuery UI Resizable 1.12.1
  * http://jqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
@@ -1872,7 +1977,7 @@ button.ui-button::-moz-focus-inner {
 }
 
 /*!
- * jQuery UI Selectable 1.11.4
+ * jQuery UI Selectable 1.12.1
  * http://jqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
@@ -1892,7 +1997,7 @@ button.ui-button::-moz-focus-inner {
 }
 
 /*!
- * jQuery UI Selectmenu 1.11.4
+ * jQuery UI Selectmenu 1.12.1
  * http://jqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
@@ -1913,7 +2018,6 @@ button.ui-button::-moz-focus-inner {
 
 .ui-selectmenu-menu .ui-menu {
 	overflow: auto;
-	/* Support: IE7 */
 	overflow-x: hidden;
 	padding-bottom: 1px;
 }
@@ -1932,34 +2036,26 @@ button.ui-button::-moz-focus-inner {
 	display: block;
 }
 
-.ui-selectmenu-button {
-	display: inline-block;
-	overflow: hidden;
-	position: relative;
-	text-decoration: none;
-	cursor: pointer;
-}
-
-.ui-selectmenu-button span.ui-icon {
-	right: 0.5em;
-	left: auto;
-	margin-top: -8px;
-	position: absolute;
-	top: 50%;
-}
-
-.ui-selectmenu-button span.ui-selectmenu-text {
-	text-align: left;
-	padding: 0.4em 2.1em 0.4em 1em;
+.ui-selectmenu-text {
 	display: block;
-	line-height: 1.4;
+	margin-right: 20px;
 	overflow: hidden;
 	text-overflow: ellipsis;
+}
+
+.ui-selectmenu-button.ui-button {
+	text-align: left;
 	white-space: nowrap;
+	width: 14em;
+}
+
+.ui-selectmenu-icon.ui-icon {
+	float: right;
+	margin-top: 0;
 }
 
 /*!
- * jQuery UI Sortable 1.11.4
+ * jQuery UI Sortable 1.12.1
  * http://jqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
@@ -1973,7 +2069,7 @@ button.ui-button::-moz-focus-inner {
 }
 
 /*!
- * jQuery UI Slider 1.11.4
+ * jQuery UI Slider 1.12.1
  * http://jqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
@@ -2061,7 +2157,7 @@ button.ui-button::-moz-focus-inner {
 }
 
 /*!
- * jQuery UI Spinner 1.11.4
+ * jQuery UI Spinner 1.12.1
  * http://jqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
@@ -2083,15 +2179,15 @@ button.ui-button::-moz-focus-inner {
 	border: none;
 	background: none;
 	color: inherit;
-	padding: 0;
+	padding: .222em 0;
 	margin: .2em 0;
 	vertical-align: middle;
 	margin-left: .4em;
-	margin-right: 22px;
+	margin-right: 2em;
 }
 
 .ui-spinner-button {
-	width: 16px;
+	width: 1.6em;
 	height: 50%;
 	font-size: .5em;
 	padding: 0;
@@ -2107,18 +2203,9 @@ button.ui-button::-moz-focus-inner {
 /* more specificity required here to override default borders */
 
 .ui-spinner a.ui-spinner-button {
-	border-top: none;
-	border-bottom: none;
-	border-right: none;
-}
-
-/* vertically center icon */
-
-.ui-spinner .ui-icon {
-	position: absolute;
-	margin-top: -8px;
-	top: 50%;
-	left: 0;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
 }
 
 .ui-spinner-up {
@@ -2129,15 +2216,8 @@ button.ui-button::-moz-focus-inner {
 	bottom: 0;
 }
 
-/* TR overrides */
-
-.ui-spinner .ui-icon-triangle-1-s {
-	/* need to fix icons sprite */
-	background-position: -65px -16px;
-}
-
 /*!
- * jQuery UI Tabs 1.11.4
+ * jQuery UI Tabs 1.12.1
  * http://jqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
@@ -2197,7 +2277,7 @@ button.ui-button::-moz-focus-inner {
 }
 
 /*!
- * jQuery UI Tooltip 1.11.4
+ * jQuery UI Tooltip 1.12.1
  * http://jqueryui.com
  *
  * Copyright jQuery Foundation and other contributors
@@ -2212,8 +2292,6 @@ button.ui-button::-moz-focus-inner {
 	position: absolute;
 	z-index: 9999;
 	max-width: 300px;
-	-webkit-box-shadow: 0 0 5px #aaa;
-	box-shadow: 0 0 5px #aaa;
 }
 
 body .ui-tooltip {

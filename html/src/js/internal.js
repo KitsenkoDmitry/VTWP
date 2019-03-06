@@ -16,10 +16,6 @@ $(document).ready(function() {
         mobileLgSize:   640,
         mobileSize:     480,
 
-
-        // Проверка touch устройств
-        // isTouch: $.browser.mobile,
-
         lang: $('html').attr('lang')
     };
 
@@ -38,27 +34,11 @@ $(document).ready(function() {
 
     $.extend(true, globalOptions, breakpoints);
 
-
-
-
-    $(window).load(() => {
-        // const { name } = $.browser;
-
-        // if (name) {
-        //     $('html').addClass(`browser-${name}`);
-        // }
-
-        // if (globalOptions.isTouch) {
-        //     $('html').addClass('touch').removeClass('no-touch');
-        // } else {
-        //     $('html').addClass('no-touch').removeClass('touch');
-        // }
-
+    $(window).on('load', () => {
         if ($('textarea').length > 0) {
             autosize($('textarea'));
         }
     });
-
 
     /**
      * Подключение js partials

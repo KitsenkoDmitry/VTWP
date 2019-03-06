@@ -79,7 +79,7 @@ body {
 
 .is-locked body {
         position: fixed;
-        /* overflow: hidden; */
+        overflow: hidden;
     }
 
 img {

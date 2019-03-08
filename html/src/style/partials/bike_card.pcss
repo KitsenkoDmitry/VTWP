@@ -1,0 +1,38 @@
+.bike-card {
+    display: flex;
+    justify-content: space-between;
+
+    & + & {
+        margin-top: calc($gutter-step * 7);
+    }
+
+    &__pic {
+        width: calc(100% / 12 * 8);
+    }
+
+    &__content {
+        width: calc(100% / 12 * 3);
+        padding-top: calc($gutter-step * 10);
+
+        &--left {
+            order: -1;
+        }
+    }
+
+        &__name {
+            display: inline-block;
+            vertical-align: top;
+            font-size: 32px;
+            margin-bottom: calc($gutter-step * 4);
+        }
+
+        &__footer {
+
+        }
+
+            &__price {
+                margin-bottom: calc($gutter-step * 4);
+                font-size: 24px;
+                font-family: $bernier;
+            }
+}

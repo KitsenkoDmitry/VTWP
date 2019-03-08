@@ -1575,6 +1575,50 @@ input[type="submit"] {
     margin: -27px 0 7px 0;
 }
 
+.bike-card {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+}
+
+.bike-card + .bike-card {
+        margin-top: 56px;
+    }
+
+.bike-card__pic {
+        width: 66.66667%;
+    }
+
+.bike-card__content {
+        width: 25%;
+        padding-top: 80px;
+    }
+
+.bike-card__content--left {
+            -ms-flex-order: -1;
+                order: -1;
+        }
+
+.bike-card__name {
+            display: inline-block;
+            vertical-align: top;
+            font-size: 32px;
+            font-size: 2rem;
+            margin-bottom: 32px;
+        }
+
+.bike-card__footer {
+
+        }
+
+.bike-card__price {
+                margin-bottom: 32px;
+                font-size: 24px;
+                font-size: 1.5rem;
+                font-family: Bernier, Arial, Helvetica, sans-serif;
+            }
+
 .field {
     position: relative;
 }
@@ -3001,6 +3045,64 @@ input[type="submit"] {
 .footer__copyrights-link img {
                 display: block;
             }
+
+.index-page-hl {
+    margin-top: 0;
+    margin-bottom: 56px;
+    font-size: 40px;
+    font-size: 2.5rem;
+    line-height: 1.4
+}
+
+@media (max-width: 1023px) {
+
+.index-page-hl {
+        font-size: 1.75rem
+}
+    }
+
+.index-page-bikes {
+    margin-bottom: 120px;
+    padding-top: 104px;
+}
+
+.index-page-brands {
+    margin-bottom: 120px;
+}
+
+.brands {
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 16px;
+    -ms-grid-rows: auto;
+    -ms-grid-columns: 1fr 16px 1fr 16px 1fr 16px 1fr 16px 1fr;
+        grid-template: auto / 1fr 1fr 1fr 1fr 1fr;
+}
+
+.brands__item {
+        -ms-flex-item-align: center;
+            -ms-grid-row-align: center;
+            align-self: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+        text-align: center;
+    }
+
+.brands__link {
+        display: inline-block;
+    }
+
+.brands__img {
+        transition: -webkit-filter 200ms ease;
+        transition: filter 200ms ease;
+        transition: filter 200ms ease, -webkit-filter 200ms ease;
+    }
+
+.brands__link:hover .brands__img {
+            -webkit-filter: brightness(2.5);
+                    filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="2.5" /><feFuncG type="linear" slope="2.5" /><feFuncB type="linear" slope="2.5" /></feComponentTransfer></filter></svg>#filter');
+                    filter: brightness(2.5);
+        }
 
 .categories {
     display: -ms-flexbox;

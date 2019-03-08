@@ -1,0 +1,23 @@
+.brands {
+    display: grid;
+    grid-gap: calc($gutter-step * 2);
+    grid-template: auto / 1fr 1fr 1fr 1fr 1fr;
+
+    &__item {
+        align-self: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    &__link {
+        display: inline-block;
+    }
+
+    &__img {
+        transition: filter $time ease;
+
+        .brands__link:hover & {
+            filter: brightness(2.5);
+        }
+    }
+}

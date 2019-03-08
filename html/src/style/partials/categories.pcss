@@ -1,0 +1,23 @@
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &__col {
+        width: 100%;
+        margin-bottom: calc($gutter-step * 4);
+
+
+        &--1of2 {
+            width: calc((100% - $gutter-step * 4) / 2);
+        }
+
+        &--1of3 {
+            width: calc((100% - ($gutter-step * 4)* 2) / 3);
+        }
+
+        &--1of4 {
+            width: calc((100% - ($gutter-step * 4)* 3) / 4);
+        }
+    }
+}

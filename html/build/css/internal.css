@@ -2778,6 +2778,95 @@ input[type="submit"] {
             fill: #fff;
         }
 
+.bikes-carousel {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+}
+
+.bikes-carousel__item input[type="radio"] + .bikes-carousel__item-label {
+                margin: 0;
+                padding: 0
+            }
+
+.bikes-carousel__item input[type="radio"] + .bikes-carousel__item-label::before,
+                .bikes-carousel__item input[type="radio"] + .bikes-carousel__item-label::after {
+                    content: none;
+                }
+
+.bikes-carousel__item input[type="radio"]:checked + .bikes-carousel__item-label .bikes-carousel__item-title {
+                        color: #fff;
+                    }
+
+.bikes-carousel__item input[type="radio"]:checked + .bikes-carousel__item-label .bikes-carousel__item-img {
+                        opacity: 1;
+                    }
+
+.bikes-carousel__item-title {
+            margin-bottom: 0;
+            font-size: 32px;
+            font-size: 2rem;
+            line-height: 1;
+            font-family: Bernier, Arial, Helvetica, sans-serif;
+            text-transform: lowercase;
+            text-align: center;
+            color: rgba(255, 255, 255, .15);
+            transition: color 200ms ease;
+        }
+
+.bikes-carousel__item-label:hover .bikes-carousel__item-title {
+                color: #fff;
+            }
+
+.bikes-carousel__item-img {
+            max-width: 160px;
+            opacity: 0.5;
+            margin: 0 auto;
+            transition: opacity 200ms ease;
+        }
+
+.bikes-carousel__item-label:hover .bikes-carousel__item-img {
+                opacity: 1;
+            }
+
+.accessories-selection {
+    padding-top: 112px;
+}
+
+.accessories-selection__hl {
+        margin-bottom: 80px;
+        text-align: center;
+    }
+
+.accessories-selection__carousel {
+        margin-bottom: 80px;
+    }
+
+.accessories-selection__row {
+        display: -ms-flexbox;
+        display: flex;
+        margin-bottom: 120px;
+    }
+
+.accessories-selection__row-col {
+            width: calc(25% - 24px);
+            margin-right: 32px
+        }
+
+.accessories-selection__row-col:last-child {
+                margin-right: 0;
+            }
+
+.accessories-selection__row-col--2of4 {
+                width: calc(50% - 48px);
+            }
+
+.accessories-selection__row-btn {
+            height: 80px;
+            margin-bottom: 24px;
+        }
+
 .footer {
     padding-top: 40px;
     padding-bottom: 32px;
@@ -2912,6 +3001,90 @@ input[type="submit"] {
 .footer__copyrights-link img {
                 display: block;
             }
+
+.categories {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+}
+
+.categories__col {
+        width: 100%;
+        margin-bottom: 32px;
+    }
+
+.categories__col--1of2 {
+            width: calc(50% - 16px);
+        }
+
+.categories__col--1of3 {
+            width: calc(33.33333% - 21.33333px);
+        }
+
+.categories__col--1of4 {
+            width: calc(25% - 24px);
+        }
+
+.category-item {
+    position: relative;
+    display: block;
+    padding: 40px 48px;
+    color: #fff;
+
+    height: 208px
+}
+
+.category-item:hover {
+        color: #fff;
+    }
+
+.category-item--md {
+        height: 288px;
+        padding: 56px 48px;
+    }
+
+.category-item--lg {
+        height: 416px;
+        padding: 56px 48px;
+    }
+
+.category-item__pic {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+.category-item__pic-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+.category-item__pic::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, .1);
+            transition: background 200ms ease;
+        }
+
+.category-item:hover .category-item__pic::after {
+                background-color: rgba(0, 0, 0, .5);
+            }
+
+.category-item__title {
+        position: relative;
+        z-index: 1;
+        margin: 0;
+    }
 
 /* select2 */
 

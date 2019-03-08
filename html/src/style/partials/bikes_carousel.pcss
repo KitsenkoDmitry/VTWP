@@ -1,0 +1,57 @@
+.bikes-carousel {
+    display: flex;
+    justify-content: space-between;
+
+    &__item {
+        input[type="radio"] {
+
+            & + .bikes-carousel__item-label {
+                margin: 0;
+                padding: 0;
+
+                &::before,
+                &::after {
+                    content: none;
+                }
+            }
+
+            &:checked {
+                & + .bikes-carousel__item-label {
+                    .bikes-carousel__item-title {
+                        color: $cl-global-invert;
+                    }
+
+                    .bikes-carousel__item-img {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        &-title {
+            margin-bottom: 0;
+            font-size: 32px;
+            line-height: 1;
+            font-family: $bernier;
+            text-transform: lowercase;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.15);
+            transition: color $time ease;
+
+            .bikes-carousel__item-label:hover & {
+                color: $cl-global-invert;
+            }
+        }
+
+        &-img {
+            max-width: 160px;
+            opacity: 0.5;
+            margin: 0 auto;
+            transition: opacity $time ease;
+
+            .bikes-carousel__item-label:hover & {
+                opacity: 1;
+            }
+        }
+    }
+}

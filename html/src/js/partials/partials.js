@@ -10,3 +10,4 @@
 @@include('filter_modal.js')
 @@include('label_animation.js')
 @@include('tooltip.js')
+@@include('map.js')

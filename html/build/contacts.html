@@ -400,9 +400,7 @@
                         Как проехать</a>
                 </div>
             </div>
-            <div class="contacts__map">
-                <img data-src="img/map.jpg" class="lazyload">
-            </div>
+            <div class="contacts__map" id="map"></div>
         </section>
 
     </main>
@@ -461,6 +459,10 @@
 
     <script src="js/external.js" type="text/javascript"></script>
     <script src="js/internal.js" type="text/javascript"></script>
+
+    <!-- подключить только на главной и на странице контактов -->
+    <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" type="text/javascript"></script>
+
 
 </body>
 </html>

@@ -1,0 +1,26 @@
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+
+    li {
+        margin-right: 14px;
+        width: 10px;
+        height: 10px;
+        border-radius: 10px;
+        list-style: none;
+        font-size: 0;
+        opacity: 0.2;
+        background-color: $cl-global-invert;
+        cursor: pointer;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &.slick-active {
+            opacity: 1;
+            background-color: $cl-red;
+        }
+    }
+}

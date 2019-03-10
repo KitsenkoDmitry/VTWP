@@ -7,17 +7,33 @@
         width: 100%;
         margin-bottom: calc($gutter-step * 4);
 
+        @media (--tablet-lg) {
+            margin-bottom: calc($gutter-step * 3);
+        }
+
 
         &--1of2 {
             width: calc((100% - $gutter-step * 4) / 2);
+
+            @media (--tablet) {
+                width: 100%;
+            }
         }
 
         &--1of3 {
             width: calc((100% - ($gutter-step * 4)* 2) / 3);
+
+            @media (--tablet) {
+                width: 100%;
+            }
         }
 
         &--1of4 {
             width: calc((100% - ($gutter-step * 4)* 3) / 4);
+
+            @media (--tablet) {
+                width: 100%;
+            }
         }
     }
 }

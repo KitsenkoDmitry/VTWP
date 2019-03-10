@@ -1,0 +1,35 @@
+<section class="contacts@@if(className){ className}">
+    <div class="container contacts__container">
+        <div class="contacts__desc">
+            @@if(isContactsPage) {
+                <h1 class="contacts__hl">
+            }
+            @@if(!isContactsPage) {
+                <h2 class="contacts__hl">
+            }
+                установочный центр<br>v-twinparts
+            @@if(!isContactsPage) {
+                </h2>
+            }
+            @@if(isContactsPage) {
+                </h1>
+            }
+            <p class="cl-grey contacts__addr">Московская облать, Солнечногорский район, д. Дурыкино, 1Д.</p>
+            <p class="contacts__tel contacts__tel--mb0">
+                <a href="tel:74994091101" class="link link--white">+7 499 409 1101</a>
+            </p>
+            <p class="contacts__tel">
+                <a href="tel:79646430101" class="link link--white">+7 964 643 0101</a>
+            </p>
+            <p class="contacts__mail">
+                <a href="mailto:" class="link link--white">info@harley-parts.ru</a>
+            </p>
+            <a href="https://yandex.ru/maps/?from=api-maps&ll=37.152171%2C56.066672&mode=routes&rtext=~56.059998%2C37.140241&rtt=auto&spn=0.048065185546875.0.01920548094935981&utm_source=api-maps&z=14"
+            class="btn btn--white contacts__how-btn">
+                Как проехать</a>
+        </div>
+    </div>
+    <div class="contacts__map">
+        <img data-src="img/map.jpg" class="lazyload">
+    </div>
+</section>

@@ -5,15 +5,25 @@
     line-height: 1.4;
 
     @media (--tablet-lg) {
+        margin-bottom: calc($gutter-step * 5);
         font-size: 28px;
     }
 }
 
 .index-page-bikes {
-    margin-bottom: calc($gutter-step * 15);
     padding-top: calc($gutter-step * 13);
+    margin-bottom: calc($gutter-step * 15);
+
+    @media (--tablet-lg) {
+        padding-top: calc($gutter-step * 7);
+        margin-bottom: calc($gutter-step * 8);
+    }
 }
 
 .index-page-brands {
     margin-bottom: calc($gutter-step * 15);
+
+    @media (--tablet-lg) {
+        margin-bottom: calc($gutter-step * 8);
+    }
 }

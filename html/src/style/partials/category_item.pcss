@@ -6,18 +6,30 @@
 
     height: 208px;
 
+    @media (--tablet-lg) {
+        height: 200px;
+        padding: calc($gutter-step * 3.5) calc($gutter-step * 3);
+    }
+
     &:hover {
         color: $cl-global-invert;
     }
 
-    &--md {
-        height: 288px;
-        padding: calc($gutter-step * 7) calc($gutter-step * 6);
+    @media (--tablet-lg-min) {
+        &--md {
+            height: 288px;
+            padding: calc($gutter-step * 7) calc($gutter-step * 6);
+        }
     }
 
     &--lg {
         height: 416px;
         padding: calc($gutter-step * 7) calc($gutter-step * 6);
+
+        @media (--tablet-lg) {
+            height: 288px;
+            padding: calc($gutter-step * 3.5) calc($gutter-step * 3);
+        }
     }
 
     &__pic {

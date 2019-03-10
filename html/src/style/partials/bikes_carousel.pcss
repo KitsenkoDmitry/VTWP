@@ -3,6 +3,22 @@
     justify-content: space-between;
 
     &__item {
+
+        @media (--tablet-lg) {
+            margin: 0 $gutter-step;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+        }
+
+
+
         input[type="radio"] {
 
             & + .bikes-carousel__item-label {
@@ -38,6 +54,10 @@
             color: rgba(255, 255, 255, 0.15);
             transition: color $time ease;
 
+            @media (--tablet-lg) {
+                font-size: 24px;
+            }
+
             .bikes-carousel__item-label:hover & {
                 color: $cl-global-invert;
             }
@@ -48,6 +68,10 @@
             opacity: 0.5;
             margin: 0 auto;
             transition: opacity $time ease;
+
+            @media (--tablet-lg) {
+                max-width: 128px;
+            }
 
             .bikes-carousel__item-label:hover & {
                 opacity: 1;

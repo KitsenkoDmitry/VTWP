@@ -1,0 +1,92 @@
+.contacts {
+    position: relative;
+    padding-bottom: calc($gutter-step * 12);
+
+    @media (--tablet-lg) {
+        padding-bottom: calc($gutter-step * 4);
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+
+        @media (--tablet-lg) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__desc {
+        width: 280px;
+        height: 680px;
+
+        @media (--tablet-lg) {
+            width: 100%;
+            height: auto;
+            margin-bottom: calc($gutter-step * 4);
+        }
+    }
+
+    &__map {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: calc((100% - $gutter-step * 4) / 12 * 8);
+        height: 680px;
+        overflow: hidden;
+
+        @media (--tablet-lg) {
+            position: static;
+            width: 100%;
+            height: 352px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__hl {
+        margin-bottom: calc($gutter-step * 5);
+        font-size: 32px;
+        line-height: 1.25;
+
+        @media (--tablet-lg) {
+            margin-bottom: calc($gutter-step * 3);
+            font-size: 24px;
+        }
+    }
+
+    &__addr {
+        margin-bottom: calc($gutter-step * 4);
+
+        @media (--tablet-lg) {
+            margin-bottom: calc($gutter-step * 3);
+        }
+    }
+
+    &__tel {
+        margin-bottom: calc($gutter-step * 3);
+
+        &--mb0 {
+            margin-bottom: 0;
+        }
+    }
+
+    &__mail {
+        @media (--tablet-lg-min) {
+            margin: calc($gutter-step * 4) 0;
+        }
+
+        @media (--tablet-lg) {
+            margin-bottom: calc($gutter-step * 3);
+        }
+    }
+
+    &__how-btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 0;
+    }
+}

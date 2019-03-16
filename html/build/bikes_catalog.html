@@ -141,14 +141,17 @@
             <div class="header__col">
                 <p class="header__col-top header__col-top--right">
                     
+                        <a href="javascript:;" class="header__col-cart link link--white js-cart-btn">
+                            <span class="header__col-cart-text">Корзина</span>
+                            <span class="qt">3</span>
+                        </a>
                     
-                        <a class="header__col-cart header__col-cart--empty">Корзина пуста</a>
                     
                 </p>
                 <div class="header__col-menu">
                     <a href="javascript:;" class="link link--bernier link--white link--underline ">Наши проекты</a>
                     <a href="javascript:;" class="link link--bernier link--white link--underline ">О нас</a>
-                    <a href="javascript:;" class="link link--bernier link--white link--underline is-active">Контакты</a>
+                    <a href="javascript:;" class="link link--bernier link--white link--underline ">Контакты</a>
                 </div>
             </div>
         </div>
@@ -373,35 +376,49 @@
 
 
     <main class="wrap-main">
-        <section class="contacts">
-            <div class="container contacts__container">
-                <div class="contacts__desc">
-                    
-                        <h1 class="contacts__hl">
-                    
-                    
-                        установочный центр<br>v-twinparts
-                    
-                    
-                        </h1>
-                    
-                    <p class="cl-grey contacts__addr">Московская облать, Солнечногорский район, д. Дурыкино, 1Д.</p>
-                    <p class="contacts__tel contacts__tel--mb0">
-                        <a href="tel:74994091101" class="link link--white">+7 499 409 1101</a>
-                    </p>
-                    <p class="contacts__tel">
-                        <a href="tel:79646430101" class="link link--white">+7 964 643 0101</a>
-                    </p>
-                    <p class="contacts__mail">
-                        <a href="mailto:" class="link link--white">info@harley-parts.ru</a>
-                    </p>
-                    <a href="https://yandex.ru/maps/?from=api-maps&ll=37.152171%2C56.066672&mode=routes&rtext=~56.059998%2C37.140241&rtt=auto&spn=0.048065185546875.0.01920548094935981&utm_source=api-maps&z=14"
-                    class="btn btn--white contacts__how-btn">
-                        Как проехать</a>
+        <div class="container container_mb">
+            <div class="page-flex-title">
+                <h1 class="page-flex-title__hl">Мотоциклы на продажу</h1>
+                <div class="page-flex-title__select field select2-transparent">
+                    <select name="ui-form__select2_2" id="ui-form__select2_2" data-search="false">
+                        <option value="1">Сначала новинки</option>
+                        <option value="2">Сначала подороже</option>
+                        <option value="3">Сначала подешевле</option>
+                        <option value="4">Сначала популярное</option>
+                        <option value="4">Сначала со скидками</option>
+                    </select>
                 </div>
             </div>
-            <div class="contacts__map" id="map"></div>
-        </section>
+
+            <section class="bike-card">
+                <a href="javacript:;" class="bike-card__pic">
+                    <img class="lazyload" data-src="img/inhtml/product_bike1.jpg">
+                </a>
+                <div class="bike-card__content">
+                    <a class="bike-card__name link link--bernier link--white" href="javascipt:;">harley-davidson 2018 breakout 114 anniversary</a>
+                    <div class="bike-card__footer">
+                        <p class="bike-card__price">2 490 000 ₽</p>
+                        <button class="btn bike-card__btn" type="button">Купить</button>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="bike-card">
+                <a href="javacript:;" class="bike-card__pic">
+                    <img class="lazyload" data-src="img/inhtml/product_bike2.jpg">
+                </a>
+                <div class="bike-card__content bike-card__content--left">
+                    <a class="bike-card__name link link--bernier link--white" href="javascipt:;">harley-davidson 2018 breakout 114 anniversary</a>
+                    <div class="bike-card__footer">
+                        <p class="bike-card__price">1 960 000 ₽</p>
+                        <button class="btn bike-card__btn" type="button">Купить</button>
+                    </div>
+                </div>
+            </section>
+
+
+        </div>
 
     </main>
 

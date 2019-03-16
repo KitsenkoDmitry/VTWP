@@ -1595,6 +1595,7 @@ input[type="submit"] {
     }
 
 .bike-card__pic {
+        display: block;
         width: 66.66667%
     }
 
@@ -3453,6 +3454,39 @@ input[type="submit"] {
             background-color: #ff3300;
         }
 
+.page-flex-title {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: baseline;
+        align-items: baseline;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-bottom: 40px
+}
+
+@media (max-width: 1023px) {
+
+.page-flex-title {
+        margin-bottom: 0
+}
+    }
+
+.page-flex-title__select {
+        margin-bottom: 0;
+        min-width: 220px
+
+    }
+
+@media (max-width: 1023px) {
+
+    .page-flex-title__select {
+            margin-left: auto
+
+    }
+        }
+
 .categories {
     display: -ms-flexbox;
     display: flex;
@@ -3759,6 +3793,17 @@ input[type="submit"] {
         padding: 0 24px
 }
     }
+
+.container_mb {
+        margin-bottom: 128px
+    }
+
+@media (max-width: 1023px) {
+
+    .container_mb {
+            margin-bottom: 64px
+    }
+        }
 
 .section {
         position: relative;

@@ -1,0 +1,21 @@
+.page-flex-title {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: calc($gutter-step * 5);
+
+    @media (--tablet-lg) {
+        margin-bottom: 0;
+    }
+
+    &__select {
+        margin-bottom: 0;
+        min-width: 220px;
+
+        @media (--tablet-lg) {
+            margin-left: auto;
+        }
+
+    }
+}

@@ -377,49 +377,106 @@
 
     <main class="wrap-main">
         <div class="container container--mb">
-            <div class="page-flex-title">
-                <h1 class="page-flex-title__hl">Мотоциклы на продажу</h1>
-                <div class="page-flex-title__select field select2-transparent">
-                    <select name="ui-form__select2_2" id="ui-form__select2_2" data-search="false">
-                        <option value="1">Сначала новинки</option>
-                        <option value="2">Сначала подороже</option>
-                        <option value="3">Сначала подешевле</option>
-                        <option value="4">Сначала популярное</option>
-                        <option value="4">Сначала со скидками</option>
-                    </select>
+            <section class="product-page">
+                <div class="product-page__carousel">
+                    todo
+                    - добавть карусель
+                    - вынести цену и старую цену в ui-kit
+                    -
+
                 </div>
+                <div class="product-page__info">
+                    <p class="product-page__category">Выхлопы Vance & Hines</p>
+                    <h1 class="product-page__hl">monster round slip-ons</h1>
+                    <p class="product-page__vendor-code">Артикул: 46654</p>
+                    <p class="product-page__in-stock">
+                        <svg class="icon icon--done"><use xlink:href="#icon-done"></use></svg>
+                        в наличии
+                    </p>
+                    <div class="product-page__price-block">
+                        <span class="product-page__price">54 900 ₽</span>
+                        <span class="product-page__price product-page__price--old">57 999 ₽</span>
+                    </div>
+                    <button type="button" class="btn btn--lg btn--block product-page__btn">Купить</button>
+                    <p class="product-page__note cl-grey">
+                        Доставка до нашего склада 1-2 недели. <br>
+                        Бережная отправка в регионы.
+                    </p>
+
+                </div>
+            </section>
+
+            <div class="product-page-desc">
+                <h2>характеристики и описание</h2>
+                <p>Выхлопная система для Harley Davidson Touring 2017 года от&nbsp;легендарного американского производителя Vance &amp;&nbsp;Hines. Очень низкий звук и&nbsp;глубокий гул за&nbsp;счет внутренней перегородки и&nbsp;конусовидного глушителя на&nbsp;выходе. Вес достаточно легкий, не&nbsp;более 4&nbsp;кг. Покрытие&nbsp;&mdash; хром, также есть с&nbsp;варианты с&nbsp;плазменным керамическим напылением чёрного цвета.</p>
             </div>
+            <section class="similar">
+                <h2 class="similar__hl">для touring также подойдёт</h2>
 
-            <section class="bike-card">
-                <a href="javacript:;" class="bike-card__pic">
-                    <img class="lazyload" data-src="img/inhtml/product_bike1.jpg">
-                </a>
-                <div class="bike-card__content">
-                    <a class="bike-card__name link link--bernier link--white" href="javascipt:;">harley-davidson 2018 breakout 114 anniversary</a>
-                    <div class="bike-card__footer">
-                        <p class="bike-card__price">2 490 000 ₽</p>
-                        <button class="btn bike-card__btn" type="button">Купить</button>
-                    </div>
-                </div>
-            </section>
+                <ul class="similar__carousel js-similar-carousel">
+                    <li class="similar__carousel-item">
+                        <a href="javascript:;" class="product">
+                            <div class="product__img">
+                                <img data-src="img/inhtml/filter.jpg" class="lazyload">
+                            </div>
+                            
+                            
+                            <div class="product__content">
+                                <div class="product__content-col">
+                                    <p class="product__company">Vines & Hines</p>
+                                    <p class="product__name">Фильтр VO2 Cage Fighter Air Intake</p>
+                                </div>
+                                <div class="product__content-col">
+                                    
+                                    <p class="product__price">16 970 ₽</p>
+                                </div>
+                            </div>
+                        </a>
 
+                    </li>
+                    <li class="similar__carousel-item">
+                            <a href="javascript:;" class="product">
+                                <div class="product__img">
+                                    <img data-src="img/inhtml/flute.jpg" class="lazyload">
+                                </div>
+                                
+                                
+                                <div class="product__content">
+                                    <div class="product__content-col">
+                                        <p class="product__company">Vines & Hines</p>
+                                        <p class="product__name">Флейты Quiet Baffles</p>
+                                    </div>
+                                    <div class="product__content-col">
+                                        
+                                        <p class="product__price">4 570 ₽</p>
+                                    </div>
+                                </div>
+                            </a>
 
-            <section class="bike-card">
-                <a href="javacript:;" class="bike-card__pic">
-                    <img class="lazyload" data-src="img/inhtml/product_bike2.jpg">
-                </a>
-                <div class="bike-card__content bike-card__content--left">
-                    <a class="bike-card__name link link--bernier link--white" href="javascipt:;">harley-davidson 2018 breakout 114 anniversary</a>
-                    <div class="bike-card__footer">
-                        <p class="bike-card__price">1 960 000 ₽</p>
-                        <button class="btn bike-card__btn" type="button">Купить</button>
-                    </div>
-                </div>
-            </section>
+                        </li>
+                    <li class="similar__carousel-item">
+                        <a href="javascript:;" class="product">
+                            <div class="product__img">
+                                <img data-src="img/inhtml/thermo.jpg" class="lazyload">
+                            </div>
+                            
+                            
+                            <div class="product__content">
+                                <div class="product__content-col">
+                                    <p class="product__company">Vines & Hines</p>
+                                    <p class="product__name">Термолента Header Wrap Kit</p>
+                                </div>
+                                <div class="product__content-col">
+                                    
+                                    <p class="product__price">7 970 ₽</p>
+                                </div>
+                            </div>
+                        </a>
 
-
+                    </li>
+                </ul>
+            </div>
         </div>
-
     </main>
 
     <footer class="footer">

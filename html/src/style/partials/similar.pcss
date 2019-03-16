@@ -1,0 +1,18 @@
+.similar {
+    &__hl {
+        margin-bottom: calc($gutter-step * 7);
+    }
+
+    &__carousel {
+        display: flex;
+
+        &-item {
+            width: calc((100% - ($gutter-step * 4) * 2) / 3 );
+            margin-right: calc($gutter-step * 4);
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}

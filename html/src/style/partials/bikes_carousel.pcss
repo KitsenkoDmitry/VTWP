@@ -14,10 +14,7 @@
             &:last-child {
                 margin-right: 0;
             }
-
         }
-
-
 
         input[type="radio"] {
 
@@ -59,7 +56,9 @@
             }
 
             .bikes-carousel__item-label:hover & {
-                color: $cl-global-invert;
+                @media (--tablet-lg-min) {
+                    color: $cl-global-invert;
+                }
             }
         }
 
@@ -74,7 +73,9 @@
             }
 
             .bikes-carousel__item-label:hover & {
-                opacity: 1;
+                @media (--tablet-lg-min) {
+                    opacity: 1;
+                }
             }
         }
     }

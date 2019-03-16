@@ -42,6 +42,14 @@ if ($bikesCarousel.length) {
             }
         ]
     });
+
+    // check bike after init
+    $bikesCarousel.find('.slick-active').find('input').prop('checked', true);
+
+    // check bike after change
+    $bikesCarousel.on('afterChange', () => {
+        $bikesCarousel.find('.slick-active').find('input').prop('checked', true);
+    });
 }
 
 // карусель категорий

@@ -2897,7 +2897,6 @@ input[type="submit"] {
             .bikes-carousel__item:last-child {
                 margin-right: 0;
             }
-
         }
 
 .bikes-carousel__item input[type="radio"] + .bikes-carousel__item-label {
@@ -2937,9 +2936,12 @@ input[type="submit"] {
         }
             }
 
-.bikes-carousel__item-label:hover .bikes-carousel__item-title {
-                color: #fff;
+@media (min-width: 1024px) {
+
+            .bikes-carousel__item-label:hover .bikes-carousel__item-title {
+                    color: #fff
             }
+                }
 
 .bikes-carousel__item-img {
             max-width: 160px;
@@ -2955,9 +2957,12 @@ input[type="submit"] {
         }
             }
 
-.bikes-carousel__item-label:hover .bikes-carousel__item-img {
-                opacity: 1;
+@media (min-width: 1024px) {
+
+            .bikes-carousel__item-label:hover .bikes-carousel__item-img {
+                    opacity: 1
             }
+                }
 
 .accessories-selection {
     padding-top: 112px

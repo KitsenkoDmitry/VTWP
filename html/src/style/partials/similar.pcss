@@ -1,17 +1,34 @@
 .similar {
     &__hl {
         margin-bottom: calc($gutter-step * 7);
+
+        @media (--tablet-lg) {
+            margin-bottom: calc($gutter-step * 3);
+        }
     }
 
     &__carousel {
         display: flex;
+        justify-content: space-between;
+
+        @media (--tablet-lg) {
+            flex-wrap: wrap;
+        }
 
         &-item {
             width: calc((100% - ($gutter-step * 4) * 2) / 3 );
-            margin-right: calc($gutter-step * 4);
 
-            &:last-child {
-                margin-right: 0;
+            @media (--tablet-lg) {
+                width: calc((100% - $gutter-step * 4) / 2 );
+                margin-bottom: calc($gutter-step * 4);
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            @media (--mobile-lg) {
+                width: 100%;
             }
         }
     }

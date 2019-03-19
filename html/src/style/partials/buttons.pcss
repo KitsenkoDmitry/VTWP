@@ -116,3 +116,24 @@ input[type="submit"] {
     fill: $cl-global-invert;
     background-color: $cl-bg;
 }
+
+.btn-arrow {
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    background-color: $cl-bg;
+    z-index: 1;
+
+    .icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        fill: $cl-global-invert;
+    }
+
+    &--prev {
+        transform: rotate(-180deg);
+    }
+}

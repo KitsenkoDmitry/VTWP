@@ -1,6 +1,5 @@
 //  карусель на первом баннере на главной странице
 const $newsCarousel = $('.js-news-carousel');
-
 if ($newsCarousel.length) {
     $newsCarousel.slick({
         arrows: false,
@@ -26,7 +25,6 @@ if ($newsCarousel.length) {
 
 // карусель подбора байков
 const $bikesCarousel = $('.js-bikes-carousel');
-
 if ($bikesCarousel.length) {
     $bikesCarousel.slick({
         arrows: false,
@@ -54,9 +52,8 @@ if ($bikesCarousel.length) {
 
 // карусель категорий
 const $categoriesCarousel = $('.js-categories-carousel');
-
 if ($categoriesCarousel.length) {
-    const categoriesOptions = {
+    $categoriesCarousel.slick({
         arrows: false,
         infinite: false,
         slidesToShow: 1,
@@ -71,8 +68,48 @@ if ($categoriesCarousel.length) {
                 settings: 'unslick',
             }
         ]
-    };
-    $categoriesCarousel.slick(categoriesOptions);
+    });
+}
 
+// карусель картинок товара
+const $productCarousel = $('.js-product-carousel');
+if ($productCarousel.length) {
+    $productCarousel.slick({
+        arrows: true,
+        infinite: true,
+        slidesToShow: 1,
+        prevArrow: '<button type="button" class="btn-arrow btn-arrow--prev product-page__carousel-prev"><svg class="icon icon--arrow-next"><use xlink:href="#icon-arrow_next"></use></svg></button>',
+        nextArrow: '<button type="button" class="btn-arrow product-page__carousel-next"><svg class="icon icon--arrow-next"><use xlink:href="#icon-arrow_next"></use></svg></button>',
+        dots: false,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
+                    dots: true
+                }
+            }
+        ]
+    });
+}
 
+// карусель похожих товаров
+const $similarCarousel = $('.js-similar-carousel');
+if ($similarCarousel.length) {
+    $similarCarousel.slick({
+        arrows: false,
+        infinite: false,
+        slidesToShow: 1,
+        centerMode: true,
+        centerPadding: '0',
+        variableWidth: false,
+        dots: true,
+        mobileFirst: true,
+        responsive: [
+            {
+                breakpoint: 639,
+                settings: 'unslick',
+            }
+        ]
+    });
 }

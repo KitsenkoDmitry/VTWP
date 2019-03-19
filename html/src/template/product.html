@@ -1,7 +1,7 @@
-<a href="javascript:;" class="product@@if(className){ @@className}">
-    <div class="product__img">
+<div class="product@@if(className){ @@className}">
+    <a href="javascript:;" class="product__img">
         <img data-src="@@imgSrc" class="lazyload">
-    </div>
+    </a>
     @@if(isNew) {
         <span class="product__icon" data-tooltip="Парадигма трансформации общества важно символизирует постиндустриализм, последнее особенно ярко выражено в ранних работах.">
             <svg class="icon icon--new"><use xlink:href="#icon-new"></use></svg>
@@ -14,8 +14,8 @@
     }
     <div class="product__content">
         <div class="product__content-col">
-            <p class="product__company">@@companyName</p>
-            <p class="product__name">@@productName</p>
+            <a href="javacript:;" class="product__company">@@companyName</a>
+            <a href="javascript:;" class="product__name">@@productName</a>
         </div>
         <div class="product__content-col">
             @@if(oldPrice) {
@@ -24,4 +24,4 @@
             <p class="product__price@@if(oldPrice){ product__price--red}">@@price ₽</p>
         </div>
     </div>
-</a>
+</div>

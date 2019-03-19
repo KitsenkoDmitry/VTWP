@@ -14,21 +14,26 @@
     <main class="wrap-main">
         <div class="container container--mb">
             <section class="product-page">
-                <div class="product-page__carousel">
-                    todo
-                    - добавть карусель
-                    - вынести цену и старую цену в ui-kit
-                    -
-
+                <p class="product-page__category">Выхлопы Vance & Hines</p>
+                <div class="product-page__carousel js-product-carousel">
+                    <div class="product-page__carousel-img">
+                        <img data-src="img/inhtml/monster-round.jpg" class="lazyload">
+                    </div>
+                    <div class="product-page__carousel-img">
+                        <img data-src="img/inhtml/harley-davidson.jpg" class="lazyload">
+                    </div>
                 </div>
                 <div class="product-page__info">
-                    <p class="product-page__category">Выхлопы Vance & Hines</p>
+                    <p class="product-page__info-category">Выхлопы Vance & Hines</p>
                     <h1 class="product-page__hl">monster round slip-ons</h1>
-                    <p class="product-page__vendor-code">Артикул: 46654</p>
-                    <p class="product-page__in-stock">
-                        <svg class="icon icon--done"><use xlink:href="#icon-done"></use></svg>
-                        в наличии
-                    </p>
+                    <div class="product-page__help-info">
+                        <p
+                        class="product-page__vendor-code">Артикул: 46654</p>
+                        <p class="product-page__in-stock">
+                            <svg class="icon icon--done"><use xlink:href="#icon-done"></use></svg>
+                            в наличии
+                        </p>
+                    </div>
                     <div class="product-page__price-block">
                         <span class="product-page__price">54 900 ₽</span>
                         <span class="product-page__price product-page__price--old">57 999 ₽</span>
@@ -49,8 +54,8 @@
             <section class="similar">
                 <h2 class="similar__hl">для touring также подойдёт</h2>
 
-                <ul class="similar__carousel js-similar-carousel">
-                    <li class="similar__carousel-item">
+                <div class="similar__carousel js-similar-carousel">
+                    <div class="similar__carousel-item">
                         @@include('template/product.html', {
                             "className": false,
                             "imgSrc": "img/inhtml/filter.jpg",
@@ -60,8 +65,8 @@
                             "companyName": "Vines & Hines",
                             "productName": "Фильтр VO2 Cage Fighter Air Intake"
                         })
-                    </li>
-                    <li class="similar__carousel-item">
+                    </div>
+                    <div class="similar__carousel-item">
                             @@include('template/product.html', {
                                 "className": false,
                                 "imgSrc": "img/inhtml/flute.jpg",
@@ -71,8 +76,8 @@
                                 "companyName": "Vines & Hines",
                                 "productName": "Флейты Quiet Baffles"
                             })
-                        </li>
-                    <li class="similar__carousel-item">
+                        </div>
+                    <div class="similar__carousel-item">
                         @@include('template/product.html', {
                             "className": false,
                             "imgSrc": "img/inhtml/thermo.jpg",
@@ -82,8 +87,8 @@
                             "companyName": "Vines & Hines",
                             "productName": "Термолента Header Wrap Kit"
                         })
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </main>

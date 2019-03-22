@@ -2,6 +2,10 @@
     margin: 0;
     overflow: auto;
 
+    &--page {
+        overflow: visible;
+    }
+
     &__item {
         display: flex;
         align-items: center;
@@ -11,6 +15,15 @@
         @media (--mobile) {
             align-items: flex-start;
             flex-wrap: wrap;
+        }
+
+        &--page {
+            @media (--mobile-lg) {
+                align-items: flex-start;
+                flex-wrap: wrap;
+                position: relative;
+                padding-top: calc($gutter-step * 4.5);
+            }
         }
 
         &-img {
@@ -23,10 +36,24 @@
             overflow: hidden;
             margin-right: calc($gutter-step * 3);
             background-color: rgb(34, 34, 34);
+            transition: none;
 
             @media (--mobile) {
                 margin-bottom: calc($gutter-step * 1.5);
                 order: 1;
+            }
+
+            .cart-items__item--page & {
+                @media (--mobile-lg) {
+                    order: initial;
+                    margin-right: calc($gutter-step * 3);
+                }
+
+                @media (--mobile) {
+                    margin-right: calc($gutter-step * 2);
+                    width: 56px;
+                    height: 40px;
+                }
             }
         }
 
@@ -36,8 +63,22 @@
             @media (--mobile) {
                 order: 3;
                 width: 100%;
-                /* margin-top: calc($gutter-step * 1.5); */
-                /* width: calc(100% - 96px - $gutter-step * 3); */
+            }
+
+            .cart-items__item--page & {
+                padding-right: calc($gutter-step * 3);
+
+                @media (--mobile-lg) {
+                    order: initial;
+                    flex-shrink: 0;
+                    width: calc(100% - 96px - $gutter-step * 4);
+                    padding-right: 0;
+                    margin-bottom: calc($gutter-step * 2);
+                }
+
+                @media (--mobile) {
+                     width: calc(100% - 56px - $gutter-step * 2);
+                }
             }
         }
 
@@ -57,6 +98,32 @@
                 font-size: 12px;
             }
 
+            &-price {
+                margin-bottom: 0;
+
+                .price {
+                    font-size: 22px;
+
+                    @media (--tablet-lg) {
+                        font-size: 18px;
+                    }
+
+                    &--old {
+                        margin-left: $gutter-step;
+                        font-size: 16px;
+                    }
+                }
+            }
+
+        &-spinner {
+            width: 23%;
+            flex-shrink: 0;
+
+            @media (--tablet) {
+                width: auto;
+            }
+        }
+
         &-aside {
             font-size: 18px;
             font-family: $bernier;
@@ -71,12 +138,53 @@
                 min-width: 0;
                 margin-left: 0;
             }
+
+            .cart-items__item--page & {
+                font-size: 22px;
+                margin-left: 0;
+                flex-shrink: 0;
+
+                @media (--tablet-lg) {
+                    font-size: 18px;
+                }
+
+                @media (--tablet) {
+                    flex-shrink: 0;
+                }
+
+                @media (--mobile-lg) {
+                    order: initial;
+                    align-self: center;
+                    margin-left: auto;
+                }
+            }
+
+            &-price {
+                display: inline-block;
+                vertical-align: top;
+                width: 128px;
+                text-align: left;
+
+                @media (--tablet) {
+                    width: auto;
+                }
+            }
         }
 
             &-remove {
                 width: 20px;
                 height: 20px;
                 margin-left: calc($gutter-step * 2.5);
+
+                .cart-items__item--page & {
+                    margin-left: $gutter-step;
+
+                    @media (--mobile-lg) {
+                        position: absolute;
+                        top: calc($gutter-step * 2);
+                        right: 0;
+                    }
+                }
             }
     }
 }

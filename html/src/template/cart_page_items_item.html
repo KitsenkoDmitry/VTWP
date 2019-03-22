@@ -1,0 +1,30 @@
+<li class="cart-items__item@@if(className){ @@className}">
+    <a href="javascript:;" class="cart-items__item-img">
+        <img data-src="@@imgLink" class="lazyload">
+    </a>
+    <div class="cart-items__item-content">
+        <p class="cart-items__item-brand">@@brand</p>
+        <a href="javascript:;" class="cart-items__item-name link link--white">@@title</a>
+        <p class="cart-items__item-price">
+            <span class="price">@@price ₽</span>
+            @@if(oldPrice){<span class="price price--old">@@oldPrice ₽</span>}
+        </p>
+    </div>
+    <div class="cart-items__item-spinner">
+        <div class="spinner" data-min="1">
+            <button class="spinner__btn spinner__btn--dec" type="button">
+                <svg class="spinner__icon icon icon--minus"><use xlink:href="#icon-minus"></use></svg>
+            </button>
+            <input type="number" class="spinner__input" name="spinner-input" value="1" step="1">
+            <button class="spinner__btn spinner__btn--inc" type="button">
+                <svg class="spinner__icon icon icon--plus"><use xlink:href="#icon-plus"></use></svg>
+            </button>
+        </div>
+    </div>
+    <div class="cart-items__item-aside">
+        <span class="cart-items__item-aside-price">@@price ₽</span>
+        <button class="cart-items__item-remove" type="button">
+            <svg class="icon icon--delete"><use xlink:href="#icon-delete"></use></svg>
+        </button>
+    </div>
+</li>

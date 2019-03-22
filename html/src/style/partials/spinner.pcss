@@ -1,0 +1,52 @@
+.spinner {
+    display: inline-flex;
+    height: calc($gutter-step * 5);
+    border: none;
+
+    input[type="number"] {
+        width: 5ch;
+        padding: 0 $gutter-step;
+        color: $cl-global-invert;
+        height: 100%;
+        border: none;
+        font-size: 16px;
+        line-height: calc($gutter-step * 5);
+        text-align: center;
+        outline: none;
+        background-color: transparent;
+    }
+
+    &__btn {
+        position: relative;
+        width: calc($gutter-step * 4);
+        padding: 0;
+        border: none;
+        background: none;
+        outline: none;
+        cursor: pointer;
+
+        &:disabled {
+            cursor: default;
+            pointer-events: none;
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        top: 50%;
+        left: 50%;
+        margin-top: -5px;
+        margin-left: -5px;
+        fill: $cl-global-invert;
+
+        .spinner__btn:hover & {
+            fill: $cl-global-invert;
+        }
+
+        .spinner__btn:disabled & {
+            fill: $cl-grey;
+        }
+    }
+}

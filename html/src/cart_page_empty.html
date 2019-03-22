@@ -1,0 +1,25 @@
+@@include('template/head.html')
+<body>
+    @@include('template/old_ie_update.html')
+
+    @@include('img/svg/sprite.svg')
+
+    @@include('template/header.html', {
+        "isUiKit": false,
+        "isIndexPage": false,
+        "isCartActive": false,
+        "activeLink": false
+    })
+
+    <main class="wrap-main">
+        <div class="container">
+            <h1>Корзина</h1>
+            <p>В корзине нет товаров</p>
+        </div>
+    </main>
+
+    @@include('template/footer.html')
+    @@include('template/foot.html')
+
+</body>
+</html>

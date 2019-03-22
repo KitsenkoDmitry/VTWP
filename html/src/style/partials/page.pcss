@@ -19,3 +19,36 @@
 
     }
 }
+
+.page-cols {
+    display: flex;
+    justify-content: space-between;
+
+    @media (--tablet-lg) {
+        flex-wrap: wrap;
+    }
+
+    &__col {
+        @media (--tablet-lg) {
+            & + & {
+                margin-top: calc($gutter-step * 4);
+            }
+        }
+
+        &--8of12 {
+            width: calc(100% / 12 * 8);
+
+            @media (--tablet-lg) {
+                width: 100%;
+            }
+        }
+
+        &--3of12 {
+            width: calc(100% / 12 * 3);
+
+            @media (--tablet-lg) {
+                width: 100%;
+            }
+        }
+    }
+}

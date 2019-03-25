@@ -1,0 +1,34 @@
+.thank-page {
+    &__hl {
+        margin-bottom: calc($gutter-step * 5);
+
+        @media (--tablet-lg) {
+            margin-bottom: calc($gutter-step * 2);
+        }
+    }
+
+    &__table {
+        max-width: 320px;
+        margin-bottom: calc($gutter-step * 5);
+
+        @media (--tablet-lg) {
+            margin-bottom: calc($gutter-step * 3);
+        }
+    }
+
+    &__text {
+        max-width: 400px;
+        margin-bottom: calc($gutter-step * 5);
+
+        @media (--tablet-lg) {
+            margin-bottom: calc($gutter-step * 3)
+        }
+    }
+
+    &__btn {
+        @media (--tablet) {
+            display: block;
+            width: 100%;
+        }
+    }
+}

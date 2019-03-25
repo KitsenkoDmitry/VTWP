@@ -1,0 +1,38 @@
+@@include('template/head.html')
+<body>
+    @@include('template/old_ie_update.html')
+
+    @@include('img/svg/sprite.svg')
+
+    @@include('template/header.html', {
+        "isUiKit": false,
+        "isIndexPage": false,
+        "isCartActive": false,
+        "activeLink": false
+    })
+
+    <main class="wrap-main">
+        <div class="container container--mb">
+            <section class="thank-page">
+                <h1 class="thank-page__hl">Спасибо за заказ!</h1>
+                <table class="table thank-page__table">
+                    <tr class="table__row">
+                        <td class="table__cell table__cell--p-xs">Номер заказа</td>
+                        <td class="table__cell table__cell--p-xs"><span class="ff-bernier fz-18">#121898</span></td>
+                    </tr>
+                    <tr class="table__row">
+                        <td class="table__cell table__cell--p-xs">Итоговая сумма заказа</td>
+                        <td class="table__cell table__cell--p-xs"><span class="price fz-18">48 853 ₽</span></td>
+                    </tr>
+                </table>
+                <p class="thank-page__text">Мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время для уточнения деталей заказа</p>
+                <a href="/" class="btn thank-page__btn">На главную страницу</a>
+            </section>
+        </div>
+    </main>
+
+    @@include('template/footer.html')
+    @@include('template/foot.html')
+
+</body>
+</html>

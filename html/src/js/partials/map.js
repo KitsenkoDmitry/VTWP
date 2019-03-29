@@ -195,7 +195,7 @@ function initMap() {
     // The map, centered at Shop
     const map = new google.maps.Map(
         document.getElementById('map'), {
-            zoom: 17,
+            zoom: 14,
             center: shop,
             styles: mapStyles,
             zoomControl: true,
@@ -206,11 +206,21 @@ function initMap() {
             fullscreenControl: true
         });
 
+    const pointIcon = {
+        url: 'img/svg/point.svg',
+        // This marker is 72 pixels wide by 72 pixels high.
+        size: new google.maps.Size(72, 72),
+        // The origin for this image is (0, 0).
+        origin: new google.maps.Point(0, 0),
+        // The anchor for this image is the center at (0, 32).
+        anchor: new google.maps.Point(36, 36)
+    };
+
     // The marker, positioned at shop
     const marker = new google.maps.Marker({
         position: shop,
-        icon: 'img/svg/point.svg',
-        map: map
+        icon: pointIcon,
+        map: map,
     });
 }
 

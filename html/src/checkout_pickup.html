@@ -1,0 +1,82 @@
+@@include('template/head.html')
+<body>
+    @@include('template/old_ie_update.html')
+
+    @@include('img/svg/sprite.svg')
+
+    @@include('template/header.html', {
+        "isUiKit": false,
+        "isIndexPage": false,
+        "isCartActive": false,
+        "activeLink": false
+    })
+
+    <main class="wrap-main">
+        <div class="container container--mb">
+            <section class="checkout">
+                <a href="javascript:;" class="link link--icon-left link--white checkout__back-link">
+                    <svg class="icon icon--back"><use xlink:href="#icon-back"></use></svg>
+                    Вернуться в корзину
+                </a>
+                <h1>Оформить заказ</h1>
+                <div class="page-cols">
+                    <div class="page-cols__col page-cols__col--1of2">
+                        <form action="" class="checkout__form">
+                            <p class="checkout__form-descr">Заполните форму и мы свяжемся с вами, чтобы уточнить все детали заказа</p>
+                            <div class="field js-label-animation">
+                                <label for="offer__name" class="field__label">Как вас зовут</label>
+                                <input id="offer__name" type="text" name="offer__name" value="" placeholder="placeholder" data-parsley-name-ru required>
+                            </div>
+                            <div class="form-cols">
+                                <div class="form-cols__col">
+                                    <div class="field js-label-animation">
+                                        <label for="offer__tel" class="field__label">Номер телефона</label>
+                                        <input id="offer__tel" class="js-phone-mask" type="tel" name="offer__tel" value="" data-parsley-phone required>
+                                    </div>
+                                </div>
+                                <div class="form-cols__col">
+                                    <div class="field js-label-animation">
+                                        <label for="offer__tel" class="field__label">Email (по желанию)</label>
+                                        <input id="offer__tel" type="email" name="offer__tel" value="" data-parsley-email>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3>выберите способ получения</h3>
+                            <div class="tabs js-tabs">
+                                <div class="tabs__head">
+                                    <a href="#tab-pickup" class="tabs__head-link js-tabs-link is-active">Самовывоз</a>
+                                    <a href="#tab-delivery" class="tabs__head-link js-tabs-link">Доставка</a>
+                                </div>
+                                <div class="tabs__body">
+                                    <div class="tabs__item js-tabs-item is-active" id="tab-pickup">
+                                        <p>Московская облать, Солнечногорский район, д. Дурыкино, 1Д.</p>
+                                        <p class="cl-grey">Пн-Пт (09:00-18:00)</p>
+                                        <p class="cl-grey mb-m">
+                                            Перед приездом просьба позвонить: <br>
+                                            <a href="tel:74994091101" class="link link--grey">+7 499 409-1101</a> <br>
+                                            <a href="tel:79646430101" class="link link--grey">+7 964 643-0101</a>
+                                        </p>
+                                        <div id="map" class="checkout__pickup-map"></div>
+                                    </div>
+                                    <div class="tabs__item js-tabs-item" id="tab-delivery">
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium doloribus deleniti officia, similique libero magnam consectetur minus commodi unde eligendi dolor voluptate porro voluptates labore cum? A dolorem nam sit.
+                                    </div>
+                                </div>
+
+                            </div>
+                        </form>
+
+                    </div>
+                    <div class="page-cols__col page-cols__col--1of2">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex eius molestias aperiam, voluptatibus reprehenderit omnis, cupiditate nesciunt autem iste porro voluptatem qui. Atque perferendis corporis delectus beatae adipisci, commodi quae.Tenetur voluptatibus molestias ea nulla? Nisi maxime obcaecati totam voluptates aspernatur ipsa dignissimos sint veritatis magni, iure vel illo accusantium modi exercitationem! Illo a voluptatum optio earum error officia iusto!
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    @@include('template/footer.html')
+    @@include('template/foot.html')
+
+</body>
+</html>

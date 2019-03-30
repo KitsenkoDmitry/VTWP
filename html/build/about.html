@@ -134,7 +134,7 @@
     </svg>
 
 
-    <header class="header js-header" >
+    <header class="header header--index js-header" >
         <div class="header__container container">
             <div class="header__col">
                 <p class="header__col-top">
@@ -150,7 +150,7 @@
                 </div>
             </div>
             <div class="header__col header__col--logo">
-                <a href="index.html" class="header__logo">
+                <a  class="header__logo">
                     <svg class="icon icon--logo"><use xlink:href="#icon-logo"></use></svg>
                 </a>
             </div>
@@ -166,7 +166,7 @@
                 </p>
                 <div class="header__col-menu">
                     <a href="javascript:;" class="link link--bernier link--white link--underline ">Наши проекты</a>
-                    <a href="javascript:;" class="link link--bernier link--white link--underline ">О нас</a>
+                    <a href="javascript:;" class="link link--bernier link--white link--underline is-active">О нас</a>
                     <a href="javascript:;" class="link link--bernier link--white link--underline ">Контакты</a>
                 </div>
             </div>
@@ -388,30 +388,87 @@
         </div>
 
     </header>
-    <div class="header-placeholder"></div>
+    <div class="header-placeholder header-placeholder--index"></div>
 
 
     <main class="wrap-main">
-        <div class="container">
-            <h1>Страницы проекта</h1>
-            <p>Все сверстанные страницы добавляются сюда для удобства поиска</p>
-            <br>
-            <ol class="ol-list">
-                <li><a target="_blank" class="link link--bernier link--white" href="ui_kit.html">Ui-kit</a></li>
-                <li><a target="_blank" class="link link--bernier link--white" href="index.html">Главная</a></li>
-                <li><a target="_blank" class="link link--bernier link--white" href="shop.html">Каталог</a></li>
-                <li><a target="_blank" class="link link--bernier link--white" href="bikes_catalog.html">Каталог мотоциклов</a></li>
-                <li><a target="_blank" class="link link--bernier link--white" href="product_page.html">Страница товара</a></li>
-                <li><a target="_blank" class="link link--bernier link--white" href="cart_page.html">Корзина</a></li>
-                <li><a target="_blank" class="link link--bernier link--white" href="cart_page_empty.html">Пустая корзина</a></li>
-                <li><a target="_blank" class="link link--bernier link--white" href="contacts.html">Страница контактов</a></li>
-                <li><a target="_blank" class="link link--bernier link--white" href="thank_you_page.html">Спасибо за заказ</a></li>
-                <li><a target="_blank" class="link link--bernier link--white" href="checkout.html">Чекаут</a></li>
-                <li><a target="_blank" class="link link--bernier link--white" href="pdf_catalog.html">Каталог PDF</a></li>
-                <li><a target="_blank" class="link link--bernier link--white" href="404.html">404</a></li>
-                <li><a target="_blank" class="link link--bernier link--white" href="about.html">О нас</a></li>
-            </ol>
+        <section class="index-main index-main--about">
+            <div class="index-main__bg">
+                <img data-src="img/about.jpg" class="lazyload">
+            </div>
+            <div class="index-main__container container">
+                <h1 class="mb-m">кастомная мастерская <br> v-twinparts</h1>
+                <p class="index-main__text">
+                    Здесь всё устроено так, чтобы вам было удобно: мы&nbsp;доставим любые мото аксессуары из&nbsp;США, а&nbsp;затем установим и&nbsp;настроим их&nbsp;в&nbsp;нашем установочном центре.
+                </p>
+            </div>
+        </section>
+        <div class="container container--mb">
+            <section class="page-team">
+                <h2 class="page-team__hl">Команда</h2>
+                <ul class="team">
+                    <li class="team__member">
+                        <div class="team__member-photo">
+                            <img data-src="img/team/lugovoy.jpg" class="lazyload">
+                        </div>
+                        <h3 class="team__member-name">виталий луговой</h3>
+                        <p class="team__member-job">Главный мотомеханик</p>
+                    </li>
+                    <li class="team__member">
+                        <div class="team__member-photo">
+                            <img data-src="img/team/chernyaev.jpg" class="lazyload">
+                        </div>
+                        <h3 class="team__member-name">михаил черняев</h3>
+                        <p class="team__member-job">Менеджер</p>
+                    </li>
+                    <li class="team__member">
+                        <div class="team__member-photo">
+                            <img data-src="img/team/kovalchuk.jpg" class="lazyload">
+                        </div>
+                        <h3 class="team__member-name">павел ковальчук</h3>
+                        <p class="team__member-job">Инженер-механик</p>
+                    </li>
+                    <li class="team__member">
+                        <div class="team__member-photo">
+                            <img data-src="img/team/eremenko.jpg" class="lazyload">
+                        </div>
+                        <h3 class="team__member-name">роман еременко</h3>
+                        <p class="team__member-job">Механик-наладчик</p>
+                    </li>
+                    <li class="team__member">
+                        <div class="team__member-photo">
+                            <img data-src="img/team/lukashin.jpg" class="lazyload">
+                        </div>
+                        <h3 class="team__member-name">евгений лукашин</h3>
+                        <p class="team__member-job">Мотомеханик</p>
+                    </li>
+                    <li class="team__member">
+                        <div class="team__member-photo">
+                            <img data-src="img/team/polovcev.jpg" class="lazyload">
+                        </div>
+                        <h3 class="team__member-name">игорь половцев</h3>
+                        <p class="team__member-job">Механик</p>
+                    </li>
+                    <li class="team__member">
+                        <div class="team__member-photo">
+                            <img data-src="img/team/stasov.jpg" class="lazyload">
+                        </div>
+                        <h3 class="team__member-name">александр стасов</h3>
+                        <p class="team__member-job">Механик</p>
+                    </li>
+                </ul>
+            </section>
+            <h2 class="mb-l">Мастерская</h2>
+            <div class="picture-carousel js-picture-carousel">
+                <div class="picture-carousel__item">
+                    <img data-src="img/service/service_01.jpg" class="lazyload">
+                </div>
+                <div class="picture-carousel__item">
+                    <img data-src="img/service/service_02.jpg" class="lazyload">
+                </div>
+            </div>
         </div>
+
     </main>
 
     <footer class="footer">

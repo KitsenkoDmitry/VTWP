@@ -1,0 +1,98 @@
+@@include('template/head.html')
+<body>
+    @@include('template/old_ie_update.html')
+
+    @@include('img/svg/sprite.svg')
+
+    @@include('template/header.html', {
+        "isUiKit": false,
+        "isIndexPage": true,
+        "isCartActive": true,
+        "activeLink": "about"
+    })
+
+    <main class="wrap-main">
+        <section class="index-main index-main--about">
+            <div class="index-main__bg">
+                <img data-src="img/about.jpg" class="lazyload">
+            </div>
+            <div class="index-main__container container">
+                <h1 class="mb-m">кастомная мастерская <br> v-twinparts</h1>
+                <p class="index-main__text">
+                    Здесь всё устроено так, чтобы вам было удобно: мы&nbsp;доставим любые мото аксессуары из&nbsp;США, а&nbsp;затем установим и&nbsp;настроим их&nbsp;в&nbsp;нашем установочном центре.
+                </p>
+            </div>
+        </section>
+        <div class="container container--mb">
+            <section class="page-team">
+                <h2 class="page-team__hl">Команда</h2>
+                <ul class="team">
+                    <li class="team__member">
+                        <div class="team__member-photo">
+                            <img data-src="img/team/lugovoy.jpg" class="lazyload">
+                        </div>
+                        <h3 class="team__member-name">виталий луговой</h3>
+                        <p class="team__member-job">Главный мотомеханик</p>
+                    </li>
+                    <li class="team__member">
+                        <div class="team__member-photo">
+                            <img data-src="img/team/chernyaev.jpg" class="lazyload">
+                        </div>
+                        <h3 class="team__member-name">михаил черняев</h3>
+                        <p class="team__member-job">Менеджер</p>
+                    </li>
+                    <li class="team__member">
+                        <div class="team__member-photo">
+                            <img data-src="img/team/kovalchuk.jpg" class="lazyload">
+                        </div>
+                        <h3 class="team__member-name">павел ковальчук</h3>
+                        <p class="team__member-job">Инженер-механик</p>
+                    </li>
+                    <li class="team__member">
+                        <div class="team__member-photo">
+                            <img data-src="img/team/eremenko.jpg" class="lazyload">
+                        </div>
+                        <h3 class="team__member-name">роман еременко</h3>
+                        <p class="team__member-job">Механик-наладчик</p>
+                    </li>
+                    <li class="team__member">
+                        <div class="team__member-photo">
+                            <img data-src="img/team/lukashin.jpg" class="lazyload">
+                        </div>
+                        <h3 class="team__member-name">евгений лукашин</h3>
+                        <p class="team__member-job">Мотомеханик</p>
+                    </li>
+                    <li class="team__member">
+                        <div class="team__member-photo">
+                            <img data-src="img/team/polovcev.jpg" class="lazyload">
+                        </div>
+                        <h3 class="team__member-name">игорь половцев</h3>
+                        <p class="team__member-job">Механик</p>
+                    </li>
+                    <li class="team__member">
+                        <div class="team__member-photo">
+                            <img data-src="img/team/stasov.jpg" class="lazyload">
+                        </div>
+                        <h3 class="team__member-name">александр стасов</h3>
+                        <p class="team__member-job">Механик</p>
+                    </li>
+                </ul>
+            </section>
+            <h2 class="mb-l">Мастерская</h2>
+            <div class="picture-carousel js-picture-carousel">
+                <div class="picture-carousel__item">
+                    <img data-src="img/service/service_01.jpg" class="lazyload">
+                </div>
+                <div class="picture-carousel__item">
+                    <img data-src="img/service/service_02.jpg" class="lazyload">
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    @@include('template/footer.html')
+    @@include('template/foot.html')
+
+</body>
+</html>

@@ -64,3 +64,19 @@
 .page-404 {
     text-align: center;
 }
+
+.page-team {
+    padding: calc($gutter-step * 11) 0;
+
+    @media (--tablet-lg) {
+        padding: calc($gutter-step * 8) 0;
+    }
+
+    &__hl {
+        margin-bottom: calc($gutter-step * 7);
+
+        @media (--tablet-lg) {
+            margin-bottom: calc($gutter-step * 4);
+        }
+    }
+}

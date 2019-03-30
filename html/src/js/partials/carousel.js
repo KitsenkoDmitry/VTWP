@@ -113,3 +113,16 @@ if ($similarCarousel.length) {
         ]
     });
 }
+
+// карусель картинок
+const $pictureCarousel = $('.js-picture-carousel');
+if ($pictureCarousel.length) {
+    $pictureCarousel.slick({
+        arrows: false,
+        infinite: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        variableWidth: true,
+
+    });
+}

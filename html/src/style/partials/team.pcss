@@ -1,0 +1,62 @@
+.team {
+    display: grid;
+    grid-row-gap: calc($gutter-step * 11);
+    grid-column-gap: calc($gutter-step * 4);
+    grid-template: auto / 1fr 1fr 1fr 1fr;
+
+    @media (--tablet-lg) {
+        grid-row-gap: calc($gutter-step * 6);
+        grid-template: auto / 1fr 1fr 1fr;
+    }
+
+    @media (--tablet) {
+        grid-row-gap: calc($gutter-step * 4);
+        grid-template: auto / 1fr 1fr;
+    }
+
+    @media (--mobile) {
+        grid-row-gap: calc($gutter-step * 3);
+        grid-column-gap: calc($gutter-step * 3);
+        grid-template: auto / 1fr;
+    }
+
+    &__member {
+        margin: 0;
+
+        @media (--mobile) {
+            display: grid;
+            grid-column-gap: calc($gutter-step * 3);
+            grid-template-rows: auto 1fr;
+            grid-template-columns: 96px 1fr;
+        }
+
+        &-photo {
+            overflow: hidden;
+            max-height: 360px;
+
+            @media (--mobile) {
+                grid-row-start: 1;
+                grid-row-end: 3;
+            }
+
+            img {
+                object-fit: cover;
+                object-position: center;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &-name {
+            margin-bottom: $gutter-step;
+
+            @media (--mobile) {
+                margin-top: 4px;
+            }
+        }
+
+        &-job {
+            margin-bottom: 0;
+        }
+    }
+}

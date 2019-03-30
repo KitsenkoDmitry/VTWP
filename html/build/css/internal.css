@@ -974,6 +974,11 @@ input[type="submit"] {
         height: 9px;
     }
 
+.icon--404 {
+        width: 176px;
+        height: 96px;
+    }
+
 .link {
     position: relative;
     display: inline-block;
@@ -4176,6 +4181,10 @@ input[type="submit"] {
                 width: 100%
         }
             }
+
+.page-404 {
+    text-align: center;
+}
 
 .product-page {
     display: -ms-flexbox;

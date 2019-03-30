@@ -6,12 +6,24 @@
     &__col {
         width: calc(50% - $gutter-step * 2);
 
+        @media (--tablet) {
+            width: 100%;
+        }
+
         &--1of3 {
             width: calc((100% - $gutter-step * 4) / 3);
+
+            @media (--tablet) {
+                width: 100%;
+            }
         }
 
         &--2of3 {
             width: calc((100% - $gutter-step * 4) / 3 * 2);
+
+            @media (--tablet) {
+                width: 100%;
+            }
         }
     }
 }

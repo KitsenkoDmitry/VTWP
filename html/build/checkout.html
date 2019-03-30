@@ -301,7 +301,7 @@
                                 <img data-src="img/inhtml/img1.png" class="lazyload">
                             </a>
                             <div class="cart-items__item-content">
-                                <p class="cart-items__item-brand">Screamin Eagle</p>
+                                <a href="javascript:;" class="cart-items__item-brand">Screamin Eagle</a>
                                 <a href="javascript:;" class="cart-items__item-name link link--white">Масло Синтетика SYN3 20w-50 1Qt</a>
                                 <p class="cart-items__item-number">Артикул: 42328</p>
                             </div>
@@ -319,7 +319,7 @@
                                 <img data-src="img/inhtml/img2.png" class="lazyload">
                             </a>
                             <div class="cart-items__item-content">
-                                <p class="cart-items__item-brand">Biltwell</p>
+                                <a href="javascript:;" class="cart-items__item-brand">Biltwell</a>
                                 <a href="javascript:;" class="cart-items__item-name link link--white">Шлем Gringo S Gloss Black</a>
                                 <p class="cart-items__item-number">Артикул: 42328</p>
                             </div>
@@ -337,7 +337,7 @@
                                 <img data-src="img/inhtml/img3.png" class="lazyload">
                             </a>
                             <div class="cart-items__item-content">
-                                <p class="cart-items__item-brand">Vance & Hines</p>
+                                <a href="javascript:;" class="cart-items__item-brand">Vance & Hines</a>
                                 <a href="javascript:;" class="cart-items__item-name link link--white">Фильтр VO2 Cage Fighter Air Intake</a>
                                 <p class="cart-items__item-number">Артикул: 42328</p>
                             </div>
@@ -355,7 +355,7 @@
                                 <img data-src="img/inhtml/img4.png" class="lazyload">
                             </a>
                             <div class="cart-items__item-content">
-                                <p class="cart-items__item-brand">Vance & Hines</p>
+                                <a href="javascript:;" class="cart-items__item-brand">Vance & Hines</a>
                                 <a href="javascript:;" class="cart-items__item-name link link--white">Флейты Quiet Baffles</a>
                                 <p class="cart-items__item-number">Артикул: 42328</p>
                             </div>
@@ -393,7 +393,7 @@
                 </a>
                 <h1>Оформить заказ</h1>
                 <div class="page-cols">
-                    <div class="page-cols__col page-cols__col--1of2">
+                    <div class="page-cols__col page-cols__col--1of2 checkout__form-wrapper">
                         <form action="" class="checkout__form" data-validate="true">
                             <p class="checkout__form-descr">Заполните форму и мы свяжемся с вами, чтобы уточнить все детали заказа</p>
                             <div class="field js-label-animation">
@@ -417,11 +417,12 @@
                             <h3 class="checkout__subheader">выберите способ получения</h3>
                             <div class="tabs js-tabs checkout__tabs">
                                 <div class="tabs__head">
-                                    <a href="#tab-pickup" class="tabs__head-link js-tabs-link is-active">Самовывоз</a>
-                                    <a href="#tab-delivery" class="tabs__head-link js-tabs-link">Доставка</a>
+                                    <label data-tab="#tab-pickup" class="tabs__head-link js-tabs-link is-active" for="pickup">Самовывоз</label>
+                                    <label data-tab="#tab-delivery" class="tabs__head-link js-tabs-link" for="delivery">Доставка</label>
                                 </div>
                                 <div class="tabs__body">
                                     <div class="tabs__item js-tabs-item is-active" id="tab-pickup">
+                                        <input type="radio" id="pickup" name="delivery-type" checked>
                                         <p>Московская облать, Солнечногорский район, д. Дурыкино, 1Д.</p>
                                         <p class="cl-grey">Пн-Пт (09:00-18:00)</p>
                                         <p class="cl-grey mb-m">
@@ -432,6 +433,7 @@
                                         <div id="map" class="checkout__pickup-map" style="border: 1px solid white; padding: 20px; color: white">место под карту</div>
                                     </div>
                                     <div class="tabs__item js-tabs-item" id="tab-delivery">
+                                        <input type="radio" id="delivery" name="delivery-type">
                                         <p class="mb-m">Доставка почтой России. Ваш заказ будет доставлен в&nbsp;ближайшее к&nbsp;Вам почтовое отделение. Срок доставки&nbsp;&mdash; до&nbsp;2-х недель в&nbsp;зависимости от&nbsp;региона.</p>
                                         <div class="form-cols">
                                             <div class="form-cols__col form-cols__col--1of3">
@@ -458,7 +460,7 @@
                             <h3 class="checkout__subheader">выберите способ оплаты</h3>
                             <div class="form-cols checkout__payment">
                                 <div class="form-cols__col">
-                                    <div class="field">
+                                    <div class="field field--mb-s">
                                         <input type="radio" name="pay-method" id="pay-method-card-online" value="card-online" checked required>
                                         <label for="pay-method-card-online" class="radio-box">
                                             Онлайн оплата банковской картой
@@ -503,11 +505,101 @@
                                 <input type="checkbox" name="form-agreement" id="form-agreement" value="1" required>
                                 <label for="form-agreement" class="cl-grey fz-13">Я согласен с <a href="javascript:;" class="link link--white" target="_blank">условиями обработки персональных данных</a></label>
                             </p>
-                            <button class="btn btn--lg" type="submit">Отправить заказ</button>
+                            <button class="btn btn--lg checkout__submit-btn" type="submit">Отправить заказ</button>
                         </form>
                     </div>
-                    <div class="page-cols__col page-cols__col--1of2">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex eius molestias aperiam, voluptatibus reprehenderit omnis, cupiditate nesciunt autem iste porro voluptatem qui. Atque perferendis corporis delectus beatae adipisci, commodi quae.Tenetur voluptatibus molestias ea nulla? Nisi maxime obcaecati totam voluptates aspernatur ipsa dignissimos sint veritatis magni, iure vel illo accusantium modi exercitationem! Illo a voluptatum optio earum error officia iusto!
+                    <div class="page-cols__col page-cols__col--1of2 checkout__cart mt-0 mb-m js-collapse">
+                        <div class="page-flex-title">
+                            <h3>Ваш заказ</h3>
+                            <div class="checkout__cart-total">
+                                <span class="price">71 436 ₽</span>
+                                <button class="checkout__cart-total-btn js-collapse-btn" type="button">
+                                    <svg class="icon icon--arrow-down"><use xlink:href="#icon-arrow_down"></use></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="checkout__collapse-body js-collapse-body">
+                            <ul class="cart-items">
+                                    <li class="cart-items__item cart-items__item--checkout">
+                                        <a href="javascript:;" class="cart-items__item-img">
+                                            <img data-src="img/inhtml/img1.png" class="lazyload">
+                                        </a>
+                                        <div class="cart-items__item-content">
+                                            <a href="javascript:;" class="cart-items__item-brand">Screamin Eagle</a>
+                                            <a href="javascript:;" class="cart-items__item-name link link--white">Масло Синтетика SYN3 20w-50 1Qt</a>
+                                        </div>
+
+                                        <div class="cart-items__item-aside">
+                                            2 ×
+                                            1 800 ₽
+                                        </div>
+                                    </li>
+
+                                    <li class="cart-items__item cart-items__item--checkout">
+                                        <a href="javascript:;" class="cart-items__item-img">
+                                            <img data-src="img/inhtml/img2.png" class="lazyload">
+                                        </a>
+                                        <div class="cart-items__item-content">
+                                            <a href="javascript:;" class="cart-items__item-brand">Biltwell</a>
+                                            <a href="javascript:;" class="cart-items__item-name link link--white">Шлем Gringo S Gloss Black</a>
+                                        </div>
+
+                                        <div class="cart-items__item-aside">
+                                            
+                                            24 990 ₽
+                                        </div>
+                                    </li>
+
+                                    <li class="cart-items__item cart-items__item--checkout">
+                                        <a href="javascript:;" class="cart-items__item-img">
+                                            <img data-src="img/inhtml/img3.png" class="lazyload">
+                                        </a>
+                                        <div class="cart-items__item-content">
+                                            <a href="javascript:;" class="cart-items__item-brand">Vance & Hines</a>
+                                            <a href="javascript:;" class="cart-items__item-name link link--white">Фильтр VO2 Cage Fighter Air Intake</a>
+                                        </div>
+
+                                        <div class="cart-items__item-aside">
+                                            3 ×
+                                            16 490 ₽
+                                        </div>
+                                    </li>
+
+                                    <li class="cart-items__item cart-items__item--checkout">
+                                        <a href="javascript:;" class="cart-items__item-img">
+                                            <img data-src="img/inhtml/img4.png" class="lazyload">
+                                        </a>
+                                        <div class="cart-items__item-content">
+                                            <a href="javascript:;" class="cart-items__item-brand">Vance & Hines</a>
+                                            <a href="javascript:;" class="cart-items__item-name link link--white">Флейты Quiet Baffles</a>
+                                        </div>
+
+                                        <div class="cart-items__item-aside">
+                                            
+                                            7 990 ₽
+                                        </div>
+                                    </li>
+
+                            </ul>
+                            <hr>
+                            <table class="table">
+                                <tr class="table__row">
+                                    <td class="table__cell table__cell--p-xs">Сумма</td>
+                                    <td class="table__cell table__cell--p-xs"><span class="price">75 436 ₽</span></td>
+                                </tr>
+                                <tr class="table__row">
+                                    <td class="table__cell table__cell--p-xs">Скидка</td>
+                                    <td class="table__cell table__cell--p-xs"><span class="price">- 4 436 ₽</span></td>
+                                </tr>
+                            </table>
+                            <hr>
+                            <table class="table">
+                                <tr class="table__row">
+                                    <td class="table__cell">Итого</td>
+                                    <td class="table__cell"><span class="price">71 436 ₽</span></td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </section>

@@ -12,6 +12,11 @@
         padding: calc($gutter-step * 3) 0;
         border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 
+        &--checkout {
+            border-bottom: none;
+            padding: calc($gutter-step * 1.5) 0;
+        }
+
         @media (--mobile) {
             align-items: flex-start;
             flex-wrap: wrap;
@@ -63,6 +68,10 @@
             @media (--mobile) {
                 order: 3;
                 width: 100%;
+            }
+
+            .cart-items__item--checkout & {
+                align-self: flex-start;
             }
 
             .cart-items__item--page & {

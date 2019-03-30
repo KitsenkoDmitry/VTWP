@@ -26,6 +26,13 @@
             border: 1px solid $cl-bg;
             border-bottom-color: $cl-global-invert;
             transition: all $time ease;
+            cursor: pointer;
+
+            @media (--tablet-lg) {
+                min-width: 0;
+                width: 50%;
+                padding: calc($gutter-step * 2) calc($gutter-step * 3);
+            }
 
             &.is-active {
                 position: relative;

@@ -3,6 +3,10 @@
 
     &__back-link {
         margin-bottom: calc($gutter-step * 7);
+
+        @media (--tablet-lg) {
+            margin-bottom: calc($gutter-step * 3);
+        }
     }
 
     &__subheader {
@@ -18,6 +22,10 @@
             right: calc($gutter-step * 2);
             opacity: 0.4;
 
+            @media (--tablet-lg) {
+                top: calc($gutter-step * 3);
+            }
+
             &:hover {
                 opacity: 1;
             }
@@ -28,9 +36,62 @@
         margin-bottom: calc($gutter-step * 7);
     }
 
+    &__form-wrapper {
+        @media (--tablet-lg) {
+            order: 2;
+        }
+    }
+
+    &__collapse-body {
+        display: none;
+
+        @media (--tablet-lg-min) {
+            /* для того, чтобы перекрыть инлайновые стили, которые могут задаваться из js при ресайзе с мобилки на десктоп */
+            display: block !important;
+        }
+    }
+
+    &__cart {
+        @media (--tablet-lg) {
+            order: 1;
+        }
+
+        &-total {
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+
+            @media (--tablet-lg-min) {
+                display: none;
+            }
+
+            &-btn {
+                position: relative;
+                display: inline-block;
+                width: 44px;
+                height: 44px;
+                fill: $cl-global-invert;
+
+                .icon {
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    transform: translateY(-50%);
+                    transition: transform $time ease;
+                }
+
+                &.is-active {
+                    .icon {
+                        transform: translateY(-50%)rotate(180deg);
+                    }
+                }
+            }
+        }
+    }
+
     &__form {
         &-descr {
-            margin-bottom: calc($gutter-step * 3);
+            margin-bottom: calc($gutter-step * 4);
         }
     }
 
@@ -41,5 +102,14 @@
 
     &__comment {
         margin-bottom: calc($gutter-step * 7);
+    }
+
+    &__submit-btn {
+        margin-bottom: 0;
+
+        @media (--tablet-lg) {
+            display: block;
+            width: 100%;
+        }
     }
 }

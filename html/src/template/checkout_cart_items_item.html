@@ -5,13 +5,10 @@
     <div class="cart-items__item-content">
         <a href="javascript:;" class="cart-items__item-brand">@@brand</a>
         <a href="javascript:;" class="cart-items__item-name link link--white">@@title</a>
-        <p class="cart-items__item-number">Артикул: 42328</p>
     </div>
 
     <div class="cart-items__item-aside">
+        @@if(qt){@@qt ×}
         @@price ₽
-        <button class="cart-items__item-remove" type="button">
-            <svg class="icon icon--delete"><use xlink:href="#icon-delete"></use></svg>
-        </button>
     </div>
 </li>

@@ -7,6 +7,10 @@
         padding: calc($gutter-step * 2) calc($gutter-step * 3);
         box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
 
+        @media (--mobile) {
+            max-width: 250px;
+        }
+
         .tippy-content {
             text-align: left;
             font-size: 12px;

@@ -573,7 +573,7 @@ input[type="checkbox"]:checked + label::after {
 
 input[type="radio"] + label.radio-box {
         width: 100%;
-        height: 112px;
+        min-height: 112px;
         color: #fff;
         font-size: 18px;
         font-size: 1.125rem;
@@ -583,6 +583,15 @@ input[type="radio"] + label.radio-box {
         border: 1px solid #fff;
         opacity: 0.4
     }
+
+@media (max-width: 1023px) {
+
+input[type="radio"] + label.radio-box {
+            min-height: 0;
+            padding: 24px;
+            margin-bottom: 16px
+    }
+        }
 
 input[type="radio"] + label.radio-box::before,
         input[type="radio"] + label.radio-box::after {
@@ -1887,8 +1896,13 @@ input[type="submit"] {
         -ms-flex-align: center;
             align-items: center;
         padding: 24px 0;
-        border-bottom: 1px solid rgba(255, 255, 255, .2)
+        border-bottom: 1px solid rgba(255, 255, 255, .2);
     }
+
+.cart-items__item--checkout {
+            border-bottom: none;
+            padding: 12px 0;
+        }
 
 @media (max-width: 479px) {
 
@@ -1968,6 +1982,11 @@ input[type="submit"] {
                     order: 3;
                 width: 100%
         }
+            }
+
+.cart-items__item--checkout .cart-items__item-content {
+                -ms-flex-item-align: start;
+                    align-self: flex-start;
             }
 
 .cart-items__item--page .cart-items__item-content {
@@ -2141,8 +2160,15 @@ input[type="submit"] {
         background-color: #fff;
         max-width: 300px;
         padding: 16px 24px;
-        box-shadow: 0px 8px 24px rgba(0, 0, 0, .1);
+        box-shadow: 0px 8px 24px rgba(0, 0, 0, .1)
     }
+
+@media (max-width: 479px) {
+
+.tippy-tooltip.tooltip-theme {
+            max-width: 250px
+    }
+        }
 
 .tippy-tooltip.tooltip-theme .tippy-content {
             text-align: left;
@@ -2211,6 +2237,7 @@ input[type="submit"] {
     }
 
 .cart-modal__content {
+        overflow: hidden;
         display: -ms-flexbox;
         display: flex;
         -ms-flex-direction: column;
@@ -2955,8 +2982,15 @@ input[type="submit"] {
 }
 
 .checkout__back-link {
-        margin-bottom: 56px;
+        margin-bottom: 56px
     }
+
+@media (max-width: 1023px) {
+
+    .checkout__back-link {
+            margin-bottom: 24px
+    }
+        }
 
 .checkout__subheader {
         margin-bottom: 32px;
@@ -2973,6 +3007,13 @@ input[type="submit"] {
             opacity: 0.4
         }
 
+@media (max-width: 1023px) {
+
+        .checkout__payment-tooltip {
+                top: 24px
+        }
+            }
+
 .checkout__payment-tooltip:hover {
                 opacity: 1;
             }
@@ -2981,8 +3022,72 @@ input[type="submit"] {
         margin-bottom: 56px;
     }
 
+@media (max-width: 1023px) {
+
+    .checkout__form-wrapper {
+            -ms-flex-order: 2;
+                order: 2
+    }
+        }
+
+.checkout__collapse-body {
+        display: none
+    }
+
+@media (min-width: 1024px) {
+
+    .checkout__collapse-body {
+            /* для того, чтобы перекрыть инлайновые стили, которые могут задаваться из js при ресайзе с мобилки на десктоп */
+            display: block !important
+    }
+        }
+
+@media (max-width: 1023px) {
+
+    .checkout__cart {
+            -ms-flex-order: 1;
+                order: 1
+    }
+        }
+
+.checkout__cart-total {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-align: center;
+                align-items: center;
+            font-size: 18px;
+            font-size: 1.125rem
+        }
+
+@media (min-width: 1024px) {
+
+        .checkout__cart-total {
+                display: none
+        }
+            }
+
+.checkout__cart-total-btn {
+                position: relative;
+                display: inline-block;
+                width: 44px;
+                height: 44px;
+                fill: #fff;
+            }
+
+.checkout__cart-total-btn .icon {
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    transform: translateY(-50%);
+                    transition: transform 200ms ease;
+                }
+
+.checkout__cart-total-btn.is-active .icon {
+                        transform: translateY(-50%)rotate(180deg);
+                    }
+
 .checkout__form-descr {
-            margin-bottom: 24px;
+            margin-bottom: 32px;
         }
 
 .checkout__pickup-map {
@@ -2994,6 +3099,18 @@ input[type="submit"] {
         margin-bottom: 56px;
     }
 
+.checkout__submit-btn {
+        margin-bottom: 0
+    }
+
+@media (max-width: 1023px) {
+
+    .checkout__submit-btn {
+            display: block;
+            width: 100%
+    }
+        }
+
 .form-cols {
     display: -ms-flexbox;
     display: flex;
@@ -3004,16 +3121,37 @@ input[type="submit"] {
 }
 
 .form-cols__col {
-        width: calc(50% - 16px);
+        width: calc(50% - 16px)
     }
 
-.form-cols__col--1of3 {
-            width: calc(33.33333% - 10.66667px);
+@media (max-width: 767px) {
+
+    .form-cols__col {
+            width: 100%
+    }
         }
 
-.form-cols__col--2of3 {
-            width: calc(66.66667% - 21.33333px);
+.form-cols__col--1of3 {
+            width: calc(33.33333% - 10.66667px)
         }
+
+@media (max-width: 767px) {
+
+        .form-cols__col--1of3 {
+                width: 100%
+        }
+            }
+
+.form-cols__col--2of3 {
+            width: calc(66.66667% - 21.33333px)
+        }
+
+@media (max-width: 767px) {
+
+        .form-cols__col--2of3 {
+                width: 100%
+        }
+            }
 
 .tabs__head {
         position: relative;
@@ -3044,9 +3182,20 @@ input[type="submit"] {
             text-transform: lowercase;
             border: 1px solid #111;
             border-bottom-color: #fff;
-            transition: all 200ms ease
+            transition: all 200ms ease;
+            cursor: pointer
 
         }
+
+@media (max-width: 1023px) {
+
+        .tabs__head-link {
+                min-width: 0;
+                width: 50%;
+                padding: 16px 24px
+
+        }
+            }
 
 .tabs__head-link.is-active {
                 position: relative;
@@ -4021,8 +4170,15 @@ input[type="submit"] {
         }
 
 .page-cols__col--1of2 {
-            width: 45.83333%;
+            width: 45.83333%
         }
+
+@media (max-width: 1023px) {
+
+        .page-cols__col--1of2 {
+                width: 100%
+        }
+            }
 
 .page-cols__col--8of12 {
             width: 66.66667%

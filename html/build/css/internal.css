@@ -727,6 +727,14 @@ input[type="submit"] {
         padding: 0 40px;
     }
 
+@media (max-width: 1023px) {
+
+.btn.btn--mobile-wide {
+            display: block;
+            width: 100%
+    }
+        }
+
 .btn-up {
     display: -ms-inline-flexbox;
     display: inline-flex;
@@ -3077,18 +3085,6 @@ input[type="submit"] {
 .checkout__comment {
         margin-bottom: 56px;
     }
-
-.checkout__submit-btn {
-        margin-bottom: 0
-    }
-
-@media (max-width: 1023px) {
-
-    .checkout__submit-btn {
-            display: block;
-            width: 100%
-    }
-        }
 
 .form-cols {
     display: -ms-flexbox;

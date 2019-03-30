@@ -1,0 +1,68 @@
+@@include('template/head.html')
+<body>
+    @@include('template/old_ie_update.html')
+
+    @@include('img/svg/sprite.svg')
+
+    @@include('template/header.html', {
+        "isUiKit": false,
+        "isIndexPage": false,
+        "isCartActive": true,
+        "activeLink": false
+    })
+
+    <main class="wrap-main">
+        <div class="container container--mb">
+            <h1 class="mb-m">каталог оригинальных запчастей harley-davidson</h1>
+
+            <!-- при интеграции удалить атрибут style -->
+            <div class="mb-l" style="border: 1px solid white; padding: 20px; height: 500px">
+                тут будет iframe
+            </div>
+
+            <div class="page-cols">
+                <form class="page-cols__col page-cols__col--1of2" data-validate="true">
+                    <h3 class="mb-m">Заказать запчасти</h3>
+                    <div class="field js-label-animation">
+                        <label for="order-number" class="field__label">Артикул товара</label>
+                        <input id="order-number" type="text" name="order-number" value="" placeholder="" required>
+                    </div>
+                    <div class="field js-label-animation">
+                        <label for="order-name" class="field__label">Как вас зовут</label>
+                        <input id="order-name" type="text" name="order-name" value="" placeholder="" required>
+                    </div>
+                    <div class="form-cols">
+                        <div class="form-cols__col">
+                            <div class="field js-label-animation">
+                                <label for="order-tel" class="field__label">Номер телефона</label>
+                                <input id="order-tel" class="js-phone-mask" type="tel" name="order-tel" value="" data-parsley-phone required>
+                            </div>
+                        </div>
+                        <div class="form-cols__col">
+                            <div class="field js-label-animation">
+                                <label for="order-email" class="field__label">Email (по желанию)</label>
+                                <input id="order-email" type="email" name="order-email" value="" data-parsley-email>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field js-label-animation">
+                        <label for="order-comment" class="field__label">Сообщение (по желанию)</label>
+                        <textarea name="order-comment" id="order-comment" rows="3" placeholder="Ваш комментарий к заказу"></textarea>
+                    </div>
+                    <p>
+                        <input type="checkbox" name="form-agreement" id="form-agreement" value="1" required>
+                        <label for="form-agreement" class="cl-grey fz-13">Я согласен с <a href="javascript:;" class="cl-white" target="_blank">условиями обработки персональных данных</a></label>
+                    </p>
+                    <button class="btn btn--lg btn--mobile-wide mb-0" type="submit">Отправить заказ</button>
+                </form>
+            </div>
+
+        </div>
+
+    </main>
+
+    @@include('template/footer.html')
+    @@include('template/foot.html')
+
+</body>
+</html>

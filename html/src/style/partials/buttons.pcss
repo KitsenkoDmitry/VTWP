@@ -87,6 +87,13 @@ input[type="submit"] {
         font-size: 22px;
         padding: 0 calc($gutter-step * 5);
     }
+
+    &.btn--mobile-wide {
+        @media (--tablet-lg) {
+            display: block;
+            width: 100%;
+        }
+    }
 }
 
 .btn-up {

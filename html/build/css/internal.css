@@ -1105,6 +1105,10 @@ input[type="submit"] {
     color: #999;
 }
 
+.cl-white {
+    color: #fff;
+}
+
 .filter-modal {
     display: none;
     position: fixed;

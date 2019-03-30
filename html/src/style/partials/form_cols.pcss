@@ -5,5 +5,13 @@
 
     &__col {
         width: calc(50% - $gutter-step * 2);
+
+        &--1of3 {
+            width: calc((100% - $gutter-step * 4) / 3);
+        }
+
+        &--2of3 {
+            width: calc((100% - $gutter-step * 4) / 3 * 2);
+        }
     }
 }

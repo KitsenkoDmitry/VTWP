@@ -491,6 +491,10 @@ input[type="checkbox"] + label, input[type="radio"] + label {
         cursor: pointer
     }
 
+input[type="checkbox"] + label.cl-grey, input[type="radio"] + label.cl-grey {
+            color: #999;
+        }
+
 input[type="checkbox"] + label:last-of-type, input[type="radio"] + label:last-of-type {
             margin-bottom: 32px;
         }
@@ -565,6 +569,40 @@ input[type="checkbox"]:checked + label::after {
     background-size: contain;
 }
 
+/* для прямоугольных радиокнопок */
+
+input[type="radio"] + label.radio-box {
+        width: 100%;
+        height: 112px;
+        color: #fff;
+        font-size: 18px;
+        font-size: 1.125rem;
+        font-family: Bernier, Arial, Helvetica, sans-serif;
+        text-transform: lowercase;
+        padding: 24px 24px 24px 32px;
+        border: 1px solid #fff;
+        opacity: 0.4
+    }
+
+input[type="radio"] + label.radio-box::before,
+        input[type="radio"] + label.radio-box::after {
+            content: none;
+        }
+
+input[type="radio"] + label.radio-box .icon {
+            display: inline-block;
+            margin: 0 4px;
+        }
+
+input[type="radio"] + label.radio-box .icon--mastercard {
+                margin-left: 12px;
+            }
+
+input[type="radio"]:checked + label.radio-box {
+            opacity: 1;
+            cursor: default;
+        }
+
 /* Стилизация кнопок */
 
 button,
@@ -582,7 +620,7 @@ input[type="submit"] {
     position: relative;
     overflow: visible;
     margin: 0 0 16px 0;
-    width: 200px;
+    min-width: 200px;
     padding: 0;
     font-family: Bernier, Arial, Helvetica, sans-serif;
     text-decoration: none;
@@ -881,6 +919,21 @@ input[type="submit"] {
 .icon--new {
         width: 36px;
         height: 36px;
+    }
+
+.icon--mastercard {
+        width: 26px;
+        height: 20px;
+    }
+
+.icon--visa {
+        width: 29px;
+        height: 10px;
+    }
+
+.icon--mir {
+        width: 35px;
+        height: 9px;
     }
 
 .link {
@@ -2897,7 +2950,34 @@ input[type="submit"] {
     }
         }
 
+.checkout {
+    color: #fff;
+}
+
 .checkout__back-link {
+        margin-bottom: 56px;
+    }
+
+.checkout__subheader {
+        margin-bottom: 32px;
+    }
+
+.checkout__payment {
+        margin-bottom: 32px;
+    }
+
+.checkout__payment-tooltip {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            opacity: 0.4
+        }
+
+.checkout__payment-tooltip:hover {
+                opacity: 1;
+            }
+
+.checkout__tabs {
         margin-bottom: 56px;
     }
 
@@ -2908,6 +2988,10 @@ input[type="submit"] {
 .checkout__pickup-map {
         width: 100%;
         height: 264px;
+    }
+
+.checkout__comment {
+        margin-bottom: 56px;
     }
 
 .form-cols {
@@ -2922,6 +3006,14 @@ input[type="submit"] {
 .form-cols__col {
         width: calc(50% - 16px);
     }
+
+.form-cols__col--1of3 {
+            width: calc(33.33333% - 10.66667px);
+        }
+
+.form-cols__col--2of3 {
+            width: calc(66.66667% - 21.33333px);
+        }
 
 .tabs__head {
         position: relative;

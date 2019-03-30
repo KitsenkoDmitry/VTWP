@@ -103,6 +103,10 @@ input[type="radio"] {
         color: $cl-global;
         cursor: pointer;
 
+        &.cl-grey {
+            color: $cl-grey;
+        }
+
         &:last-of-type {
             margin-bottom: calc($gutter-step * 4);
         }
@@ -180,4 +184,40 @@ input[type="checkbox"] + label::after {
 input[type="checkbox"]:checked + label::after {
     background: svg-load('../svg/done.svg', fill=#1D1D1D) no-repeat center;
     background-size: contain;
+}
+
+/* для прямоугольных радиокнопок */
+input[type="radio"] {
+    & + label.radio-box {
+        width: 100%;
+        height: 112px;
+        color: $cl-global-invert;
+        font-size: 18px;
+        font-family: $bernier;
+        text-transform: lowercase;
+        padding: calc($gutter-step * 3) calc($gutter-step * 3) calc($gutter-step * 3) calc($gutter-step * 4);
+        border: 1px solid $cl-global-invert;
+        opacity: 0.4;
+
+        &::before,
+        &::after {
+            content: none;
+        }
+
+        .icon {
+            display: inline-block;
+            margin: 0 calc($gutter-step / 2);
+
+            &--mastercard {
+                margin-left: 12px;
+            }
+        }
+    }
+
+    &:checked {
+        & + label.radio-box {
+            opacity: 1;
+            cursor: default;
+        }
+    }
 }

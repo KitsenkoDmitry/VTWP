@@ -20,6 +20,22 @@
     }
 }
 
+.page-hl {
+    margin-bottom: calc($gutter-step * 6);
+
+    @media (--tablet-lg) {
+        margin-bottom: calc($gutter-step * 4);
+    }
+}
+
+.page-link-back {
+    margin-bottom: calc($gutter-step * 5);
+
+     @media (--tablet-lg) {
+        margin-bottom: calc($gutter-step * 2);
+    }
+}
+
 .page-cols {
     display: flex;
     justify-content: space-between;
@@ -63,6 +79,32 @@
 
 .page-404 {
     text-align: center;
+}
+
+.page-project {
+    &__cards {
+        margin-bottom: calc($gutter-step * 20);
+
+        @media (--tablet-lg) {
+            margin-bottom: calc($gutter-step * 8);
+        }
+    }
+
+    &__carousel {
+        margin-bottom: calc($gutter-step * 15);
+
+        @media (--tablet-lg) {
+            margin-bottom: calc($gutter-step * 7);
+        }
+    }
+
+    &__h2 {
+        margin-bottom: calc($gutter-step * 10);
+
+        @media (--tablet-lg) {
+            margin-bottom: calc($gutter-step * 4);
+        }
+    }
 }
 
 .page-team {

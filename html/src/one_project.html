@@ -1,0 +1,93 @@
+@@include('template/head.html')
+<body>
+    @@include('template/old_ie_update.html')
+
+    @@include('img/svg/sprite.svg')
+
+    @@include('template/header.html', {
+        "isUiKit": false,
+        "isIndexPage": false,
+        "isCartActive": true,
+        "activeLink": false
+    })
+
+    <main class="wrap-main">
+        <div class="container container--mb">
+            <a href="javascript:;" class="link link--icon-left link--white page-link-back">
+                <svg class="icon icon--back"><use xlink:href="#icon-back"></use></svg>
+                Назад
+            </a>
+            <section class="page-project">
+                <h1 class="page-hl">harley-davidson 2016 street glide special</h1>
+
+                <div class="page-project__cards">
+                    <div class="bike-card">
+                        <div class="bike-card__pic">
+                            <img class="lazyload" data-src="img/inhtml/project_1.jpg">
+                        </div>
+                        <div class="bike-card__content bike-card__content--pt-sm">
+                            <p>Цвет серый мат Charcoal Denim</p>
+                        </div>
+                    </div>
+
+                    <div class="bike-card">
+                        <div class="bike-card__pic">
+                            <img class="lazyload" data-src="img/inhtml/project_2.jpg">
+                        </div>
+                        <div class="bike-card__content bike-card__content--left bike-card__content--pt-sm">
+                            <p>Harley-Davidson серия Burst и Contrast Cut:</p>
+                            <ul class="ul-list">
+                                <li>Зеркала</li>
+                                <li>Безель фары</li>
+                                <li>Платформы, педали, шифтеры</li>
+                                <li>Ручки сцепления и тормоза</li>
+                                <li>Ручаги КПП и тормоза</li>
+                                <li>Крышка сцепления One Skull</li>
+                                <li>Быстросьемная спинка пассажира</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bike-card">
+                        <div class="bike-card__pic">
+                            <img class="lazyload" data-src="img/inhtml/project_3.jpg">
+                        </div>
+                        <div class="bike-card__content bike-card__content--pt-sm">
+                            <p>Performance Machine:</p>
+                            <ul class="ul-list">
+                                <li>Фильтр воздуха</li>
+                                <li>Грипсы</li>
+                                <li>Лючок бензобака</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="picture-carousel page-project__carousel js-picture-carousel">
+                    <div class="picture-carousel__item picture-carousel__item--sm">
+                        <img data-src="img/inhtml/project_carousel_1.jpg" class="lazyload">
+                    </div>
+                    <div class="picture-carousel__item picture-carousel__item--sm">
+                        <img data-src="img/inhtml/project_carousel_2.jpg" class="lazyload">
+                    </div>
+                    <div class="picture-carousel__item picture-carousel__item--sm">
+                        <img data-src="img/inhtml/project_carousel_3.jpg" class="lazyload">
+                    </div>
+                </div>
+                <h2 class="page-h1 page-project__h2">следующий проект</h2>
+                @@include('template/bike_card.html', {
+                    "className": false,
+                    "isRightImg": true,
+                    "imgSrc": "img/inhtml/bike_red.jpg",
+                    "name": "harley-davidson 2011 blackline",
+                    "desc": "Минимализм во всех проявлениях. Никаких декоративных элементов, только необходимые детали и чистота линий настоящего чоппера.",
+                    "price": false
+                })
+            </section>
+        </div>
+    </main>
+
+    @@include('template/footer.html')
+    @@include('template/foot.html')
+
+</body>
+</html>

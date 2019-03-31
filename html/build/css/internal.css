@@ -162,7 +162,8 @@ h6 {
 }
     }
 
-h1 {
+h1,
+.page-h1 {
     margin-top: 0;
     font-size: 40px;
     font-size: 2.5rem;
@@ -171,12 +172,14 @@ h1 {
 
 @media (max-width: 1023px) {
 
-h1 {
+h1,
+.page-h1 {
         font-size: 1.75rem
 }
     }
 
-h2 {
+h2,
+.page-h2 {
     font-size: 32px;
     font-size: 2rem;
     line-height: 1.25
@@ -184,13 +187,14 @@ h2 {
 
 @media (max-width: 1023px) {
 
-h2 {
+h2,
+.page-h2 {
         font-size: 1.5rem
 }
     }
 
 h3,
-.page-h2 {
+.page-h3 {
     font-size: 24px;
     font-size: 1.5rem;
     line-height: 1.33
@@ -199,7 +203,7 @@ h3,
 @media (max-width: 1023px) {
 
 h3,
-.page-h2 {
+.page-h3 {
         font-size: 1.375rem
 }
     }
@@ -801,13 +805,13 @@ input[type="submit"] {
 
 .ul-list li {
         position: relative;
-        margin-bottom: 16px;
-        padding-left: 24px;
+        margin-bottom: 4px;
+        padding-left: 16px;
     }
 
 .ul-list > li:before, .ul-list ul > li:before {
             content: '';
-            background: #1D1D1D;
+            background: #fff;
             display: inline-block;
             position: absolute;
             top: 11px;
@@ -1746,16 +1750,41 @@ input[type="submit"] {
     }
         }
 
+.bike-card__pic img {
+            display: block;
+        }
+
 .bike-card__content {
         width: 25%;
         padding-top: 80px
     }
 
+@media (max-width: 1479px) {
+
+    .bike-card__content {
+            padding-top: 40px
+    }
+        }
+
 @media (max-width: 1023px) {
 
     .bike-card__content {
-            padding-top: 8px;
+            padding-top: 32px;
             width: 100%
+    }
+        }
+
+@media (max-width: 767px) {
+
+    .bike-card__content {
+            padding-top: 16px
+    }
+        }
+
+@media (max-width: 479px) {
+
+    .bike-card__content {
+            padding-top: 8px
     }
         }
 
@@ -1765,6 +1794,24 @@ input[type="submit"] {
                     order: -1;
             }
         }
+
+.bike-card__content--pt-sm {
+            padding-top: 40px
+        }
+
+@media (max-width: 1023px) {
+
+        .bike-card__content--pt-sm {
+                padding-top: 32px
+        }
+            }
+
+@media (max-width: 479px) {
+
+        .bike-card__content--pt-sm {
+                padding-top: 16px
+        }
+            }
 
 .bike-card__name {
             display: inline-block;
@@ -1778,6 +1825,17 @@ input[type="submit"] {
 
         .bike-card__name {
                 font-size: 1.375rem;
+                margin-bottom: 16px
+        }
+            }
+
+.bike-card__desc {
+            margin-bottom: 40px
+        }
+
+@media (max-width: 1023px) {
+
+        .bike-card__desc {
                 margin-bottom: 24px
         }
             }
@@ -1810,6 +1868,7 @@ input[type="submit"] {
 @media (max-width: 1023px) {
 
             .bike-card__btn {
+                    min-width: 0;
                     width: 50%;
                     margin-bottom: 0
             }
@@ -4140,6 +4199,28 @@ input[type="submit"] {
     }
         }
 
+.page-hl {
+    margin-bottom: 48px
+}
+
+@media (max-width: 1023px) {
+
+.page-hl {
+        margin-bottom: 32px
+}
+    }
+
+.page-link-back {
+    margin-bottom: 40px
+}
+
+@media (max-width: 1023px) {
+
+.page-link-back {
+        margin-bottom: 16px
+}
+    }
+
 .page-cols {
     display: -ms-flexbox;
     display: flex;
@@ -4197,6 +4278,38 @@ input[type="submit"] {
 .page-404 {
     text-align: center;
 }
+
+.page-project__cards {
+        margin-bottom: 160px
+    }
+
+@media (max-width: 1023px) {
+    .page-project__cards {
+            margin-bottom: 64px
+    }
+        }
+
+.page-project__carousel {
+        margin-bottom: 120px
+    }
+
+@media (max-width: 1023px) {
+
+    .page-project__carousel {
+            margin-bottom: 56px
+    }
+        }
+
+.page-project__h2 {
+        margin-bottom: 80px
+    }
+
+@media (max-width: 1023px) {
+
+    .page-project__h2 {
+            margin-bottom: 32px
+    }
+        }
 
 .page-team {
     padding: 88px 0
@@ -4881,6 +4994,21 @@ input[type="submit"] {
             margin-right: 16px
     }
         }
+
+.picture-carousel__item--sm {
+            width: 488px;
+            height: 304px;
+            margin-right: 32px
+        }
+
+@media (max-width: 767px) {
+
+        .picture-carousel__item--sm {
+                width: 256px;
+                height: 160px;
+                margin-right: 16px
+        }
+            }
 
 .picture-carousel__item img {
             width: 100%;

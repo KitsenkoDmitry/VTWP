@@ -4963,7 +4963,7 @@ input[type="submit"] {
 .picture-carousel {
     display: -ms-flexbox;
     display: flex;
-    width: 100vw
+    width: 114%
 }
 
 @media (max-width: 1023px) {

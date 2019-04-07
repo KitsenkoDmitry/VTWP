@@ -1,0 +1,43 @@
+@@include('template/head.html')
+<body>
+    @@include('template/old_ie_update.html')
+
+    @@include('img/svg/sprite.svg')
+
+    @@include('template/header.html', {
+        "isUiKit": false,
+        "isIndexPage": false,
+        "isCartActive": false,
+        "activeLink": "catalog"
+    })
+
+    <main class="wrap-main">
+        <div class="container container--mb">
+            <div class="page-cols">
+                <div class="page-cols__col page-cols__col--1of2">
+                    <p>
+                        <a href="javascript:;" class="link link--white link--bernier" target="_blank">Каталог оригинальных запчастей Harley-Davidson</a>
+                    </p>
+                    <p>
+                        <a href="javascript:;" class="link link--white link--bernier" target="_blank">Каталог оригинальных аксессуаров Harley-Davidson</a>
+                    </p>
+                    <p>
+                        <a href="javascript:;" class="link link--white link--bernier" target="_blank">Каталог оригинальных выхлопных систем Harley-Davidson</a>
+                    </p>
+                </div>
+                <div class="page-cols__col page-cols__col--1of3">
+                    <h3>Как заказать?</h3>
+                    <p class="cl-grey">Просто сообщите нам артикул товара из каталога и мы уточним все детали заказа</p>
+                    <p class="mb-0"><a href="tel:74994091101" class="link link--white">+7 499 409 1101</a></p>
+                    <p class="mb-m"><a href="tel:79646430101" class="link link--white">+7 964 643 0101</a></p>
+                    <p><a href="mailto:info@harley-parts.ru" class="link link--white">info@harley-parts.ru</a></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    @@include('template/footer.html')
+    @@include('template/foot.html')
+
+</body>
+</html>

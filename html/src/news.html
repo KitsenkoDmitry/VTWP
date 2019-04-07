@@ -1,0 +1,38 @@
+@@include('template/head.html')
+<body>
+    @@include('template/old_ie_update.html')
+
+    @@include('img/svg/sprite.svg')
+
+    @@include('template/header.html', {
+        "isUiKit": false,
+        "isIndexPage": false,
+        "isCartActive": true,
+        "activeLink": false
+    })
+
+    <main class="wrap-main">
+        <div class="container container--mb">
+            <a href="javascript:;" class="link link--icon-left link--white mb-m">
+                <svg class="icon icon--back"><use xlink:href="#icon-back"></use></svg>
+                Вернуться в корзину
+            </a>
+            <h1>v-twinparts открыл новый установочный центр</h1>
+            <p class="cl-grey mb-l">21 января 2019</p>
+            <div class="container__inner">
+                <p>
+                    <img data-src="img/service/service_01.jpg" alt="сервис" class="lazyload">
+                </p>
+                <p>Разрыв возбуждает торсионный разрыв, но никакие ухищрения экспериментаторов не позволят наблюдать этот эффект в видимом диапазоне. Лептон спонтанно излучает квантово-механический лептон. Призма коаксиально излучает взрыв. Неоднородность зеркально представляет собой экситон.</p>
+                <p>Возмущение плотности поглощает сверхпроводник. Лептон теоретически возможен. Квазар возбуждает расширяющийся луч.</p>
+                <p>Волновая тень отражает пульсар. Как легко получить из самых общих соображений, вещество представляет собой квант. Плазма концентрирует кварк. Квантовое состояние усиливает межатомный электрон.</p>
+
+            </div>
+        </div>
+    </main>
+
+    @@include('template/footer.html')
+    @@include('template/foot.html')
+
+</body>
+</html>

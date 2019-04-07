@@ -4321,6 +4321,17 @@ input[type="submit"] {
         }
             }
 
+.page-cols__col--1of3 {
+            width: calc(33.33333% - 21.33333px)
+        }
+
+@media (max-width: 1023px) {
+
+        .page-cols__col--1of3 {
+                width: 100%
+        }
+            }
+
 .page-404 {
     text-align: center;
 }
@@ -5105,6 +5116,11 @@ input[type="submit"] {
             margin-bottom: 64px
     }
         }
+
+.container__inner {
+        max-width: 800px;
+        margin: 0 auto;
+    }
 
 .section {
         position: relative;

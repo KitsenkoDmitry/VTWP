@@ -25,11 +25,12 @@
         }
 
         @media (--tablet-lg) {
-            padding: 0 0 0 calc($gutter-step * 3);
+            width: 300px;
+            /* padding: 0 0 0 calc($gutter-step * 3); */
             border: none;
-            width: 200px;
-            height: 100px;
-            margin-right: calc($gutter-step * 4);
+            /* width: 200px; */
+            /* height: 100px; */
+            /* margin-right: calc($gutter-step * 4); */
         }
 
         &:hover {
@@ -58,7 +59,7 @@
             pointer-events: none;
 
             @media (--tablet-lg) {
-                display: none;
+                opacity: 1;
             }
 
             .news-carousel__item:hover & {

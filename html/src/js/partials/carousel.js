@@ -18,7 +18,7 @@ function initCarousels () {
                 {
                     breakpoint: 767,
                     settings: {
-                        infinite: false,
+                        // infinite: false,
                     },
                 },
                 {

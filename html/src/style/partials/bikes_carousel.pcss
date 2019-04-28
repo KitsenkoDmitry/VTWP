@@ -31,7 +31,7 @@
             &:checked {
                 & + .bikes-carousel__item-label {
                     .bikes-carousel__item-title {
-                        color: $cl-global-invert;
+                        color: $cl-red;
                     }
 
                     .bikes-carousel__item-img {
@@ -48,7 +48,7 @@
             font-family: $bernier;
             text-transform: lowercase;
             text-align: center;
-            color: rgba(255, 255, 255, 0.15);
+            color: $cl-global;
             transition: color $time ease;
 
             @media (--tablet-lg) {
@@ -57,14 +57,14 @@
 
             .bikes-carousel__item-label:hover & {
                 @media (--tablet-lg-min) {
-                    color: $cl-global-invert;
+                    /* color: $cl-global-invert; */
                 }
             }
         }
 
         &-img {
             max-width: 160px;
-            opacity: 0.5;
+            opacity: 0.75;
             margin: 0 auto;
             transition: opacity $time ease;
 

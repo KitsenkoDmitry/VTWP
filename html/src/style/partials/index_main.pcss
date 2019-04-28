@@ -13,6 +13,14 @@
         padding-bottom: calc($gutter-step * 8);
     }
 
+    &--new {
+        padding-top: 220px;
+
+        @media (--tablet-lg) {
+            padding-top: 130px;
+        }
+    }
+
     &__bg {
         position: absolute;
         z-index: 1;
@@ -22,7 +30,6 @@
         right: 0;
         bottom: 0;
         pointer-events: none;
-
 
         img {
             width: 100%;
@@ -38,6 +45,12 @@
             width: 100%;
             height: 100%;
             background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        &--no-overlay {
+            &::after {
+                content: none;
+            }
         }
     }
 

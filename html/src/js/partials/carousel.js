@@ -77,6 +77,20 @@ function initCarousels () {
         });
     }
 
+    // карусель на главной
+    const $indexMainCarousel = $('.js-index-main-carousel');
+    if ($indexMainCarousel.length && !$indexMainCarousel.hasClass('slick-initialized')) {
+        $indexMainCarousel.slick({
+            arrows: false,
+            infinite: false,
+            slidesToShow: 1,
+            centerMode: true,
+            centerPadding: '0',
+            variableWidth: false,
+            dots: true,
+        });
+    }
+
     // карусель картинок товара
     const $productCarousel = $('.js-product-carousel');
     if ($productCarousel.length && !$productCarousel.hasClass('slick-initialized')) {

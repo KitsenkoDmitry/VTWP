@@ -1,8 +1,13 @@
 .accessories-selection {
-    padding-top: calc($gutter-step * 14);
+    padding: calc($gutter-step * 6) 0;
+    background: $cl-global-invert url('$img_path/white_bg.jpg') no-repeat center;
+    background-size: cover;
+    color: $cl-global;
+    margin-bottom: calc($gutter-step * 15);
 
     @media (--tablet-lg) {
-        padding-top: calc($gutter-step * 3);
+        padding: calc($gutter-step * 3) 0;
+        margin-bottom: calc($gutter-step * 4);
     }
 
     &__hl {
@@ -30,11 +35,9 @@
 
     &__row {
         display: flex;
-        margin-bottom: calc($gutter-step * 15);
 
         @media (--tablet-lg) {
             flex-wrap: wrap;
-            margin-bottom: 0;
         }
 
         &-col {

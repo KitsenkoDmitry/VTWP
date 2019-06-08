@@ -1795,13 +1795,20 @@ input[type='submit'] {
 .catalog-list {
     display: -ms-flexbox;
     display: flex;
+    padding-bottom: 16px;
 }
 
 .catalog-list__item {
-        margin-right: 5%;
+        /* три колонки */
+        width: calc(33.33333% - 21.33333px);
+        margin-right: 32px;
         margin-bottom: 0;
-        padding-bottom: 32px;
+        padding-bottom: 16px
     }
+
+.catalog-list__item:nth-child(3n) {
+            margin-right: 0;
+        }
 
 .catalog-list__item-pic {
             margin-bottom: 12px;
@@ -3722,6 +3729,12 @@ input[type='submit'] {
 
 .header__dropdown-col--1of2 {
                 width: calc(50% - 16px);
+            }
+
+.header__dropdown-col-text {
+                max-width: 510px;
+                color: #999;
+                margin-bottom: 32px;
             }
 
 .header__dropdown-list {

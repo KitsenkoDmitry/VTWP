@@ -1,10 +1,17 @@
 .catalog-list {
     display: flex;
+    padding-bottom: calc($gutter-step * 2);
 
     &__item {
-        margin-right: 5%;
+        /* три колонки */
+        width: calc((100% - $gutter-step * 8) / 3);
+        margin-right: calc($gutter-step * 4);
         margin-bottom: 0;
-        padding-bottom: calc($gutter-step * 4);
+        padding-bottom: calc($gutter-step * 2);
+
+        &:nth-child(3n) {
+            margin-right: 0;
+        }
 
         &-pic {
             margin-bottom: calc($gutter-step * 1.5);

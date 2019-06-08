@@ -58,34 +58,22 @@ function lockDocument() {
 // ------ логика открытия выпадашек хедера ------
 const $header = $('.js-header');
 
-$(document).on('click', '.js-header-dropdown-btn', e => {
-    e.preventDefault();
+$(document).on('mouseover', '.js-header-dropdown-btn', e => {
     const $self = $(e.currentTarget);
     const category = $self.attr('data-category');
-    const $categoryDropdown = $(`[data-dropdown-category='${category}']`);
-
-    if ($self.hasClass('is-chosen')) {
-        $self.removeClass('is-chosen');
-        $categoryDropdown.removeClass('is-active');
-        $header.removeClass('is-active');
-        $('body').removeClass('has-overlay');
-    } else {
-        $('.js-header-dropdown-btn').removeClass('is-chosen');
-        $('.js-header-dropdown').removeClass('is-active');
-        $header.addClass('is-active');
-        $self.addClass('is-chosen');
+    $('.js-header-dropdown').removeClass('is-active');
+    $header.removeClass('is-active');
+    $('body').removeClass('has-overlay');
+    if (category) {
+        const $categoryDropdown = $(`[data-dropdown-category='${category}']`);
         $categoryDropdown.addClass('is-active');
+        $header.addClass('is-active');
         $('body').addClass('has-overlay');
-        $(document).on('click', closeDropdownHandler);
     }
 });
 
-function closeDropdownHandler(e) {
-    if ($(e.target).closest('.js-header').length === 0) {
-        $('.js-header-dropdown-btn').removeClass('is-chosen');
-        $('.js-header-dropdown').removeClass('is-active');
-        $header.removeClass('is-active');
-        $('body').removeClass('has-overlay');
-        $(document).off('click', closeDropdownHandler);
-    }
-}
+$(document).on('mouseleave', '.js-header-dropdown', e => {
+    $('.js-header-dropdown').removeClass('is-active');
+    $header.removeClass('is-active');
+    $('body').removeClass('has-overlay');
+});

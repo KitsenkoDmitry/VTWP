@@ -134,7 +134,7 @@
     </svg>
 
 
-    <header class="header js-header" style="background-color: black">
+    <header class="header js-header" style="background-color: black" >
         <div class="header__container container">
             <div class="header__col">
                 <p class="header__col-top">
@@ -144,34 +144,63 @@
                     </button>
                 </p>
                 <div class="header__col-menu">
-                    <a href="javascript:;" class="link link--bernier link--white link--underline js-header-dropdown-btn " data-category="shop">Магазин</a>
-                    <a href="catalogs.html" class="link link--bernier link--white link--underline ">Заказ по каталогам</a>
-                    <a href="bikes_catalog.html" class="link link--bernier link--white link--underline ">Мотоциклы</a>
+                    <!-- обратите внимание, у каждо ссылки в десктопном меню должен быть класс js-header-dropdown-btn -->
+                    <a
+                        href="javascript:;"
+                        class="link link--bernier link--white link--underline js-header-dropdown-btn "
+                        data-category="shop"
+                        >Магазин</a
+                    >
+                    <a
+                        href="catalogs.html"
+                        class="link link--bernier link--white link--underline  js-header-dropdown-btn"
+                        data-category="catalog"
+                        >Заказ по каталогам</a
+                    >
+                    <a
+                        href="bikes_catalog.html"
+                        class="link link--bernier link--white link--underline  js-header-dropdown-btn"
+                        >Мотоциклы</a
+                    >
                 </div>
             </div>
             <div class="header__col header__col--logo">
-                <a href="index.html" class="header__logo">
-                    <svg class="icon icon--logo"><use xlink:href="#icon-logo"></use></svg>
+                <a href="index.html"  class="header__logo js-header-dropdown-btn">
+                    <svg class="icon icon--logo" style="transform: rotate(180deg)"><use xlink:href="#icon-logo"></use></svg>
                 </a>
             </div>
             <div class="header__col">
                 <p class="header__col-top header__col-top--right">
                     
-                        <a href="javascript:;" class="header__col-cart link link--white js-cart-btn">
-                            <span class="header__col-cart-text">Корзина</span>
-                            <span class="qt">3</span>
-                        </a>
-                    
-                    
+                    <a href="javascript:;" class="header__col-cart link link--white js-cart-btn js-header-dropdown-btn">
+                        <span class="header__col-cart-text">Корзина</span>
+                        <span class="qt">3</span>
+                    </a>
+                     
                 </p>
                 <div class="header__col-menu">
-                    <a href="projects_page.html" class="link link--bernier link--white link--underline ">Наши проекты</a>
-                    <a href="about.html" class="link link--bernier link--white link--underline ">О нас</a>
-                    <a href="contacts.html" class="link link--bernier link--white link--underline ">Контакты</a>
+                    <a
+                        href="projects_page.html"
+                        class="link link--bernier link--white link--underline  js-header-dropdown-btn"
+                        >Наши проекты</a
+                    >
+                    <a
+                        href="about.html"
+                        class="link link--bernier link--white link--underline  js-header-dropdown-btn"
+                        >О нас</a
+                    >
+                    <a
+                        href="contacts.html"
+                        class="link link--bernier link--white link--underline  js-header-dropdown-btn"
+                        >Контакты</a
+                    >
                 </div>
             </div>
         </div>
-        <div class="header__container header__container--dropdown container js-header-dropdown" data-dropdown-category="shop">
+        <div
+            class="header__container header__container--dropdown container js-header-dropdown"
+            data-dropdown-category="shop"
+        >
             <div class="header__dropdown-col">
                 <ul class="header__dropdown-list">
                     <li class="header__dropdown-list-item">
@@ -218,6 +247,51 @@
                 </a>
             </div>
         </div>
+        <div
+            class="header__container header__container--dropdown container js-header-dropdown"
+            data-dropdown-category="catalog"
+        >
+            <div class="header__dropdown-col header__dropdown-col--1of2">
+                <ul class="catalog-list">
+                    <li class="catalog-list__item">
+                        <a href="javascript:;" class="catalog-list__link">
+                            <div class="catalog-list__item-pic">
+                                <img src="/img/catalog1.jpg" alt="" />
+                            </div>
+                            <p class="catalog-list__item-text">V-TWIN BICKER’S Choice</p>
+                            <p class="catalog-list__item-text">2019</p>
+                        </a>
+                    </li>
+                    <li class="catalog-list__item">
+                        <a href="javascript:;" class="catalog-list__link">
+                            <div class="catalog-list__item-pic">
+                                <img src="/img/catalog2.jpg" alt="" />
+                            </div>
+                            <p class="catalog-list__item-text">Drag Specialites</p>
+                            <p class="catalog-list__item-text">2019</p>
+                        </a>
+                    </li>
+                    <li class="catalog-list__item">
+                        <a href="javascript:;" class="catalog-list__link">
+                            <div class="catalog-list__item-pic">
+                                <img src="/img/catalog1.jpg" alt="" />
+                            </div>
+                            <p class="catalog-list__item-text">V-TWIN BICKER’S Choice</p>
+                            <p class="catalog-list__item-text">2019</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="header__dropdown-col header__dropdown-col--1of2">
+                <p class="cl-grey mb-m">
+                    Cообщите нам артикул товара из каталога.Стоимость заказа - цена в каталоге +$15/кг. Доставка за 1-2
+                    недели.
+                </p>
+                <p class="mb-0"><a href="tel:+74994091101" class="link link--white">+7 499 409 1101</a></p>
+                <p class="mb-0"><a href="tel:+79646430101" class="link link--white">+7 964 643 0101</a></p>
+                <p class="mb-0"><a href="mailto:info@harley-parts.ru" class="link link--white">info@harley-parts.ru</a></p>
+            </div>
+        </div>
         <div class="mobile-menu js-mobile-menu faster">
             <div class="container">
                 <button class="mobile-menu__close btn-close js-menu-close">
@@ -259,99 +333,98 @@
                 </ul>
             </div>
         </div>
+ <div class="cart-modal js-cart-modal faster">
+    <button class="cart-modal__close btn-close js-cart-close">
+        <svg class="icon icon--close"><use xlink:href="#icon-close"></use></svg>
+    </button>
+    <div class="cart-modal__content">
+        <h3 class="cart-modal__title">В корзине</h3>
 
-        <div class="cart-modal js-cart-modal faster">
-            <button class="cart-modal__close btn-close js-cart-close">
-                <svg class="icon icon--close"><use xlink:href="#icon-close"></use></svg>
-            </button>
-            <div class="cart-modal__content">
-                <h3 class="cart-modal__title">В корзине</h3>
+        <div class="cart-modal__cart-items-wrapper">
+            <ul class="cart-modal__cart-items cart-items">
+                <li class="cart-items__item">
+                    <a href="javascript:;" class="cart-items__item-img">
+                        <img data-src="img/inhtml/img1.png" class="lazyload">
+                    </a>
+                    <div class="cart-items__item-content">
+                        <a href="javascript:;" class="cart-items__item-brand">Screamin Eagle</a>
+                        <a href="javascript:;" class="cart-items__item-name link link--white">Масло Синтетика SYN3 20w-50 1Qt</a>
+                        <p class="cart-items__item-number">Артикул: 42328</p>
+                    </div>
 
-                <div class="cart-modal__cart-items-wrapper">
-                    <ul class="cart-modal__cart-items cart-items">
-                        <li class="cart-items__item">
-                            <a href="javascript:;" class="cart-items__item-img">
-                                <img data-src="img/inhtml/img1.png" class="lazyload">
-                            </a>
-                            <div class="cart-items__item-content">
-                                <a href="javascript:;" class="cart-items__item-brand">Screamin Eagle</a>
-                                <a href="javascript:;" class="cart-items__item-name link link--white">Масло Синтетика SYN3 20w-50 1Qt</a>
-                                <p class="cart-items__item-number">Артикул: 42328</p>
-                            </div>
+                    <div class="cart-items__item-aside">
+                        1 800 ₽
+                        <button class="cart-items__item-remove" type="button">
+                            <svg class="icon icon--delete"><use xlink:href="#icon-delete"></use></svg>
+                        </button>
+                    </div>
+                </li>
 
-                            <div class="cart-items__item-aside">
-                                1 800 ₽
-                                <button class="cart-items__item-remove" type="button">
-                                    <svg class="icon icon--delete"><use xlink:href="#icon-delete"></use></svg>
-                                </button>
-                            </div>
-                        </li>
+                <li class="cart-items__item">
+                    <a href="javascript:;" class="cart-items__item-img">
+                        <img data-src="img/inhtml/img2.png" class="lazyload">
+                    </a>
+                    <div class="cart-items__item-content">
+                        <a href="javascript:;" class="cart-items__item-brand">Biltwell</a>
+                        <a href="javascript:;" class="cart-items__item-name link link--white">Шлем Gringo S Gloss Black</a>
+                        <p class="cart-items__item-number">Артикул: 42328</p>
+                    </div>
 
-                        <li class="cart-items__item">
-                            <a href="javascript:;" class="cart-items__item-img">
-                                <img data-src="img/inhtml/img2.png" class="lazyload">
-                            </a>
-                            <div class="cart-items__item-content">
-                                <a href="javascript:;" class="cart-items__item-brand">Biltwell</a>
-                                <a href="javascript:;" class="cart-items__item-name link link--white">Шлем Gringo S Gloss Black</a>
-                                <p class="cart-items__item-number">Артикул: 42328</p>
-                            </div>
+                    <div class="cart-items__item-aside">
+                        24 990 ₽
+                        <button class="cart-items__item-remove" type="button">
+                            <svg class="icon icon--delete"><use xlink:href="#icon-delete"></use></svg>
+                        </button>
+                    </div>
+                </li>
 
-                            <div class="cart-items__item-aside">
-                                24 990 ₽
-                                <button class="cart-items__item-remove" type="button">
-                                    <svg class="icon icon--delete"><use xlink:href="#icon-delete"></use></svg>
-                                </button>
-                            </div>
-                        </li>
+                <li class="cart-items__item">
+                    <a href="javascript:;" class="cart-items__item-img">
+                        <img data-src="img/inhtml/img3.png" class="lazyload">
+                    </a>
+                    <div class="cart-items__item-content">
+                        <a href="javascript:;" class="cart-items__item-brand">Vance & Hines</a>
+                        <a href="javascript:;" class="cart-items__item-name link link--white">Фильтр VO2 Cage Fighter Air Intake</a>
+                        <p class="cart-items__item-number">Артикул: 42328</p>
+                    </div>
 
-                        <li class="cart-items__item">
-                            <a href="javascript:;" class="cart-items__item-img">
-                                <img data-src="img/inhtml/img3.png" class="lazyload">
-                            </a>
-                            <div class="cart-items__item-content">
-                                <a href="javascript:;" class="cart-items__item-brand">Vance & Hines</a>
-                                <a href="javascript:;" class="cart-items__item-name link link--white">Фильтр VO2 Cage Fighter Air Intake</a>
-                                <p class="cart-items__item-number">Артикул: 42328</p>
-                            </div>
+                    <div class="cart-items__item-aside">
+                        16 490 ₽
+                        <button class="cart-items__item-remove" type="button">
+                            <svg class="icon icon--delete"><use xlink:href="#icon-delete"></use></svg>
+                        </button>
+                    </div>
+                </li>
 
-                            <div class="cart-items__item-aside">
-                                16 490 ₽
-                                <button class="cart-items__item-remove" type="button">
-                                    <svg class="icon icon--delete"><use xlink:href="#icon-delete"></use></svg>
-                                </button>
-                            </div>
-                        </li>
+                <li class="cart-items__item">
+                    <a href="javascript:;" class="cart-items__item-img">
+                        <img data-src="img/inhtml/img4.png" class="lazyload">
+                    </a>
+                    <div class="cart-items__item-content">
+                        <a href="javascript:;" class="cart-items__item-brand">Vance & Hines</a>
+                        <a href="javascript:;" class="cart-items__item-name link link--white">Флейты Quiet Baffles</a>
+                        <p class="cart-items__item-number">Артикул: 42328</p>
+                    </div>
 
-                        <li class="cart-items__item">
-                            <a href="javascript:;" class="cart-items__item-img">
-                                <img data-src="img/inhtml/img4.png" class="lazyload">
-                            </a>
-                            <div class="cart-items__item-content">
-                                <a href="javascript:;" class="cart-items__item-brand">Vance & Hines</a>
-                                <a href="javascript:;" class="cart-items__item-name link link--white">Флейты Quiet Baffles</a>
-                                <p class="cart-items__item-number">Артикул: 42328</p>
-                            </div>
+                    <div class="cart-items__item-aside">
+                        7 990 ₽
+                        <button class="cart-items__item-remove" type="button">
+                            <svg class="icon icon--delete"><use xlink:href="#icon-delete"></use></svg>
+                        </button>
+                    </div>
+                </li>
 
-                            <div class="cart-items__item-aside">
-                                7 990 ₽
-                                <button class="cart-items__item-remove" type="button">
-                                    <svg class="icon icon--delete"><use xlink:href="#icon-delete"></use></svg>
-                                </button>
-                            </div>
-                        </li>
-
-                    </ul>
-                </div>
-            </div>
-            <a href="cart_page.html" class="cart-modal__footer">
-                <div class="cart-modal__footer-price">
-                    <p class="cart-modal__footer-name">Сумма</p>
-                    <p class="cart-modal__footer-amount">51 300 ₽</p>
-                </div>
-                <span class="cart-modal__footer-text">Перейти в корзину</a>
-            </a>
+            </ul>
         </div>
+    </div>
+    <a href="cart_page.html" class="cart-modal__footer">
+        <div class="cart-modal__footer-price">
+            <p class="cart-modal__footer-name">Сумма</p>
+            <p class="cart-modal__footer-amount">51 300 ₽</p>
+        </div>
+        <span class="cart-modal__footer-text">Перейти в корзину</a>
+    </a>
+</div>
 
     </header>
     <div class="header-placeholder"></div>

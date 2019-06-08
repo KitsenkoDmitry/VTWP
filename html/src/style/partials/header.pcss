@@ -15,6 +15,7 @@
 
     &--index {
         background-color: transparent;
+
         @media (--tablet-lg) {
             padding-bottom: calc($gutter-step * 8);
         }
@@ -25,12 +26,6 @@
 
         @media (--tablet-lg-min) {
             padding-bottom: calc($gutter-step * 8);
-        }
-    }
-
-    .has-overlay & {
-        &:not(.is-active) {
-            background-color: transparent;
         }
     }
 
@@ -176,6 +171,10 @@
             &--1of4 {
                 /* 1 колонка */
                 width: calc(25% - $gutter-step);
+            }
+
+            &--1of2 {
+                width: calc(50% - $gutter-step * 2);
             }
         }
 

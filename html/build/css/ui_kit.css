@@ -4,44 +4,43 @@
  * В прод сборку не попадают
  */
 
- /* Настройки шагов адаптива и сетки */
+/* Настройки шагов адаптива и сетки */
 
- /* Изменение настроек сетки */
+/* Изменение настроек сетки */
 
- /* Основные размеры для элементов */
+/* Основные размеры для элементов */
 
- /* Точки адаптива
+/* Точки адаптива
     Пример: @media (--mobile) {}
 */
 
- /* Переменные */
+/* Переменные */
 
- /* Основные цвета проекта */
+/* Основные цвета проекта */
 
- /* цвета шрифта */
+/* цвета шрифта */
 
- /* цвет фона */
+/* цвет фона */
 
- /* акцидентные цвета */
+/* акцидентные цвета */
 
- /* Путь к папке с картинками
+/* Путь к папке с картинками
  * Пример: background-image: url('$img_path/svg/load.svg')
  */
 
- /* Время для основных анимаций */
+/* Время для основных анимаций */
 
- .ui-kit-main {
+.ui-kit-main {
     counter-reset: uiSectionCounter;
-
     overflow: hidden;
 }
 
- .ui-kit-section {
+.ui-kit-section {
     padding: 32px 0;
     border-bottom: 1px dashed grey;
 }
 
- .ui-kit-section__hl {
+.ui-kit-section__hl {
         position: relative;
         margin: 0 0 16px 0;
         font-size: 32px;
@@ -50,65 +49,65 @@
         padding-right: 60px
     }
 
- @media (max-width: 767px) {
+@media (max-width: 767px) {
 
     .ui-kit-section__hl {
             font-size: 1.5rem
     }
         }
 
- .ui-kit-section__hl-num {
+.ui-kit-section__hl-num {
         position: absolute;
         right: 0
     }
 
- .ui-kit-section__hl-num:before {
+.ui-kit-section__hl-num::before {
             counter-increment: uiSectionCounter;
-            content:  '\2014 ' counter(uiSectionCounter);
+            content: '\2014 'counter(uiSectionCounter);
             display: inline-block;
         }
 
- .ui-kit-section__desc {
-        opacity: .6;
+.ui-kit-section__desc {
+        opacity: 0.6;
         margin-bottom: 16px;
     }
 
- .ui-kit-colors {
+.ui-kit-colors {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
 }
 
- .ui-kit-colors__col {
+.ui-kit-colors__col {
         margin-right: 16px;
         margin-bottom: 16px;
         width: 120px;
     }
 
- .ui-kit-colors__name {
-            display: -ms-flexbox;
-            display: flex;
-            -ms-flex-align: center;
-                align-items: center;
-            -ms-flex-pack: center;
-                justify-content: center;
-            text-transform: lowercase;
-            text-align: center;
-            width: 120px;
-            height: 120px;
-            margin-bottom: 16px;
-        }
+.ui-kit-colors__name {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+            align-items: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+        text-transform: lowercase;
+        text-align: center;
+        width: 120px;
+        height: 120px;
+        margin-bottom: 16px;
+    }
 
- .ui-kit-colors__desc {
-            color: #999;
-            font-size: 14px;
-            font-size: 0.875rem;
-            text-align: center;
-            margin-bottom: 0;
-        }
+.ui-kit-colors__desc {
+        color: #999;
+        font-size: 14px;
+        font-size: 0.875rem;
+        text-align: center;
+        margin-bottom: 0;
+    }
 
- .ui-kit-cols {
+.ui-kit-cols {
     display: -ms-flexbox;
     display: flex;
     position: relative;
@@ -116,32 +115,32 @@
         flex-wrap: wrap;
 }
 
- .ui-kit-cols__col {
+.ui-kit-cols__col {
         width: 45%;
         margin-right: 5%
     }
 
- .ui-kit-cols__col:last-child {
+.ui-kit-cols__col:last-child {
             margin-right: 0;
         }
 
- @media (max-width: 1023px) {
+@media (max-width: 1023px) {
 
     .ui-kit-cols__col {
-            width: 100$
+            width: 100%
     }
         }
 
- .ui-kit-cols__col--1of4 {
+.ui-kit-cols__col--1of4 {
             width: 22%;
             margin-right: 4%
         }
 
- .ui-kit-cols__col--1of4:last-child {
+.ui-kit-cols__col--1of4:last-child {
                 margin-right: 0;
             }
 
- @media (max-width: 1023px) {
+@media (max-width: 1023px) {
 
         .ui-kit-cols__col--1of4 {
                 width: 45%;
@@ -149,17 +148,17 @@
         }
             }
 
- @media (max-width: 767px) {
+@media (max-width: 767px) {
 
         .ui-kit-cols__col--1of4 {
                 width: 100%
         }
             }
 
- .ui-kit-desc {
+.ui-kit-desc {
     font-size: 11px;
     font-size: 0.6875rem;
-    opacity: .6;
+    opacity: 0.6;
 }
 
 /*# sourceMappingURL=ui_kit.css.map */

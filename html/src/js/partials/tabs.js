@@ -1,7 +1,7 @@
 // немного специфичные табы. Используются на странице checkout.html. При желании можно доработать
 
 if ($('.js-tabs-link').length) {
-    $(document).on('click', '.js-tabs-link', (e) => {
+    $(document).on('click', '.js-tabs-link', e => {
         // e.preventDefault();
         const $self = $(e.currentTarget);
 

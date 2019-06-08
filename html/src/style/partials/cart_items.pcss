@@ -47,7 +47,6 @@
                 width: 56px;
                 height: 40px;
             }
-
         }
 
         &-content {
@@ -61,46 +60,44 @@
                 margin-bottom: calc($gutter-step * 2);
             }
 
-
             .cart-items__item--checkout & {
                 align-self: flex-start;
                 margin-bottom: 0;
             }
-
         }
 
-            &-brand {
-                margin-bottom: 0;
-                color: $cl-grey;
-            }
+        &-brand {
+            margin-bottom: 0;
+            color: $cl-grey;
+        }
 
-            &-name {
-                display: block;
-                margin-bottom: $gutter-step;
-            }
+        &-name {
+            display: block;
+            margin-bottom: $gutter-step;
+        }
 
-            &-number {
-                margin-bottom: 0;
-                color: $cl-grey;
-                font-size: 12px;
-            }
+        &-number {
+            margin-bottom: 0;
+            color: $cl-grey;
+            font-size: 12px;
+        }
 
-            &-price {
-                margin-bottom: 0;
+        &-price {
+            margin-bottom: 0;
 
-                .price {
-                    font-size: 22px;
+            .price {
+                font-size: 22px;
 
-                    @media (--tablet-lg) {
-                        font-size: 18px;
-                    }
+                @media (--tablet-lg) {
+                    font-size: 18px;
+                }
 
-                    &--old {
-                        margin-left: $gutter-step;
-                        font-size: 16px;
-                    }
+                &--old {
+                    margin-left: $gutter-step;
+                    font-size: 16px;
                 }
             }
+        }
 
         &-spinner {
             width: 23%;
@@ -157,17 +154,16 @@
             }
         }
 
-            &-remove {
-                width: 20px;
-                height: 20px;
-                margin-left: $gutter-step;
+        &-remove {
+            width: 20px;
+            height: 20px;
+            margin-left: $gutter-step;
 
-                @media (--mobile-lg) {
-                    position: absolute;
-                    top: calc($gutter-step * 2);
-                    right: 0;
-                }
-
+            @media (--mobile-lg) {
+                position: absolute;
+                top: calc($gutter-step * 2);
+                right: 0;
             }
+        }
     }
 }

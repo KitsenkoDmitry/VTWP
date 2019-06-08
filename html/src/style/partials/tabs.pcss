@@ -42,20 +42,17 @@
                 cursor: default;
                 pointer-events: none;
             }
-
         }
     }
 
+    /* &__body {
+    } */
 
-    &__body {
+    &__item {
+        display: none;
 
-    }
-
-        &__item {
-            display: none;
-
-            &.is-active {
-                display: block;
-            }
+        &.is-active {
+            display: block;
         }
+    }
 }

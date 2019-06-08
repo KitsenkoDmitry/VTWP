@@ -14,8 +14,7 @@ $.extend(Parsley.options, {
             $handler;
         if (type == 'checkbox' || type == 'radio') {
             $handler = $element; // то есть ничего не выделяем (input скрыт), иначе выделяет родительский блок
-        }
-        else if ($element.hasClass('select2-hidden-accessible')) {
+        } else if ($element.hasClass('select2-hidden-accessible')) {
             $handler = $('.select2-selection--single', $element.next('.select2'));
         }
 
@@ -28,15 +27,15 @@ $.extend(Parsley.options, {
 
         if (type == 'checkbox' || type == 'radio') {
             $container = $(`[name="${$element.attr('name')}"]:last + label`).next('.errors-placement');
-        }
-        else if ($element.hasClass('select2-hidden-accessible')) {
+        } else if ($element.hasClass('select2-hidden-accessible')) {
             $container = $element.next('.select2').next('.errors-placement');
-        }
-        else if (type == 'file') {
+        } else if (type == 'file') {
             $container = $element.closest('.custom-file').next('.errors-placement');
-        }
-        else if ($element.attr('name') == 'is_recaptcha_success') {
-            $container = $element.parent().next('.g-recaptcha').next('.errors-placement');
+        } else if ($element.attr('name') == 'is_recaptcha_success') {
+            $container = $element
+                .parent()
+                .next('.g-recaptcha')
+                .next('.errors-placement');
         }
         // else {
         //     $container = $element.closest('.field');
@@ -44,7 +43,7 @@ $.extend(Parsley.options, {
         // }
 
         return $container;
-    }
+    },
 });
 
 // Кастомные валидаторы
@@ -56,8 +55,8 @@ Parsley.addValidator('nameRu', {
     },
     messages: {
         ru: 'Cимволы А-Я, а-я, " ", "-"',
-        en: 'Only simbols А-Я, а-я, " ", "-"'
-    }
+        en: 'Only simbols А-Я, а-я, " ", "-"',
+    },
 });
 
 // Только латинские буквы, тире, пробелы
@@ -67,8 +66,8 @@ Parsley.addValidator('nameEn', {
     },
     messages: {
         ru: 'Cимволы A-Z, a-z, " ", "-"',
-        en: 'Only simbols A-Z, a-z, " ", "-"'
-    }
+        en: 'Only simbols A-Z, a-z, " ", "-"',
+    },
 });
 
 // Только латинские и русские буквы, тире, пробелы
@@ -78,8 +77,8 @@ Parsley.addValidator('name', {
     },
     messages: {
         ru: 'Cимволы A-Z, a-z, А-Я, а-я, " ", "-"',
-        en: 'Only simbols A-Z, a-z, А-Я, а-я, " ", "-"'
-    }
+        en: 'Only simbols A-Z, a-z, А-Я, а-я, " ", "-"',
+    },
 });
 
 // Только цифры и русские буквы
@@ -89,8 +88,8 @@ Parsley.addValidator('numLetterRu', {
     },
     messages: {
         ru: 'Cимволы А-Я, а-я, 0-9',
-        en: 'Only simbols А-Я, а-я, 0-9'
-    }
+        en: 'Only simbols А-Я, а-я, 0-9',
+    },
 });
 
 // Только цифры, латинские и русские буквы
@@ -100,8 +99,8 @@ Parsley.addValidator('numLetter', {
     },
     messages: {
         ru: 'Cимволы A-Z, a-z, А-Я, а-я, 0-9',
-        en: 'Only simbols A-Z, a-z, А-Я, а-я, 0-9'
-    }
+        en: 'Only simbols A-Z, a-z, А-Я, а-я, 0-9',
+    },
 });
 
 // Телефонный номер
@@ -111,8 +110,8 @@ Parsley.addValidator('phone', {
     },
     messages: {
         ru: 'Некорректный телефонный номер',
-        en: 'Incorrect phone number'
-    }
+        en: 'Incorrect phone number',
+    },
 });
 
 // Только цифры
@@ -122,19 +121,21 @@ Parsley.addValidator('number', {
     },
     messages: {
         ru: 'Cимволы 0-9',
-        en: 'Only simbols 0-9'
-    }
+        en: 'Only simbols 0-9',
+    },
 });
 
 // Почта без кириллицы
 Parsley.addValidator('email', {
     validateString: function(value) {
-        return /^([A-Za-zА-Яа-я0-9\-](\.|_|-){0,1})+[A-Za-zА-Яа-я0-9\-]\@([A-Za-zА-Яа-я0-9\-])+((\.){0,1}[A-Za-zА-Яа-я0-9\-]){1,}\.[a-zа-я0-9\-]{2,}$/.test(value);
+        return /^([A-Za-zА-Яа-я0-9\-](\.|_|-){0,1})+[A-Za-zА-Яа-я0-9\-]\@([A-Za-zА-Яа-я0-9\-])+((\.){0,1}[A-Za-zА-Яа-я0-9\-]){1,}\.[a-zа-я0-9\-]{2,}$/.test(
+            value
+        );
     },
     messages: {
         ru: 'Некорректный почтовый адрес',
-        en: 'Incorrect email address'
-    }
+        en: 'Incorrect email address',
+    },
 });
 
 // Формат даты DD.MM.YYYY
@@ -144,7 +145,10 @@ Parsley.addValidator('date', {
             regMatch = /(\d{1,2})\.(\d{1,2})\.(\d{4})/,
             min = arguments[2].$element.data('dateMin'),
             max = arguments[2].$element.data('dateMax'),
-            minDate, maxDate, valueDate, result;
+            minDate,
+            maxDate,
+            valueDate,
+            result;
 
         if (min && (result = min.match(regMatch))) {
             minDate = new Date(+result[3], result[2] - 1, +result[1]);
@@ -152,30 +156,31 @@ Parsley.addValidator('date', {
         if (max && (result = max.match(regMatch))) {
             maxDate = new Date(+result[3], result[2] - 1, +result[1]);
         }
-        if (result = value.match(regMatch)) {
+        if ((result = value.match(regMatch))) {
             valueDate = new Date(+result[3], result[2] - 1, +result[1]);
         }
 
-        return regTest.test(value) && (minDate ? valueDate >= minDate : true) && (maxDate ? valueDate <= maxDate : true);
+        return (
+            regTest.test(value) && (minDate ? valueDate >= minDate : true) && (maxDate ? valueDate <= maxDate : true)
+        );
     },
     messages: {
         ru: 'Некорректная дата',
-        en: 'Incorrect date'
-    }
+        en: 'Incorrect date',
+    },
 });
-
 
 // Файл ограниченного размера
 Parsley.addValidator('fileMaxSize', {
     validateString: function(value, maxSize, parsleyInstance) {
         let files = parsleyInstance.$element[0].files;
-        return files.length != 1  || files[0].size <= maxSize * 1024;
+        return files.length != 1 || files[0].size <= maxSize * 1024;
     },
     requirementType: 'integer',
     messages: {
         ru: 'Файл должен весить не более, чем %s Kb',
-        en: 'File size can\'t be more then %s Kb'
-    }
+        en: "File size can't be more then %s Kb",
+    },
 });
 
 // Ограничения расширений файлов
@@ -196,8 +201,8 @@ Parsley.addValidator('fileExtension', {
     },
     messages: {
         ru: 'Допустимы только файлы формата %s',
-        en: 'Available extensions are %s'
-    }
+        en: 'Available extensions are %s',
+    },
 });
 
 // Создаёт контейнеры для ошибок у нетипичных элементов

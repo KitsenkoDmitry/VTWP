@@ -3,7 +3,7 @@ initCarousels();
 $(window).on('resize', initCarousels);
 
 // инициализирует все карусели
-function initCarousels () {
+function initCarousels() {
     //  карусель на первом баннере на главной странице
     const $newsCarousel = $('.js-news-carousel');
     if ($newsCarousel.length && !$newsCarousel.hasClass('slick-initialized')) {
@@ -24,8 +24,8 @@ function initCarousels () {
                 {
                     breakpoint: 1023,
                     settings: 'unslick',
-                }
-            ]
+                },
+            ],
         });
     }
 
@@ -43,16 +43,22 @@ function initCarousels () {
                 {
                     breakpoint: 767,
                     settings: 'unslick',
-                }
-            ]
+                },
+            ],
         });
 
         // check bike after init
-        $bikesCarousel.find('.slick-active').find('input').prop('checked', true);
+        $bikesCarousel
+            .find('.slick-active')
+            .find('input')
+            .prop('checked', true);
 
         // check bike after change
         $bikesCarousel.on('afterChange', () => {
-            $bikesCarousel.find('.slick-active').find('input').prop('checked', true);
+            $bikesCarousel
+                .find('.slick-active')
+                .find('input')
+                .prop('checked', true);
         });
     }
 
@@ -72,8 +78,8 @@ function initCarousels () {
                 {
                     breakpoint: 767,
                     settings: 'unslick',
-                }
-            ]
+                },
+            ],
         });
     }
 
@@ -98,18 +104,20 @@ function initCarousels () {
             arrows: true,
             infinite: true,
             slidesToShow: 1,
-            prevArrow: '<button type="button" class="btn-arrow btn-arrow--prev product-page__carousel-prev"><svg class="icon icon--arrow-next"><use xlink:href="#icon-arrow_next"></use></svg></button>',
-            nextArrow: '<button type="button" class="btn-arrow product-page__carousel-next"><svg class="icon icon--arrow-next"><use xlink:href="#icon-arrow_next"></use></svg></button>',
+            prevArrow:
+                '<button type="button" class="btn-arrow btn-arrow--prev product-page__carousel-prev"><svg class="icon icon--arrow-next"><use xlink:href="#icon-arrow_next"></use></svg></button>',
+            nextArrow:
+                '<button type="button" class="btn-arrow product-page__carousel-next"><svg class="icon icon--arrow-next"><use xlink:href="#icon-arrow_next"></use></svg></button>',
             dots: false,
             responsive: [
                 {
                     breakpoint: 768,
                     settings: {
                         arrows: false,
-                        dots: true
-                    }
-                }
-            ]
+                        dots: true,
+                    },
+                },
+            ],
         });
     }
 
@@ -129,8 +137,8 @@ function initCarousels () {
                 {
                     breakpoint: 639,
                     settings: 'unslick',
-                }
-            ]
+                },
+            ],
         });
     }
 

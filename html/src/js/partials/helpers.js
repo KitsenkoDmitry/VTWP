@@ -10,7 +10,6 @@ function isNumeric(n) {
     return !isNaN(parseFloat(n)) && isFinite(n);
 }
 
-
 /**
  * Удаляет все нечисловые символы и приводит к числу
  *

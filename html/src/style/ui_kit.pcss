@@ -4,12 +4,11 @@
  * В прод сборку не попадают
  */
 
- @import 'partials/grid_settings.pcss';
- @import 'partials/variables.pcss';
+@import 'partials/grid_settings.pcss';
+@import 'partials/variables.pcss';
 
 .ui-kit-main {
     counter-reset: uiSectionCounter;
-
     overflow: hidden;
 }
 
@@ -33,15 +32,15 @@
         position: absolute;
         right: 0;
 
-        &:before {
+        &::before {
             counter-increment: uiSectionCounter;
-            content:  '\2014 ' counter(uiSectionCounter);
+            content: '\2014 'counter(uiSectionCounter);
             display: inline-block;
         }
     }
 
     &__desc {
-        opacity: .6;
+        opacity: 0.6;
         margin-bottom: calc($gutter-step * 2);
     }
 }
@@ -56,23 +55,23 @@
         width: 120px;
     }
 
-        &__name {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-transform: lowercase;
-            text-align: center;
-            width: 120px;
-            height: 120px;
-            margin-bottom: calc($gutter-step * 2);
-        }
+    &__name {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: lowercase;
+        text-align: center;
+        width: 120px;
+        height: 120px;
+        margin-bottom: calc($gutter-step * 2);
+    }
 
-        &__desc {
-            color: $cl-grey;
-            font-size: 14px;
-            text-align: center;
-            margin-bottom: 0;
-        }
+    &__desc {
+        color: $cl-grey;
+        font-size: 14px;
+        text-align: center;
+        margin-bottom: 0;
+    }
 }
 
 .ui-kit-cols {
@@ -89,12 +88,12 @@
         }
 
         @media (--tablet-lg) {
-            width: 100$;
+            width: 100%;
         }
 
         &--1of4 {
             width: 22%;
-            margin-right: calc((100% - 22% * 4)/3);
+            margin-right: calc((100% - 22% * 4) / 3);
 
             &:last-child {
                 margin-right: 0;
@@ -114,5 +113,5 @@
 
 .ui-kit-desc {
     font-size: 11px;
-    opacity: .6;
+    opacity: 0.6;
 }

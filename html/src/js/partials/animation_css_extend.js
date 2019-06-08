@@ -3,12 +3,12 @@
  * @param  {String} animationName название анимации
  * @param  {Function} callback функция, которая отработает после завершения анимации
  * @return {Object} объект анимации
- * 
+ *
  * @see  https://daneden.github.io/animate.css/
- * 
+ *
  * @example
  * $('#yourElement').animateCss('bounce');
- * 
+ *
  * $('#yourElement').animateCss('bounce', function() {
  *     // Делаем что-то после завершения анимации
  * });
@@ -37,5 +37,5 @@ $.fn.extend({
         });
 
         return this;
-    }
+    },
 });

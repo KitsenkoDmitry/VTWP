@@ -1,10 +1,10 @@
 /**
-*   Активировать/дезактивировать спиннер
-*   const $block = $('.spinner');
-*   const spinner = Spinner.getInstance($block);
-*   spinner.enableSpinner();/spinner.disableSpinner();
-*
-*/
+ *   Активировать/дезактивировать спиннер
+ *   const $block = $('.spinner');
+ *   const spinner = Spinner.getInstance($block);
+ *   spinner.enableSpinner();/spinner.disableSpinner();
+ *
+ */
 
 class Spinner {
     /**
@@ -72,7 +72,6 @@ class Spinner {
         this.elements.$input.prop('disabled', false);
         this.$block.removeClass('is-disabled');
     }
-
 
     /**
      * Обновляет значение счётчика.

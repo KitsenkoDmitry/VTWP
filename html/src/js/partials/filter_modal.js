@@ -1,6 +1,5 @@
 const $filterModal = $('.js-filter-modal');
 if ($filterModal.length) {
-
     $(document).on('click', '.js-filter-btn', e => {
         $filterModal.addClass('is-active').animateCss('slideInRight');
         $('body').addClass('has-overlay');

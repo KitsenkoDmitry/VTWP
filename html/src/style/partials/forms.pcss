@@ -1,6 +1,6 @@
 /* Стилизация элементов форм */
 
-input[type="number"] {
+input[type='number'] {
     /* Прячет стрелки управления поля number в Firefox */
     appearance: textfield;
 
@@ -13,27 +13,27 @@ input[type="number"] {
 }
 
 /* прячет стрелки у инпута */
-input[type="search"]::-webkit-search-decoration,
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-results-button,
-input[type="search"]::-webkit-search-results-decoration {
+input[type='search']::-webkit-search-decoration,
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-results-button,
+input[type='search']::-webkit-search-results-decoration {
     display: none;
 }
 
-input[type="color"],
-input[type="date"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="email"],
-input[type="month"],
-input[type="number"],
-input[type="password"],
-input[type="search"],
-input[type="tel"],
-input[type="text"],
-input[type="time"],
-input[type="url"],
-input[type="week"],
+input[type='color'],
+input[type='date'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='email'],
+input[type='month'],
+input[type='number'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+input[type='text'],
+input[type='time'],
+input[type='url'],
+input[type='week'],
 input:not([type]),
 textarea,
 select {
@@ -42,9 +42,7 @@ select {
     padding: calc($gutter-step * 5) calc($gutter-step * 3) calc($gutter-step * 2);
     width: 100%;
     margin-bottom: calc($gutter-step * 4);
-
     font-size: 16px;
-
     zoom: 1;
     transition: all $time ease;
     border-radius: 0;
@@ -88,12 +86,11 @@ textarea {
     }
 }
 
-
 /* чекбоксы и радио-кнопки */
-input[type="checkbox"],
-input[type="radio"] {
+input[type='checkbox'],
+input[type='radio'] {
     position: absolute;
-    clip: rect(0,0,0,0);
+    clip: rect(0, 0, 0, 0);
 
     & + label {
         position: relative;
@@ -146,50 +143,39 @@ input[type="radio"] {
                 background-color: $cl-disabled-grey;
             }
         }
-
-    }
-
-    &:checked {
-        & + label:after {
-
-        }
-
-        &:disabled + label:after {
-
-        }
     }
 }
 
-input[type="radio"] + label::before,
-input[type="radio"] + label::after {
+input[type='radio'] + label::before,
+input[type='radio'] + label::after {
     border-radius: 50%;
 }
 
-input[type="radio"] + label::after {
+input[type='radio'] + label::after {
     top: 7px;
     left: 9px;
     width: 6px;
     height: 6px;
 }
 
-input[type="radio"]:checked + label::after {
+input[type='radio']:checked + label::after {
     background-color: $cl-global;
 }
 
-input[type="checkbox"] + label::after {
+input[type='checkbox'] + label::after {
     top: 3px;
     left: 6px;
     width: 13px;
     height: 13px;
 }
 
-input[type="checkbox"]:checked + label::after {
+input[type='checkbox']:checked + label::after {
     background: svg-load('../svg/done.svg', fill=#1D1D1D) no-repeat center;
     background-size: contain;
 }
 
 /* для прямоугольных радиокнопок */
-input[type="radio"] {
+input[type='radio'] {
     & + label.radio-box {
         width: 100%;
         min-height: 112px;

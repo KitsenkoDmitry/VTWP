@@ -5,7 +5,6 @@
     top: 0;
     right: 0;
     bottom: 0;
-
     flex-direction: column;
     width: 584px;
     color: $cl-global-invert;
@@ -36,28 +35,28 @@
         }
     }
 
-        &__title {
-            margin-top: 0;
-            margin-bottom: $gutter-step;
-            flex-shrink: 0;
-        }
+    &__title {
+        margin-top: 0;
+        margin-bottom: $gutter-step;
+        flex-shrink: 0;
+    }
 
-        &__cart-items-wrapper {
-            padding-right: $gutter-step;
-            overflow-y: auto;
-            -webkit-overflow-scrolling: touch;
-        }
+    &__cart-items-wrapper {
+        padding-right: $gutter-step;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
 
-        &__close {
-            position: absolute;
-            top: calc($gutter-step * 3);
-            right: calc($gutter-step * 3);
+    &__close {
+        position: absolute;
+        top: calc($gutter-step * 3);
+        right: calc($gutter-step * 3);
 
-            @media (--tablet) {
-                top: calc($gutter-step * 2);
-                right: calc($gutter-step * 2);
-            }
+        @media (--tablet) {
+            top: calc($gutter-step * 2);
+            right: calc($gutter-step * 2);
         }
+    }
 
     &__footer {
         display: flex;
@@ -80,20 +79,16 @@
             color: $cl-global-invert;
         }
 
-        &-price {
-
+        &-name {
+            margin-bottom: 0;
         }
 
-            &-name {
-                margin-bottom: 0;
-            }
-
-            &-amount {
-                margin-bottom: 0;
-                font-weight: bold;
-                font-family: $bernier;
-                font-size: 22px;
-            }
+        &-amount {
+            margin-bottom: 0;
+            font-weight: bold;
+            font-family: $bernier;
+            font-size: 22px;
+        }
 
         &-text {
             font-size: 22px;

@@ -7,5 +7,5 @@
  */
 $('.js-phone-mask').inputmask('+7(999) 999-99-99', {
     clearMaskOnLostFocus: true,
-    showMaskOnHover: false
+    showMaskOnHover: false,
 });

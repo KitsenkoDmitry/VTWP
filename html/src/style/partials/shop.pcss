@@ -8,7 +8,7 @@
         padding-top: $gutter-step;
 
         @media (--desktop) {
-            width: calc(100% / 4 - $gutter-step * 2)
+            width: calc(100% / 4 - $gutter-step * 2);
         }
 
         @media (--tablet-lg) {
@@ -71,15 +71,15 @@
             justify-content: space-between;
         }
 
-            &-product {
-                width: calc((100% - $gutter-step * 4)/2);
-                margin-bottom: calc($gutter-step * 9);
+        &-product {
+            width: calc((100% - $gutter-step * 4) / 2);
+            margin-bottom: calc($gutter-step * 9);
 
-                @media (--mobile-lg) {
-                    width: 100%;
-                    margin-bottom: calc($gutter-step * 6);
-                }
+            @media (--mobile-lg) {
+                width: 100%;
+                margin-bottom: calc($gutter-step * 6);
             }
+        }
 
         &-more {
             position: relative;

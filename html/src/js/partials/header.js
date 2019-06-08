@@ -6,10 +6,10 @@ $(document).on('click', '.js-menu-btn', () => {
 });
 
 $(document).on('click', '.js-menu-close', () => {
-    hideModal($mobileMenu)
+    hideModal($mobileMenu);
 });
 
-$(document).on('click', '.js-cart-btn', (e) => {
+$(document).on('click', '.js-cart-btn', e => {
     e.preventDefault();
     openModal($cartModal);
 });
@@ -55,7 +55,6 @@ function lockDocument() {
     $('html').addClass('is-locked');
 }
 
-
 // ------ логика открытия выпадашек хедера ------
 const $header = $('.js-header');
 
@@ -80,7 +79,6 @@ $(document).on('click', '.js-header-dropdown-btn', e => {
         $(document).on('click', closeDropdownHandler);
     }
 });
-
 
 function closeDropdownHandler(e) {
     if ($(e.target).closest('.js-header').length === 0) {

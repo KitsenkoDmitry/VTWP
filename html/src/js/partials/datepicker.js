@@ -1,6 +1,6 @@
 const datepickerDefaultOptions = {
     dateFormat: 'dd.mm.yy',
-    showOtherMonths: true
+    showOtherMonths: true,
 };
 
 /**
@@ -14,18 +14,18 @@ const datepickerDefaultOptions = {
 let Datepicker = function() {
     const datepicker = $('.js-datepicker');
 
-    datepicker.each(function () {
+    datepicker.each(function() {
         let minDate = $(this).data('date-min');
         let maxDate = $(this).data('date-max');
         const showMY = $(this).data('show-m-y');
 
         /* если в атрибуте указано current, то выводим текущую дату */
-        if ( maxDate === 'current' || minDate === 'current') {
+        if (maxDate === 'current' || minDate === 'current') {
             const currentDate = new Date();
             let currentDay = currentDate.getDate();
-            currentDay < 10 ? currentDay = '0' + currentDay.toString() : currentDay;
+            currentDay < 10 ? (currentDay = '0' + currentDay.toString()) : currentDay;
             const newDate = currentDay + '.' + (currentDate.getMonth() + 1) + '.' + currentDate.getFullYear();
-            maxDate === 'current' ? maxDate = newDate : minDate = newDate;
+            maxDate === 'current' ? (maxDate = newDate) : (minDate = newDate);
         }
 
         let itemOptions = {
@@ -33,11 +33,13 @@ let Datepicker = function() {
             maxDate: maxDate || null,
             onSelect: function() {
                 $(this).change();
-                $(this).closest('.field').addClass('is-filled');
-            }
+                $(this)
+                    .closest('.field')
+                    .addClass('is-filled');
+            },
         };
 
-        if(showMY) {
+        if (showMY) {
             itemOptions['changeYear'] = true;
             itemOptions['yearRange'] = 'c-100:c';
             itemOptions['changeMonth'] = true;
@@ -48,16 +50,18 @@ let Datepicker = function() {
         $(this).datepicker(itemOptions);
     });
 
-     // делаем красивым селек месяца и года
-     $(document).on('focus', '.js-datepicker', () => {
+    // делаем красивым селек месяца и года
+    $(document).on('focus', '.js-datepicker', () => {
         // используем задержку, чтобы дейтпикер успел инициализироваться
         setTimeout(() => {
-            if($('.ui-datepicker').find('select').length) {
-                $('.ui-datepicker').find('select').select2({
-                    selectOnBlur: true,
-                    dropdownCssClass: 'error',
-                    minimumResultsForSearch: Infinity
-                });
+            if ($('.ui-datepicker').find('select').length) {
+                $('.ui-datepicker')
+                    .find('select')
+                    .select2({
+                        selectOnBlur: true,
+                        dropdownCssClass: 'error',
+                        minimumResultsForSearch: Infinity,
+                    });
             }
         }, 10);
     });

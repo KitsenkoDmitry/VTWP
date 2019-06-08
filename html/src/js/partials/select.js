@@ -24,19 +24,20 @@ let CustomSelect = function($elem) {
                     selectOnBlur: true,
                     dropdownCssClass: 'error',
                     language: {
-                        noResults: function () {
+                        noResults: function() {
                             return 'Совпадений не найдено';
                         },
-                    }
+                    },
                 });
 
                 $(this).on('change', function(e) {
                     // нужно для вылидации на лету
-                    $(this).find(`option[value="${$(this).value}"]`).click();
+                    $(this)
+                        .find(`option[value="${$(this).value}"]`)
+                        .click();
                 });
             }
         });
-
     };
 
     self.update = function($updateElem) {

@@ -6,8 +6,8 @@ const tooltipSettings = {
     animateFill: false,
     placement: 'right-center',
     distance: 20,
-    theme: 'tooltip'
-}
+    theme: 'tooltip',
+};
 
 /**
  *  init all tooltips
@@ -15,8 +15,8 @@ const tooltipSettings = {
 function initTooltips() {
     $('[data-tooltip]').each((index, elem) => {
         const localSettings = {
-            content: $(elem).attr('data-tooltip')
-        }
+            content: $(elem).attr('data-tooltip'),
+        };
         if ($(elem).data('click')) {
             localSettings['trigger'] = 'click keyup';
             localSettings['interactive'] = true;

@@ -5,7 +5,7 @@
     font-size: 16px;
     text-align: left;
     text-transform: uppercase;
-    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 
     &.select2 {
         width: 100% !important;
@@ -16,9 +16,7 @@
         border-radius: 0;
         box-shadow: none;
         height: 80px;
-        transition: color $time ease,
-                    background-color $time ease,
-                    border-color $time ease;
+        transition: color $time ease, background-color $time ease, border-color $time ease;
 
         .select2-selection__rendered {
             padding: calc($gutter-step * 5) calc($gutter-step * 3) calc($gutter-step * 2);
@@ -68,7 +66,6 @@
     &.select2-container--disabled {
         .select2-selection--single {
             background: transparent;
-
             color: $cl-grey;
 
             .select2-selection__arrow {
@@ -96,6 +93,10 @@
         }
     }
 
+    .select2-results {
+        padding-bottom: calc($gutter-step * 2);
+    }
+
     .select2-results__option {
         color: $cl-global;
         list-style: none outside;
@@ -111,7 +112,7 @@
             }
         }
 
-        &[aria-selected="true"] {
+        &[aria-selected='true'] {
             background: transparent;
             color: $cl-grey;
 
@@ -130,7 +131,6 @@
 
 .select2-transparent {
     .select2-container--default {
-
         .select2-selection--single {
             background-color: transparent;
             color: $cl-global-invert;
@@ -143,7 +143,6 @@
                 padding-right: 24px;
                 color: $cl-global-invert;
             }
-
 
             .select2-selection__arrow {
                 right: -10px;

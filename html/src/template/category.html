@@ -1,0 +1,29 @@
+<div class="category @@if(className){@@className}">
+    <a href="/shop.html" class="category__all-link">
+        @@categoryAllText
+    </a>
+    <a href="/product.html" class="category__product">
+        <div class="category__product-pic">
+            <img data-src="@@picSrc" alt="" class="lazyload" />
+        </div>
+        <div class="category__product-wrapper">
+            <p class="mb-0"><a href="javascript:;" class="category__product-company">@@brand</a></p>
+            <div class="category__product-info">
+                <div class="category__product-left">
+                    @@if(name){
+                    <p class="category__product-name"><a href="/product.html">@@name</a></p>
+                    } @@if(desc){
+                    <p class="category__product-desc">
+                        <span class="category__product-desc-text">@@desc</span>
+                        @@if(inStock){<span class="category__product-instock">в наличии</span>}
+                    </p>
+                    }
+                </div>
+                <div class="category__product-right">
+                    <p class="category__product-price">@@price ₽</p>
+                    <button class="link link--bernier" type="button">В корзину</button>
+                </div>
+            </div>
+        </div>
+    </a>
+</div>

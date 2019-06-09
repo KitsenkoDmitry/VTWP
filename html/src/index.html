@@ -175,114 +175,110 @@
                 </form>
             </div>
         </section>
-        <div class="container">
-            <div class="categories">
-                <div class="categories__col categories__col--1of2">
+        <section class="categories-section">
+            <div class="container">
+                <h2 class="categories-section__hl">Каталог запчастей и аксессуаров ДЛЯ МОТОЦИКОВ harley-Davidson</h2>
+                <div class="categories">
                     @@include('template/category_item.html', {
-                        "isLg": true,
-                        "isMd": false,
-                        "isWide": false,
                         "className": false,
-                        "imgSrc": "img/categories/V&H_Exhaust.jpg",
-                        "title": "выхлопные системы <br>vance & hines"
+                        "imgSrc": "img/vance_and_hines.png",
+                        "logoSrc": "img/svg/vance_and_hines.svg",
+                        "title": "Выхлопы Vance&Hines"
                     })
-                </div>
-                <div class="categories__col categories__col--1of2">
+
                     @@include('template/category_item.html', {
-                        "isLg": true,
-                        "isMd": false,
-                        "isWide": false,
                         "className": false,
-                        "imgSrc": "img/categories/TBR.jpg",
-                        "title": "выхлопные системы <br>two brothers racing"
+                        "imgSrc": "img/two_brothers.png",
+                        "logoSrc": "img/svg/two_brothers.svg",
+                        "title": "Выхлопы TWO BROTHERS RACING"
+                    })
+
+                </div>
+                <div class="categories categories--carousel js-categories-carousel">
+                    @@include('template/category.html', {
+                        "className": false,
+                        "brand": "Vance & Hines",
+                        "categoryAllText": "Все фильтры",
+                        "picSrc": "./img/categories/vo2.jpg",
+                        "name": "VO2 Rogue Air Intake",
+                        "desc": "Воздушный фильтр для  Harley Davidson Sportster",
+                        "inStock": true,
+                        "price": "32 190"
+                    })
+                    @@include('template/category.html', {
+                        "className": false,
+                        "brand": "Vance & Hines",
+                        "categoryAllText": "Все тюнеры",
+                        "picSrc": "./img/categories/fuelpack.png",
+                        "name": " Fuelpak FP3 #66005",
+                        "desc": "Тюнер (прошивка) двигателя",
+                        "inStock": true,
+                        "price": "29 900"
+                    })
+                    @@include('template/category.html', {
+                        "className": false,
+                        "categoryAllText": "Свет",
+                        "brand": "Kellermann",
+                        "picSrc": "./img/categories/atto.jpg",
+                        "name": "Atto RB HM",
+                        "desc": "Диодный задний поворотник",
+                        "inStock": true,
+                        "price": "6 400"
+                    })
+                    @@include('template/category.html', {
+                        "className": false,
+                        "categoryAllText": "Подвеска",
+                        "brand": "Legend Suspension",
+                        "picSrc": "./img/categories/legend.jpg",
+                        "name": "LEGEND AIR-A SOFTAIL M8",
+                        "desc": "Пневмоподвеска для Harley Davidson Softail M8",
+                        "inStock": true,
+                        "price": "6 400"
+                    })
+                    @@include('template/category.html', {
+                        "className": false,
+                        "categoryAllText": "Крылья",
+                        "brand": "Rik's",
+                        "picSrc": "./img/categories/complect.jpg",
+                        "name": false,
+                        "desc": "Комплект Breakout 2018",
+                        "inStock": false,
+                        "price": "999 858"
+                    })
+                    @@include('template/category.html', {
+                        "className": false,
+                        "categoryAllText": "Экипировка",
+                        "brand": "Vance & Hines",
+                        "picSrc": "./img/categories/filter.jpg",
+                        "name": "VO2 Rogue Air Intake",
+                        "desc": "Воздушный фильтр для Harley Davidson 114″ M8 Softail",
+                        "inStock": false,
+                        "price": "999 858"
+                    })
+                    @@include('template/category.html', {
+                        "className": false,
+                        "categoryAllText": "Номерные кронштейны",
+                        "brand": "Vance & Hines",
+                        "picSrc": "./img/categories/filter.jpg",
+                        "name": "VO2 Rogue Air Intake",
+                        "desc": "Воздушный фильтр для Harley Davidson 114″ M8 Softail",
+                        "inStock": false,
+                        "price": "999 858"
+                    })
+                    @@include('template/category.html', {
+                        "className": false,
+                        "categoryAllText": "Техническое обслуживание",
+                        "brand": "Vance & Hines",
+                        "picSrc": "./img/categories/filter.jpg",
+                        "name": "VO2 Rogue Air Intake",
+                        "desc": "Воздушный фильтр для Harley Davidson 114″ M8 Softail",
+                        "inStock": false,
+                        "price": "999 858"
                     })
                 </div>
             </div>
-            <div class="categories categories--carousel js-categories-carousel">
-                <div class="categories__col categories__col--1of3">
-                    @@include('template/category_item.html', {
-                        "isLg": false,
-                        "isMd": true,
-                        "isWide": false,
-                        "className": false,
-                        "imgSrc": "img/categories/Podveska.jpg",
-                        "title": "подвеска"
-                    })
-                </div>
-                <div class="categories__col categories__col--1of3">
-                    @@include('template/category_item.html', {
-                        "isLg": false,
-                        "isMd": true,
-                        "isWide": false,
-                        "className": false,
-                        "imgSrc": "img/categories/Filters.jpg",
-                        "title": "фильтры"
-                    })
-                </div>
-                <div class="categories__col categories__col--1of3">
-                    @@include('template/category_item.html', {
-                        "isLg": false,
-                        "isMd": true,
-                        "isWide": false,
-                        "className": false,
-                        "imgSrc": "img/categories/Light.jpg",
-                        "title": "свет"
-                    })
-                </div>
+        </section>
 
-                <div class="categories__col categories__col--1of4">
-                    @@include('template/category_item.html', {
-                        "isLg": false,
-                        "isMd": false,
-                        "isWide": false,
-                        "className": false,
-                        "imgSrc": "img/categories/Tuners.jpg",
-                        "title": "тюнеры"
-                    })
-                </div>
-                <div class="categories__col categories__col--1of4">
-                    @@include('template/category_item.html', {
-                        "isLg": false,
-                        "isMd": false,
-                        "isWide": false,
-                        "className": false,
-                        "imgSrc": "img/categories/Wings.jpg",
-                        "title": "крылья"
-                    })
-                </div>
-                <div class="categories__col categories__col--1of4">
-                    @@include('template/category_item.html', {
-                        "isLg": false,
-                        "isMd": false,
-                        "isWide": false,
-                        "className": false,
-                        "imgSrc": "img/categories/Equipment.jpg",
-                        "title": "экипировка"
-                    })
-                </div>
-                <div class="categories__col categories__col--1of4">
-                    @@include('template/category_item.html', {
-                        "isLg": false,
-                        "isMd": false,
-                        "isWide": false,
-                        "className": false,
-                        "imgSrc": "img/categories/Krepezh.jpg",
-                        "title": "номерные кронштейны"
-                    })
-                </div>
-
-                <div class="categories__col">
-                    @@include('template/category_item.html', {
-                        "isLg": false,
-                        "isMd": false,
-                        "isWide": false,
-                        "className": false,
-                        "imgSrc": "img/categories/TO.jpg",
-                        "title": "Запчасти для технического <br>обслуживания"
-                    })
-                </div>
-            </div>
-        </div>
         <section class="index-page-bikes">
             <div class="container">
                 <h2 class="index-page-hl">Мотоциклы на продажу</h2>

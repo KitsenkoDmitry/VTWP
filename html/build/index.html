@@ -256,7 +256,7 @@
                     <li class="catalog-list__item">
                         <a href="javascript:;" class="catalog-list__link">
                             <div class="catalog-list__item-pic">
-                                <img src="/img/catalog1.jpg" class="lazyload" alt="" />
+                                <img data-src="/img/catalog1.jpg" class="lazyload" alt="" />
                             </div>
                             <p class="catalog-list__item-text">V-TWIN BICKER’S Choice</p>
                             <p class="catalog-list__item-text">2019</p>
@@ -265,7 +265,7 @@
                     <li class="catalog-list__item">
                         <a href="javascript:;" class="catalog-list__link">
                             <div class="catalog-list__item-pic">
-                                <img src="/img/catalog2.jpg" class="lazyload" alt="" />
+                                <img data-src="/img/catalog2.jpg" class="lazyload" alt="" />
                             </div>
                             <p class="catalog-list__item-text">Drag Specialites</p>
                             <p class="catalog-list__item-text">2019</p>
@@ -274,7 +274,7 @@
                     <li class="catalog-list__item">
                         <a href="javascript:;" class="catalog-list__link">
                             <div class="catalog-list__item-pic">
-                                <img src="/img/catalog1.jpg" class="lazyload" alt="" />
+                                <img data-src="/img/catalog1.jpg" class="lazyload" alt="" />
                             </div>
                             <p class="catalog-list__item-text">V-TWIN BICKER’S Choice</p>
                             <p class="catalog-list__item-text">2019</p>
@@ -594,134 +594,272 @@
                 </form>
             </div>
         </section>
-        <div class="container">
-            <div class="categories">
-                <div class="categories__col categories__col--1of2">
-                    <a
-                        class="category-item category-item--lg"
-                        href="javascript:;"
-                        >
+        <section class="categories-section">
+            <div class="container">
+                <h2 class="categories-section__hl">Каталог запчастей и аксессуаров ДЛЯ МОТОЦИКОВ harley-Davidson</h2>
+                <div class="categories">
+                    <a class="category-item " href="javascript:;">
                         <div class="category-item__pic">
-                            <img class="category-item__pic-img lazyload" data-src="img/categories/V&H_Exhaust.jpg">
+                            <img class="category-item__pic-img lazyload" data-src="img/vance_and_hines.png" />
                         </div>
-                        <h3 class="category-item__title">выхлопные системы <br>vance & hines</h3>
+                        <img class="category-item__logo lazyload" data-src="img/svg/vance_and_hines.svg" alt="" />
+                        <h3 class="category-item__title">Выхлопы Vance&Hines</h3>
                     </a>
 
-                </div>
-                <div class="categories__col categories__col--1of2">
-                    <a
-                        class="category-item category-item--lg"
-                        href="javascript:;"
-                        >
+
+                    <a class="category-item " href="javascript:;">
                         <div class="category-item__pic">
-                            <img class="category-item__pic-img lazyload" data-src="img/categories/TBR.jpg">
+                            <img class="category-item__pic-img lazyload" data-src="img/two_brothers.png" />
                         </div>
-                        <h3 class="category-item__title">выхлопные системы <br>two brothers racing</h3>
+                        <img class="category-item__logo lazyload" data-src="img/svg/two_brothers.svg" alt="" />
+                        <h3 class="category-item__title">Выхлопы TWO BROTHERS RACING</h3>
                     </a>
+
+
+                </div>
+                <div class="categories categories--carousel js-categories-carousel">
+                    <div class="category ">
+                        <a href="/shop.html" class="category__all-link">
+                            Все фильтры
+                        </a>
+                        <a href="/product.html" class="category__product">
+                            <div class="category__product-pic">
+                                <img data-src="./img/categories/vo2.jpg" alt="" class="lazyload" />
+                            </div>
+                            <div class="category__product-wrapper">
+                                <p class="mb-0"><a href="javascript:;" class="category__product-company">Vance & Hines</a></p>
+                                <div class="category__product-info">
+                                    <div class="category__product-left">
+                                        
+                                        <p class="category__product-name"><a href="/product.html">VO2 Rogue Air Intake</a></p>
+                                         
+                                        <p class="category__product-desc">
+                                            <span class="category__product-desc-text">Воздушный фильтр для  Harley Davidson Sportster</span>
+                                            <span class="category__product-instock">в наличии</span>
+                                        </p>
+                                        
+                                    </div>
+                                    <div class="category__product-right">
+                                        <p class="category__product-price">32 190 ₽</p>
+                                        <button class="link link--bernier" type="button">В корзину</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="category ">
+                        <a href="/shop.html" class="category__all-link">
+                            Все тюнеры
+                        </a>
+                        <a href="/product.html" class="category__product">
+                            <div class="category__product-pic">
+                                <img data-src="./img/categories/fuelpack.png" alt="" class="lazyload" />
+                            </div>
+                            <div class="category__product-wrapper">
+                                <p class="mb-0"><a href="javascript:;" class="category__product-company">Vance & Hines</a></p>
+                                <div class="category__product-info">
+                                    <div class="category__product-left">
+                                        
+                                        <p class="category__product-name"><a href="/product.html"> Fuelpak FP3 #66005</a></p>
+                                         
+                                        <p class="category__product-desc">
+                                            <span class="category__product-desc-text">Тюнер (прошивка) двигателя</span>
+                                            <span class="category__product-instock">в наличии</span>
+                                        </p>
+                                        
+                                    </div>
+                                    <div class="category__product-right">
+                                        <p class="category__product-price">29 900 ₽</p>
+                                        <button class="link link--bernier" type="button">В корзину</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="category ">
+                        <a href="/shop.html" class="category__all-link">
+                            Свет
+                        </a>
+                        <a href="/product.html" class="category__product">
+                            <div class="category__product-pic">
+                                <img data-src="./img/categories/atto.jpg" alt="" class="lazyload" />
+                            </div>
+                            <div class="category__product-wrapper">
+                                <p class="mb-0"><a href="javascript:;" class="category__product-company">Kellermann</a></p>
+                                <div class="category__product-info">
+                                    <div class="category__product-left">
+                                        
+                                        <p class="category__product-name"><a href="/product.html">Atto RB HM</a></p>
+                                         
+                                        <p class="category__product-desc">
+                                            <span class="category__product-desc-text">Диодный задний поворотник</span>
+                                            <span class="category__product-instock">в наличии</span>
+                                        </p>
+                                        
+                                    </div>
+                                    <div class="category__product-right">
+                                        <p class="category__product-price">6 400 ₽</p>
+                                        <button class="link link--bernier" type="button">В корзину</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="category ">
+                        <a href="/shop.html" class="category__all-link">
+                            Подвеска
+                        </a>
+                        <a href="/product.html" class="category__product">
+                            <div class="category__product-pic">
+                                <img data-src="./img/categories/legend.jpg" alt="" class="lazyload" />
+                            </div>
+                            <div class="category__product-wrapper">
+                                <p class="mb-0"><a href="javascript:;" class="category__product-company">Legend Suspension</a></p>
+                                <div class="category__product-info">
+                                    <div class="category__product-left">
+                                        
+                                        <p class="category__product-name"><a href="/product.html">LEGEND AIR-A SOFTAIL M8</a></p>
+                                         
+                                        <p class="category__product-desc">
+                                            <span class="category__product-desc-text">Пневмоподвеска для Harley Davidson Softail M8</span>
+                                            <span class="category__product-instock">в наличии</span>
+                                        </p>
+                                        
+                                    </div>
+                                    <div class="category__product-right">
+                                        <p class="category__product-price">6 400 ₽</p>
+                                        <button class="link link--bernier" type="button">В корзину</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="category ">
+                        <a href="/shop.html" class="category__all-link">
+                            Крылья
+                        </a>
+                        <a href="/product.html" class="category__product">
+                            <div class="category__product-pic">
+                                <img data-src="./img/categories/complect.jpg" alt="" class="lazyload" />
+                            </div>
+                            <div class="category__product-wrapper">
+                                <p class="mb-0"><a href="javascript:;" class="category__product-company">Rik's</a></p>
+                                <div class="category__product-info">
+                                    <div class="category__product-left">
+                                         
+                                        <p class="category__product-desc">
+                                            <span class="category__product-desc-text">Комплект Breakout 2018</span>
+                                            
+                                        </p>
+                                        
+                                    </div>
+                                    <div class="category__product-right">
+                                        <p class="category__product-price">999 858 ₽</p>
+                                        <button class="link link--bernier" type="button">В корзину</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="category ">
+                        <a href="/shop.html" class="category__all-link">
+                            Экипировка
+                        </a>
+                        <a href="/product.html" class="category__product">
+                            <div class="category__product-pic">
+                                <img data-src="./img/categories/filter.jpg" alt="" class="lazyload" />
+                            </div>
+                            <div class="category__product-wrapper">
+                                <p class="mb-0"><a href="javascript:;" class="category__product-company">Vance & Hines</a></p>
+                                <div class="category__product-info">
+                                    <div class="category__product-left">
+                                        
+                                        <p class="category__product-name"><a href="/product.html">VO2 Rogue Air Intake</a></p>
+                                         
+                                        <p class="category__product-desc">
+                                            <span class="category__product-desc-text">Воздушный фильтр для Harley Davidson 114″ M8 Softail</span>
+                                            
+                                        </p>
+                                        
+                                    </div>
+                                    <div class="category__product-right">
+                                        <p class="category__product-price">999 858 ₽</p>
+                                        <button class="link link--bernier" type="button">В корзину</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="category ">
+                        <a href="/shop.html" class="category__all-link">
+                            Номерные кронштейны
+                        </a>
+                        <a href="/product.html" class="category__product">
+                            <div class="category__product-pic">
+                                <img data-src="./img/categories/filter.jpg" alt="" class="lazyload" />
+                            </div>
+                            <div class="category__product-wrapper">
+                                <p class="mb-0"><a href="javascript:;" class="category__product-company">Vance & Hines</a></p>
+                                <div class="category__product-info">
+                                    <div class="category__product-left">
+                                        
+                                        <p class="category__product-name"><a href="/product.html">VO2 Rogue Air Intake</a></p>
+                                         
+                                        <p class="category__product-desc">
+                                            <span class="category__product-desc-text">Воздушный фильтр для Harley Davidson 114″ M8 Softail</span>
+                                            
+                                        </p>
+                                        
+                                    </div>
+                                    <div class="category__product-right">
+                                        <p class="category__product-price">999 858 ₽</p>
+                                        <button class="link link--bernier" type="button">В корзину</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="category ">
+                        <a href="/shop.html" class="category__all-link">
+                            Техническое обслуживание
+                        </a>
+                        <a href="/product.html" class="category__product">
+                            <div class="category__product-pic">
+                                <img data-src="./img/categories/filter.jpg" alt="" class="lazyload" />
+                            </div>
+                            <div class="category__product-wrapper">
+                                <p class="mb-0"><a href="javascript:;" class="category__product-company">Vance & Hines</a></p>
+                                <div class="category__product-info">
+                                    <div class="category__product-left">
+                                        
+                                        <p class="category__product-name"><a href="/product.html">VO2 Rogue Air Intake</a></p>
+                                         
+                                        <p class="category__product-desc">
+                                            <span class="category__product-desc-text">Воздушный фильтр для Harley Davidson 114″ M8 Softail</span>
+                                            
+                                        </p>
+                                        
+                                    </div>
+                                    <div class="category__product-right">
+                                        <p class="category__product-price">999 858 ₽</p>
+                                        <button class="link link--bernier" type="button">В корзину</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
 
                 </div>
             </div>
-            <div class="categories categories--carousel js-categories-carousel">
-                <div class="categories__col categories__col--1of3">
-                    <a
-                        class="category-item category-item--md"
-                        href="javascript:;"
-                        >
-                        <div class="category-item__pic">
-                            <img class="category-item__pic-img lazyload" data-src="img/categories/Podveska.jpg">
-                        </div>
-                        <h3 class="category-item__title">подвеска</h3>
-                    </a>
+        </section>
 
-                </div>
-                <div class="categories__col categories__col--1of3">
-                    <a
-                        class="category-item category-item--md"
-                        href="javascript:;"
-                        >
-                        <div class="category-item__pic">
-                            <img class="category-item__pic-img lazyload" data-src="img/categories/Filters.jpg">
-                        </div>
-                        <h3 class="category-item__title">фильтры</h3>
-                    </a>
-
-                </div>
-                <div class="categories__col categories__col--1of3">
-                    <a
-                        class="category-item category-item--md"
-                        href="javascript:;"
-                        >
-                        <div class="category-item__pic">
-                            <img class="category-item__pic-img lazyload" data-src="img/categories/Light.jpg">
-                        </div>
-                        <h3 class="category-item__title">свет</h3>
-                    </a>
-
-                </div>
-
-                <div class="categories__col categories__col--1of4">
-                    <a
-                        class="category-item"
-                        href="javascript:;"
-                        >
-                        <div class="category-item__pic">
-                            <img class="category-item__pic-img lazyload" data-src="img/categories/Tuners.jpg">
-                        </div>
-                        <h3 class="category-item__title">тюнеры</h3>
-                    </a>
-
-                </div>
-                <div class="categories__col categories__col--1of4">
-                    <a
-                        class="category-item"
-                        href="javascript:;"
-                        >
-                        <div class="category-item__pic">
-                            <img class="category-item__pic-img lazyload" data-src="img/categories/Wings.jpg">
-                        </div>
-                        <h3 class="category-item__title">крылья</h3>
-                    </a>
-
-                </div>
-                <div class="categories__col categories__col--1of4">
-                    <a
-                        class="category-item"
-                        href="javascript:;"
-                        >
-                        <div class="category-item__pic">
-                            <img class="category-item__pic-img lazyload" data-src="img/categories/Equipment.jpg">
-                        </div>
-                        <h3 class="category-item__title">экипировка</h3>
-                    </a>
-
-                </div>
-                <div class="categories__col categories__col--1of4">
-                    <a
-                        class="category-item"
-                        href="javascript:;"
-                        >
-                        <div class="category-item__pic">
-                            <img class="category-item__pic-img lazyload" data-src="img/categories/Krepezh.jpg">
-                        </div>
-                        <h3 class="category-item__title">номерные кронштейны</h3>
-                    </a>
-
-                </div>
-
-                <div class="categories__col">
-                    <a
-                        class="category-item"
-                        href="javascript:;"
-                        >
-                        <div class="category-item__pic">
-                            <img class="category-item__pic-img lazyload" data-src="img/categories/TO.jpg">
-                        </div>
-                        <h3 class="category-item__title">Запчасти для технического <br>обслуживания</h3>
-                    </a>
-
-                </div>
-            </div>
-        </div>
         <section class="index-page-bikes">
             <div class="container">
                 <h2 class="index-page-hl">Мотоциклы на продажу</h2>

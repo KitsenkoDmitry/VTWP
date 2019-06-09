@@ -1,9 +1,7 @@
-<a
-    class="category-item@@if(isLg){ category-item--lg}@@if(isMd){ category-item--md}@@if(isWide){ category-item--md}@@if(className){ @@className}"
-    href="javascript:;"
-    >
+<a class="category-item @@if(className){ @@className}" href="javascript:;">
     <div class="category-item__pic">
-        <img class="category-item__pic-img lazyload" data-src="@@imgSrc">
+        <img class="category-item__pic-img lazyload" data-src="@@imgSrc" />
     </div>
+    <img class="category-item__logo lazyload" data-src="@@logoSrc" alt="" />
     <h3 class="category-item__title">@@title</h3>
 </a>

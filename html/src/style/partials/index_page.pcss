@@ -11,19 +11,86 @@
 }
 
 .index-page-bikes {
-    padding-top: calc($gutter-step * 13);
-    margin-bottom: calc($gutter-step * 15);
+    padding: calc($gutter-step * 10) 0 calc($gutter-step * 8);
+    background-image: url('$img_path/instagram_bg.jpg');
+    background-size: cover;
 
-    @media (--tablet-lg) {
-        padding-top: calc($gutter-step * 7);
-        margin-bottom: calc($gutter-step * 8);
+    @media (--tablet) {
+        padding: calc($gutter-step * 5) 0;
+    }
+
+    &__hl {
+        text-align: center;
+        color: $cl-global;
     }
 }
 
 .index-page-brands {
-    margin-bottom: calc($gutter-step * 15);
+    padding: calc($gutter-step * 10) 0;
 
     @media (--tablet-lg) {
+        padding: calc($gutter-step * 5) 0;
+    }
+
+    &__hl {
+        text-align: center;
+        margin-bottom: calc($gutter-step * 4);
+    }
+}
+
+.index-page-contacts {
+    padding: calc($gutter-step * 10) 0;
+    background-image: url('$img_path/contacts_bg.jpg');
+    background-size: cover;
+    margin-bottom: calc($gutter-step * 5);
+
+    @media (--tablet) {
+        padding: calc($gutter-step * 4) 0;
+        margin-bottom: calc($gutter-step * 3);
+    }
+
+    &__hl {
+        text-align: center;
         margin-bottom: calc($gutter-step * 8);
+
+        @media (--tablet) {
+            margin-bottom: calc($gutter-step * 4);
+        }
+    }
+
+    &__cols {
+        display: flex;
+
+        @media (--tablet-lg) {
+            display: block;
+        }
+    }
+
+    &__desc {
+        width: calc((100% - $gutter-step * 4) / 4);
+        display: flex;
+        flex-direction: column;
+
+        @media (--tablet-lg) {
+            display: block;
+            width: 100%;
+            margin-bottom: calc($gutter-step * 4);
+        }
+    }
+
+    &__how-btn {
+        margin-top: auto;
+        margin-bottom: 0;
+    }
+
+    &__map {
+        height: 320px;
+        flex-grow: 1;
+        flex-shrink: 1;
+        margin-left: calc($gutter-step * 4);
+
+        @media (--tablet-lg) {
+            margin-left: 0;
+        }
     }
 }

@@ -1,0 +1,65 @@
+.instagram {
+    padding: calc($gutter-step * 10) 0;
+    background-image: url('$img_path/instagram_bg.jpg');
+    background-size: cover;
+
+    @media (--tablet) {
+        padding: calc($gutter-step * 5) 0;
+    }
+
+    &__hl {
+        margin-bottom: calc($gutter-step * 10);
+        text-align: center;
+
+        @media (--tablet) {
+            margin-bottom: calc($gutter-step * 4);
+        }
+
+        span {
+            color: #ff9728;
+            background: linear-gradient(to right, #ff9728, #d13c98 50%, #5856ca 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    &-frames {
+        display: grid;
+        grid-gap: calc($gutter-step * 3);
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+
+        @media (--tablet) {
+            display: block;
+        }
+
+        &__item {
+            position: relative;
+            overflow: hidden;
+            background: $cl-bg;
+
+            @media (--tablet) {
+                margin-bottom: calc($gutter-step * 4);
+            }
+
+            &-content {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+            }
+
+            &::after {
+                content: '';
+                display: block;
+                padding-bottom: 100%;
+            }
+        }
+
+        .slick-dots {
+            li {
+                background-color: $cl-bg;
+            }
+        }
+    }
+}

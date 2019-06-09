@@ -1828,8 +1828,9 @@ input[type='submit'] {
         display: -ms-grid;
         display: grid;
         grid-gap: 24px;
-        -ms-grid-columns: 1fr 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr 1fr
+        -ms-grid-rows: auto;
+        -ms-grid-columns: 1fr 24px 1fr 24px 1fr 24px 1fr;
+            grid-template: auto / 1fr 1fr 1fr 1fr
     }
 
 @media (max-width: 767px) {
@@ -2105,23 +2106,99 @@ input[type='submit'] {
     }
 
 .bike-card + .bike-card {
-        margin-top: 56px;
+        margin-top: 32px;
     }
 
-.bike-card__pic {
-        display: block;
+.bike-card__carousel {
+        display: -ms-flexbox;
+        display: flex;
         width: 66.66667%
     }
 
 @media (max-width: 1023px) {
 
-    .bike-card__pic {
+    .bike-card__carousel {
             width: 100%
     }
         }
 
-.bike-card__pic img {
+@media (max-width: 767px) {
+
+    .bike-card__carousel {
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap
+    }
+        }
+
+.bike-card__carousel img {
             display: block;
+        }
+
+.bike-card__preview {
+        width: 16.7%;
+    }
+
+@media (min-width: 768px) {
+
+        .bike-card__preview--left {
+                -ms-flex-order: -1;
+                    order: -1
+        }
+            }
+
+@media (max-width: 767px) {
+
+    .bike-card__preview {
+            width: 100%;
+            display: -ms-flexbox;
+            display: flex
+    }
+        }
+
+.bike-card__preview-pic {
+            display: block;
+            position: relative;
+            width: 100%;
+            cursor: pointer
+        }
+
+@media (max-width: 767px) {
+
+        .bike-card__preview-pic {
+                width: 25%
+        }
+            }
+
+.bike-card__preview-pic::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba(0, 0, 0, .5);
+                transition: background 200ms ease;
+            }
+
+.bike-card__preview-pic.is-active::after {
+                    background-color: transparent;
+                }
+
+.bike-card__big-pic {
+        width: 83.4%;
+        pointer-events: none
+    }
+
+@media (max-width: 767px) {
+
+    .bike-card__big-pic {
+            width: 100%;
+            pointer-events: all
+    }
+        }
+
+.bike-card__big-pic-item {
+            width: 100%;
         }
 
 .bike-card__content {

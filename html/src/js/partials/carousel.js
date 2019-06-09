@@ -153,4 +153,36 @@ function initCarousels() {
             variableWidth: true,
         });
     }
+
+    const $bikeCardCarousel = $('.js-bike-card-carousel');
+    if ($bikeCardCarousel.length && !$bikeCardCarousel.hasClass('slick-initialized')) {
+        $bikeCardCarousel.each((index, item) => {
+            $(item).slick({
+                slidesToScroll: 1,
+                slidesToShow: 1,
+                arrows: false,
+                dots: false,
+                fade: true,
+                responsive: [
+                    {
+                        breakpoint: 767,
+                        settings: {
+                            fade: false,
+                        },
+                    },
+                ],
+            });
+        });
+
+        // реализовываем переключение слайдов
+        $(document).on('click', '.js-bike-card-slide-btn', e => {
+            const $btn = $(e.currentTarget);
+            const $parent = $btn.closest('.bike-card');
+            const $carousel = $parent.find('.js-bike-card-carousel');
+            const slideId = $btn.data('slide');
+            $parent.find('.js-bike-card-slide-btn').removeClass('is-active');
+            $btn.addClass('is-active');
+            $carousel.slick('slickGoTo', slideId);
+        });
+    }
 }

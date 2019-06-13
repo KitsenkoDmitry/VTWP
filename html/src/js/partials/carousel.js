@@ -168,6 +168,7 @@ function initCarousels() {
                         breakpoint: 767,
                         settings: {
                             fade: false,
+                            dots: true,
                         },
                     },
                 ],

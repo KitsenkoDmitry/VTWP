@@ -926,8 +926,8 @@ input[type='submit'] {
     }
 
 .icon--insta {
-        width: 24px;
-        height: 24px;
+        width: 38px;
+        height: 38px;
     }
 
 .icon--tw {
@@ -946,8 +946,13 @@ input[type='submit'] {
     }
 
 .icon--fb {
-        width: 12px;
-        height: 24px;
+        width: 19px;
+        height: 38px;
+    }
+
+.icon--youtube {
+        width: 46px;
+        height: 46px;
     }
 
 .icon--logo {
@@ -1167,6 +1172,10 @@ input[type='submit'] {
     color: #fff;
 }
 
+.nowrap {
+    white-space: nowrap;
+}
+
 .filter-modal {
     display: none;
     position: fixed;
@@ -1339,26 +1348,36 @@ input[type='submit'] {
                 }
 
 .shop__main-products {
-            display: -ms-flexbox;
-            display: flex;
-            -ms-flex-wrap: wrap;
-                flex-wrap: wrap;
-            -ms-flex-pack: justify;
-                justify-content: space-between;
+            display: -ms-grid;
+            display: grid;
+            -ms-grid-rows: auto;
+            -ms-grid-columns: 1fr 24px 1fr 24px 1fr;
+                grid-template: auto / 1fr 1fr 1fr;
+            grid-gap: 48px 24px;
+            margin-bottom: 64px
         }
 
-.shop__main-product {
-            width: calc(50% - 16px);
-            margin-bottom: 72px
-        }
+@media (max-width: 767px) {
 
-@media (max-width: 639px) {
-
-        .shop__main-product {
-                width: 100%;
-                margin-bottom: 48px
+        .shop__main-products {
+                -ms-grid-rows: auto;
+                -ms-grid-columns: 1fr 24px 1fr;
+                    grid-template: auto / 1fr 1fr
         }
             }
+
+@media (max-width: 479px) {
+
+        .shop__main-products {
+                -ms-grid-rows: auto;
+                -ms-grid-columns: 1fr;
+                    grid-template: auto / 1fr
+        }
+            }
+
+/* &-product {
+
+        } */
 
 .shop__main-more {
             position: relative;
@@ -1502,7 +1521,7 @@ input[type='submit'] {
 
 .product__img {
         display: block;
-        height: 304px;
+        max-height: 230px;
         overflow: hidden;
         margin-bottom: 16px;
         background-color: #232323
@@ -1516,6 +1535,7 @@ input[type='submit'] {
         }
 
 .product__img img {
+            display: block;
             width: 100%;
         }
 
@@ -2106,7 +2126,7 @@ input[type='submit'] {
     }
 
 .bike-card + .bike-card {
-        margin-top: 32px;
+        margin-top: 64px;
     }
 
 .bike-card__carousel {
@@ -2127,6 +2147,7 @@ input[type='submit'] {
     .bike-card__carousel {
             -ms-flex-wrap: wrap;
                 flex-wrap: wrap
+            /* margin-bottom: calc($gutter-step * 3); */
     }
         }
 
@@ -2135,8 +2156,15 @@ input[type='submit'] {
         }
 
 .bike-card__preview {
-        width: 16.7%;
+        width: 16.7%
     }
+
+@media (max-width: 767px) {
+
+    .bike-card__preview {
+            display: none
+    }
+        }
 
 @media (min-width: 768px) {
 
@@ -2145,15 +2173,6 @@ input[type='submit'] {
                     order: -1
         }
             }
-
-@media (max-width: 767px) {
-
-    .bike-card__preview {
-            width: 100%;
-            display: -ms-flexbox;
-            display: flex
-    }
-        }
 
 .bike-card__preview-pic {
             display: block;
@@ -2198,8 +2217,15 @@ input[type='submit'] {
         }
 
 .bike-card__big-pic-item {
-            width: 100%;
+            width: 100%
         }
+
+@media (max-width: 767px) {
+
+        .bike-card__big-pic-item {
+                margin-bottom: 16px
+        }
+            }
 
 .bike-card__content {
         width: 25%;
@@ -2332,6 +2358,15 @@ input[type='submit'] {
             margin-bottom: 0
     }
         }
+
+.bike-card .slick-dots li {
+            background-color: #999;
+            opacity: 1
+        }
+
+.bike-card .slick-dots li.slick-active {
+                background-color: #f30;
+            }
 
 .field {
     position: relative;
@@ -4464,7 +4499,8 @@ input[type='submit'] {
         -ms-flex-align: center;
             align-items: center;
         -ms-flex-pack: justify;
-            justify-content: space-between
+            justify-content: space-between;
+        margin-top: 40px
     }
 
 @media (max-width: 1023px) {
@@ -4475,8 +4511,23 @@ input[type='submit'] {
     }
         }
 
+.footer__copyrights-socials {
+            -ms-flex-align: center;
+                align-items: center
+        }
+
+@media (max-width: 767px) {
+
+        .footer__copyrights-socials {
+                margin-bottom: 16px
+        }
+            }
+
 .footer__copyrights-col {
-            width: 33.333%
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-align: center;
+                align-items: center
         }
 
 @media (max-width: 1023px) {
@@ -4488,18 +4539,13 @@ input[type='submit'] {
         }
             }
 
-.footer__copyrights-col--center {
-                text-align: center
-            }
+@media (max-width: 767px) {
 
-@media (max-width: 1023px) {
-
-            .footer__copyrights-col--center {
-                    -ms-flex-order: -2;
-                        order: -2;
-                    margin-bottom: 16px
+        .footer__copyrights-col {
+                -ms-flex-direction: column;
+                    flex-direction: column
+        }
             }
-                }
 
 .footer__copyrights-col:last-child {
                 text-align: right
@@ -4520,9 +4566,20 @@ input[type='submit'] {
         }
 
 .footer__copyrights-link {
+            max-width: 252px;
+            max-height: 52px;
             display: inline-block;
             vertical-align: top;
+            margin-right: 56px
         }
+
+@media (max-width: 767px) {
+
+        .footer__copyrights-link {
+                margin-right: 0;
+                margin-bottom: 32px
+        }
+            }
 
 .footer__copyrights-link img {
                 display: block;
@@ -5334,7 +5391,7 @@ input[type='submit'] {
 
 .categories-section {
     padding: 80px 0 48px;
-    background-image: url('../img/categories_bg.png');
+    background-image: url('../img/categories_bg.jpg');
     background-size: cover
 }
 

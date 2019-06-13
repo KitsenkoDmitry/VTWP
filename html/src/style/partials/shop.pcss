@@ -66,18 +66,17 @@
         }
 
         &-products {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
+            display: grid;
+            grid-template: auto / 1fr 1fr 1fr;
+            grid-gap: calc($gutter-step * 6) calc($gutter-step * 3);
+            margin-bottom: calc($gutter-step * 8);
 
-        &-product {
-            width: calc((100% - $gutter-step * 4) / 2);
-            margin-bottom: calc($gutter-step * 9);
+            @media (--tablet) {
+                grid-template: auto / 1fr 1fr;
+            }
 
-            @media (--mobile-lg) {
-                width: 100%;
-                margin-bottom: calc($gutter-step * 6);
+            @media (--mobile) {
+                grid-template: auto / 1fr;
             }
         }
 

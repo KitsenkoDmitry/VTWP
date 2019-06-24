@@ -1,4 +1,8 @@
-<header class="header@@if(isIndexPage){ header--index} js-header" @@if(isUiKit){style="background-color: black" }>
+<header
+    class="header@@if(isIndexPage){ header--index} js-header @@if(className){@@className}"
+    @@if(isUiKit){style="background-color: black"
+    }
+>
     <div class="header__container container">
         <div class="header__col">
             <p class="header__col-top">

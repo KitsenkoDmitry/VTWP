@@ -7,6 +7,10 @@
     text-transform: uppercase;
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 
+    .wrap-main--white-bg & {
+        box-shadow: none;
+    }
+
     &.select2 {
         width: 100% !important;
     }
@@ -133,7 +137,7 @@
     .select2-container--default {
         .select2-selection--single {
             background-color: transparent;
-            color: $cl-global-invert;
+            color: $cl-global;
             text-align: center;
             text-transform: none;
             height: auto;
@@ -141,7 +145,7 @@
             .select2-selection__rendered {
                 padding-top: 0;
                 padding-right: 24px;
-                color: $cl-global-invert;
+                color: $cl-global;
             }
 
             .select2-selection__arrow {
@@ -149,7 +153,7 @@
                 bottom: 11px;
 
                 b {
-                    background: url('$img_path/svg/arrow_down_white.svg') no-repeat center;
+                    background: url('$img_path/svg/arrow_down.svg') no-repeat center;
                 }
             }
         }

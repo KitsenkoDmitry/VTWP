@@ -6,12 +6,13 @@
 
     @@include('template/header.html', {
         "isUiKit": false,
-        "isIndexPage": false,
+        "isIndexPage": true,
         "isCartActive": true,
-        "activeLink": false
+        "activeLink": false,
+        "className": "header--gradient"
     })
 
-    <main class="wrap-main">
+    <main class="wrap-main wrap-main--white-bg">
         <div class="container container--mb">
             <div class="page-flex-title">
                 <h1 class="page-flex-title__hl">Мотоциклы на продажу</h1>

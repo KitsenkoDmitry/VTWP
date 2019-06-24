@@ -1375,10 +1375,6 @@ input[type='submit'] {
         }
             }
 
-/* &-product {
-
-        } */
-
 .shop__main-more {
             position: relative;
             display: -ms-flexbox;
@@ -2302,7 +2298,8 @@ input[type='submit'] {
     }
         }
 
-.index-page-bikes .bike-card__name {
+.index-page-bikes .bike-card__name,
+        .wrap-main--white-bg .bike-card__name {
             color: #1d1d1d;
         }
 
@@ -2317,7 +2314,8 @@ input[type='submit'] {
     }
         }
 
-.index-page-bikes .bike-card__desc {
+.index-page-bikes .bike-card__desc,
+        .wrap-main--white-bg .bike-card__desc {
             color: #1d1d1d;
         }
 
@@ -2346,7 +2344,8 @@ input[type='submit'] {
     }
         }
 
-.index-page-bikes .bike-card__price {
+.index-page-bikes .bike-card__price,
+        .wrap-main--white-bg .bike-card__price {
             color: #1d1d1d;
         }
 
@@ -3877,6 +3876,10 @@ input[type='submit'] {
 .header {
         padding: 16px 0 32px
 }
+    }
+
+.header--gradient {
+        background-image: linear-gradient(180deg, rgba(0, 0, 0, .7) 0%, rgba(0, 0, 0, 0) 100%);
     }
 
 .header--index {
@@ -5529,8 +5532,12 @@ input[type='submit'] {
     font-size: 1rem;
     text-align: left;
     text-transform: uppercase;
-    box-shadow: 0 6px 8px rgba(0, 0, 0, .15)
+    box-shadow: 0 6px 8px rgba(0, 0, 0, .15);
 }
+
+.wrap-main--white-bg .select2-container {
+        box-shadow: none;
+    }
 
 .select2-container.select2 {
         width: 100% !important;
@@ -5645,7 +5652,7 @@ input[type='submit'] {
 
 .select2-transparent .select2-container--default .select2-selection--single {
             background-color: transparent;
-            color: #fff;
+            color: #1d1d1d;
             text-align: center;
             text-transform: none;
             height: auto;
@@ -5654,7 +5661,7 @@ input[type='submit'] {
 .select2-transparent .select2-container--default .select2-selection--single .select2-selection__rendered {
                 padding-top: 0;
                 padding-right: 24px;
-                color: #fff;
+                color: #1d1d1d;
             }
 
 .select2-transparent .select2-container--default .select2-selection--single .select2-selection__arrow {
@@ -5663,7 +5670,7 @@ input[type='submit'] {
             }
 
 .select2-transparent .select2-container--default .select2-selection--single .select2-selection__arrow b {
-                    background: url('../img/svg/arrow_down_white.svg') no-repeat center;
+                    background: url('../img/svg/arrow_down.svg') no-repeat center;
                 }
 
 .team {
@@ -5826,6 +5833,14 @@ input[type='submit'] {
     -ms-flex-negative: 0;
         flex-shrink: 0;
 }
+
+.wrap-main--white-bg {
+        background-image: url('../img/instagram_bg.jpg');
+        background-size: cover;
+        background-attachment: fixed;
+        padding-top: 235px;
+        color: #1d1d1d;
+    }
 
 .container {
     position: relative;

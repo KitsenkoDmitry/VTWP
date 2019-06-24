@@ -5839,8 +5839,15 @@ input[type='submit'] {
         background-size: cover;
         background-attachment: fixed;
         padding-top: 235px;
-        color: #1d1d1d;
+        color: #1d1d1d
     }
+
+@media (max-width: 1023px) {
+
+    .wrap-main--white-bg {
+            padding-top: 135px
+    }
+        }
 
 .container {
     position: relative;

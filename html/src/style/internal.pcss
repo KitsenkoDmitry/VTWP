@@ -8,9 +8,13 @@
     flex-shrink: 0;
 
     &--white-bg {
-        background-image: url('$img_path/instagram_bg.jpg');
-        background-size: cover;
-        background-attachment: fixed;
+        @media (--tablet-lg-min) {
+            background-image: url('$img_path/instagram_bg.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        background-color: $cl-global-invert;
         padding-top: 235px;
         color: $cl-global;
 
@@ -20,9 +24,12 @@
     }
 
     &--black-bg {
-        background-image: url('$img_path/categories_bg.jpg');
-        background-size: cover;
-        background-attachment: fixed;
+        @media (--tablet-lg-min) {
+            background-image: url('$img_path/categories_bg.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
         padding-top: 235px;
 
         @media (--tablet-lg) {

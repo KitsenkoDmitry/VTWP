@@ -5835,10 +5835,18 @@ input[type='submit'] {
         flex-shrink: 0;
 }
 
+@media (min-width: 1024px) {
+
+    .wrap-main--white-bg {
+            background-image: url('../img/instagram_bg.jpg');
+            background-size: cover;
+            background-attachment: fixed
+    }
+        }
+
 .wrap-main--white-bg {
-        background-image: url('../img/instagram_bg.jpg');
-        background-size: cover;
-        background-attachment: fixed;
+
+        background-color: #fff;
         padding-top: 235px;
         color: #1d1d1d
     }
@@ -5850,10 +5858,17 @@ input[type='submit'] {
     }
         }
 
+@media (min-width: 1024px) {
+
+    .wrap-main--black-bg {
+            background-image: url('../img/categories_bg.jpg');
+            background-size: cover;
+            background-attachment: fixed
+    }
+        }
+
 .wrap-main--black-bg {
-        background-image: url('../img/categories_bg.jpg');
-        background-size: cover;
-        background-attachment: fixed;
+
         padding-top: 235px
     }
 

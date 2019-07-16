@@ -4002,6 +4002,20 @@ input[type='submit'] {
         }
             }
 
+.header__col-time {
+            display: inline-block;
+            vertical-align: baseline;
+            color: #999;
+            margin-left: 32px
+        }
+
+@media (max-width: 1023px) {
+
+        .header__col-time {
+                display: none
+        }
+            }
+
 .header__col-menu-btn {
             display: -ms-inline-flexbox;
             display: inline-flex;

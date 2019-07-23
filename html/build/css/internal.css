@@ -801,6 +801,14 @@ input[type='submit'] {
         transform: rotate(-180deg);
     }
 
+.btn-arrow.slick-disabled {
+        pointer-events: none;
+    }
+
+.btn-arrow.slick-disabled .icon {
+            fill: #999;
+        }
+
 .ul-list {
     margin-bottom: 16px;
 }
@@ -5245,14 +5253,14 @@ input[type='submit'] {
 }
     }
 
-.product-page__carousel {
+.product-page__carousel-wrapper {
         position: relative;
         width: 66.66667%
     }
 
 @media (max-width: 1023px) {
 
-    .product-page__carousel {
+    .product-page__carousel-wrapper {
             width: 100%;
             max-width: 640px;
             margin-left: auto;
@@ -5263,7 +5271,7 @@ input[type='submit'] {
 
 @media (max-width: 639px) {
 
-    .product-page__carousel {
+    .product-page__carousel-wrapper {
             width: calc(100% + 48px);
             margin-left: -24px;
             margin-right: -24px
@@ -5275,6 +5283,10 @@ input[type='submit'] {
             max-height: 632px;
             overflow: hidden;
         }
+
+.product-page__carousel-img img {
+                width: 100%;
+            }
 
 .product-page__carousel-prev {
             position: absolute;
@@ -5294,6 +5306,44 @@ input[type='submit'] {
                 margin-top: 24px
         }
             }
+
+.product-page__carousel-btns {
+        padding-top: 8px;
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-rows: auto;
+        -ms-grid-columns: 1fr 8px 1fr 8px 1fr 8px 1fr 8px 1fr;
+            grid-template: auto/ 1fr 1fr 1fr 1fr 1fr;
+        grid-gap: 8px
+    }
+
+@media (max-width: 767px) {
+
+    .product-page__carousel-btns {
+            display: none
+    }
+        }
+
+.product-page__carousel-btns-pic {
+            display: block;
+            position: relative;
+            cursor: pointer
+        }
+
+.product-page__carousel-btns-pic::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba(0, 0, 0, .5);
+                transition: background 200ms ease;
+            }
+
+.product-page__carousel-btns-pic.is-active::after {
+                    background-color: transparent;
+                }
 
 .product-page__info {
         width: 25%
@@ -5324,11 +5374,6 @@ input[type='submit'] {
             display: block
     }
         }
-
-/* &__help-info {
-        @media (--tablet-lg) {
-        }
-    } */
 
 .product-page__vendor-code {
         margin-bottom: 8px;

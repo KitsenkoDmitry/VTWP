@@ -141,4 +141,12 @@ input[type='submit'] {
     &--prev {
         transform: rotate(-180deg);
     }
+
+    &.slick-disabled {
+        pointer-events: none;
+
+        .icon {
+            fill: $cl-grey;
+        }
+    }
 }

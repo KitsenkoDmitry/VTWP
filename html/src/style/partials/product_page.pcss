@@ -8,7 +8,7 @@
         margin-bottom: calc($gutter-step * 8);
     }
 
-    &__carousel {
+    &__carousel-wrapper {
         position: relative;
         width: calc(100% / 3 * 2);
 
@@ -25,11 +25,17 @@
             margin-left: calc(-$gutter-step * 3);
             margin-right: calc(-$gutter-step * 3);
         }
+    }
 
+    &__carousel {
         &-img {
             width: 100%;
             max-height: 632px;
             overflow: hidden;
+
+            img {
+                width: 100%;
+            }
         }
 
         &-prev {
@@ -47,6 +53,40 @@
         .slick-dots {
             @media (--tablet-lg) {
                 margin-top: calc($gutter-step * 3);
+            }
+        }
+    }
+
+    &__carousel-btns {
+        padding-top: $gutter-step;
+        display: grid;
+        grid-template: auto/ 1fr 1fr 1fr 1fr 1fr;
+        grid-gap: $gutter-step;
+
+        @media (--tablet) {
+            display: none;
+        }
+
+        &-pic {
+            display: block;
+            position: relative;
+            cursor: pointer;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba(0, 0, 0, 0.5);
+                transition: background $time ease;
+            }
+
+            &.is-active {
+                &::after {
+                    background-color: transparent;
+                }
             }
         }
     }
@@ -73,11 +113,6 @@
             display: block;
         }
     }
-
-    /* &__help-info {
-        @media (--tablet-lg) {
-        }
-    } */
 
     &__vendor-code {
         margin-bottom: $gutter-step;

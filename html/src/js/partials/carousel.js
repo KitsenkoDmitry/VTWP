@@ -102,7 +102,7 @@ function initCarousels() {
     if ($productCarousel.length && !$productCarousel.hasClass('slick-initialized')) {
         $productCarousel.slick({
             arrows: true,
-            infinite: true,
+            infinite: false,
             slidesToShow: 1,
             prevArrow:
                 '<button type="button" class="btn-arrow btn-arrow--prev product-page__carousel-prev"><svg class="icon icon--arrow-next"><use xlink:href="#icon-arrow_next"></use></svg></button>',
@@ -118,6 +118,23 @@ function initCarousels() {
                     },
                 },
             ],
+        });
+
+        $productCarousel.on('afterChange', (slick, currentSlide) => {
+            const $parent = $(slick.currentTarget).closest('.product-page__carousel-wrapper');
+            $parent.find('.product-page__carousel-btns-pic').removeClass('is-active');
+            $parent.find(`[data-slide=${currentSlide.currentSlide}]`).addClass('is-active');
+        });
+
+        // реализовываем переключение слайдов
+        $(document).on('click', '.product-page__carousel-btns-pic', e => {
+            const $btn = $(e.currentTarget);
+            const $parent = $btn.closest('.product-page__carousel-wrapper');
+            const $productCarousel = $parent.find('.js-product-carousel');
+            const slideId = $btn.data('slide');
+            $parent.find('.product-page__carousel-btns-pic').removeClass('is-active');
+            $btn.addClass('is-active');
+            $productCarousel.slick('slickGoTo', slideId);
         });
     }
 

@@ -955,6 +955,16 @@ input[type='submit'] {
         height: 46px;
     }
 
+.icon--whatsapp {
+        width: 18px;
+        height: 18px;
+    }
+
+.icon--viber {
+        width: 21px;
+        height: 21px;
+    }
+
 .icon--logo {
         width: 176px;
         height: 123px
@@ -1887,6 +1897,59 @@ input[type='submit'] {
                 background-color: #111;
             }
 
+.catalogs-page__hl {
+        margin-bottom: 48px;
+    }
+
+@media (min-width: 1024px) {
+    .catalogs-page__container {
+            width: 50%
+    }
+        }
+
+.catalogs-page__cols {
+        margin-bottom: 56px
+    }
+
+@media (min-width: 1024px) {
+
+    .catalogs-page__cols {
+            -webkit-column-count: 2;
+               -moz-column-count: 2;
+                    column-count: 2;
+            grid-column-gap: 32px;
+            -webkit-column-gap: 32px;
+               -moz-column-gap: 32px;
+                    column-gap: 32px
+    }
+        }
+
+.catalogs-page__cols-item {
+            page-break-inside: avoid;
+            -webkit-column-break-inside: avoid;
+                    break-inside: avoid;
+        }
+
+.catalogs-page__cols-item-text {
+                margin-bottom: 0;
+                fill: #fff;
+            }
+
+.catalogs-page__list {
+        width: 75%;
+        margin-bottom: 24px
+    }
+
+@media (max-width: 767px) {
+
+    .catalogs-page__list {
+            width: 100%;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            margin-bottom: 0
+    }
+        }
+
 .category {
     display: block;
     background-color: #111;
@@ -2065,8 +2128,19 @@ input[type='submit'] {
         padding-bottom: 16px
     }
 
-.catalog-list__item:nth-child(3n) {
-            margin-right: 0;
+@media (max-width: 767px) {
+
+    .catalog-list__item {
+            width: 245px;
+            margin-right: 24px;
+            margin-bottom: 24px
+    }
+        }
+
+@media (min-width: 768px) {
+            .catalog-list__item:nth-child(3n) {
+                margin-right: 0;
+            }
         }
 
 .catalog-list__item-pic {

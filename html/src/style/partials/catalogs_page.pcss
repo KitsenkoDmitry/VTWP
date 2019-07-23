@@ -1,0 +1,39 @@
+.catalogs-page {
+    &__hl {
+        margin-bottom: calc($gutter-step * 6);
+    }
+    &__container {
+        @media (--tablet-lg-min) {
+            width: 50%;
+        }
+    }
+
+    &__cols {
+        margin-bottom: calc($gutter-step * 7);
+
+        @media (--tablet-lg-min) {
+            column-count: 2;
+            column-gap: calc($gutter-step * 4);
+        }
+
+        &-item {
+            break-inside: avoid;
+
+            &-text {
+                margin-bottom: 0;
+                fill: $cl-global-invert;
+            }
+        }
+    }
+
+    &__list {
+        width: 75%;
+        margin-bottom: calc($gutter-step * 3);
+
+        @media (--tablet) {
+            width: 100%;
+            flex-wrap: wrap;
+            margin-bottom: 0;
+        }
+    }
+}

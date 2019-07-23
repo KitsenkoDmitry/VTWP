@@ -9,8 +9,16 @@
         margin-bottom: 0;
         padding-bottom: calc($gutter-step * 2);
 
-        &:nth-child(3n) {
-            margin-right: 0;
+        @media (--tablet) {
+            width: 245px;
+            margin-right: calc($gutter-step * 3);
+            margin-bottom: calc($gutter-step * 3);
+        }
+
+        @media (--tablet-min) {
+            &:nth-child(3n) {
+                margin-right: 0;
+            }
         }
 
         &-pic {

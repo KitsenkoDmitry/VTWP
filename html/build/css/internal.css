@@ -2845,7 +2845,9 @@ input[type='submit'] {
         flex-direction: column;
     width: 584px;
     color: #fff;
-    background-color: #111
+    background-color: #111;
+    opacity: 0;
+    transition: 200ms opacity 200ms ease
 }
 
 @media (max-width: 767px) {
@@ -2858,6 +2860,7 @@ input[type='submit'] {
 .cart-modal.is-active {
         display: -ms-flexbox;
         display: flex;
+        opacity: 1;
     }
 
 .cart-modal__content {

@@ -69,11 +69,21 @@ $(document).on('mouseover', '.js-header-dropdown-btn', e => {
         $categoryDropdown.addClass('is-active');
         $header.addClass('is-active');
         $('body').addClass('has-overlay');
+        rerenderHeader();
     }
 });
 
-$(document).on('mouseleave', '.js-header-dropdown', e => {
-    $('.js-header-dropdown').removeClass('is-active');
-    $header.removeClass('is-active');
-    $('body').removeClass('has-overlay');
+$(document).on('mouseleave', '.js-header', e => {
+    if ($('.js-header-dropdown').hasClass('is-active')) {
+        $('.js-header-dropdown').removeClass('is-active');
+        $header.removeClass('is-active');
+        $('body').removeClass('has-overlay');
+        rerenderHeader();
+    }
 });
+
+// fix bug for safari
+function rerenderHeader() {
+    $header.hide();
+    setTimeout(() => {$header.show()}, 0)
+}

@@ -41,15 +41,17 @@
                 "isRightImg": true,
                 "imgSrc": "img/inhtml/product_bike2.jpg",
                 "name": "harley-davidson 2018 breakout 114 anniversary",
-                "desc": false,
+                "desc": true,
                 "price": "1 960 000"
             })
 
-            @@include('template/projects.html', {
-                "titleClassName" :"mb-m",
-                "title": "Наши проекты",
-                "projectsClassName": false
-            })
+            <section class="page-projects">
+                @@include('template/projects.html', {
+                    "titleClassName" :"mb-m",
+                    "title": "Наши проекты",
+                    "projectsClassName": false
+                })
+            </section>
 
         </div>
 

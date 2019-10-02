@@ -5239,6 +5239,24 @@ input[type='submit'] {
 }
     }
 
+.page-projects {
+    margin-top: 144px
+}
+
+@media (max-width: 1023px) {
+
+.page-projects {
+        margin-top: 96px
+}
+    }
+
+@media (max-width: 767px) {
+
+.page-projects {
+        margin-top: 40px
+}
+    }
+
 .product-page {
     display: -ms-flexbox;
     display: flex;

@@ -1,0 +1,130 @@
+.projects {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: calc($gutter-step * 4);
+
+    @media (--tablet-lg) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media (--tablet) {
+        grid-gap: calc($gutter-step * 3);
+    }
+
+    @media (--mobile-lg) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.project {
+    position: relative;
+    height: 396px;
+    overflow: hidden;
+
+    @media (--tablet-lg) {
+        height: 350px;
+    }
+
+    @media (--tablet) {
+        height: 300px;
+    }
+
+    &__link {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        background-color: $cl-bg;
+        cursor: pointer;
+
+        &:hover {
+            &::after {
+                background-color: transparent;
+                pointer-events: none;
+            }
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: calc(100% - 96px);
+            background-color: rgba(0, 0, 0, 0.3);
+            transition: background $time ease;
+        }
+
+        &-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            max-width: auto;
+            transition: transform $time ease-in-out;
+
+            .project__link:hover & {
+                transform: scale(1.1);
+            }
+        }
+
+        &-info {
+            position: relative;
+            margin-top: auto;
+            display: flex;
+            height: 96px;
+            color: $cl-global-invert;
+            background-color: rgba(0, 0, 0, 0.7);
+            transition: background $time ease;
+
+            .project__link:hover & {
+                background-color: $cl-red;
+            }
+
+            &-date {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 0 calc($gutter-step * 2);
+                text-align: right;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    width: 1px;
+                    height: 100%;
+                    background-color: #c4c4c4;
+                    opacity: 0.3;
+                }
+            }
+
+            &-year {
+                display: block;
+                font-size: 16px;
+                font-weight: bold;
+            }
+
+            &-month {
+                font-size: 14px;
+                white-space: nowrap;
+            }
+        }
+
+        &-name {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 calc($gutter-step * 2);
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+    }
+}

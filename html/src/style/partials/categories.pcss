@@ -14,6 +14,20 @@
         }
     }
 
+    &--index {
+        padding: calc($gutter-step * 10) 0;
+
+        @media (--tablet) {
+            padding: calc($gutter-step * 5) 0;
+        }
+
+        .container {
+            @media (--mobile-lg) {
+                padding: 0 calc($gutter-step * 3);
+            }
+        }
+    }
+
     &__hl {
         margin-bottom: calc($gutter-step * 8);
         text-align: center;

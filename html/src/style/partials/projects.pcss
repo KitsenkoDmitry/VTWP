@@ -9,11 +9,16 @@
     }
 
     @media (--tablet) {
-        grid-gap: calc($gutter-step * 3);
+        display: block;
     }
 
-    @media (--mobile-lg) {
-        grid-template-columns: 1fr;
+    .slick-dots {
+        margin-top: 24px;
+    }
+
+    .slick-track::before,
+    .slick-track::after {
+        content: none !important;
     }
 }
 
@@ -28,6 +33,11 @@
 
     @media (--tablet) {
         height: 300px;
+        margin: 0 12px;
+    }
+
+    @media (--mobile-lg) {
+        margin: 0;
     }
 
     &__link {
@@ -79,9 +89,10 @@
             height: 96px;
             color: $cl-global-invert;
             background-color: rgba(0, 0, 0, 0.7);
-            transition: background $time ease;
+            transition: all $time ease;
 
             .project__link:hover & {
+                transform: scaleY(1.1);
                 background-color: $cl-red;
             }
 

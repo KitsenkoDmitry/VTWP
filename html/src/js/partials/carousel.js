@@ -83,6 +83,34 @@ function initCarousels() {
         });
     }
 
+    // карусель проектов и/или событий
+    const $projectsCarousel = $('.js-projects-carousel');
+    if ($projectsCarousel.length && !$projectsCarousel.hasClass('slick-initialized')) {
+        $projectsCarousel.slick({
+            arrows: false,
+            infinite: false,
+            slidesToShow: 1,
+            centerMode: true,
+            centerPadding: '0',
+            variableWidth: false,
+            dots: true,
+            mobileFirst: true,
+            responsive: [
+                {
+                    breakpoint: 767,
+                    settings: 'unslick',
+                },
+                {
+                    breakpoint: 639,
+                    settings: {
+                        slidesToShow: 2,
+                        centerMode: false,
+                    },
+                },
+            ],
+        });
+    }
+
     // карусель на главной
     const $indexMainCarousel = $('.js-index-main-carousel');
     if ($indexMainCarousel.length && !$indexMainCarousel.hasClass('slick-initialized')) {

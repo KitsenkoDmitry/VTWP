@@ -6019,16 +6019,17 @@ input[type='submit'] {
 @media (max-width: 767px) {
 
 .projects {
-        grid-gap: 24px
+        display: block
 }
     }
 
-@media (max-width: 639px) {
+.projects .slick-dots {
+        margin-top: 24px;
+    }
 
-.projects {
-        -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr
-}
+.projects .slick-track::before,
+    .projects .slick-track::after {
+        content: none !important;
     }
 
 .project {
@@ -6047,7 +6048,15 @@ input[type='submit'] {
 @media (max-width: 767px) {
 
 .project {
-        height: 300px
+        height: 300px;
+        margin: 0 12px
+}
+    }
+
+@media (max-width: 639px) {
+
+.project {
+        margin: 0
 }
     }
 
@@ -6102,10 +6111,11 @@ input[type='submit'] {
             height: 96px;
             color: #fff;
             background-color: rgba(0, 0, 0, .7);
-            transition: background 200ms ease;
+            transition: all 200ms ease;
         }
 
 .project__link:hover .project__link-info {
+                transform: scaleY(1.1);
                 background-color: #f30;
             }
 

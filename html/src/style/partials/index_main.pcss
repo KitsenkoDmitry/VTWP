@@ -11,6 +11,7 @@
     &--about {
         padding-top: 230px;
         padding-bottom: calc($gutter-step * 8);
+        overflow: visible;
     }
 
     &--new {
@@ -18,6 +19,12 @@
 
         @media (--tablet-lg) {
             padding-top: 130px;
+        }
+    }
+
+    &--bikes {
+        @media (--tablet-lg-min) {
+            margin-bottom: calc($gutter-step * 8);
         }
     }
 
@@ -47,9 +54,19 @@
             background-color: rgba(0, 0, 0, 0.4);
         }
 
+        .index-main--about & {
+            bottom: initial;
+        }
+
         &--no-overlay {
             &::after {
                 content: none;
+            }
+
+            .index-main--about & {
+                img {
+                    height: auto;
+                }
             }
         }
     }

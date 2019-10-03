@@ -1462,6 +1462,7 @@ input[type='submit'] {
 .index-main--about {
         padding-top: 230px;
         padding-bottom: 64px;
+        overflow: visible;
     }
 
 .index-main--new {
@@ -1472,6 +1473,13 @@ input[type='submit'] {
 
     .index-main--new {
             padding-top: 130px
+    }
+        }
+
+@media (min-width: 1024px) {
+
+    .index-main--bikes {
+            margin-bottom: 64px
     }
         }
 
@@ -1502,9 +1510,18 @@ input[type='submit'] {
             background-color: rgba(0, 0, 0, .4);
         }
 
+.index-main--about .index-main__bg {
+            bottom: auto;
+            bottom: initial;
+        }
+
 .index-main__bg--no-overlay::after {
                 content: none;
             }
+
+.index-main--about .index-main__bg--no-overlay img {
+                    height: auto;
+                }
 
 .index-main__container {
         position: relative;
@@ -5939,63 +5956,6 @@ input[type='submit'] {
 
 .team__member-job {
             margin-bottom: 0;
-        }
-
-.picture-carousel {
-    display: -ms-flexbox;
-    display: flex;
-    width: 114%
-}
-
-@media (max-width: 1023px) {
-
-.picture-carousel {
-        width: calc(100vw - 24px)
-}
-    }
-
-.picture-carousel__item {
-        width: 800px;
-        height: 536px;
-        margin-right: 104px
-    }
-
-@media (max-width: 1023px) {
-
-    .picture-carousel__item {
-            width: 256px;
-            height: 160px;
-            margin-right: 32px
-    }
-        }
-
-@media (max-width: 767px) {
-
-    .picture-carousel__item {
-            margin-right: 16px
-    }
-        }
-
-.picture-carousel__item--sm {
-            width: 488px;
-            height: 304px;
-            margin-right: 32px
-        }
-
-@media (max-width: 767px) {
-
-        .picture-carousel__item--sm {
-                width: 256px;
-                height: 160px;
-                margin-right: 16px
-        }
-            }
-
-.picture-carousel__item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: 50% 50%;
         }
 
 .projects {

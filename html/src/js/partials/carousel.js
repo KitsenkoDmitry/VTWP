@@ -231,4 +231,46 @@ function initCarousels() {
             $carousel.slick('slickGoTo', slideId);
         });
     }
+
+    // карусель картинок товара
+    const $picturesCarousel = $('.js-pictures-carousel');
+    if ($picturesCarousel.length && !$picturesCarousel.hasClass('slick-initialized')) {
+        $picturesCarousel.slick({
+            arrows: true,
+            infinite: false,
+            variableWidth: true,
+            prevArrow:
+                '<button type="button" class="btn-arrow btn-arrow--prev pictures__carousel-btn-prev"><svg class="icon icon--arrow-next"><use xlink:href="#icon-arrow_next"></use></svg></button>',
+            nextArrow:
+                '<button type="button" class="btn-arrow pictures__carousel-btn-next"><svg class="icon icon--arrow-next"><use xlink:href="#icon-arrow_next"></use></svg></button>',
+            dots: false,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        variableWidth: false,
+                    },
+                },
+            ],
+        });
+
+        $picturesCarousel.on('afterChange', (slick, currentSlide) => {
+            const $parent = $(slick.currentTarget).closest('.pictures');
+            $parent.find('.pictures__thumbs-item').removeClass('is-active');
+            $parent.find(`[data-slide=${currentSlide.currentSlide}]`).addClass('is-active');
+        });
+
+        // реализовываем переключение слайдов
+        $(document).on('click', '.pictures__thumbs-item', e => {
+            const $btn = $(e.currentTarget);
+            const $parent = $btn.closest('.pictures');
+            const $picturesCarousel = $parent.find('.js-pictures-carousel');
+            const slideId = $btn.data('slide');
+            $parent.find('.pictures__thumbs-item').removeClass('is-active');
+            $btn.addClass('is-active');
+            $picturesCarousel.slick('slickGoTo', slideId);
+        });
+    }
 }

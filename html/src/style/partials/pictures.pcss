@@ -1,0 +1,108 @@
+.pictures {
+    &__carousel {
+        position: relative;
+        margin-bottom: $gutter-step;
+
+        &-slide {
+            height: 536px;
+            margin-right: calc($gutter-step * 2);
+
+            @media (--tablet-lg) {
+                height: 350px;
+            }
+
+            @media (--tablet) {
+                height: auto;
+                margin: 0 $gutter-step;
+            }
+
+            &-img {
+                height: 100%;
+
+                @media (--tablet) {
+                    height: auto;
+                }
+            }
+        }
+
+        &-btn-next,
+        &-btn-prev {
+            width: 72px;
+            height: 64px;
+            position: absolute;
+            top: calc(536px / 2 - 64px / 2);
+
+            @media (--tablet-lg) {
+                top: calc(350px / 2 - 64px / 2);
+            }
+        }
+
+        &-btn-prev {
+            left: 0;
+        }
+
+        &-btn-next {
+            right: 0;
+        }
+
+        .slick-dots {
+            @media (--tablet) {
+                margin-top: calc($gutter-step * 3);
+            }
+        }
+    }
+
+    &__thumbs {
+        display: flex;
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+
+        @media (--tablet-lg) {
+            display: none;
+        }
+
+        &::-webkit-scrollbar {
+            width: 1px !important;
+            height: 1px !important;
+            background: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: transparent !important;
+        }
+
+        &-item {
+            flex-shrink: 0;
+            width: 107px;
+            height: 72px;
+            text-align: center;
+            position: relative;
+            cursor: pointer;
+
+            &-img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba(0, 0, 0, 0.5);
+                transition: background $time ease;
+            }
+
+            &.is-active {
+                cursor: default;
+
+                &::after {
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+}

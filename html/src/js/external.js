@@ -18,5 +18,5 @@
 @@include('../../node_modules/select2/dist/js/select2.full.js')
 @@include('../../node_modules/autosize/dist/autosize.js')
 @@include('../../node_modules/slick-carousel/slick/slick.min.js')
-
+@@include('../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js')
 @@include('../../node_modules/lazysizes/lazysizes.js')

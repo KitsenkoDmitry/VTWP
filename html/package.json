@@ -21,6 +21,7 @@
     ],
     "dependencies": {
         "@babel/polyfill": "^7.2.5",
+        "@fancyapps/fancybox": "^3.5.7",
         "animate.css": "^3.7.0",
         "autosize": "^4.0.2",
         "gulp-babel": "^8.0.0",

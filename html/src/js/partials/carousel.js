@@ -272,5 +272,7 @@ function initCarousels() {
             $btn.addClass('is-active');
             $picturesCarousel.slick('slickGoTo', slideId);
         });
+
+        $('[data-fancybox="pictures"]').fancybox({});
     }
 }

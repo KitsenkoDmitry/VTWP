@@ -6233,7 +6233,8 @@ input[type='submit'] {
 .pictures__thumbs-item-img {
                 width: 100%;
                 height: 100%;
-                object-fit: contain;
+                object-fit: cover;
+                object-position: center;
             }
 
 .pictures__thumbs-item::after {

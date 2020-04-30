@@ -25,7 +25,7 @@
         "animate.css": "^3.7.0",
         "autosize": "^4.0.2",
         "gulp-babel": "^8.0.0",
-        "jquery": "^3.3.1",
+        "jquery": "^3.5.0",
         "jquery-ui": "^1.12.1",
         "jquery.browser": "^0.1.0",
         "jquery.inputmask": "~3.3.4",

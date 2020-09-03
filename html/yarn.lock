@@ -5358,10 +5358,10 @@ last-run@^1.1.0:
     default-resolution "^2.0.0"
     es6-weak-map "^2.0.1"
 
-lazysizes@^4.1.6:
-  version "4.1.6"
-  resolved "https://registry.yarnpkg.com/lazysizes/-/lazysizes-4.1.6.tgz#a8b1e0cc6b6cf3ddc0a0e7c44768aeed27ca343a"
-  integrity sha512-tbW91sxEwTIBp0n6YiWE+/O4uFe2w4X66YG2rm6dVf4wsa1hJkrp34FD1XjynU+9BeKP/o9/VZlj+bls0G1cCg==
+lazysizes@^5.2.1:
+  version "5.2.1"
+  resolved "https://registry.yarnpkg.com/lazysizes/-/lazysizes-5.2.1.tgz#f450e36a995efb5817acb8c904f3d2f2efc29ffa"
+  integrity sha512-607dEMlbcnkny2lGYVqoA/rQO+WGpWh/BISeS1eLfT8nHQw6E+R8ybJoKKGVlZ2czKPTATrsU95f+nkwix0fXw==
 
 lazystream@^1.0.0:
   version "1.0.0"

@@ -29,7 +29,7 @@
         "jquery-ui": "^1.12.1",
         "jquery.browser": "^0.1.0",
         "jquery.inputmask": "~3.3.4",
-        "lazysizes": "^4.1.6",
+        "lazysizes": "^5.2.1",
         "normalize.css": "8.0.1",
         "parsleyjs": "^2.8.1",
         "postcss-for": "^2.1.1",

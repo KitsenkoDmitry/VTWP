@@ -33,7 +33,7 @@
         "normalize.css": "8.0.1",
         "parsleyjs": "^2.8.1",
         "postcss-for": "^2.1.1",
-        "select2": "~4.0.6-rc.1",
+        "select2": "~4.0.6",
         "slick-carousel": "^1.8.1",
         "tippy.js": "^3.4.1"
     },
